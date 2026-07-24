@@ -1,8 +1,24 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
+import { subscribeToNewsletter } from '../lib/mailerlite.js';
 
 export default function Home() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('idle'); // idle | sending | done | error
+
+  const handleSubscribe = async () => {
+    if (!email) return;
+    setStatus('sending');
+    try {
+      await subscribeToNewsletter(email);
+      setStatus('done');
+    } catch {
+      setStatus('error');
+    }
+  };
+
   return (
     <div className="page-shell">
       <NavBar variant="white" />
@@ -188,16 +204,34 @@ export default function Home() {
         <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.8, maxWidth: 500, margin: '12px auto 26px' }}>
           The events, workshops, and neighbors worth knowing — warmth, never noise. A <strong style={{ color: '#fff', fontWeight: 600 }}>52–66% open rate</strong> says it lands.
         </p>
-        <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <input
-            type="email"
-            placeholder="you@cincinnati.com"
-            style={{ background: 'rgba(255,255,255,.09)', border: '1px solid rgba(255,255,255,.22)', borderRadius: 100, padding: '14px 22px', font: '400 14px var(--font-sans)', color: '#fff', width: 300, outline: 'none' }}
-          />
-          <Link className="btn" to="/newsletter" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>
-            Subscribe
-          </Link>
-        </div>
+        {status === 'done' ? (
+          <p style={{ fontSize: 15, fontWeight: 300, color: '#fff' }}>You're on the list — welcome in! 💌</p>
+        ) : (
+          <>
+            <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <input
+                type="email"
+                placeholder="you@cincinnati.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                style={{ background: 'rgba(255,255,255,.09)', border: '1px solid rgba(255,255,255,.22)', borderRadius: 100, padding: '14px 22px', font: '400 14px var(--font-sans)', color: '#fff', width: 300, outline: 'none' }}
+              />
+              <button
+                onClick={handleSubscribe}
+                disabled={status === 'sending'}
+                className="btn"
+                style={{ cursor: status === 'sending' ? 'default' : 'pointer', opacity: status === 'sending' ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}
+              >
+                {status === 'sending' ? 'Subscribing…' : 'Subscribe'}
+              </button>
+            </div>
+            {status === 'error' && (
+              <p style={{ fontSize: 13, color: 'var(--gc-lavender-soft)', marginTop: 10 }}>
+                Something went wrong — try again, or use the <Link to="/newsletter" style={{ color: 'var(--gc-lavender-soft)' }}>newsletter page</Link>.
+              </p>
+            )}
+          </>
+        )}
       </div>
 
       <Footer showExplore linked={false} />
