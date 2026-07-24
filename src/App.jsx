@@ -10,6 +10,7 @@ import UGC from './pages/UGC.jsx';
 import Partners from './pages/Partners.jsx';
 import ConsultationIntake from './pages/ConsultationIntake.jsx';
 import WorthQuiz from './pages/WorthQuiz.jsx';
+import BetterTogetherRecap from './pages/BetterTogetherRecap.jsx';
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/partners" element={<Partners />} />
         <Route path="/consultation-intake" element={<ConsultationIntake />} />
         <Route path="/worth-quiz" element={<WorthQuiz />} />
+        <Route path="/better-together-recap" element={<BetterTogetherRecap />} />
       </Routes>
     </BrowserRouter>
   );

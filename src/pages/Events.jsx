@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
 import ImageSlot from '../components/ImageSlot.jsx';
@@ -95,7 +96,7 @@ const EVENTS = [
 ];
 
 const PAST = [
-  { title: 'Better, Together — Girlhood Brunch', caption: 'July 2026 · Flagship fundraiser for EIE' },
+  { title: 'Better, Together — Girlhood Brunch', caption: 'July 2026 · Flagship fundraiser for EIE', href: '/better-together-recap' },
   { title: 'Spring Studio Art Series', caption: 'April 2025 · 10 students' },
   { title: 'Rooftop Summer Social', caption: 'July 2025 · Cincinnati' },
   { title: 'Back-to-School Market', caption: 'August 2025 · 22 makers' },
@@ -190,15 +191,21 @@ export default function Events() {
           A look back at the rooms we've filled since 2025. Drop your own photos in to bring the gallery to life.
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16 }}>
-          {PAST.map((p) => (
-            <div key={p.title} className="hover-caption">
-              <ImageSlot label={p.title} height={180} radius={6} />
-              <div className="hover-caption-target" style={{ fontFamily: 'var(--font-serif)', fontSize: 15, fontWeight: 700, color: 'var(--gc-slate)', marginTop: 12, transition: 'color .2s' }}>
-                {p.title}
-              </div>
-              <div style={{ font: '600 10px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginTop: 3 }}>{p.caption}</div>
-            </div>
-          ))}
+          {PAST.map((p) => {
+            const Wrapper = p.href ? Link : 'div';
+            const wrapperProps = p.href ? { to: p.href, style: { textDecoration: 'none' } } : {};
+            return (
+              <Wrapper key={p.title} className="hover-caption" {...wrapperProps}>
+                <ImageSlot label={p.title} height={180} radius={6} />
+                <div className="hover-caption-target" style={{ fontFamily: 'var(--font-serif)', fontSize: 15, fontWeight: 700, color: 'var(--gc-slate)', marginTop: 12, transition: 'color .2s' }}>
+                  {p.title}
+                </div>
+                <div style={{ font: '600 10px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginTop: 3 }}>
+                  {p.caption}{p.href ? ' · Read the case study →' : ''}
+                </div>
+              </Wrapper>
+            );
+          })}
         </div>
       </div>
 
