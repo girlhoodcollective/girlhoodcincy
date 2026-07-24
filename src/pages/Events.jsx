@@ -14,7 +14,7 @@ const EVENTS = [
   },
   {
     id: 'dream-big', mon: 'Sep', day: '12', year: '2026', cat: 'Workshop',
-    shopifyUrl: 'https://girlhoodcollective.myshopify.com/products/dream-big-monthly-experience-sep-12-2026',
+    shopifyUrl: 'https://gardqv-rg.myshopify.com/products/dream-big-monthly-experience-sep-12-2026',
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Dream Big', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
@@ -23,7 +23,7 @@ const EVENTS = [
   },
   {
     id: 'bloom-confidence', mon: 'Oct', day: '10', year: '2026', cat: 'Workshop', published: false,
-    shopifyUrl: 'https://girlhoodcollective.myshopify.com/products/bloom-with-confidence-monthly-experience-oct-10-2026',
+    shopifyUrl: 'https://gardqv-rg.myshopify.com/products/bloom-with-confidence-monthly-experience-oct-10-2026',
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Bloom with Confidence', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
@@ -32,7 +32,7 @@ const EVENTS = [
   },
   {
     id: 'treasure-story', mon: 'Nov', day: '14', year: '2026', cat: 'Workshop', published: false,
-    shopifyUrl: 'https://girlhoodcollective.myshopify.com/products/treasure-your-story-monthly-experience-nov-14-2026',
+    shopifyUrl: 'https://gardqv-rg.myshopify.com/products/treasure-your-story-monthly-experience-nov-14-2026',
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Treasure Your Story', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
@@ -41,7 +41,7 @@ const EVENTS = [
   },
   {
     id: 'sweet-success', mon: 'Dec', day: '12', year: '2026', cat: 'Workshop', published: false,
-    shopifyUrl: 'https://girlhoodcollective.myshopify.com/products/sweet-success-monthly-experience-dec-12-2026',
+    shopifyUrl: 'https://gardqv-rg.myshopify.com/products/sweet-success-monthly-experience-dec-12-2026',
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Sweet Success', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
@@ -58,7 +58,7 @@ const EVENTS = [
   },
   {
     id: 'every-brain-belongs', mon: 'Jan', day: '09', year: '2027', cat: 'Workshop', published: false,
-    shopifyUrl: 'https://girlhoodcollective.myshopify.com/products/every-brain-belongs-monthly-experience-jan-9-2027',
+    shopifyUrl: 'https://gardqv-rg.myshopify.com/products/every-brain-belongs-monthly-experience-jan-9-2027',
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Every Brain Belongs', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
@@ -67,7 +67,7 @@ const EVENTS = [
   },
   {
     id: 'building-community', mon: 'Feb', day: '13', year: '2027', cat: 'Workshop', published: false,
-    shopifyUrl: 'https://girlhoodcollective.myshopify.com/products/building-community-monthly-experience-feb-13-2027',
+    shopifyUrl: 'https://gardqv-rg.myshopify.com/products/building-community-monthly-experience-feb-13-2027',
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Building Community', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
@@ -76,7 +76,7 @@ const EVENTS = [
   },
   {
     id: 'ready-to-lead', mon: 'Mar', day: '13', year: '2027', cat: 'Workshop', published: false,
-    shopifyUrl: 'https://girlhoodcollective.myshopify.com/products/ready-to-lead-monthly-experience-mar-13-2027',
+    shopifyUrl: 'https://gardqv-rg.myshopify.com/products/ready-to-lead-monthly-experience-mar-13-2027',
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Ready to Lead', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
@@ -85,7 +85,7 @@ const EVENTS = [
   },
   {
     id: 'mix-it-up', mon: 'Apr', day: '10', year: '2027', cat: 'Workshop', published: false,
-    shopifyUrl: 'https://girlhoodcollective.myshopify.com/products/mix-it-up-monthly-experience-apr-10-2027',
+    shopifyUrl: 'https://gardqv-rg.myshopify.com/products/mix-it-up-monthly-experience-apr-10-2027',
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Mix It Up', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
@@ -94,7 +94,7 @@ const EVENTS = [
   },
   {
     id: 'launch-big-idea', mon: 'May', day: '08', year: '2027', cat: 'Workshop', published: false,
-    shopifyUrl: 'https://girlhoodcollective.myshopify.com/products/launch-your-big-idea-monthly-experience-may-8-2027',
+    shopifyUrl: 'https://gardqv-rg.myshopify.com/products/launch-your-big-idea-monthly-experience-may-8-2027',
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Launch Your Big Idea', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
