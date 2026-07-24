@@ -22,6 +22,15 @@ const EVENTS = [
     long: "Meet Jess Evans and hear her story of leaving NYC to open Dance Factory Fitness. A confidence-building dance-cardio session, hands-on vision board building, and a future-self letter to open in a year. 120 minutes · girls 8–12.",
   },
   {
+    id: 'helping-hands', mon: 'Sep', day: '19', year: '2026', cat: 'Workshop',
+    shopifyUrl: 'https://girlhoodcincy.com/products/mother-daughter-workshop-fill-a-purse-fill-a-heart',
+    badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
+    title: 'Helping Hands', where: 'Parent-Child Volunteer Experience · 3500 Columbia Pkwy',
+    price: '$50 · per adult-child pair',
+    desc: 'A hands-on service project for parents and kids (ages 6+) to give back together — supporting one of our partner nonprofits.',
+    long: "Join us for a hands-on service opportunity supporting one of our partner organizations. All supplies provided — just bring yourself and a positive attitude. All genders of kids and grownups welcome. One ticket required per adult, max 2 kids per adult ticket.",
+  },
+  {
     id: 'bloom-confidence', mon: 'Oct', day: '10', year: '2026', cat: 'Workshop', published: false,
     shopifyUrl: 'https://gardqv-rg.myshopify.com/products/bloom-with-confidence-monthly-experience-oct-10-2026',
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
