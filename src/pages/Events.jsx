@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
-import ImageSlot from '../components/ImageSlot.jsx';
 
 const EVENTS = [
   {
@@ -96,11 +95,22 @@ const EVENTS = [
 ];
 
 const PAST = [
-  { title: 'Better, Together — Girlhood Brunch', caption: 'July 2026 · Flagship fundraiser for EIE', href: '/better-together-recap' },
-  { title: 'Spring Studio Art Series', caption: 'April 2025 · 10 students' },
-  { title: 'Rooftop Summer Social', caption: 'July 2025 · Cincinnati' },
-  { title: 'Back-to-School Market', caption: 'August 2025 · 22 makers' },
-  { title: "Founders' Coffee", caption: "February 2025 · Where it began" },
+  {
+    title: 'Better, Together — Girlhood Brunch', caption: 'July 2026 · Flagship fundraiser for EIE', href: '/better-together-recap',
+    photo: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/432_a2c25d8f-0ce8-40d5-b0fe-f1f1d4b17a69.jpg?v=1784653522',
+  },
+  {
+    title: 'Spring Studio Art Series', caption: 'April 2025 · 10 students',
+    photo: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2311.jpg?v=1777676512',
+  },
+  {
+    title: 'Hyde Park Market', caption: 'August 2025 · 22 makers',
+    photo: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/165.jpg?v=1783270119',
+  },
+  {
+    title: 'Fall Arts and Crafts Series', caption: 'October 2025 · Girls 9+',
+    photo: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-studio-art-1.jpg?v=1774545499',
+  },
 ];
 
 const CATS = ['All', 'Market', 'Workshop'];
@@ -188,7 +198,7 @@ export default function Events() {
         <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Looking back</div>
         <div style={{ fontFamily: 'var(--font-serif)', fontSize: 30, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Seriously proud of what we made.</div>
         <p style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 560, marginBottom: 28 }}>
-          A look back at the rooms we've filled since 2025. Drop your own photos in to bring the gallery to life.
+          A look back at the rooms we've filled since 2025.
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16 }}>
           {PAST.map((p) => {
@@ -196,7 +206,12 @@ export default function Events() {
             const wrapperProps = p.href ? { to: p.href, style: { textDecoration: 'none' } } : {};
             return (
               <Wrapper key={p.title} className="hover-caption" {...wrapperProps}>
-                <ImageSlot label={p.title} height={180} radius={6} />
+                <img
+                  src={p.photo}
+                  alt={p.title}
+                  loading="lazy"
+                  style={{ width: '100%', height: 180, objectFit: 'cover', borderRadius: 6, display: 'block' }}
+                />
                 <div className="hover-caption-target" style={{ fontFamily: 'var(--font-serif)', fontSize: 15, fontWeight: 700, color: 'var(--gc-slate)', marginTop: 12, transition: 'color .2s' }}>
                   {p.title}
                 </div>
