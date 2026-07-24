@@ -165,6 +165,12 @@ export default function Home() {
 
       {/* LIVED-EXPERIENCE BRIDGE */}
       <div style={{ background: 'var(--gc-slate)', padding: '60px 44px', textAlign: 'center' }}>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_1964.heic?v=1783122573&format=jpg"
+          alt="Brittany, founder of Girlhood Collective"
+          loading="lazy"
+          style={{ width: 120, height: 120, objectFit: 'cover', borderRadius: '50%', border: '2px solid rgba(255,255,255,.24)', display: 'block', margin: '0 auto 24px' }}
+        />
         <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 20 }}>
           Why this is personal
         </div>
