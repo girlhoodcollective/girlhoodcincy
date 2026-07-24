@@ -42,13 +42,13 @@ export default function About() {
 
       {/* FOUNDER */}
       <div style={{ background: '#fff', padding: '64px 44px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '340px 1fr', gap: 44, alignItems: 'center', maxWidth: 960, margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '260px 1fr', gap: 44, alignItems: 'center', maxWidth: 960, margin: '0 auto' }}>
           <div>
             <img
               src={FOUNDER_PHOTO}
               alt="Brittany Gruber, founder of Girlhood Collective"
               loading="lazy"
-              style={{ width: 340, height: 400, objectFit: 'cover', borderRadius: 8, display: 'block' }}
+              style={{ width: 260, height: 300, objectFit: 'cover', objectPosition: 'center 10%', borderRadius: 8, display: 'block' }}
             />
           </div>
           <div>
