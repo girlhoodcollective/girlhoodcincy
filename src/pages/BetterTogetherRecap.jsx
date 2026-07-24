@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
-import ImageSlot from '../components/ImageSlot.jsx';
 
 const STATS = [
   { value: '$3,000', label: 'Revenue raised' },
@@ -30,11 +29,10 @@ const RESULTS = [
 ];
 
 const GALLERY = [
-  'Panel discussion under the Columbia Center archway',
-  'Guest group photo on stage',
-  'Panelists together after the program',
-  'Guests seated at the reception',
-  'Opening remarks from the podium',
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/432_a2c25d8f-0ce8-40d5-b0fe-f1f1d4b17a69.jpg?v=1784653522', alt: 'Guests and panelists together at the Better Together Brunch' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6378.jpg?v=1784590111', alt: 'Better Together Brunch at the Columbia Center' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6384.jpg?v=1784581853', alt: 'Guests at the Better Together Brunch' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4415_1d38b43f-96e0-47ca-96f8-4e8db80ef328.jpg?v=1784581862', alt: 'Speaker addressing the room at the Better Together Brunch' },
 ];
 
 export default function BetterTogetherRecap() {
@@ -132,14 +130,17 @@ export default function BetterTogetherRecap() {
       <div style={{ background: 'var(--gc-cream)', padding: '56px 44px', borderTop: '1px solid rgba(45,52,71,.06)' }}>
         <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>From the room</div>
         <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24 }}>A few moments from the morning.</div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 14 }}>
-          {GALLERY.map((label) => (
-            <ImageSlot key={label} label={label} height={220} radius={10} style={{ background: '#fff', border: '1px solid var(--gc-border)' }} />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 14 }}>
+          {GALLERY.map((g) => (
+            <img
+              key={g.src}
+              src={g.src}
+              alt={g.alt}
+              loading="lazy"
+              style={{ width: '100%', height: 340, objectFit: 'cover', borderRadius: 10, border: '1px solid var(--gc-border)', display: 'block' }}
+            />
           ))}
         </div>
-        <p style={{ fontSize: 12.5, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 14 }}>
-          Placeholder frames — drop the real event photos in to replace these.
-        </p>
       </div>
 
       <div style={{ background: 'var(--gc-slate)', padding: '56px 44px', textAlign: 'center' }}>
