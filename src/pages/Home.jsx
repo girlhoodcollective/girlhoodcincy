@@ -20,18 +20,6 @@ export default function Home() {
         </p>
       </div>
 
-      {/* EXPLAINER VIDEO */}
-      <div style={{ background: 'var(--gc-cream)', padding: '0 44px 48px', display: 'flex', justifyContent: 'center' }}>
-        <video
-          controls
-          playsInline
-          preload="metadata"
-          style={{ width: '100%', maxWidth: 800, borderRadius: 10, border: '1px solid var(--gc-border)', display: 'block', background: '#000' }}
-        >
-          <source src="https://cdn.shopify.com/videos/c/o/v/87b908b2b73b4e8e8ce8d6b61633d21a.mov" />
-        </video>
-      </div>
-
       {/* TWO-DOOR HERO */}
       <div style={{ display: 'flex', alignItems: 'stretch' }}>
         <div style={{ width: '50%', background: 'var(--gc-navy)', padding: '58px 44px', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}>
@@ -108,6 +96,18 @@ export default function Home() {
             <p style={{ fontSize: 13, fontWeight: 300, color: 'rgba(255,255,255,.6)', lineHeight: 1.6 }}>The creator work, the approach, and the rate card.</p>
           </Link>
         </div>
+      </div>
+
+      {/* EXPLAINER VIDEO */}
+      <div style={{ background: 'var(--gc-cream)', padding: '48px 44px', display: 'flex', justifyContent: 'center' }}>
+        <video
+          controls
+          playsInline
+          preload="metadata"
+          style={{ width: '100%', maxWidth: 400, borderRadius: 10, border: '1px solid var(--gc-border)', display: 'block', background: '#000' }}
+        >
+          <source src="https://cdn.shopify.com/videos/c/o/v/87b908b2b73b4e8e8ce8d6b61633d21a.mov" />
+        </video>
       </div>
 
       {/* PARALLEL COLUMNS: WORK WITH ME | EVENTS */}
