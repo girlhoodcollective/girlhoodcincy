@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const formats = [
+  { title: 'Short-form video', body: 'Reels & TikToks that feel like a friend talking — hooks, voiceover, and honest product moments.', accent: 'var(--gc-emerald)' },
+  { title: 'Photo & lifestyle', body: 'Warm, natural stills for your feed, site, and ads — in real spaces with real people.', accent: 'var(--gc-lavender)' },
+  { title: 'Written & email', body: 'Captions, newsletters, and brand voice that carries — the words behind a 52–66% open rate.', accent: 'var(--gc-slate)' },
+];
+
+const rates = [
+  { tag: 'Single piece', tagColor: 'var(--gc-emerald)', title: 'One video or photo set', body: 'Concept, shoot, and edit for one deliverable with usage rights.', price: 'from $250' },
+  { tag: 'Content bundle', tagColor: 'var(--gc-emerald)', title: '3–5 pieces, mixed formats', body: 'A cohesive set for a launch or campaign — video, photo, and captions.', price: 'from $800', featured: true },
+  { tag: 'Monthly retainer', tagColor: 'var(--gc-lavender)', title: 'Ongoing partnership', body: 'A steady stream of content plus strategy — for brands building over time.', price: "let's talk" },
+];
+
+const portfolio = ['Reel / cover', 'Product still', 'Lifestyle', 'Campaign'];
+---
+
+<Layout title="UGC Portfolio">
+  <Nav variant="white" active="Tools" />
+
+  <div class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="rule" style="background:var(--gc-lavender);margin-bottom:24px"></div>
+      <div class="eyebrow eyebrow-sky" style="margin-bottom:18px">UGC &amp; creator partnerships · for brands</div>
+      <h1 class="serif-heading hero-heading" style="color:#fff">Content that gets <span class="serif-script" style="color:var(--gc-lavender-soft)">felt</span> — before it's sold.</h1>
+      <p class="hero-copy">Authentic, community-rooted content for brands who want to read like a neighbor's recommendation, not an ad. Real voice, real audience, real trust — from someone who's spent years building exactly that in Cincinnati.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:hello@girlhoodcincy.com">Start a collaboration →</a>
+        <a class="btn btn-outline-light" href="#rates">See the rate card</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat stat--divided"><div class="display-heading" style="font-size:38px;color:var(--gc-emerald)">52–66%</div><div class="stat-label">Newsletter open rate</div></div>
+    <div class="stat stat--divided"><div class="display-heading" style="font-size:38px;color:var(--gc-emerald)">12+</div><div class="stat-label">Events produced</div></div>
+    <div class="stat"><div class="display-heading" style="font-size:38px;color:var(--gc-emerald)">Cincy</div><div class="stat-label">Cincinnati rooted</div></div>
+  </div>
+
+  <div class="formats">
+    <div class="eyebrow eyebrow-emerald" style="font-weight:700;margin-bottom:12px">What I make</div>
+    <div class="serif-heading" style="font-size:32px;margin-bottom:30px">Formats that <span class="serif-script" style="color:var(--gc-lavender)">land.</span></div>
+    <div class="formats-grid">
+      {formats.map((f) => (
+        <div class="stat-card" style={`border-top-color:${f.accent}`}>
+          <div class="serif-heading" style="font-size:19px;margin-bottom:8px">{f.title}</div>
+          <p style="font-size:13.5px;font-weight:300;color:var(--gc-ink-muted);line-height:1.65">{f.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="portfolio">
+    <div class="eyebrow eyebrow-emerald" style="font-weight:700;margin-bottom:12px">Selected work</div>
+    <div class="serif-heading" style="font-size:26px;margin-bottom:24px">A few recent pieces.</div>
+    <div class="portfolio-grid">
+      {portfolio.map((label) => (
+        <div class="portfolio-slot">{label}</div>
+      ))}
+    </div>
+    <p style="font-size:12.5px;font-weight:300;color:var(--gc-ink-muted);margin-top:14px">Drag your own samples onto the frames above — they'll stay put.</p>
+  </div>
+
+  <div class="approach">
+    <div class="approach-inner">
+      <div class="eyebrow eyebrow-sky" style="font-weight:700;margin-bottom:18px">The approach</div>
+      <div class="serif-heading" style="font-size:26px;line-height:1.4;color:#fff">She feels seen before she feels sold to. <span style="color:var(--gc-lavender-soft)">That's the standard for everything I make.</span></div>
+      <p class="approach-copy">I don't chase trends or perform enthusiasm. I make content the way I build community — with discernment, warmth, and a real point of view. Brands come to me because my audience trusts me, and that trust doesn't transfer to things I don't believe in.</p>
+    </div>
+  </div>
+
+  <div id="rates" class="rates">
+    <div class="rates-head">
+      <div class="eyebrow eyebrow-emerald" style="font-weight:700;margin-bottom:12px">Rate card</div>
+      <div class="serif-heading" style="font-size:28px">Starting points, not <span class="serif-script" style="color:var(--gc-lavender)">packages.</span></div>
+      <p class="rates-copy">Every brand is scoped to fit. These give you a sense of where things begin.</p>
+    </div>
+    <div class="rates-grid">
+      {rates.map((r) => (
+        <div class={`rate-card${r.featured ? ' rate-card--featured' : ''}`}>
+          {r.featured && <div class="rate-badge">Most popular</div>}
+          <div class="eyebrow" style={`font-size:10px;margin-bottom:12px;color:${r.tagColor}`}>{r.tag}</div>
+          <div class="serif-heading" style="font-size:18px;margin-bottom:6px">{r.title}</div>
+          <p style="font-size:13px;font-weight:300;color:var(--gc-ink-muted);line-height:1.6;margin-bottom:16px">{r.body}</p>
+          <div class="display-heading" style="font-size:30px;color:var(--gc-slate)">{r.price}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="cta">
+    <div class="serif-heading" style="font-size:28px;margin-bottom:8px">Let's make something <span class="serif-script" style="color:var(--gc-emerald)">worth trusting.</span></div>
+    <p class="cta-copy">Tell me about your brand and what you're launching — I'll come back with a real idea, not a template.</p>
+    <a class="btn btn-primary" href="mailto:hello@girlhoodcincy.com">Email hello@girlhoodcincy.com</a>
+  </div>
+
+  <Footer />
+</Layout>
+
+<style>
+  .hero { background: var(--gc-navy); padding: 62px 44px 56px; position: relative; overflow: hidden; }
+  .hero-glow { position: absolute; top: -90px; right: -70px; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, rgba(186, 217, 243, .22), transparent 70%); }
+  .hero-inner { position: relative; z-index: 2; max-width: 720px; }
+  .hero-heading { font-size: 48px; line-height: 1.1; }
+  .hero-copy { font-size: 16px; font-weight: 300; color: rgba(255, 255, 255, .74); line-height: 1.85; max-width: 560px; margin: 22px 0 28px; }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  .stats { background: var(--gc-section); border-bottom: 1px solid var(--gc-border); padding: 34px 44px; display: flex; justify-content: center; flex-wrap: wrap; }
+  .stat { text-align: center; padding: 0 38px; }
+  .stat--divided { border-right: 1px solid var(--gc-border); }
+  .stat-label { font: 600 10px var(--font-sans); letter-spacing: .16em; text-transform: uppercase; color: var(--gc-ink-muted); margin-top: 6px; }
+
+  .formats { background: #fff; padding: 60px 44px; }
+  .formats-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+  .portfolio { background: var(--gc-cream); padding: 56px 44px; border-top: 1px solid rgba(45, 52, 71, .06); }
+  .portfolio-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .portfolio-slot {
+    width: 100%; height: 240px; display: flex; align-items: center; justify-content: center; text-align: center;
+    background: #fff; border: 1px solid var(--gc-border); border-radius: 10px; color: var(--gc-ink-muted); font-size: 13px;
+  }
+
+  .approach { background: var(--gc-navy); padding: 58px 44px; }
+  .approach-inner { max-width: 760px; margin: 0 auto; }
+  .approach-copy { font-size: 15px; font-weight: 300; color: rgba(255, 255, 255, .72); line-height: 1.85; margin-top: 20px; }
+
+  .rates { background: #fff; padding: 60px 44px; }
+  .rates-head { text-align: center; margin-bottom: 32px; }
+  .rates-copy { font-size: 13.5px; font-weight: 300; color: var(--gc-ink-muted); line-height: 1.6; max-width: 480px; margin: 10px auto 0; }
+  .rates-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 920px; margin: 0 auto; }
+  .rate-card { border: 1px solid var(--gc-border); border-radius: 10px; padding: 28px 26px; position: relative; }
+  .rate-card--featured { border: 1.5px solid var(--gc-emerald); }
+  .rate-badge {
+    position: absolute; top: -11px; left: 26px; background: var(--gc-emerald); color: #fff;
+    font: 700 9px var(--font-sans); letter-spacing: .14em; text-transform: uppercase; padding: 4px 12px; border-radius: 100px;
+  }
+
+  .cta { background: var(--gc-sage-light); border-top: 1px solid #dde6e2; padding: 56px 44px; text-align: center; }
+  .cta-copy { font-size: 14.5px; font-weight: 300; color: var(--gc-ink-muted); line-height: 1.75; max-width: 480px; margin: 0 auto 24px; }
+
+  @media (max-width: 760px) {
+    .formats-grid, .rates-grid { grid-template-columns: 1fr; }
+    .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>

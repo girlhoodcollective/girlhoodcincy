@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const tools = [
+  {
+    href: '/consultation-intake', accent: 'var(--gc-emerald)', tagColor: 'var(--gc-emerald)',
+    tag: 'For organizations · 8 min', title: 'Consultation Intake',
+    body: 'A five-part diagnostic for leaders. Tell me what\'s actually going on — the thing that keeps coming up, the conversation you\'ve been avoiding — and get a personalized read on the pattern underneath and where we\'d start.',
+    cta: 'Begin the intake →',
+  },
+  {
+    href: '/worth-quiz', accent: 'var(--gc-lavender)', tagColor: 'var(--gc-lavender)',
+    tag: 'For women · 20 questions', title: 'What Are You Worth?',
+    body: 'A warm skills inventory that names the things you\'ve been calling "just common sense." Map your real, marketable strengths to an income path that fits you — grounded in Cincinnati\'s actual market.',
+    cta: 'Take the quiz →',
+  },
+  {
+    href: '/ugc', accent: 'var(--gc-pink)', tagColor: 'var(--gc-pink-deep)',
+    tag: 'For brands', title: 'UGC Portfolio',
+    body: 'See the creator work, the approach, and the rate card. Authentic, community-rooted content for brands who want to be felt before they\'re sold — content that reads like a neighbor\'s recommendation, not an ad.',
+    cta: 'View the portfolio →',
+  },
+];
+---
+
+<Layout title="Tools">
+  <Nav variant="white" active="Tools" />
+
+  <div class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="eyebrow eyebrow-sky" style="margin-bottom:18px">Free · no email wall to look</div>
+      <h1 class="serif-heading hero-heading" style="color:#fff">Start with a <span class="serif-script" style="color:var(--gc-lavender-soft)">question.</span></h1>
+      <p class="hero-copy">Three tools to help you figure out what you actually need — for your organization, your career, or your brand. Answer honestly; the more specific you are, the more useful they get.</p>
+    </div>
+  </div>
+
+  <div class="tools-list">
+    {tools.map((t) => (
+      <a class="tool" href={t.href} style={`border-left-color:${t.accent}`}>
+        <div>
+          <div class="eyebrow" style={`font-size:10px;margin-bottom:8px;color:${t.tagColor}`}>{t.tag}</div>
+          <div class="serif-heading" style="font-size:26px;line-height:1.15">{t.title}</div>
+        </div>
+        <div>
+          <p class="tool-copy">{t.body}</p>
+          <span class="tool-cta" style={`color:${t.tagColor}`}>{t.cta}</span>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <Footer />
+</Layout>
+
+<style>
+  .hero { background: var(--gc-navy-deep); padding: 64px 44px 56px; text-align: center; position: relative; overflow: hidden; }
+  .hero-glow { position: absolute; top: -90px; left: -70px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(186, 217, 243, .22), transparent 70%); }
+  .hero-inner { position: relative; z-index: 2; }
+  .hero-heading { font-size: 46px; line-height: 1.1; max-width: 640px; margin: 0 auto; }
+  .hero-copy { font-size: 16px; font-weight: 300; color: rgba(255, 255, 255, .7); line-height: 1.8; max-width: 520px; margin: 20px auto 0; }
+
+  .tools-list { background: #fff; padding: 56px 44px; display: flex; flex-direction: column; gap: 20px; max-width: 920px; margin: 0 auto; }
+  .tool {
+    text-decoration: none; display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: center;
+    border: 1px solid var(--gc-border); border-radius: 8px; border-left-width: 5px; border-left-style: solid;
+    padding: 32px 34px; transition: transform .2s, box-shadow .2s;
+  }
+  .tool:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(53, 91, 116, .14); }
+  .tool-copy { font-size: 15px; font-weight: 300; color: var(--gc-ink); line-height: 1.8; margin-bottom: 12px; }
+  .tool-cta { font: 600 11px var(--font-sans); letter-spacing: .14em; text-transform: uppercase; }
+
+  @media (max-width: 700px) {
+    .tool { grid-template-columns: 1fr; }
+  }
+</style>

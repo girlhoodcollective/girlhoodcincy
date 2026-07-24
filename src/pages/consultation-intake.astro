@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import ConsultationIntake from '../components/ConsultationIntake';
+---
+
+<Layout title="Consultation Intake">
+  <Nav variant="navy" minimalLabel="Consultation Intake · Brittany Gruber" />
+
+  <div class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="eyebrow eyebrow-sky" style="margin-bottom:18px">Let's figure out what you actually need</div>
+      <h1 class="serif-heading hero-heading" style="color:#fff">You were never the problem. <span class="serif-script" style="color:var(--gc-lavender-soft)">Let's start there.</span></h1>
+      <p class="hero-copy">This intake takes about 8 minutes. Answer honestly — there are no right answers, and the more specific you are, the more useful this is for both of us.</p>
+    </div>
+  </div>
+
+  <ConsultationIntake client:load />
+</Layout>
+
+<style>
+  .hero { background: var(--gc-navy); padding: 60px 32px 40px; text-align: center; position: relative; overflow: hidden; }
+  .hero-glow { position: absolute; top: -90px; right: -70px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(186, 217, 243, .22), transparent 70%); }
+  .hero-inner { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; }
+  .hero-heading { font-size: 42px; line-height: 1.15; }
+  .hero-copy { font-size: 15px; font-weight: 300; color: rgba(255, 255, 255, .7); line-height: 1.8; max-width: 500px; margin: 18px auto 0; }
+
+  :global(.intake-body) { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+  :global(.progress-wrap) { max-width: 460px; margin: -32px auto 0; padding: 0 24px; }
+  :global(.progress-labels) { display: flex; justify-content: space-between; font: 600 10px var(--font-sans); letter-spacing: .14em; text-transform: uppercase; color: rgba(255, 255, 255, .5); margin-bottom: 8px; }
+  :global(.progress-track) { background: rgba(255, 255, 255, .12); border-radius: 100px; height: 4px; overflow: hidden; }
+  :global(.progress-fill) { height: 100%; background: var(--gc-emerald-soft); border-radius: 100px; transition: width .5s ease; }
+
+  :global(.intake-card) { background: #fff; border: 1px solid var(--gc-border); border-radius: 14px; box-shadow: 0 6px 28px rgba(53, 91, 116, .08); padding: 44px; margin-top: 36px; }
+  :global(.intake-sub) { font-size: 14.5px; font-weight: 300; color: var(--gc-ink-muted); line-height: 1.65; margin-bottom: 30px; }
+  :global(.field-label) { display: block; font: 600 12.5px var(--font-sans); color: var(--gc-slate); margin-bottom: 8px; }
+  :global(.field-hint) { font-size: 12.5px; font-weight: 300; color: var(--gc-ink-muted); line-height: 1.5; margin-bottom: 10px; }
+  :global(.intake-actions) { display: flex; gap: 12px; align-items: center; margin-top: 30px; }
+
+  :global(.opt-grid) { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 24px; }
+  :global(.check-opt) {
+    display: flex; gap: 10px; align-items: flex-start; padding: 14px 16px; border: 1.5px solid var(--gc-border);
+    border-radius: 8px; cursor: pointer; background: #fff; transition: border-color .2s, background .2s; user-select: none;
+  }
+  :global(.check-opt--sel) { border-color: var(--gc-emerald); background: var(--gc-sage-light); }
+  :global(.check-box) {
+    width: 18px; height: 18px; border-radius: 4px; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center;
+    justify-content: center; border: 2px solid #c3d0d8; background: transparent;
+  }
+  :global(.check-box--sel) { border-color: var(--gc-emerald); background: var(--gc-emerald); }
+
+  :global(.pill-row) { display: flex; flex-wrap: wrap; gap: 9px; }
+  :global(.pill-opt) {
+    padding: 10px 18px; border: 1.5px solid var(--gc-border); border-radius: 100px; cursor: pointer; font-size: 13.5px;
+    color: var(--gc-slate); background: #fff; transition: all .2s; user-select: none;
+  }
+  :global(.pill-opt--sel) { border-color: var(--gc-navy); background: var(--gc-navy); color: #fff; }
+
+  :global(.scale-labels) { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--gc-ink-muted); margin-bottom: 8px; }
+  :global(.scale-row) { display: flex; gap: 8px; }
+  :global(.scale-opt) {
+    width: 46px; height: 46px; border: 1.5px solid var(--gc-border); border-radius: 8px; cursor: pointer; font-size: 15px;
+    font-weight: 600; color: var(--gc-slate); background: #fff; display: flex; align-items: center; justify-content: center;
+    transition: all .2s; font-family: var(--font-sans);
+  }
+  :global(.scale-opt--sel) { border-color: var(--gc-emerald); background: var(--gc-emerald); color: #fff; }
+  :global(.safety-note) { background: var(--gc-sage-light); border-left: 3px solid var(--gc-emerald); padding: 14px 18px; border-radius: 0 8px 8px 0; margin-top: 14px; font-size: 13px; color: var(--gc-ink); line-height: 1.6; }
+
+  :global(.results-wrap) { margin-top: 36px; }
+  :global(.results-hero) { background: var(--gc-navy); border-radius: 14px; padding: 44px; text-align: center; position: relative; overflow: hidden; }
+  :global(.result-cards) { display: flex; flex-direction: column; gap: 14px; margin-top: 16px; }
+  :global(.result-card) { background: #fff; border: 1px solid var(--gc-border); border-radius: 12px; border-top: 3px solid var(--gc-emerald); padding: 28px 30px; }
+  :global(.result-quote) { background: var(--gc-slate); border-radius: 12px; padding: 26px 30px; margin-top: 14px; text-align: center; font-family: var(--font-serif); font-style: italic; font-size: 18px; color: #fff; line-height: 1.6; }
+  :global(.result-cta) { text-align: center; padding: 40px 20px 10px; }
+
+  @media (max-width: 600px) {
+    :global(.opt-grid) { grid-template-columns: 1fr; }
+  }
+</style>

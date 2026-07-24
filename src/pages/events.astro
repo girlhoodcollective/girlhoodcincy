@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import EventsExplorer from '../components/EventsExplorer';
+import { events, pastEvents } from '../data/events';
+
+const navyLinks = [
+  { label: 'Events & Workshops', href: '/events' },
+  { label: 'About', href: '/about' },
+  { label: 'Partners', href: '/partners' },
+];
+---
+
+<Layout title="Events & Workshops">
+  <Nav variant="navy" active="Events & Workshops" links={navyLinks} />
+
+  <div class="hero">
+    <div class="rule"></div>
+    <div class="eyebrow eyebrow-sky" style="margin-bottom:16px">Events &amp; Workshops</div>
+    <h1 class="display-heading hero-heading">Gather, make, <span class="serif-script" style="color:var(--gc-lavender-soft)">belong.</span></h1>
+    <p class="hero-copy">Brunches that fill a room, markets that build a neighborhood, and workshops where girls find their creative voice. Come as you are.</p>
+  </div>
+
+  <div class="upcoming">
+    <div class="upcoming-head">
+      <div>
+        <div class="eyebrow eyebrow-emerald" style="font-weight:700;margin-bottom:10px">Upcoming</div>
+        <div class="serif-heading" style="font-size:30px">What's coming up next</div>
+      </div>
+    </div>
+    <EventsExplorer events={events} client:load />
+  </div>
+
+  <div class="recap">
+    <div class="eyebrow eyebrow-emerald" style="font-weight:700;margin-bottom:10px">Looking back</div>
+    <div class="serif-heading" style="font-size:30px;margin-bottom:8px">Seriously proud of what we made.</div>
+    <p class="recap-copy">A look back at the rooms we've filled since 2025. Drop your own photos in to bring the gallery to life.</p>
+    <div class="gallery">
+      {pastEvents.map((p) => (
+        <div class="gcell">
+          <div class="gcell-photo">{p.title}</div>
+          <div class="gcap serif-heading" style="font-size:15px;margin-top:12px">{p.title}</div>
+          <div style="font:600 10px var(--font-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gc-ink-muted);margin-top:3px">{p.meta}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <Footer />
+</Layout>
+
+<style>
+  .hero { background: var(--gc-slate); padding: 56px 44px 52px; }
+  .hero-heading { font-size: 52px; color: #fff; line-height: 1.04; max-width: 640px; margin: 0; }
+  .hero-copy { font-size: 15px; font-weight: 300; color: rgba(255, 255, 255, .72); line-height: 1.85; max-width: 520px; margin-top: 20px; }
+
+  .upcoming { background: #fff; padding: 56px 44px 40px; }
+  .upcoming-head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 24px; }
+
+  :global(.ev-filters) { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+  :global(.fbtn) {
+    cursor: pointer;
+    border: 1px solid var(--gc-border);
+    border-radius: 100px;
+    padding: 9px 20px;
+    font: 600 11px var(--font-sans);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    background: #fff;
+    color: var(--gc-ink-muted);
+    transition: all .18s;
+  }
+  :global(.fbtn:hover) { border-color: var(--gc-emerald); color: var(--gc-emerald); }
+  :global(.fbtn--active) { border-color: var(--gc-emerald); background: var(--gc-emerald); color: #fff; }
+
+  :global(.ev-list) { display: flex; flex-direction: column; gap: 14px; }
+  :global(.evrow) { display: flex; border: 1px solid var(--gc-border); border-radius: 4px; overflow: hidden; transition: box-shadow .2s, transform .2s; }
+  :global(.evrow:hover) { box-shadow: 0 10px 30px rgba(53, 91, 116, .13); transform: translateY(-2px); }
+  :global(.evrow-date) { background: var(--gc-slate); width: 120px; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 22px 12px; }
+  :global(.evrow-body) { padding: 22px 28px; flex: 1; min-width: 0; }
+  :global(.evrow-meta) { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+  :global(.ev-badge) { display: inline-block; font: 700 10px var(--font-sans); letter-spacing: .14em; text-transform: uppercase; padding: 4px 10px; border-radius: 2px; }
+  :global(.evrow-desc) { font-size: 13.5px; font-weight: 300; color: var(--gc-ink); line-height: 1.65; max-width: 600px; margin-bottom: 14px; }
+  :global(.evrow-actions) { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+
+  :global(.ev-modal-backdrop) {
+    position: fixed; inset: 0; background: rgba(27, 34, 54, .55); backdrop-filter: blur(3px);
+    display: flex; align-items: center; justify-content: center; z-index: 500; padding: 24px;
+  }
+  :global(.ev-modal) { background: #fff; border-radius: 6px; max-width: 560px; width: 100%; max-height: 90vh; overflow: auto; box-shadow: 0 24px 70px rgba(27, 34, 54, .4); }
+  :global(.ev-modal-head) { background: var(--gc-slate); padding: 28px 32px; position: relative; }
+  :global(.ev-modal-close) {
+    position: absolute; top: 18px; right: 20px; background: rgba(255, 255, 255, .12); border: none;
+    color: #fff; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-size: 16px; line-height: 1;
+  }
+  :global(.ev-modal-body) { padding: 28px 32px; }
+  :global(.ev-form-grid) { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  .recap { background: var(--gc-section); padding: 56px 44px; }
+  .recap-copy { font-size: 14px; font-weight: 300; color: var(--gc-ink-muted); line-height: 1.7; max-width: 560px; margin-bottom: 28px; }
+  .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .gcell-photo {
+    width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 12px;
+    background: var(--gc-sage-light); border-radius: 6px; color: var(--gc-emerald); font: 600 12px var(--font-sans); letter-spacing: .04em;
+  }
+  .gcell:hover .gcap { color: var(--gc-emerald); }
+
+  @media (max-width: 760px) {
+    .gallery { grid-template-columns: repeat(2, 1fr); }
+    :global(.evrow) { flex-direction: column; }
+    :global(.evrow-date) { width: 100%; flex-direction: row; gap: 10px; padding: 12px; }
+  }
+</style>

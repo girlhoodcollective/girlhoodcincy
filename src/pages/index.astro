@@ -1,0 +1,232 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { events } from '../data/events';
+
+const teaser = events.slice(0, 3);
+---
+
+<Layout title="Home">
+  <Nav variant="white" />
+
+  <div class="brand-strip">
+    <div class="eyebrow eyebrow-emerald" style="margin-bottom:8px">Greater Cincinnati · est. 2025</div>
+    <div class="serif-heading" style="font-size:26px">We believe in <span class="serif-script" style="color:var(--gc-emerald)">doing it differently.</span></div>
+    <p class="lede">Events, workshops, consulting, and community for women and girls of every age and industry — led by a founder who connects the dots for a living.</p>
+  </div>
+
+  <div class="two-door">
+    <div class="door door--navy">
+      <div class="door-glow door-glow--top"></div>
+      <div class="door-content">
+        <div class="eyebrow eyebrow-sky" style="margin-bottom:18px">For organizations &amp; leaders</div>
+        <h1 class="serif-heading door-heading" style="color:#fff">Build a room where people are <span class="serif-script" style="color:var(--gc-lavender-soft)">understood.</span></h1>
+        <p class="door-copy" style="color:rgba(255,255,255,.72)">Strategy, HR &amp; people, and program design — with a facilitator who's lived the gap between policy and belonging.</p>
+        <a class="btn btn-primary" href="/work-with-me">Work with me →</a>
+      </div>
+    </div>
+    <div class="door door--cream">
+      <div class="door-glow door-glow--bottom"></div>
+      <div class="door-content">
+        <div class="eyebrow eyebrow-emerald" style="margin-bottom:18px">For women &amp; community</div>
+        <h2 class="serif-heading door-heading">Find your people. Come sit at the <span class="serif-script" style="color:var(--gc-emerald)">table.</span></h2>
+        <p class="door-copy" style="color:var(--gc-ink-muted)">Brunches, workshops, and markets for women and girls of every age and industry — right here in Greater Cincinnati.</p>
+        <a class="btn btn-secondary" href="/events">See what's on →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="promise-strip">
+    <span class="eyebrow eyebrow-emerald" style="letter-spacing:.16em">Events</span><span class="promise-dot">✦</span>
+    <span class="eyebrow eyebrow-emerald" style="letter-spacing:.16em">Consulting</span><span class="promise-dot">✦</span>
+    <span class="eyebrow eyebrow-emerald" style="letter-spacing:.16em">Workshops</span><span class="promise-dot">✦</span>
+    <span class="eyebrow eyebrow-emerald" style="letter-spacing:.16em">Community</span>
+  </div>
+
+  <div class="tools-band">
+    <div class="eyebrow eyebrow-sky" style="font-weight:700;margin-bottom:12px">Start with a question</div>
+    <div class="serif-script" style="font-size:30px;color:#fff;margin-bottom:8px">Not sure which door?</div>
+    <p class="lede" style="color:rgba(255,255,255,.62);margin:0 auto 30px">Three free tools help you figure out what you actually need — for your organization, your career, or your brand.</p>
+    <div class="tools-grid">
+      <a class="toolcard" href="/consultation-intake">
+        <div class="eyebrow eyebrow-sky" style="font-size:9px;margin-bottom:12px">For orgs · 8 min</div>
+        <div class="serif-heading" style="color:#fff;font-size:19px;margin-bottom:6px">Consultation Intake</div>
+        <p class="toolcard-copy">Answer honestly, get a personalized read on what you need.</p>
+      </a>
+      <a class="toolcard" href="/worth-quiz">
+        <div class="eyebrow eyebrow-sky" style="font-size:9px;margin-bottom:12px">For women · 20 Q</div>
+        <div class="serif-heading" style="color:#fff;font-size:19px;margin-bottom:6px">What Are You Worth?</div>
+        <p class="toolcard-copy">Map your real, marketable skills to a Cincinnati path.</p>
+      </a>
+      <a class="toolcard" href="/ugc">
+        <div class="eyebrow eyebrow-sky" style="font-size:9px;margin-bottom:12px">For brands</div>
+        <div class="serif-heading" style="color:#fff;font-size:19px;margin-bottom:6px">UGC Portfolio</div>
+        <p class="toolcard-copy">The creator work, the approach, and the rate card.</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="parallel-cols">
+    <div class="col col--white">
+      <div class="eyebrow eyebrow-emerald" style="font-weight:700;letter-spacing:.2em;margin-bottom:8px">Work with me</div>
+      <div class="serif-heading" style="font-size:24px;margin-bottom:20px">The same care, brought to <span class="serif-script" style="color:var(--gc-emerald)">your</span> room.</div>
+      <a class="svcrow" href="/work-with-me">
+        <div class="serif-heading" style="font-size:18px">Strategic Consultation</div>
+        <p class="svcrow-copy">Think, plan, and decide with an outside voice.</p>
+      </a>
+      <a class="svcrow" href="/work-with-me">
+        <div class="serif-heading" style="font-size:18px">HR &amp; People Strategy</div>
+        <p class="svcrow-copy">Culture and environments built for real people.</p>
+      </a>
+      <a class="svcrow" href="/work-with-me">
+        <div class="serif-heading" style="font-size:18px">Program Design</div>
+        <p class="svcrow-copy">Build what your community actually needs.</p>
+      </a>
+      <a class="svcrow svcrow--last" href="/work-with-me">
+        <div class="serif-heading" style="font-size:18px">UGC &amp; Creator Partnerships</div>
+        <p class="svcrow-copy">Content brands are felt through, not sold with.</p>
+      </a>
+      <a class="navlink" href="/work-with-me" style="color:var(--gc-emerald)">See services &amp; book →</a>
+    </div>
+    <div class="col col--section">
+      <div class="eyebrow" style="font-weight:700;letter-spacing:.2em;color:var(--gc-slate);margin-bottom:8px">Events &amp; community</div>
+      <div class="serif-heading" style="font-size:24px;margin-bottom:20px">Come sit at the <span class="serif-script" style="color:var(--gc-emerald)">table.</span></div>
+      {teaser.map((e) => (
+        <a class="evcard" href="/events">
+          <div class="evcard-date">
+            <div class="eyebrow eyebrow-emerald" style="font-size:9px">{e.mon}</div>
+            <div class="display-heading" style="font-size:30px;color:var(--gc-slate);line-height:1">{e.day}</div>
+          </div>
+          <div>
+            <div class="serif-heading" style="font-size:17px">{e.title}</div>
+            <p class="evcard-copy">{e.where}</p>
+          </div>
+        </a>
+      ))}
+      <a class="navlink" href="/events" style="color:var(--gc-emerald)">See all events →</a>
+    </div>
+  </div>
+
+  <div class="bridge">
+    <div class="eyebrow eyebrow-sky" style="font-weight:700;margin-bottom:20px">Why this is personal</div>
+    <div class="serif-heading bridge-copy" style="color:#fff">Diagnosed with ADHD and autism later in life, I know what it's like to navigate a world that wasn't built for how your brain works. <span style="color:var(--gc-lavender-soft)">That's the whole reason both doors exist.</span></div>
+    <div class="serif-script" style="font-size:22px;color:var(--gc-lavender-soft);margin-top:20px">— Brittany</div>
+  </div>
+
+  <div class="newsletter-block">
+    <div class="eyebrow eyebrow-sky" style="font-weight:700;margin-bottom:12px">The newsletter</div>
+    <div class="serif-script" style="font-size:42px;color:#fff;line-height:1.1;margin-bottom:8px">A Voice That Carries</div>
+    <p class="lede" style="color:rgba(255,255,255,.72);margin:12px auto 26px">The events, workshops, and neighbors worth knowing — warmth, never noise. A <strong style="color:#fff;font-weight:600">52–66% open rate</strong> says it lands.</p>
+    <form class="newsletter-form" action="/newsletter" method="get">
+      <input class="nl-input" type="email" name="email" placeholder="you@cincinnati.com" required />
+      <button class="btn btn-primary" type="submit">Subscribe</button>
+    </form>
+  </div>
+
+  <Footer />
+</Layout>
+
+<style>
+  .brand-strip {
+    background: var(--gc-cream);
+    padding: 30px 44px 26px;
+    text-align: center;
+    border-bottom: 1px solid rgba(45, 52, 71, .06);
+  }
+  .lede {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--gc-ink-muted);
+    line-height: 1.8;
+    max-width: 540px;
+    margin: 10px auto 0;
+  }
+  .two-door { display: flex; align-items: stretch; }
+  .door { width: 50%; padding: 58px 44px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+  .door--navy { background: var(--gc-navy); }
+  .door--cream { background: var(--gc-cream); }
+  .door-glow { position: absolute; width: 300px; height: 300px; border-radius: 50%; }
+  .door-glow--top { top: -80px; left: -60px; background: radial-gradient(circle, rgba(186, 217, 243, .22), transparent 70%); }
+  .door-glow--bottom { bottom: -80px; right: -60px; background: radial-gradient(circle, rgba(79, 178, 134, .14), transparent 70%); }
+  .door-content { position: relative; z-index: 2; }
+  .door-heading { font-size: 40px; line-height: 1.1; }
+  .door--cream .door-heading { color: var(--gc-slate); }
+  .door-copy { font-size: 15px; font-weight: 300; line-height: 1.85; margin: 20px 0 26px; max-width: 420px; }
+
+  .promise-strip {
+    background: var(--gc-sage-light);
+    border-top: 1px solid #dde6e2;
+    border-bottom: 1px solid #dde6e2;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+  }
+  .promise-dot { color: var(--gc-lavender); }
+
+  .tools-band { background: var(--gc-navy-deep); padding: 56px 44px; text-align: center; }
+  .tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; max-width: 900px; margin: 0 auto; }
+  .toolcard {
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .14);
+    border-radius: 8px;
+    padding: 26px 22px;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .toolcard:hover { transform: translateY(-3px); }
+  .toolcard-copy { font-size: 13px; font-weight: 300; color: rgba(255, 255, 255, .6); line-height: 1.6; }
+
+  .parallel-cols { display: flex; }
+  .col { width: 50%; padding: 54px 44px; }
+  .col--white { background: #fff; border-right: 1px solid var(--gc-border); }
+  .col--section { background: var(--gc-section); }
+  .svcrow { display: block; text-decoration: none; border-top: 1px solid var(--gc-border); padding: 16px 12px 15px; transition: background .2s; }
+  .svcrow:hover { background: var(--gc-sage-light); }
+  .svcrow--last { border-bottom: 1px solid var(--gc-border); margin-bottom: 20px; }
+  .svcrow-copy { font-size: 13px; font-weight: 300; color: var(--gc-ink-muted); line-height: 1.6; margin-top: 3px; }
+  .evcard {
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid var(--gc-border);
+    border-radius: 6px;
+    padding: 18px 20px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 12px;
+    transition: box-shadow .2s;
+  }
+  .evcard:hover { box-shadow: 0 8px 26px rgba(53, 91, 116, .14); }
+  .evcard-date { text-align: center; flex-shrink: 0; width: 40px; }
+  .evcard-copy { font-size: 12.5px; font-weight: 300; color: var(--gc-ink-muted); margin-top: 2px; }
+
+  .bridge { background: var(--gc-slate); padding: 60px 44px; text-align: center; }
+  .bridge-copy { font-size: 28px; line-height: 1.4; max-width: 720px; margin: 0 auto; }
+
+  .newsletter-block { background: var(--gc-navy); padding: 58px 44px; text-align: center; }
+  .newsletter-form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .nl-input {
+    background: rgba(255, 255, 255, .09);
+    border: 1px solid rgba(255, 255, 255, .22);
+    border-radius: 100px;
+    padding: 14px 22px;
+    font: 400 14px var(--font-sans);
+    color: #fff;
+    width: 300px;
+    outline: none;
+  }
+  .nl-input::placeholder { color: rgba(255, 255, 255, .4); }
+
+  @media (max-width: 760px) {
+    .two-door, .parallel-cols, .tools-grid { flex-direction: column; }
+    .tools-grid { display: flex; flex-direction: column; }
+    .door, .col { width: 100%; }
+    .col--white { border-right: none; }
+  }
+</style>

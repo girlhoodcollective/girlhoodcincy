@@ -1,0 +1,37 @@
+---
+export interface Props {
+  showExplore?: boolean;
+}
+const { showExplore = true } = Astro.props;
+---
+
+<footer class="site-footer">
+  <a href="/" style="text-decoration:none">
+    <div class="brand" style="flex-direction:column;align-items:flex-start;gap:2px;margin-bottom:2px">
+      <span class="brand-name" style="color:#fff">Girlhood</span>
+      <span class="brand-suffix">Collective</span>
+    </div>
+    <p class="footer-tagline">
+      Cincinnati, OH · girlhoodcincy.com<br />
+      @girlhood_cincy · Uniting makers, teachers,<br />
+      leaders &amp; learners since 2025.
+    </p>
+  </a>
+  <div style="display:flex;gap:44px;flex-wrap:wrap">
+    {showExplore && (
+      <div>
+        <p class="footer-col-label">Explore</p>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <a class="navlink" href="/work-with-me" style="color:rgba(255,255,255,.6)">Work With Me</a>
+          <a class="navlink" href="/events" style="color:rgba(255,255,255,.6)">Events</a>
+          <a class="navlink" href="/tools" style="color:rgba(255,255,255,.6)">Tools</a>
+          <a class="navlink" href="/about" style="color:rgba(255,255,255,.6)">About</a>
+        </div>
+      </div>
+    )}
+    <div style="text-align:right">
+      <p class="footer-col-label">Say hello</p>
+      <div class="footer-say-hello">hello@girlhoodcincy.com</div>
+    </div>
+  </div>
+</footer>

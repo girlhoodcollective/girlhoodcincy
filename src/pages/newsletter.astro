@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { issues } from '../data/newsletterIssues';
+
+const navyLinks = [
+  { label: 'Events & Workshops', href: '/events' },
+  { label: 'About', href: '/about' },
+  { label: 'Partners', href: '/partners' },
+];
+---
+
+<Layout title="Newsletter">
+  <Nav variant="navy" links={navyLinks} />
+
+  <div class="hero">
+    <div class="eyebrow eyebrow-sky" style="margin-bottom:16px">The newsletter</div>
+    <div class="serif-script" style="font-size:52px;color:#fff;line-height:1.08">A Voice That Carries</div>
+    <p class="hero-copy">The events, workshops, and neighbors worth knowing — delivered with warmth, never noise. Twice a month, from our Greater Cincinnati to your inbox.</p>
+    <div class="open-rate">
+      <span class="display-heading" style="font-size:26px;color:var(--gc-lavender-soft)">52–66%</span>
+      <span style="font:600 10px var(--font-sans);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)">open rate</span>
+    </div>
+
+    <div id="nl-success" class="nl-success" hidden>
+      <div style="font-size:30px;margin-bottom:8px">💌</div>
+      <div class="serif-script" style="font-size:26px;color:#fff;margin-bottom:6px">You're on the list!</div>
+      <p style="font-size:13.5px;font-weight:300;color:rgba(255,255,255,.7);line-height:1.7">Watch your inbox — the next issue lands in a week or two. So glad you're here.</p>
+    </div>
+    <form id="nl-form" class="nl-form" data-netlify="true" name="newsletter">
+      <input class="nl-input" type="email" name="email" placeholder="you@cincinnati.com" required />
+      <button class="btn btn-primary btn-sm" type="submit">Subscribe</button>
+    </form>
+  </div>
+
+  <div class="archive">
+    <div class="eyebrow eyebrow-emerald" style="font-weight:700;margin-bottom:10px">The archive</div>
+    <div class="serif-heading" style="font-size:30px;margin-bottom:8px">Past issues</div>
+    <p class="archive-copy">Catch up on what you missed. A little of everything we've been up to.</p>
+    <div class="issues-grid">
+      {issues.map((i) => (
+        <div class="isscard" style={`border-top-color:${i.accent}`}>
+          <div class="isscard-head">
+            <span class="eyebrow eyebrow-emerald" style="font-size:10px">{i.vol}</span>
+            <span style="font:600 11px var(--font-sans);color:var(--gc-ink-muted)">{i.date}</span>
+          </div>
+          <div class="serif-heading" style="font-size:19px;margin-bottom:8px">{i.title}</div>
+          <p class="isscard-copy">{i.excerpt}</p>
+          <span class="readlink">Read issue →</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <Footer showExplore={false} />
+</Layout>
+
+<script>
+  const form = document.getElementById('nl-form') as HTMLFormElement | null;
+  const success = document.getElementById('nl-success');
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    form.hidden = true;
+    if (success) success.hidden = false;
+  });
+</script>
+
+<style>
+  .hero { background: var(--gc-slate); padding: 60px 44px 56px; text-align: center; }
+  .hero-copy { font-size: 15px; font-weight: 300; color: rgba(255, 255, 255, .74); line-height: 1.85; max-width: 520px; margin: 16px auto 8px; }
+  .open-rate { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 28px; }
+  .nl-form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .nl-input { background: rgba(255, 255, 255, .09); border: 1px solid rgba(255, 255, 255, .22); border-radius: 3px; padding: 14px 20px; font: 400 14px var(--font-sans); color: #fff; width: 320px; outline: none; }
+  .nl-input::placeholder { color: rgba(255, 255, 255, .45); }
+  .nl-success { max-width: 440px; margin: 0 auto; background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .2); border-radius: 6px; padding: 28px 24px; }
+
+  .archive { background: #fff; padding: 56px 44px 64px; }
+  .archive-copy { font-size: 14px; font-weight: 300; color: var(--gc-ink-muted); line-height: 1.7; max-width: 520px; margin-bottom: 28px; }
+  .issues-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .isscard { border: 1px solid var(--gc-border); border-radius: 4px; border-top: 3px solid; padding: 24px 26px; transition: box-shadow .2s, transform .2s; cursor: default; }
+  .isscard:hover { box-shadow: 0 10px 28px rgba(53, 91, 116, .13); transform: translateY(-2px); }
+  .isscard:hover .readlink { color: var(--gc-emerald); }
+  .isscard-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+  .isscard-copy { font-size: 13px; font-weight: 300; color: var(--gc-ink-muted); line-height: 1.65; margin-bottom: 14px; }
+  .readlink { font: 600 11px var(--font-sans); letter-spacing: .12em; text-transform: uppercase; color: var(--gc-slate); transition: color .2s; }
+
+  @media (max-width: 620px) {
+    .issues-grid { grid-template-columns: 1fr; }
+  }
+</style>

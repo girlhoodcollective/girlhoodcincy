@@ -1,0 +1,15 @@
+---
+export interface Props {
+  number: string;
+  title: string;
+  body: string;
+  accent?: string;
+}
+const { number, title, body, accent = 'var(--gc-emerald)' } = Astro.props;
+---
+
+<div class="stat-card" style={`border-top-color:${accent}`}>
+  <div class="card-num">{number}</div>
+  <div class="serif-heading" style="font-size:16px;margin-bottom:6px">{title}</div>
+  <p style="font-size:13px;font-weight:300;color:var(--gc-ink-muted);line-height:1.65">{body}</p>
+</div>

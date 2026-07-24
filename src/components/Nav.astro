@@ -1,0 +1,37 @@
+---
+export interface Props {
+  variant?: 'white' | 'navy';
+  active?: string;
+  links?: { label: string; href: string }[];
+  minimalLabel?: string;
+}
+
+const {
+  variant = 'white',
+  active = '',
+  links = [
+    { label: 'Work With Me', href: '/work-with-me' },
+    { label: 'Events', href: '/events' },
+    { label: 'Tools', href: '/tools' },
+    { label: 'About', href: '/about' },
+  ],
+  minimalLabel,
+} = Astro.props;
+---
+
+<nav class={`site-nav site-nav--${variant}`}>
+  <a href="/" class="brand">
+    <span class="brand-name">Girlhood</span>
+    <span class="brand-suffix">Collective</span>
+  </a>
+  {minimalLabel ? (
+    <div class="navlink" style="letter-spacing:.2em">{minimalLabel}</div>
+  ) : (
+    <div class="nav-links">
+      {links.map((link) => (
+        <a class={`navlink${active === link.label ? ' active' : ''}`} href={link.href}>{link.label}</a>
+      ))}
+      <a class="btn btn-primary btn-sm" href="/newsletter">Newsletter</a>
+    </div>
+  )}
+</nav>
