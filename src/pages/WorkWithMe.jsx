@@ -38,6 +38,20 @@ const SERVICES = [
   },
 ];
 
+const BRANDS = [
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4419.jpg?v=1784511473', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4050.jpg?v=1784511429', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4417.jpg?v=1784511337', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4418.jpg?v=1784510803', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4103.jpg?v=1784510675', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Untitled_2Bdesign_2B_25286_2529.webp?v=1784503719', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/PillarLogoSalmon_edited_edited.png?v=1784503720', alt: 'Pillar' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/full-ks-logo.png?v=1784503720', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo-1.png?v=1784503720', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo-web.png?v=1784503719', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo.png?v=1784511511', alt: 'Brand we\'ve worked with' },
+];
+
 const STEPS = [
   { border: 'var(--gc-emerald)', n: '1', title: 'Start with the intake', body: 'An 8-minute diagnostic tells me what you\'re really carrying — before we ever talk.' },
   { border: 'var(--gc-lavender)', n: '2', title: 'A real conversation', body: 'No pitch, no pressure. An honest look at whether I\'m the right person for this.' },
@@ -146,6 +160,37 @@ export default function WorkWithMe() {
               <p style={{ fontSize: 13, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{s.body}</p>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div style={{ background: '#fff', padding: '58px 44px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Trusted by</div>
+          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24 }}>Brands we've worked with.</div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 14 }}>
+            {BRANDS.map((b, i) => (
+              <div
+                key={b.src + i}
+                style={{
+                  background: '#fff',
+                  border: '1px solid var(--gc-border)',
+                  borderRadius: 8,
+                  height: 110,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: 18,
+                }}
+              >
+                <img
+                  src={b.src}
+                  alt={b.alt}
+                  loading="lazy"
+                  style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', display: 'block' }}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
