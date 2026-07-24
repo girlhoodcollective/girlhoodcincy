@@ -5,14 +5,6 @@ import ImageSlot from '../components/ImageSlot.jsx';
 
 const EVENTS = [
   {
-    id: 'brunch', mon: 'Jul', day: '18', year: '2026', cat: 'Brunch',
-    badgeBg: 'var(--gc-blush)', badgeText: 'var(--gc-slate)',
-    title: 'Better, together.', where: 'Sat, Jul 18 · 10 AM–1 PM · Columbia Center',
-    price: '$75 per seat · benefiting EIE',
-    desc: "Our flagship fundraiser — an intimate, seated brunch bringing Cincinnati's most engaged women into one room to connect, learn from an expert panel, and give.",
-    long: "More than a brunch. An upscale, seated morning of expert panelists, a real EIE student story, and generous conversation — with a portion of every $75 seat going directly to Endurance in Education's youth mentorship work. Saturday, July 18, 2026 · 10 AM–1 PM at the Columbia Center.",
-  },
-  {
     id: 'market', mon: 'Sep', day: '13', year: '2026', cat: 'Market',
     badgeBg: 'var(--gc-sage-light)', badgeText: 'var(--gc-emerald)',
     title: 'Girlhood Goes to Market', where: 'Fall Makers Market · Cincinnati',
@@ -21,20 +13,36 @@ const EVENTS = [
     long: 'A free, open-to-all afternoon market featuring 20+ local women makers, seasonal florals from the shop, and live music. Bring a friend, bring your kids, bring cash for the makers.',
   },
   {
-    id: 'studio', mon: 'Oct', day: '02', year: '2026', cat: 'Workshop',
+    id: 'dream-big', mon: 'Sep', day: '12', year: '2026', cat: 'Workshop',
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
-    title: 'Studio Art Series', where: '4 Wednesdays · Girls 9+',
-    price: '$150 · materials included',
-    desc: 'An immersive four-week workshop where girls use art as a tool for self-expression, reflection, and confidence building. No experience required.',
-    long: 'Four Wednesdays of ink, watercolor, acrylics, and oil pastels — guided by a local artist in a small, supportive studio of ten. Every student leaves with finished pieces to hang and be genuinely proud of.',
+    title: 'Dream Big', where: 'Monthly Experience · Girls 8–12',
+    price: '$40 · materials included',
+    desc: "A vision board, a mini dance session, and a letter to your future self — with Jess Evans of Dance Factory Fitness on goal-setting and dreaming with purpose.",
+    long: "Meet Jess Evans and hear her story of leaving NYC to open Dance Factory Fitness. A confidence-building dance-cardio session, hands-on vision board building, and a future-self letter to open in a year. 120 minutes · girls 8–12.",
   },
   {
-    id: 'florals', mon: 'Nov', day: '07', year: '2026', cat: 'Workshop',
+    id: 'bloom-confidence', mon: 'Oct', day: '10', year: '2026', cat: 'Workshop',
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
-    title: 'An Evening of Florals', where: 'Seasonal Arranging · Ages 16+',
-    price: '$75 · flowers & vessel included',
-    desc: 'A slow, hands-on evening building your own seasonal arrangement — a little wine, a lot of greenery, and space to breathe.',
-    long: 'Learn the basics of seasonal arranging with florals fresh from the shop. You bring yourself; we bring the blooms, the vessel, and a warm room full of good company. Leave with an arrangement for your table.',
+    title: 'Bloom with Confidence', where: 'Monthly Experience · Girls 8–12',
+    price: '$40 · materials included',
+    desc: "Build a paper-petal \"Confidence Garden\" naming your strengths and coping tools, with play therapist Val Strunk of Wired to Bloom.",
+    long: "Meet Val Strunk and learn what a play therapist actually does. Build a Confidence Garden keepsake — each petal names a strength or coping tool — plus a guided journal prompt on what helps you bloom on a hard day. 120 minutes · girls 8–12.",
+  },
+  {
+    id: 'treasure-story', mon: 'Nov', day: '14', year: '2026', cat: 'Workshop',
+    badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
+    title: 'Treasure Your Story', where: 'Monthly Experience · Girls 8–12',
+    price: '$40 · materials included',
+    desc: "Decorate a keepsake treasure box, learn saving vs. spending, and set a savings goal — with Courtney Reinhold of Little Treasurer.",
+    long: "Meet Courtney Reinhold and the story behind Little Treasurer and Finley the panda. A money-basics mini-lesson (coin ID, saving vs. spending, goal setting), a decorated keepsake treasure box, and a short memory or goal story to put inside. 120 minutes · girls 8–12.",
+  },
+  {
+    id: 'sweet-success', mon: 'Dec', day: '12', year: '2026', cat: 'Workshop',
+    badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
+    title: 'Sweet Success', where: 'Monthly Experience · Girls 8–12',
+    price: '$40 · materials included',
+    desc: 'Decorate cupcakes or cookies and design the packaging to give them away — with Trillium Cake Co. on small-business basics.',
+    long: "Meet the Trillium Cake Co. baker and her small-business story. Decorate cupcakes or cookies, then a mini branding lesson to design a simple label or box before gifting your treats to someone you choose. 120 minutes · girls 8–12.",
   },
   {
     id: 'holiday', mon: 'Dec', day: '06', year: '2026', cat: 'Market',
@@ -45,23 +53,56 @@ const EVENTS = [
     long: 'Our cozy winter market: handmade gifts from local women makers, holiday florals and wreaths, hot cocoa for the kids, and a warm room to end the year in.',
   },
   {
-    id: 'intentions', mon: 'Jan', day: '17', year: '2027', cat: 'Brunch',
-    badgeBg: 'var(--gc-blush)', badgeText: 'var(--gc-slate)',
-    title: 'New Year Intentions Brunch', where: "Women's Brunch · Cincinnati",
-    price: 'From $55',
-    desc: 'A quiet, intentional brunch to start the year on purpose — journaling, honest conversation, and women of every age at one table.',
-    long: 'No resolutions, no pressure. Just a seated brunch, a guided intention-setting session, and a room of women choosing to start the year with clarity and community.',
+    id: 'every-brain-belongs', mon: 'Jan', day: '09', year: '2027', cat: 'Workshop',
+    badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
+    title: 'Every Brain Belongs', where: 'Monthly Experience · Girls 8–12',
+    price: '$40 · materials included',
+    desc: 'Build a personalized learning toolkit and explore how every brain learns differently, with Dana Huls of Learn With Me Cincy.',
+    long: "Meet Dana Huls and her work on math anxiety and learning differences. Identify your own visual, auditory, or hands-on learning style, build a personalized toolkit, and reflect on a growth-mindset journal prompt. 120 minutes · girls 8–12.",
+  },
+  {
+    id: 'building-community', mon: 'Feb', day: '13', year: '2027', cat: 'Workshop',
+    badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
+    title: 'Building Community', where: 'Monthly Experience · Girls 8–12',
+    price: '$40 · materials included',
+    desc: 'Design a kindness campaign or neighborhood guide in small groups, with Abbey Cummins of Everything Cincy.',
+    long: "Meet Abbey Cummins and how she built Everything Cincy to connect people to the city. Small groups design a kindness campaign or mini neighborhood guide, present it to the room, then assemble a take-home community challenge kit. 120 minutes · girls 8–12.",
+  },
+  {
+    id: 'ready-to-lead', mon: 'Mar', day: '13', year: '2027', cat: 'Workshop',
+    badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
+    title: 'Ready to Lead', where: 'Monthly Experience · Girls 8–12',
+    price: '$40 · materials included',
+    desc: 'A team challenge and an intro to emergency preparedness, with an American Red Cross volunteer.',
+    long: "An intro-level taste of preparedness (not a certification course): build a mini emergency kit, practice a scenario as a team, and talk through what to do and who to call. Every girl leaves with a take-home preparedness resource kit. 120 minutes · girls 8–12.",
+  },
+  {
+    id: 'mix-it-up', mon: 'Apr', day: '10', year: '2027', cat: 'Workshop',
+    badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
+    title: 'Mix It Up', where: 'Monthly Experience · Girls 8–12',
+    price: '$40 · materials included',
+    desc: 'Create a signature mocktail, name it, and design the menu card — with the founder behind Nava.',
+    long: "Meet the Nava founder and her story building a coffee and beverage brand from a truck. Small groups create a signature mocktail recipe, design a simple menu card, name and brand the drink, then taste-test and serve each other. 120 minutes · girls 8–12.",
+  },
+  {
+    id: 'launch-big-idea', mon: 'May', day: '08', year: '2027', cat: 'Workshop',
+    badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
+    title: 'Launch Your Big Idea', where: 'Monthly Experience · Girls 8–12',
+    price: '$40 · materials included',
+    desc: 'Develop a business idea, sketch a logo, package a product, and pitch it — with Truckshop founder Ashley Volbrecht.',
+    long: "Meet Ashley Volbrecht, founder of Truckshop, and her origin story. Develop a simple business idea, sketch a logo, package a sample product, and practice a one-minute pitch in pairs — with volunteers pitching to the whole group. 120 minutes · girls 8–12.",
   },
 ];
 
 const PAST = [
+  { title: 'Better, Together — Girlhood Brunch', caption: 'July 2026 · Flagship fundraiser for EIE' },
   { title: 'Spring Studio Art Series', caption: 'April 2025 · 10 students' },
   { title: 'Rooftop Summer Social', caption: 'July 2025 · Cincinnati' },
   { title: 'Back-to-School Market', caption: 'August 2025 · 22 makers' },
   { title: "Founders' Coffee", caption: "February 2025 · Where it began" },
 ];
 
-const CATS = ['All', 'Brunch', 'Market', 'Workshop'];
+const CATS = ['All', 'Market', 'Workshop'];
 
 export default function Events() {
   const [filter, setFilter] = useState('All');

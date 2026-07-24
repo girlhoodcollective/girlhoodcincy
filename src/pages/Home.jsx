@@ -139,15 +139,12 @@ export default function Home() {
           </div>
           <Link className="hover-shadow" to="/events" style={{ textDecoration: 'none', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '18px 20px', display: 'flex', gap: 16, alignItems: 'center', marginBottom: 12 }}>
             <div style={{ textAlign: 'center', flexShrink: 0 }}>
-              <div style={{ font: '600 9px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>Jul</div>
-              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 30, color: 'var(--gc-slate)', lineHeight: 1 }}>18</div>
+              <div style={{ font: '600 9px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>Sep</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 30, color: 'var(--gc-slate)', lineHeight: 1 }}>12</div>
             </div>
             <div>
-              <div style={{ display: 'inline-block', font: '700 8px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-slate)', background: 'var(--gc-blush)', padding: '3px 8px', borderRadius: 2, marginBottom: 5 }}>
-                Flagship fundraiser
-              </div>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 17, fontWeight: 700, color: 'var(--gc-slate)' }}>Better, Together — Girlhood Brunch</div>
-              <p style={{ fontSize: 12.5, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>Sat, Jul 18 · Columbia Center</p>
+              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 17, fontWeight: 700, color: 'var(--gc-slate)' }}>Dream Big</div>
+              <p style={{ fontSize: 12.5, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>Monthly Experience · girls 8–12</p>
             </div>
           </Link>
           <Link className="hover-shadow" to="/events" style={{ textDecoration: 'none', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '18px 20px', display: 'flex', gap: 16, alignItems: 'center', marginBottom: 12 }}>
@@ -163,11 +160,11 @@ export default function Home() {
           <Link className="hover-shadow" to="/events" style={{ textDecoration: 'none', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '18px 20px', display: 'flex', gap: 16, alignItems: 'center', marginBottom: 20 }}>
             <div style={{ textAlign: 'center', flexShrink: 0 }}>
               <div style={{ font: '600 9px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-lavender)' }}>Oct</div>
-              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 30, color: 'var(--gc-slate)', lineHeight: 1 }}>02</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 30, color: 'var(--gc-slate)', lineHeight: 1 }}>10</div>
             </div>
             <div>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 17, fontWeight: 700, color: 'var(--gc-slate)' }}>Studio Art Series</div>
-              <p style={{ fontSize: 12.5, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>4-week workshop · girls 9+</p>
+              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 17, fontWeight: 700, color: 'var(--gc-slate)' }}>Bloom with Confidence</div>
+              <p style={{ fontSize: 12.5, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>Monthly Experience · girls 8–12</p>
             </div>
           </Link>
           <Link className="navlink navlink--onwhite" to="/events" style={{ color: 'var(--gc-emerald)' }}>
