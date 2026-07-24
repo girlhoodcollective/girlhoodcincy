@@ -150,16 +150,24 @@ export default function WorkWithMe() {
       </div>
 
       <div style={{ background: 'var(--gc-slate)', padding: '58px 44px' }}>
-        <div style={{ maxWidth: 760, margin: '0 auto' }}>
-          <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 18 }}>The lens I bring</div>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: '#fff', lineHeight: 1.4 }}>
-            I don't theorize about rooms that weren't built for you. As a later-in-life AuDHD diagnosis and a Black woman in predominantly white civic spaces,{' '}
-            <span style={{ color: 'var(--gc-lavender-soft)' }}>I've navigated them from the inside.</span>
+        <div style={{ maxWidth: 900, margin: '0 auto', display: 'grid', gridTemplateColumns: '160px 1fr', gap: 36, alignItems: 'flex-start' }}>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3918.jpg?v=1783447727"
+            alt="Brittany at work"
+            loading="lazy"
+            style={{ width: 160, height: 190, objectFit: 'cover', borderRadius: 8, border: '1px solid rgba(255,255,255,.18)', display: 'block' }}
+          />
+          <div>
+            <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 18 }}>The lens I bring</div>
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: '#fff', lineHeight: 1.4 }}>
+              I don't theorize about rooms that weren't built for you. As a later-in-life AuDHD diagnosis and a Black woman in predominantly white civic spaces,{' '}
+              <span style={{ color: 'var(--gc-lavender-soft)' }}>I've navigated them from the inside.</span>
+            </div>
+            <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.85, marginTop: 20 }}>
+              That's pattern recognition, not just frameworks. It shapes how I listen, how I facilitate, and what I notice before anyone says a word — and it's why the work usually isn't about fixing the person. It's about fixing the room they were given.
+            </p>
+            <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 22, color: 'var(--gc-lavender-soft)', marginTop: 22 }}>— Brittany</div>
           </div>
-          <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.85, marginTop: 20 }}>
-            That's pattern recognition, not just frameworks. It shapes how I listen, how I facilitate, and what I notice before anyone says a word — and it's why the work usually isn't about fixing the person. It's about fixing the room they were given.
-          </p>
-          <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 22, color: 'var(--gc-lavender-soft)', marginTop: 22 }}>— Brittany</div>
         </div>
       </div>
 

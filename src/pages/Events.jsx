@@ -137,15 +137,31 @@ export default function Events() {
     <div className="page-shell">
       <NavBar variant="navy" active="Events & Workshops" />
 
-      <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px' }}>
-        <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
-        <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Events &amp; Workshops</div>
-        <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 640 }}>
-          Gather, make, <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>belong.</span>
+      <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px', display: 'grid', gridTemplateColumns: '1fr 220px', gap: 32, alignItems: 'center' }}>
+        <div>
+          <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
+          <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Events &amp; Workshops</div>
+          <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 640 }}>
+            Gather, make, <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>belong.</span>
+          </div>
+          <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, marginTop: 20 }}>
+            Brunches that fill a room, markets that build a neighborhood, and workshops where girls find their creative voice. Come as you are.
+          </p>
         </div>
-        <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, marginTop: 20 }}>
-          Brunches that fill a room, markets that build a neighborhood, and workshops where girls find their creative voice. Come as you are.
-        </p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-studio-art-2.jpg?v=1774548572"
+            alt="Girls working on a project at a Girlhood Collective workshop"
+            loading="lazy"
+            style={{ width: '100%', height: 145, objectFit: 'cover', borderRadius: 8, border: '1px solid var(--gc-border)', display: 'block' }}
+          />
+          <img
+            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2308.jpg?v=1778190541"
+            alt="Girls working on a project at a Girlhood Collective workshop"
+            loading="lazy"
+            style={{ width: '100%', height: 145, objectFit: 'cover', borderRadius: 8, border: '1px solid var(--gc-border)', display: 'block' }}
+          />
+        </div>
       </div>
 
       <div style={{ background: '#fff', padding: '56px 44px 40px' }}>

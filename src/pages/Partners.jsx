@@ -32,15 +32,23 @@ export default function Partners() {
     <div className="page-shell">
       <NavBar variant="navy" active="Partners" />
 
-      <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px' }}>
-        <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
-        <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>The neighborhood</div>
-        <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 640 }}>
-          Built <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>alongside</span> good people.
+      <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px', display: 'grid', gridTemplateColumns: '1fr 300px', gap: 40, alignItems: 'center' }}>
+        <div>
+          <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
+          <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>The neighborhood</div>
+          <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 640 }}>
+            Built <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>alongside</span> good people.
+          </div>
+          <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, marginTop: 20 }}>
+            We partner with women-led businesses, educators, makers, and community leaders across Cincinnati. Because we're better together.
+          </p>
         </div>
-        <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, marginTop: 20 }}>
-          We partner with women-led businesses, educators, makers, and community leaders across Cincinnati. Because we're better together.
-        </p>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3916.jpg?v=1783447727"
+          alt="Brittany working with a student"
+          loading="lazy"
+          style={{ width: '100%', height: 320, objectFit: 'cover', borderRadius: 10, border: '1px solid var(--gc-border)', display: 'block' }}
+        />
       </div>
 
       <div style={{ background: '#fff', padding: '60px 44px' }}>
