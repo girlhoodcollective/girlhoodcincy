@@ -28,6 +28,20 @@ const RESULTS = [
   'funded entirely by the event\'s own revenue.',
 ];
 
+const SPONSORS = [
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4419.jpg?v=1784511473', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4050.jpg?v=1784511429', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4417.jpg?v=1784511337', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4418.jpg?v=1784510803', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4103.jpg?v=1784510675', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Untitled_2Bdesign_2B_25286_2529.webp?v=1784503719', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/PillarLogoSalmon_edited_edited.png?v=1784503720', alt: 'Pillar' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/full-ks-logo.png?v=1784503720', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo-1.png?v=1784503720', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo-web.png?v=1784503719', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo.png?v=1784511511', alt: 'Better Together Brunch sponsor' },
+];
+
 const GALLERY = [
   { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/432_a2c25d8f-0ce8-40d5-b0fe-f1f1d4b17a69.jpg?v=1784653522', alt: 'Guests and panelists together at the Better Together Brunch' },
   { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6378.jpg?v=1784590111', alt: 'Better Together Brunch at the Columbia Center', position: 'center 15%' },
@@ -124,6 +138,35 @@ export default function BetterTogetherRecap() {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div style={{ background: 'var(--gc-section)', padding: '56px 44px' }}>
+        <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Made possible by</div>
+        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24 }}>Our sponsors.</div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 14, maxWidth: 1000 }}>
+          {SPONSORS.map((s, i) => (
+            <div
+              key={s.src + i}
+              style={{
+                background: '#fff',
+                border: '1px solid var(--gc-border)',
+                borderRadius: 8,
+                height: 110,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: 18,
+              }}
+            >
+              <img
+                src={s.src}
+                alt={s.alt}
+                loading="lazy"
+                style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', display: 'block' }}
+              />
+            </div>
+          ))}
         </div>
       </div>
 
