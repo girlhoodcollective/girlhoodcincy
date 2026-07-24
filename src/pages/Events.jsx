@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
+import { submitNetlifyForm } from '../lib/netlifyForms.js';
 
 const EVENTS = [
   {
@@ -137,6 +138,8 @@ export default function Events() {
   const [filter, setFilter] = useState('All');
   const [detailId, setDetailId] = useState(null);
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [rsvpError, setRsvpError] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', seats: '1', note: '' });
 
   const detail = EVENTS.find((e) => e.id === detailId) || null;
@@ -147,9 +150,23 @@ export default function Events() {
   const openDetail = (id) => {
     setDetailId(id);
     setSubmitted(false);
+    setRsvpError(false);
     setForm({ name: '', email: '', seats: '1', note: '' });
   };
   const closeDetail = () => setDetailId(null);
+
+  const handleRsvp = async () => {
+    setSending(true);
+    setRsvpError(false);
+    try {
+      await submitNetlifyForm('event-rsvp', { ...form, event: detail.title });
+      setSubmitted(true);
+    } catch {
+      setRsvpError(true);
+    } finally {
+      setSending(false);
+    }
+  };
 
   return (
     <div className="page-shell">
@@ -334,11 +351,18 @@ export default function Events() {
                     onChange={setField('note')}
                     style={{ marginBottom: 16 }}
                   />
+                  {rsvpError && (
+                    <p style={{ fontSize: 13, color: '#c0392b', marginBottom: 12 }}>
+                      Something went wrong sending that — please email us directly at{' '}
+                      <a href="mailto:hello@girlhoodcincy.com" style={{ color: '#c0392b' }}>hello@girlhoodcincy.com</a> instead.
+                    </p>
+                  )}
                   <button
-                    onClick={() => setSubmitted(true)}
-                    style={{ width: '100%', cursor: 'pointer', border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 11px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', padding: 15, borderRadius: 3 }}
+                    onClick={handleRsvp}
+                    disabled={sending}
+                    style={{ width: '100%', cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 11px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', padding: 15, borderRadius: 3 }}
                   >
-                    Confirm my RSVP
+                    {sending ? 'Sending…' : 'Confirm my RSVP'}
                   </button>
                 </div>
               )}

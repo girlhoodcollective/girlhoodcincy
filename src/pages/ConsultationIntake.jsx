@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import NavBar from '../components/NavBar.jsx';
+import { submitNetlifyForm } from '../lib/netlifyForms.js';
 
 const ORG_DEFS = [
   { v: 'nonprofit', label: 'Nonprofit / social impact', sub: '501c3, community org, advocacy' },
@@ -141,14 +142,14 @@ function Card({ children }) {
   );
 }
 
-function SectionNav({ onNext, onBack, nextLabel = 'Continue →' }) {
+function SectionNav({ onNext, onBack, nextLabel = 'Continue →', disabled = false }) {
   return (
     <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-      <button className="btn" onClick={onNext} style={{ background: 'var(--gc-navy)', color: '#fff', padding: '15px 30px' }}>
+      <button className="btn" onClick={onNext} disabled={disabled} style={{ background: 'var(--gc-navy)', color: '#fff', padding: '15px 30px', opacity: disabled ? 0.7 : 1, cursor: disabled ? 'default' : 'pointer' }}>
         {nextLabel}
       </button>
       {onBack && (
-        <button className="btn" onClick={onBack} style={{ background: 'transparent', color: 'var(--gc-ink-muted)', padding: '15px 16px' }}>
+        <button className="btn" onClick={onBack} disabled={disabled} style={{ background: 'transparent', color: 'var(--gc-ink-muted)', padding: '15px 16px' }}>
           ← Back
         </button>
       )}
@@ -181,9 +182,43 @@ export default function ConsultationIntake() {
   const toggle = (setter) => (v) =>
     setter((cur) => (cur.includes(v) ? cur.filter((x) => x !== v) : [...cur, v]));
 
+  const [sending, setSending] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
+
   const go = (n) => {
     setSection(n);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const finishIntake = async () => {
+    setSending(true);
+    setSubmitError(false);
+    try {
+      await submitNetlifyForm('consultation-intake', {
+        name, email, role,
+        orgType: orgType.join(', '),
+        problemDesc,
+        duration,
+        problemType: problemType.join(', '),
+        prevAttempts,
+        affected: affected.join(', '),
+        peopleDesc,
+        psychSafety,
+        supportType: supportType.join(', '),
+        success,
+        timeline,
+        budget,
+        fears,
+        resistance,
+        ndContext,
+        trust,
+      });
+    } catch {
+      setSubmitError(true);
+    } finally {
+      setSending(false);
+      go('results');
+    }
   };
 
   const isResults = section === 'results';
@@ -431,7 +466,7 @@ export default function ConsultationIntake() {
               <label style={{ ...LABEL_STYLE, marginBottom: 10 }}>What would make you trust a consultant right away?</label>
               <textarea className="fld" placeholder="e.g. Someone who listens before they propose a solution. / Lived experience, not just theory…" value={trust} onChange={(e) => setTrust(e.target.value)} />
             </div>
-            <SectionNav onNext={() => go('results')} onBack={() => go(4)} nextLabel="See my summary →" />
+            <SectionNav onNext={finishIntake} onBack={() => go(4)} nextLabel={sending ? 'Sending…' : 'See my summary →'} disabled={sending} />
           </Card>
         )}
 
@@ -467,6 +502,11 @@ export default function ConsultationIntake() {
               <p style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 440, margin: '0 auto 22px' }}>
                 The next step is a real conversation — no pitch, no pressure. Just an honest look at whether I'm the right person for what you're facing.
               </p>
+              {submitError && (
+                <p style={{ fontSize: 13, color: '#c0392b', maxWidth: 440, margin: '0 auto 20px' }}>
+                  Heads up — your intake summary didn't send automatically. Please use the button below to reach out directly so nothing gets lost.
+                </p>
+              )}
               <a className="btn" href="mailto:hello@girlhoodcincy.com" style={{ background: 'var(--gc-navy)', color: '#fff', padding: '15px 30px' }}>
                 Request a consultation call
               </a>

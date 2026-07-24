@@ -8,6 +8,47 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Hidden static forms so Netlify's build-time bot can detect these form schemas. -->
+    <!-- The real, styled forms live in the React app and submit to these same names via fetch. -->
+    <form name="partners-contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="org" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="interest" />
+      <textarea name="msg"></textarea>
+    </form>
+
+    <form name="event-rsvp" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="event" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="seats" />
+      <textarea name="note"></textarea>
+    </form>
+
+    <form name="consultation-intake" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="role"></textarea>
+      <input type="text" name="orgType" />
+      <textarea name="problemDesc"></textarea>
+      <input type="text" name="duration" />
+      <input type="text" name="problemType" />
+      <textarea name="prevAttempts"></textarea>
+      <input type="text" name="affected" />
+      <textarea name="peopleDesc"></textarea>
+      <input type="text" name="psychSafety" />
+      <input type="text" name="supportType" />
+      <textarea name="success"></textarea>
+      <input type="text" name="timeline" />
+      <input type="text" name="budget" />
+      <textarea name="fears"></textarea>
+      <textarea name="resistance"></textarea>
+      <input type="text" name="ndContext" />
+      <textarea name="trust"></textarea>
+    </form>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
