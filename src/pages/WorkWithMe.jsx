@@ -49,24 +49,24 @@ export default function WorkWithMe() {
     <div className="page-shell">
       <NavBar variant="white" active="Work With Me" />
 
-      <div style={{ background: 'var(--gc-navy)', padding: '64px 44px 58px', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: -90, right: -70, width: 340, height: 340, borderRadius: '50%', background: 'radial-gradient(circle, rgba(186,217,243,.22), transparent 70%)' }} />
+      <div style={{ background: 'var(--gc-cream)', padding: '64px 44px 58px', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: -90, right: -70, width: 340, height: 340, borderRadius: '50%', background: 'radial-gradient(circle, rgba(79,178,134,.14), transparent 70%)' }} />
         <div style={{ position: 'relative', zIndex: 2, maxWidth: 720 }}>
           <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
-          <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.28em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 18 }}>
+          <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.28em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
             Consulting · Facilitation · People strategy
           </div>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 50, fontWeight: 700, color: '#fff', lineHeight: 1.08 }}>
-            Build a room where people are <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-lavender-soft)' }}>understood.</span>
+          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 50, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.08 }}>
+            Build a room where people are <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>understood.</span>
           </div>
-          <p style={{ fontSize: 16, fontWeight: 300, color: 'rgba(255,255,255,.74)', lineHeight: 1.85, maxWidth: 560, margin: '22px 0 28px' }}>
+          <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, margin: '22px 0 28px' }}>
             I help organizations and the women inside them build environments where people are actually seen — combining people strategy, program design, and lived experience of navigating rooms that weren't built for how everyone works.
           </p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
             <Link className="btn" to="/consultation-intake" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '16px 30px' }}>
               Start the intake →
             </Link>
-            <a className="btn" href="#book" style={{ border: '1px solid rgba(255,255,255,.32)', color: '#fff', padding: '15px 28px' }}>
+            <a className="btn" href="#book" style={{ border: '1.5px solid var(--gc-navy)', color: 'var(--gc-navy)', padding: '15px 28px' }}>
               Book a call
             </a>
           </div>

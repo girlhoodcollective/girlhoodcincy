@@ -21,7 +21,7 @@ const EVENTS = [
     long: "Meet Jess Evans and hear her story of leaving NYC to open Dance Factory Fitness. A confidence-building dance-cardio session, hands-on vision board building, and a future-self letter to open in a year. 120 minutes · girls 8–12.",
   },
   {
-    id: 'bloom-confidence', mon: 'Oct', day: '10', year: '2026', cat: 'Workshop',
+    id: 'bloom-confidence', mon: 'Oct', day: '10', year: '2026', cat: 'Workshop', published: false,
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Bloom with Confidence', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
@@ -29,7 +29,7 @@ const EVENTS = [
     long: "Meet Val Strunk and learn what a play therapist actually does. Build a Confidence Garden keepsake — each petal names a strength or coping tool — plus a guided journal prompt on what helps you bloom on a hard day. 120 minutes · girls 8–12.",
   },
   {
-    id: 'treasure-story', mon: 'Nov', day: '14', year: '2026', cat: 'Workshop',
+    id: 'treasure-story', mon: 'Nov', day: '14', year: '2026', cat: 'Workshop', published: false,
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Treasure Your Story', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
@@ -37,7 +37,7 @@ const EVENTS = [
     long: "Meet Courtney Reinhold and the story behind Little Treasurer and Finley the panda. A money-basics mini-lesson (coin ID, saving vs. spending, goal setting), a decorated keepsake treasure box, and a short memory or goal story to put inside. 120 minutes · girls 8–12.",
   },
   {
-    id: 'sweet-success', mon: 'Dec', day: '12', year: '2026', cat: 'Workshop',
+    id: 'sweet-success', mon: 'Dec', day: '12', year: '2026', cat: 'Workshop', published: false,
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Sweet Success', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
@@ -45,7 +45,7 @@ const EVENTS = [
     long: "Meet the Trillium Cake Co. baker and her small-business story. Decorate cupcakes or cookies, then a mini branding lesson to design a simple label or box before gifting your treats to someone you choose. 120 minutes · girls 8–12.",
   },
   {
-    id: 'holiday', mon: 'Dec', day: '06', year: '2026', cat: 'Market',
+    id: 'holiday', mon: 'Dec', day: '06', year: '2026', cat: 'Market', published: false,
     badgeBg: 'var(--gc-sage-light)', badgeText: 'var(--gc-emerald)',
     title: 'Holiday Neighbors Market', where: 'Winter Market · The Columbia Center',
     price: 'Free · All ages',
@@ -53,7 +53,7 @@ const EVENTS = [
     long: 'Our cozy winter market: handmade gifts from local women makers, holiday florals and wreaths, hot cocoa for the kids, and a warm room to end the year in.',
   },
   {
-    id: 'every-brain-belongs', mon: 'Jan', day: '09', year: '2027', cat: 'Workshop',
+    id: 'every-brain-belongs', mon: 'Jan', day: '09', year: '2027', cat: 'Workshop', published: false,
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Every Brain Belongs', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
@@ -61,7 +61,7 @@ const EVENTS = [
     long: "Meet Dana Huls and her work on math anxiety and learning differences. Identify your own visual, auditory, or hands-on learning style, build a personalized toolkit, and reflect on a growth-mindset journal prompt. 120 minutes · girls 8–12.",
   },
   {
-    id: 'building-community', mon: 'Feb', day: '13', year: '2027', cat: 'Workshop',
+    id: 'building-community', mon: 'Feb', day: '13', year: '2027', cat: 'Workshop', published: false,
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Building Community', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
@@ -69,7 +69,7 @@ const EVENTS = [
     long: "Meet Abbey Cummins and how she built Everything Cincy to connect people to the city. Small groups design a kindness campaign or mini neighborhood guide, present it to the room, then assemble a take-home community challenge kit. 120 minutes · girls 8–12.",
   },
   {
-    id: 'ready-to-lead', mon: 'Mar', day: '13', year: '2027', cat: 'Workshop',
+    id: 'ready-to-lead', mon: 'Mar', day: '13', year: '2027', cat: 'Workshop', published: false,
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Ready to Lead', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
@@ -77,7 +77,7 @@ const EVENTS = [
     long: "An intro-level taste of preparedness (not a certification course): build a mini emergency kit, practice a scenario as a team, and talk through what to do and who to call. Every girl leaves with a take-home preparedness resource kit. 120 minutes · girls 8–12.",
   },
   {
-    id: 'mix-it-up', mon: 'Apr', day: '10', year: '2027', cat: 'Workshop',
+    id: 'mix-it-up', mon: 'Apr', day: '10', year: '2027', cat: 'Workshop', published: false,
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Mix It Up', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
@@ -85,7 +85,7 @@ const EVENTS = [
     long: "Meet the Nava founder and her story building a coffee and beverage brand from a truck. Small groups create a signature mocktail recipe, design a simple menu card, name and brand the drink, then taste-test and serve each other. 120 minutes · girls 8–12.",
   },
   {
-    id: 'launch-big-idea', mon: 'May', day: '08', year: '2027', cat: 'Workshop',
+    id: 'launch-big-idea', mon: 'May', day: '08', year: '2027', cat: 'Workshop', published: false,
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Launch Your Big Idea', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
@@ -122,7 +122,8 @@ export default function Events() {
   const [form, setForm] = useState({ name: '', email: '', seats: '1', note: '' });
 
   const detail = EVENTS.find((e) => e.id === detailId) || null;
-  const visible = EVENTS.filter((e) => filter === 'All' || e.cat === filter);
+  const published = EVENTS.filter((e) => e.published !== false);
+  const visible = published.filter((e) => filter === 'All' || e.cat === filter);
   const setField = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
 
   const openDetail = (id) => {
@@ -136,13 +137,13 @@ export default function Events() {
     <div className="page-shell">
       <NavBar variant="navy" active="Events & Workshops" />
 
-      <div style={{ background: 'var(--gc-slate)', padding: '56px 44px 52px' }}>
+      <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px' }}>
         <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
-        <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 16 }}>Events &amp; Workshops</div>
-        <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: '#fff', lineHeight: 1.04, maxWidth: 640 }}>
-          Gather, make, <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-lavender-soft)' }}>belong.</span>
+        <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Events &amp; Workshops</div>
+        <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 640 }}>
+          Gather, make, <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>belong.</span>
         </div>
-        <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.85, maxWidth: 520, marginTop: 20 }}>
+        <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, marginTop: 20 }}>
           Brunches that fill a room, markets that build a neighborhood, and workshops where girls find their creative voice. Come as you are.
         </p>
       </div>

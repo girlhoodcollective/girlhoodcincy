@@ -25,24 +25,24 @@ export default function UGC() {
     <div className="page-shell">
       <NavBar variant="white" active="Tools" />
 
-      <div style={{ background: 'var(--gc-navy)', padding: '62px 44px 56px', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: -90, right: -70, width: 340, height: 340, borderRadius: '50%', background: 'radial-gradient(circle, rgba(186,217,243,.22), transparent 70%)' }} />
+      <div style={{ background: 'var(--gc-cream)', padding: '62px 44px 56px', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: -90, right: -70, width: 340, height: 340, borderRadius: '50%', background: 'radial-gradient(circle, rgba(79,178,134,.14), transparent 70%)' }} />
         <div style={{ position: 'relative', zIndex: 2, maxWidth: 720 }}>
-          <div style={{ width: 54, height: 4, background: 'var(--gc-lavender)', borderRadius: 2, marginBottom: 24 }} />
-          <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.28em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 18 }}>
+          <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
+          <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.28em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
             UGC &amp; creator partnerships · for brands
           </div>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 48, fontWeight: 700, color: '#fff', lineHeight: 1.1 }}>
-            Content that gets <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-lavender-soft)' }}>felt</span> — before it's sold.
+          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 48, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.1 }}>
+            Content that gets <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>felt</span> — before it's sold.
           </div>
-          <p style={{ fontSize: 16, fontWeight: 300, color: 'rgba(255,255,255,.74)', lineHeight: 1.85, maxWidth: 560, margin: '22px 0 28px' }}>
+          <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, margin: '22px 0 28px' }}>
             Authentic, community-rooted content for brands who want to read like a neighbor's recommendation, not an ad. Real voice, real audience, real trust — from someone who's spent years building exactly that in Cincinnati.
           </p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
             <a className="btn" href="mailto:hello@girlhoodcincy.com" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '16px 30px' }}>
               Start a collaboration →
             </a>
-            <a className="btn" href="#rates" style={{ border: '1px solid rgba(255,255,255,.32)', color: '#fff', padding: '15px 28px' }}>
+            <a className="btn" href="#rates" style={{ border: '1.5px solid var(--gc-navy)', color: 'var(--gc-navy)', padding: '15px 28px' }}>
               See the rate card
             </a>
           </div>

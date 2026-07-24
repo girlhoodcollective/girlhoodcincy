@@ -18,7 +18,8 @@ export default function NavBar({ variant = 'white', active, label }) {
     return (
       <nav
         style={{
-          background: 'var(--gc-navy)',
+          background: 'var(--gc-cream)',
+          borderBottom: '1px solid var(--gc-border)',
           padding: '16px 40px',
           display: 'flex',
           alignItems: 'center',
@@ -26,13 +27,13 @@ export default function NavBar({ variant = 'white', active, label }) {
         }}
       >
         <Link to="/" style={{ lineHeight: 1, textDecoration: 'none' }}>
-          <span style={{ fontFamily: 'var(--font-display)', fontSize: 20, color: '#fff' }}>Girlhood</span>
+          <span style={{ fontFamily: 'var(--font-display)', fontSize: 20, color: 'var(--gc-navy)' }}>Girlhood</span>
           <span
             style={{
               fontFamily: 'var(--font-serif)',
               fontStyle: 'italic',
               fontSize: 15,
-              color: '#fff',
+              color: 'var(--gc-navy)',
               marginLeft: 5,
             }}
           >
@@ -44,7 +45,7 @@ export default function NavBar({ variant = 'white', active, label }) {
             font: '600 10px var(--font-sans)',
             letterSpacing: '.2em',
             textTransform: 'uppercase',
-            color: 'rgba(255,255,255,.5)',
+            color: 'var(--gc-ink-muted)',
           }}
         >
           {label}
@@ -59,8 +60,8 @@ export default function NavBar({ variant = 'white', active, label }) {
   return (
     <nav
       style={{
-        background: isNavy ? 'var(--gc-slate)' : '#fff',
-        borderBottom: isNavy ? 'none' : '1px solid var(--gc-border)',
+        background: '#fff',
+        borderBottom: '1px solid var(--gc-border)',
         padding: '16px 40px',
         display: 'flex',
         alignItems: 'center',
@@ -70,32 +71,15 @@ export default function NavBar({ variant = 'white', active, label }) {
         zIndex: 100,
       }}
     >
-      <Link
-        to="/"
-        style={
-          isNavy
-            ? { display: 'flex', flexDirection: 'column', lineHeight: 1, textDecoration: 'none' }
-            : { lineHeight: 1, textDecoration: 'none' }
-        }
-      >
-        <span
-          style={{
-            fontFamily: 'var(--font-display)',
-            fontSize: isNavy ? 20 : 21,
-            color: isNavy ? '#fff' : 'var(--gc-navy)',
-            ...(isNavy ? { marginTop: 0 } : {}),
-          }}
-        >
-          Girlhood
-        </span>
+      <Link to="/" style={{ lineHeight: 1, textDecoration: 'none' }}>
+        <span style={{ fontFamily: 'var(--font-display)', fontSize: 21, color: 'var(--gc-navy)' }}>Girlhood</span>
         <span
           style={{
             fontFamily: 'var(--font-serif)',
             fontStyle: 'italic',
             fontSize: 16,
-            color: isNavy ? '#fff' : 'var(--gc-navy)',
-            marginLeft: isNavy ? 0 : 5,
-            marginTop: isNavy ? 2 : 0,
+            color: 'var(--gc-navy)',
+            marginLeft: 5,
           }}
         >
           Collective
@@ -106,32 +90,14 @@ export default function NavBar({ variant = 'white', active, label }) {
           <Link
             key={l.label}
             to={l.href}
-            className={`navlink ${isNavy ? 'navlink--ondark' : 'navlink--onwhite'} ${active === l.label ? 'active' : ''}`}
+            className={`navlink navlink--onwhite ${active === l.label ? 'active' : ''}`}
           >
             {l.label}
           </Link>
         ))}
-        {isNavy ? (
-          <Link
-            to="/newsletter"
-            style={{
-              background: 'var(--gc-emerald)',
-              color: '#fff',
-              font: '600 10px var(--font-sans)',
-              letterSpacing: '.18em',
-              textTransform: 'uppercase',
-              padding: '11px 20px',
-              borderRadius: 3,
-              textDecoration: 'none',
-            }}
-          >
-            Newsletter
-          </Link>
-        ) : (
-          <Link to="/newsletter" className="btn" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '11px 20px' }}>
-            Newsletter
-          </Link>
-        )}
+        <Link to="/newsletter" className="btn" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '11px 20px' }}>
+          Newsletter
+        </Link>
       </div>
     </nav>
   );

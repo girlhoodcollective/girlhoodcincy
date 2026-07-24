@@ -40,16 +40,16 @@ export default function Tools() {
     <div className="page-shell">
       <NavBar variant="white" active="Tools" />
 
-      <div style={{ background: 'var(--gc-navy-deep)', padding: '64px 44px 56px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: -90, left: -70, width: 320, height: 320, borderRadius: '50%', background: 'radial-gradient(circle, rgba(186,217,243,.22), transparent 70%)' }} />
+      <div style={{ background: 'var(--gc-cream)', padding: '64px 44px 56px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: -90, left: -70, width: 320, height: 320, borderRadius: '50%', background: 'radial-gradient(circle, rgba(79,178,134,.14), transparent 70%)' }} />
         <div style={{ position: 'relative', zIndex: 2 }}>
-          <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.28em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 18 }}>
+          <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.28em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
             Free · no email wall to look
           </div>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 46, fontWeight: 700, color: '#fff', lineHeight: 1.1, maxWidth: 640, margin: '0 auto' }}>
-            Start with a <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-lavender-soft)' }}>question.</span>
+          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 46, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.1, maxWidth: 640, margin: '0 auto' }}>
+            Start with a <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>question.</span>
           </div>
-          <p style={{ fontSize: 16, fontWeight: 300, color: 'rgba(255,255,255,.7)', lineHeight: 1.8, maxWidth: 520, margin: '20px auto 0' }}>
+          <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.8, maxWidth: 520, margin: '20px auto 0' }}>
             Three tools to help you figure out what you actually need — for your organization, your career, or your brand. Answer honestly; the more specific you are, the more useful they get.
           </p>
         </div>

@@ -40,13 +40,13 @@ export default function BetterTogetherRecap() {
     <div className="page-shell">
       <NavBar variant="navy" active="Events & Workshops" />
 
-      <div style={{ background: 'var(--gc-slate)', padding: '56px 44px 52px', textAlign: 'center' }}>
-        <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald-soft)', marginBottom: 16 }}>Case study</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 34, fontWeight: 400, color: 'var(--gc-lavender-soft)', marginBottom: 6 }}>Better Together Brunch</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 40, fontWeight: 700, color: '#fff', lineHeight: 1.15, maxWidth: 680, margin: '0 auto' }}>
+      <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px', textAlign: 'center' }}>
+        <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Case study</div>
+        <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 34, fontWeight: 400, color: 'var(--gc-emerald)', marginBottom: 6 }}>Better Together Brunch</div>
+        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 40, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.15, maxWidth: 680, margin: '0 auto' }}>
           From zero awareness to campaign kickoff
         </div>
-        <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.8, maxWidth: 560, margin: '18px auto 0' }}>
+        <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.8, maxWidth: 560, margin: '18px auto 0' }}>
           How one event turned from a first-time nonprofit fundraiser into $3,000 raised, 10 new sponsors, and the start of a community.
         </p>
       </div>

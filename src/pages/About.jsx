@@ -6,15 +6,6 @@ const FOUNDER_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/J8
 const FAMILY_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-brittany-family.jpg?v=1774545413';
 const PERSONAL_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_9211.jpg?v=1774029457';
 
-const PRINCIPLES = [
-  { n: '01', border: 'var(--gc-emerald)', title: 'Real Connection', body: 'Rooms where people actually meet — not networks, neighbors.' },
-  { n: '02', border: 'var(--gc-lavender)', title: 'Community First', body: 'Community comes before the algorithm. Always.' },
-  { n: '03', border: '#d98cae', title: 'Authenticity Over Performance', body: 'Show up as you are. That’s the whole point.' },
-  { n: '04', border: 'var(--gc-slate)', title: 'Discernment as a Skill', body: 'We choose carefully so you don’t have to. Curation is care.' },
-  { n: '05', border: 'var(--gc-emerald)', title: 'Space to Breathe', body: 'No urgency-bait, no noise. Slow, warm, on purpose.' },
-  { n: '06', border: 'var(--gc-lavender)', title: 'Intergenerational Impact', body: 'Women of every age and industry, in the same room.' },
-];
-
 const STATS = [
   { value: '2025', label: 'Founded' },
   { value: '12+', label: 'Events hosted' },
@@ -28,14 +19,14 @@ export default function About() {
       <NavBar variant="navy" active="About" />
 
       {/* HERO */}
-      <div style={{ background: 'var(--gc-slate)', padding: '56px 44px 52px' }}>
+      <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px' }}>
         <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
-        <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 16 }}>Our story</div>
-        <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: '#fff', lineHeight: 1.04, maxWidth: 720 }}>
+        <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Our story</div>
+        <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 720 }}>
           Uniting makers, teachers, leaders &amp; learners{' '}
-          <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-lavender-soft)' }}>since 2025.</span>
+          <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>since 2025.</span>
         </div>
-        <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.85, maxWidth: 560, marginTop: 20 }}>
+        <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, marginTop: 20 }}>
           We connect women and girls to the people, programs, and experiences that they've been missing — right here on Cincinnati's Greater Cincinnati.
         </p>
       </div>
@@ -98,25 +89,6 @@ export default function About() {
               style={{ width: '100%', height: 220, objectFit: 'cover', borderRadius: 8, display: 'block' }}
             />
           </div>
-        </div>
-      </div>
-
-      {/* MANIFESTO */}
-      <div style={{ background: 'var(--gc-section)', padding: '60px 44px' }}>
-        <div style={{ textAlign: 'center', marginBottom: 36 }}>
-          <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>What we believe</div>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 30, fontWeight: 700, color: 'var(--gc-slate)' }}>
-            We believe in <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-lavender)' }}>doing it differently.</span>
-          </div>
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, maxWidth: 940, margin: '0 auto' }}>
-          {PRINCIPLES.map((p) => (
-            <div key={p.n} style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 4, borderTop: `2px solid ${p.border}`, padding: '26px 24px' }}>
-              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 22, color: 'var(--gc-lavender-soft)', marginBottom: 10 }}>{p.n}</div>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 16, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>{p.title}</div>
-              <p style={{ fontSize: 13, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{p.body}</p>
-            </div>
-          ))}
         </div>
       </div>
 

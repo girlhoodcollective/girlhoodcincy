@@ -19,22 +19,22 @@ export default function Newsletter() {
     <div className="page-shell">
       <NavBar variant="navy" active="Newsletter" />
 
-      <div style={{ background: 'var(--gc-slate)', padding: '60px 44px 56px', textAlign: 'center' }}>
-        <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 16 }}>The newsletter</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 52, color: '#fff', lineHeight: 1.08 }}>A Voice That Carries</div>
-        <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.74)', lineHeight: 1.85, maxWidth: 520, margin: '16px auto 8px' }}>
+      <div style={{ background: 'var(--gc-cream)', padding: '60px 44px 56px', textAlign: 'center' }}>
+        <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>The newsletter</div>
+        <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.08 }}>A Voice That Carries</div>
+        <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, margin: '16px auto 8px' }}>
           The events, workshops, and neighbors worth knowing — delivered with warmth, never noise. Twice a month, from our Greater Cincinnati to your inbox.
         </p>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 28 }}>
-          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 26, color: 'var(--gc-lavender-soft)' }}>52–66%</span>
-          <span style={{ font: '600 10px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,.5)' }}>open rate</span>
+          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 26, color: 'var(--gc-emerald)' }}>52–66%</span>
+          <span style={{ font: '600 10px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)' }}>open rate</span>
         </div>
 
         {submitted ? (
-          <div style={{ maxWidth: 440, margin: '0 auto', background: 'rgba(255,255,255,.08)', border: '1px solid rgba(255,255,255,.2)', borderRadius: 6, padding: '28px 24px' }}>
+          <div style={{ maxWidth: 440, margin: '0 auto', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '28px 24px' }}>
             <div style={{ fontSize: 30, marginBottom: 8 }}>💌</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 26, color: '#fff', marginBottom: 6 }}>You're on the list!</div>
-            <p style={{ fontSize: 13.5, fontWeight: 300, color: 'rgba(255,255,255,.7)', lineHeight: 1.7 }}>
+            <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 26, color: 'var(--gc-navy)', marginBottom: 6 }}>You're on the list!</div>
+            <p style={{ fontSize: 13.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7 }}>
               Watch your inbox — the next issue lands in a week or two. So glad you're here.
             </p>
           </div>
@@ -45,7 +45,8 @@ export default function Newsletter() {
               placeholder="you@cincinnati.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              style={{ background: 'rgba(255,255,255,.09)', border: '1px solid rgba(255,255,255,.22)', borderRadius: 3, padding: '14px 20px', font: '400 14px var(--font-sans)', color: '#fff', width: 320, outline: 'none' }}
+              className="fld"
+              style={{ width: 320 }}
             />
             <button
               onClick={() => setSubmitted(true)}

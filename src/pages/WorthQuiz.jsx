@@ -121,23 +121,23 @@ export default function WorthQuiz() {
       <NavBar variant="minimal" label="What Are You Worth? · A skills inventory" />
 
       {phase === 'intro' && (
-        <div style={{ background: 'var(--gc-navy)', padding: '64px 32px 72px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', top: -90, right: -70, width: 320, height: 320, borderRadius: '50%', background: 'radial-gradient(circle, rgba(186,217,243,.22), transparent 70%)' }} />
+        <div style={{ background: 'var(--gc-cream)', padding: '64px 32px 72px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ position: 'absolute', top: -90, right: -70, width: 320, height: 320, borderRadius: '50%', background: 'radial-gradient(circle, rgba(79,178,134,.14), transparent 70%)' }} />
           <div style={{ position: 'relative', zIndex: 2, maxWidth: 640, margin: '0 auto' }}>
-            <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.26em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 18 }}>
+            <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.26em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
               A warm skills inventory · Cincinnati
             </div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 44, fontWeight: 700, color: '#fff', lineHeight: 1.12 }}>
-              You were never <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-lavender-soft)' }}>wrong</span> about yourself.
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 44, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.12 }}>
+              You were never <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>wrong</span> about yourself.
             </div>
-            <p style={{ fontSize: 16, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.8, maxWidth: 500, margin: '20px auto 26px' }}>
+            <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.8, maxWidth: 500, margin: '20px auto 26px' }}>
               You were just never given the tools to name what you're actually good at — and what it's worth. Twenty questions, about six minutes, and a lot more clarity than when you started.
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: 10, flexWrap: 'wrap', marginBottom: 32 }}>
-              <span style={{ background: 'rgba(255,255,255,.07)', border: '1px solid rgba(255,255,255,.16)', borderRadius: 100, padding: '7px 16px', fontSize: 12, color: 'rgba(255,255,255,.72)' }}>
+              <span style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 100, padding: '7px 16px', fontSize: 12, color: 'var(--gc-ink-muted)' }}>
                 Names the skills you call "just common sense"
               </span>
-              <span style={{ background: 'rgba(255,255,255,.07)', border: '1px solid rgba(255,255,255,.16)', borderRadius: 100, padding: '7px 16px', fontSize: 12, color: 'rgba(255,255,255,.72)' }}>
+              <span style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 100, padding: '7px 16px', fontSize: 12, color: 'var(--gc-ink-muted)' }}>
                 Grounded in Cincinnati's real market
               </span>
             </div>

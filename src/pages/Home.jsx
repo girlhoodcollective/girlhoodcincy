@@ -147,7 +147,7 @@ export default function Home() {
               <p style={{ fontSize: 12.5, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>Monthly Experience · girls 8–12</p>
             </div>
           </Link>
-          <Link className="hover-shadow" to="/events" style={{ textDecoration: 'none', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '18px 20px', display: 'flex', gap: 16, alignItems: 'center', marginBottom: 12 }}>
+          <Link className="hover-shadow" to="/events" style={{ textDecoration: 'none', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '18px 20px', display: 'flex', gap: 16, alignItems: 'center', marginBottom: 20 }}>
             <div style={{ textAlign: 'center', flexShrink: 0 }}>
               <div style={{ font: '600 9px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>Sep</div>
               <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 30, color: 'var(--gc-slate)', lineHeight: 1 }}>13</div>
@@ -155,16 +155,6 @@ export default function Home() {
             <div>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 17, fontWeight: 700, color: 'var(--gc-slate)' }}>Girlhood Goes to Market</div>
               <p style={{ fontSize: 12.5, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>Fall makers market · Cincinnati</p>
-            </div>
-          </Link>
-          <Link className="hover-shadow" to="/events" style={{ textDecoration: 'none', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '18px 20px', display: 'flex', gap: 16, alignItems: 'center', marginBottom: 20 }}>
-            <div style={{ textAlign: 'center', flexShrink: 0 }}>
-              <div style={{ font: '600 9px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-lavender)' }}>Oct</div>
-              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 30, color: 'var(--gc-slate)', lineHeight: 1 }}>10</div>
-            </div>
-            <div>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 17, fontWeight: 700, color: 'var(--gc-slate)' }}>Bloom with Confidence</div>
-              <p style={{ fontSize: 12.5, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>Monthly Experience · girls 8–12</p>
             </div>
           </Link>
           <Link className="navlink navlink--onwhite" to="/events" style={{ color: 'var(--gc-emerald)' }}>
