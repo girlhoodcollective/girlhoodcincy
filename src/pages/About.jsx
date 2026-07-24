@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
-import ImageSlot from '../components/ImageSlot.jsx';
+
+const FOUNDER_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/J8A2562.jpg?v=1774664826';
+const FAMILY_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-brittany-family.jpg?v=1774545413';
+const PERSONAL_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_9211.jpg?v=1774029457';
 
 const PRINCIPLES = [
   { n: '01', border: 'var(--gc-emerald)', title: 'Real Connection', body: 'Rooms where people actually meet — not networks, neighbors.' },
@@ -41,7 +44,12 @@ export default function About() {
       <div style={{ background: '#fff', padding: '64px 44px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '340px 1fr', gap: 44, alignItems: 'center', maxWidth: 960, margin: '0 auto' }}>
           <div>
-            <ImageSlot label="A photo of Brittany" width={340} height={400} radius={8} style={{ background: 'var(--gc-section)', border: 'none' }} />
+            <img
+              src={FOUNDER_PHOTO}
+              alt="Brittany Gruber, founder of Girlhood Collective"
+              loading="lazy"
+              style={{ width: 340, height: 400, objectFit: 'cover', borderRadius: 8, display: 'block' }}
+            />
           </div>
           <div>
             <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Meet the founder</div>
@@ -65,15 +73,31 @@ export default function About() {
 
       {/* WHY THIS IS PERSONAL */}
       <div style={{ background: 'var(--gc-slate)', padding: '60px 44px' }}>
-        <div style={{ maxWidth: 820, margin: '0 auto' }}>
-          <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 20 }}>Why this is personal</div>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 30, fontWeight: 700, color: '#fff', lineHeight: 1.28, letterSpacing: '-.01em' }}>
-            Diagnosed with ADHD and autism later in life, I know what it's like to navigate a world that wasn't built for the way your brain works best.
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: 48, maxWidth: 1000, margin: '0 auto', alignItems: 'center' }}>
+          <div>
+            <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 20 }}>Why this is personal</div>
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 30, fontWeight: 700, color: '#fff', lineHeight: 1.28, letterSpacing: '-.01em' }}>
+              Diagnosed with ADHD and autism later in life, I know what it's like to navigate a world that wasn't built for the way your brain works best.
+            </div>
+            <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.85, maxWidth: 680, marginTop: 24 }}>
+              That journey fuels the work. I love helping others understand themselves, embrace their strengths, and advocate for what they need — and helping organizations learn what it really means to be genuinely inclusive.
+            </p>
+            <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 24, color: 'var(--gc-lavender-soft)', marginTop: 24 }}>— Brittany</div>
           </div>
-          <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.85, maxWidth: 680, marginTop: 24 }}>
-            That journey fuels the work. I love helping others understand themselves, embrace their strengths, and advocate for what they need — and helping organizations learn what it really means to be genuinely inclusive.
-          </p>
-          <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 24, color: 'var(--gc-lavender-soft)', marginTop: 24 }}>— Brittany</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+            <img
+              src={FAMILY_PHOTO}
+              alt="Brittany with her family"
+              loading="lazy"
+              style={{ width: '100%', height: 220, objectFit: 'cover', borderRadius: 8, display: 'block' }}
+            />
+            <img
+              src={PERSONAL_PHOTO}
+              alt="Brittany Gruber"
+              loading="lazy"
+              style={{ width: '100%', height: 220, objectFit: 'cover', borderRadius: 8, display: 'block' }}
+            />
+          </div>
         </div>
       </div>
 
