@@ -16,7 +16,7 @@ function Brand({ deep }) {
           fontFamily: 'var(--font-serif)',
           fontStyle: 'italic',
           fontSize: deep ? 18 : 17,
-          color: 'var(--gc-lavender-soft)',
+          color: '#fff',
         }}
       >
         Collective

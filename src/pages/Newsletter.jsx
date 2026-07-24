@@ -26,7 +26,7 @@ export default function Newsletter() {
           The events, workshops, and neighbors worth knowing — delivered with warmth, never noise. Twice a month, from our Greater Cincinnati to your inbox.
         </p>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 28 }}>
-          <span style={{ fontFamily: 'var(--font-display)', fontSize: 26, color: 'var(--gc-lavender-soft)' }}>52–66%</span>
+          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 26, color: 'var(--gc-lavender-soft)' }}>52–66%</span>
           <span style={{ font: '600 10px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,.5)' }}>open rate</span>
         </div>
 

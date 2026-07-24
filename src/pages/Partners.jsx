@@ -35,7 +35,7 @@ export default function Partners() {
       <div style={{ background: 'var(--gc-slate)', padding: '56px 44px 52px' }}>
         <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
         <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 16 }}>The neighborhood</div>
-        <div style={{ fontFamily: 'var(--font-display)', fontSize: 52, color: '#fff', lineHeight: 1.04, maxWidth: 640 }}>
+        <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: '#fff', lineHeight: 1.04, maxWidth: 640 }}>
           Built <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-lavender-soft)' }}>alongside</span> good people.
         </div>
         <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.85, maxWidth: 560, marginTop: 20 }}>

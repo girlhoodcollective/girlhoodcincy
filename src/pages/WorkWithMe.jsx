@@ -96,7 +96,7 @@ export default function WorkWithMe() {
               }}
             >
               <div>
-                <div style={{ fontFamily: 'var(--font-display)', fontSize: 34, color: 'var(--gc-lavender-soft)', marginBottom: 8 }}>{s.n}</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 34, color: 'var(--gc-lavender-soft)', marginBottom: 8 }}>{s.n}</div>
                 <div style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--gc-slate)', lineHeight: 1.2 }}>{s.title}</div>
                 <div style={{ font: '600 10px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginTop: 10 }}>{s.kicker}</div>
               </div>
@@ -115,7 +115,7 @@ export default function WorkWithMe() {
 
           <div id="ugc" style={{ scrollMarginTop: 80, display: 'grid', gridTemplateColumns: '220px 1fr', gap: 36, padding: '44px 0 8px' }}>
             <div>
-              <div style={{ fontFamily: 'var(--font-display)', fontSize: 34, color: 'var(--gc-lavender-soft)', marginBottom: 8 }}>04</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 34, color: 'var(--gc-lavender-soft)', marginBottom: 8 }}>04</div>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--gc-slate)', lineHeight: 1.2 }}>UGC &amp; Creator Partnerships</div>
               <div style={{ font: '600 10px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginTop: 10 }}>Felt · not sold</div>
             </div>
@@ -141,7 +141,7 @@ export default function WorkWithMe() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, maxWidth: 900, margin: '0 auto' }}>
           {STEPS.map((s) => (
             <div key={s.n} style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, borderTop: `3px solid ${s.border}`, padding: '26px 24px' }}>
-              <div style={{ fontFamily: 'var(--font-display)', fontSize: 24, color: 'var(--gc-lavender-soft)', marginBottom: 10 }}>{s.n}</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 24, color: 'var(--gc-lavender-soft)', marginBottom: 10 }}>{s.n}</div>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 17, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>{s.title}</div>
               <p style={{ fontSize: 13, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{s.body}</p>
             </div>
@@ -151,7 +151,7 @@ export default function WorkWithMe() {
 
       <div style={{ background: 'var(--gc-slate)', padding: '58px 44px' }}>
         <div style={{ maxWidth: 760, margin: '0 auto' }}>
-          <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: '#F6C6DD', marginBottom: 18 }}>The lens I bring</div>
+          <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 18 }}>The lens I bring</div>
           <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: '#fff', lineHeight: 1.4 }}>
             I don't theorize about rooms that weren't built for you. As a later-in-life AuDHD diagnosis and a Black woman in predominantly white civic spaces,{' '}
             <span style={{ color: 'var(--gc-lavender-soft)' }}>I've navigated them from the inside.</span>

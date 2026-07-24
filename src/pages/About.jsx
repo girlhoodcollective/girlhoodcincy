@@ -28,7 +28,7 @@ export default function About() {
       <div style={{ background: 'var(--gc-slate)', padding: '56px 44px 52px' }}>
         <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
         <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 16 }}>Our story</div>
-        <div style={{ fontFamily: 'var(--font-display)', fontSize: 52, color: '#fff', lineHeight: 1.04, maxWidth: 720 }}>
+        <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: '#fff', lineHeight: 1.04, maxWidth: 720 }}>
           Uniting makers, teachers, leaders &amp; learners{' '}
           <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-lavender-soft)' }}>since 2025.</span>
         </div>
@@ -66,7 +66,7 @@ export default function About() {
       {/* WHY THIS IS PERSONAL */}
       <div style={{ background: 'var(--gc-slate)', padding: '60px 44px' }}>
         <div style={{ maxWidth: 820, margin: '0 auto' }}>
-          <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: '#F6C6DD', marginBottom: 20 }}>Why this is personal</div>
+          <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 20 }}>Why this is personal</div>
           <div style={{ fontFamily: 'var(--font-serif)', fontSize: 30, fontWeight: 700, color: '#fff', lineHeight: 1.28, letterSpacing: '-.01em' }}>
             Diagnosed with ADHD and autism later in life, I know what it's like to navigate a world that wasn't built for the way your brain works best.
           </div>
@@ -88,7 +88,7 @@ export default function About() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, maxWidth: 940, margin: '0 auto' }}>
           {PRINCIPLES.map((p) => (
             <div key={p.n} style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 4, borderTop: `2px solid ${p.border}`, padding: '26px 24px' }}>
-              <div style={{ fontFamily: 'var(--font-display)', fontSize: 22, color: 'var(--gc-lavender-soft)', marginBottom: 10 }}>{p.n}</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 22, color: 'var(--gc-lavender-soft)', marginBottom: 10 }}>{p.n}</div>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 16, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>{p.title}</div>
               <p style={{ fontSize: 13, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{p.body}</p>
             </div>
@@ -100,7 +100,7 @@ export default function About() {
       <div style={{ background: '#fff', padding: '52px 44px', display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
         {STATS.map((s, i) => (
           <div key={s.label} style={{ textAlign: 'center', padding: '0 40px', borderRight: i < STATS.length - 1 ? '1px solid var(--gc-border)' : 'none' }}>
-            <div style={{ fontFamily: 'var(--font-display)', fontSize: 44, color: 'var(--gc-emerald)', lineHeight: 1 }}>{s.value}</div>
+            <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 44, color: 'var(--gc-emerald)', lineHeight: 1 }}>{s.value}</div>
             <div style={{ font: '600 10px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginTop: 6 }}>{s.label}</div>
           </div>
         ))}

@@ -87,7 +87,7 @@ export default function Events() {
       <div style={{ background: 'var(--gc-slate)', padding: '56px 44px 52px' }}>
         <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
         <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 16 }}>Events &amp; Workshops</div>
-        <div style={{ fontFamily: 'var(--font-display)', fontSize: 52, color: '#fff', lineHeight: 1.04, maxWidth: 640 }}>
+        <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: '#fff', lineHeight: 1.04, maxWidth: 640 }}>
           Gather, make, <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-lavender-soft)' }}>belong.</span>
         </div>
         <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.85, maxWidth: 520, marginTop: 20 }}>
@@ -115,7 +115,7 @@ export default function Events() {
             <div key={e.id} className="hover-shadow" style={{ display: 'flex', border: '1px solid var(--gc-border)', borderRadius: 4, overflow: 'hidden' }}>
               <div style={{ background: 'var(--gc-slate)', width: 120, flexShrink: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '22px 12px' }}>
                 <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)' }}>{e.mon}</div>
-                <div style={{ fontFamily: 'var(--font-display)', fontSize: 44, color: '#fff', lineHeight: 1 }}>{e.day}</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 44, color: '#fff', lineHeight: 1 }}>{e.day}</div>
                 <div style={{ font: '400 12px var(--font-sans)', color: 'rgba(255,255,255,.55)' }}>{e.year}</div>
               </div>
               <div style={{ padding: '22px 28px', flex: 1, minWidth: 0 }}>

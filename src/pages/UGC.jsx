@@ -52,7 +52,7 @@ export default function UGC() {
       <div style={{ background: 'var(--gc-section)', borderBottom: '1px solid var(--gc-border)', padding: '34px 44px', display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
         {STATS.map((s, i) => (
           <div key={s.label} style={{ textAlign: 'center', padding: '0 38px', borderRight: i < STATS.length - 1 ? '1px solid var(--gc-border)' : 'none' }}>
-            <div style={{ fontFamily: 'var(--font-display)', fontSize: 38, color: 'var(--gc-emerald)', lineHeight: 1 }}>{s.value}</div>
+            <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 38, color: 'var(--gc-emerald)', lineHeight: 1 }}>{s.value}</div>
             <div style={{ font: '600 10px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginTop: 6 }}>{s.label}</div>
           </div>
         ))}
@@ -125,7 +125,7 @@ export default function UGC() {
               <div style={{ font: '700 10px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>{r.eyebrow}</div>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 18, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>{r.title}</div>
               <p style={{ fontSize: 13, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.6, marginBottom: 16 }}>{r.body}</p>
-              <div style={{ fontFamily: 'var(--font-display)', fontSize: 30, color: 'var(--gc-slate)' }}>{r.price}</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 30, color: 'var(--gc-slate)' }}>{r.price}</div>
             </div>
           ))}
         </div>

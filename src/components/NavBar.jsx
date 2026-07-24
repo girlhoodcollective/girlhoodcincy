@@ -32,7 +32,7 @@ export default function NavBar({ variant = 'white', active, label }) {
               fontFamily: 'var(--font-serif)',
               fontStyle: 'italic',
               fontSize: 15,
-              color: 'var(--gc-lavender-soft)',
+              color: '#fff',
               marginLeft: 5,
             }}
           >
@@ -93,7 +93,7 @@ export default function NavBar({ variant = 'white', active, label }) {
             fontFamily: 'var(--font-serif)',
             fontStyle: 'italic',
             fontSize: 16,
-            color: isNavy ? 'var(--gc-lavender-soft)' : 'var(--gc-lavender)',
+            color: isNavy ? '#fff' : 'var(--gc-navy)',
             marginLeft: isNavy ? 0 : 5,
             marginTop: isNavy ? 2 : 0,
           }}
