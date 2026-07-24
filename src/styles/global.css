@@ -1,0 +1,160 @@
+@import './tokens.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--gc-ink);
+  background: #fff;
+}
+
+a {
+  color: inherit;
+}
+
+input, textarea, select, button {
+  font-family: var(--font-sans);
+}
+
+::placeholder {
+  color: var(--gc-ink-muted);
+  opacity: 0.6;
+}
+
+.page-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 0 80px rgba(53, 91, 116, 0.06);
+}
+
+/* Nav links */
+.navlink {
+  font: 600 10px/1 var(--font-sans);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.navlink--onwhite {
+  color: var(--gc-ink-muted);
+}
+.navlink--onwhite:hover {
+  color: var(--gc-emerald);
+}
+.navlink--onwhite.active {
+  color: var(--gc-emerald);
+}
+.navlink--ondark {
+  color: rgba(255, 255, 255, 0.55);
+}
+.navlink--ondark:hover {
+  color: var(--gc-lavender-soft);
+}
+.navlink--ondark.active {
+  color: #fff;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font: 600 12px var(--font-sans);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  transition: transform 0.15s, background 0.2s, border-color 0.2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Hover-lift cards used across pages */
+.hover-lift {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(53, 91, 116, 0.14);
+}
+
+.hover-shadow {
+  transition: box-shadow 0.2s;
+}
+.hover-shadow:hover {
+  box-shadow: 0 8px 26px rgba(53, 91, 116, 0.14);
+}
+
+.hover-row {
+  transition: background 0.2s;
+}
+.hover-row:hover {
+  background: var(--gc-sage-light);
+}
+
+.hover-border {
+  transition: border-color 0.2s, transform 0.2s;
+}
+.hover-border:hover {
+  border-color: var(--gc-emerald);
+  transform: translateY(-3px);
+}
+
+.hover-caption:hover .hover-caption-target {
+  color: var(--gc-emerald);
+}
+
+.fld {
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--gc-border);
+  border-radius: 3px;
+  padding: 12px 14px;
+  font: 400 14px var(--font-sans);
+  color: var(--gc-ink);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.fld:focus {
+  border-color: var(--gc-emerald);
+}
+textarea.fld {
+  resize: vertical;
+}
+
+.fbtn {
+  cursor: pointer;
+  border: 1px solid var(--gc-border);
+  border-radius: 100px;
+  padding: 9px 20px;
+  font: 600 11px var(--font-sans);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: #fff;
+  color: var(--gc-ink-muted);
+  transition: all 0.18s;
+}
+.fbtn:hover {
+  border-color: var(--gc-emerald);
+  color: var(--gc-emerald);
+}
+.fbtn.active {
+  border-color: var(--gc-emerald);
+  background: var(--gc-emerald);
+  color: #fff;
+}

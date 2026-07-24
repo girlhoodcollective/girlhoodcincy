@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Petit+Formal+Script&family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  /* Fonts */
+  --font-script: 'Petit Formal Script', cursive;
+  --font-display: 'Abril Fatface', Georgia, serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Palette — Girlhood Collective, post-repalette (cream / blue / green / navy) */
+  --gc-cream: #FBFAF7;
+  --gc-navy: #1B2E4A;
+  --gc-navy-deep: #1B2E4A;
+  --gc-slate: #1B2E4A;
+  --gc-emerald: #4FB286;
+  --gc-emerald-soft: #7FCBA6;
+  --gc-lavender: #4FB286;
+  --gc-lavender-soft: #BAD9F3;
+  --gc-blush: #BAD9F3;
+  --gc-sage-light: #EAF3EC;
+  --gc-section: #F4F8FB;
+
+  /* Inherited from design-system base tokens */
+  --gc-ink: #2D3447;
+  --gc-ink-muted: #5B6B7E;
+  --gc-border: #DCE5EA;
+  --gc-yellow: #F3E184;
+  --gc-gold: #D4A800;
+  --gc-green: #439B75;
+}
