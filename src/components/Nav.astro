@@ -31,7 +31,7 @@ const {
       {links.map((link) => (
         <a class={`navlink${active === link.label ? ' active' : ''}`} href={link.href}>{link.label}</a>
       ))}
-      <a class="btn btn-primary btn-sm" href="/newsletter">Newsletter</a>
+      <a class={`btn btn-sm ${variant === 'navy' ? 'btn-primary-inverse' : 'btn-primary'}`} href="/newsletter">Newsletter</a>
     </div>
   )}
 </nav>

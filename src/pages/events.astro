@@ -51,6 +51,13 @@ const navyLinks = [
 </Layout>
 
 <style>
+  /* Page secondary accent: Hydrangea Blue — personality, warmth, community (Brand Identity Guide) */
+  :global(.page) {
+    --gc-emerald: var(--gc-hydrangea);
+    --gc-emerald-soft: var(--gc-hydrangea-soft);
+    --gc-sage-light: var(--gc-hydrangea-wash);
+  }
+
   .hero { background: var(--gc-slate); padding: 56px 44px 52px; }
   .hero-heading { font-size: 52px; color: #fff; line-height: 1.04; max-width: 640px; margin: 0; }
   .hero-copy { font-size: 15px; font-weight: 300; color: rgba(255, 255, 255, .72); line-height: 1.85; max-width: 520px; margin-top: 20px; }

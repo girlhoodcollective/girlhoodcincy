@@ -55,7 +55,7 @@ export default function WorthQuiz() {
             <span class="quiz-badge">Names the skills you call "just common sense"</span>
             <span class="quiz-badge">Grounded in Cincinnati's real market</span>
           </div>
-          <button class="btn btn-primary" onClick={() => setPhase('quiz')}>Begin the quiz →</button>
+          <button class="btn btn-primary-inverse" onClick={() => setPhase('quiz')}>Begin the quiz →</button>
         </div>
       </div>
     );

@@ -1,0 +1,61 @@
+<!-- @dsCard group="Components" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Girlhood Collective — Wordmark, Nav &amp; Buttons</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap">
+<style>
+  :root {
+    --gc-ivory:#F8F6F0; --gc-navy:#1D3557; --gc-sage:#94B4A9; --gc-emerald:#40826D;
+    --gc-hydrangea:#6F96CF; --gc-peony:#F971AF; --gc-border:#DEE3E3; --gc-ink-muted:#66717E;
+  }
+  body { margin:0; padding:40px; background:#fff; font-family:'DM Sans',sans-serif; color:#29323F; }
+  h1 { font-family:'Playfair Display',serif; font-size:28px; margin:0 0 6px; color:var(--gc-navy); }
+  .sub { font-size:14px; color:var(--gc-ink-muted); margin-bottom:32px; max-width:640px; line-height:1.6; }
+  h2 { font-family:'Playfair Display',serif; font-size:17px; color:var(--gc-navy); margin:36px 0 14px; }
+
+  /* Wordmark */
+  .brand { position:relative; display:inline-block; line-height:1; text-decoration:none; padding-top:.65em; }
+  .brand-name { display:block; font-family:'Playfair Display',serif; font-weight:700; font-size:26px; color:var(--gc-navy); }
+  .brand-suffix { position:absolute; top:0; right:0; white-space:nowrap; line-height:1; font-family:'Playfair Display',serif; font-style:italic; font-weight:400; font-size:.58em; color:var(--gc-navy); }
+  .on-navy { background:var(--gc-navy); padding:24px 28px; border-radius:8px; display:inline-block; }
+  .on-navy .brand-name, .on-navy .brand-suffix { color:var(--gc-ivory); }
+
+  /* Buttons */
+  .btn { display:inline-block; text-decoration:none; border:none; cursor:pointer; font:600 12px 'DM Sans',sans-serif; letter-spacing:.1em; text-transform:uppercase; border-radius:100px; padding:14px 26px; }
+  .btn-primary { background:var(--gc-navy); color:var(--gc-ivory); }
+  .btn-primary-inverse { background:var(--gc-ivory); color:var(--gc-navy); }
+  .btn-secondary { background:var(--gc-emerald); color:#fff; }
+  .btn-outline { border:1px solid var(--gc-navy); color:var(--gc-navy); background:transparent; }
+  .row { display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin-bottom:10px; }
+  .dark-row { background:var(--gc-navy); padding:24px; border-radius:8px; }
+  .note { font-size:12.5px; color:var(--gc-ink-muted); margin-top:6px; }
+</style>
+</head>
+<body>
+  <h1>Wordmark, Nav &amp; Buttons</h1>
+  <p class="sub">Construction: "Girlhood" in Playfair Display, "Collective" set smaller in Playfair Display Italic, right-aligned above the second half of the word. Color: Heritage Navy on light, Warm Ivory reversed on dark — never a secondary/accent color.</p>
+
+  <h2>Wordmark</h2>
+  <div class="row">
+    <a class="brand" href="#"><span class="brand-name">Girlhood</span><span class="brand-suffix">Collective</span></a>
+    <div class="on-navy"><a class="brand" href="#"><span class="brand-name">Girlhood</span><span class="brand-suffix">Collective</span></a></div>
+  </div>
+
+  <h2>Buttons — on light backgrounds</h2>
+  <div class="row">
+    <a class="btn btn-primary" href="#">Primary</a>
+    <a class="btn btn-secondary" href="#">Secondary (page accent)</a>
+    <a class="btn btn-outline" href="#">Outline</a>
+  </div>
+  <p class="note">Primary = Heritage Navy (the anchor/trust action). Secondary = the page's one rotating accent (Sage / Emerald / Hydrangea) — used for in-flow, non-final actions.</p>
+
+  <h2>Buttons — on navy backgrounds</h2>
+  <div class="dark-row row" style="margin-top:0">
+    <a class="btn btn-primary-inverse" href="#">Primary (inverse)</a>
+    <a class="btn btn-secondary" href="#">Secondary</a>
+  </div>
+  <p class="note">On a navy background, Primary inverts to Warm Ivory fill / Navy text to preserve contrast — never navy-on-navy.</p>
+</body>
+</html>

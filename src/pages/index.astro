@@ -23,7 +23,7 @@ const teaser = events.slice(0, 3);
         <div class="eyebrow eyebrow-sky" style="margin-bottom:18px">For organizations &amp; leaders</div>
         <h1 class="serif-heading door-heading" style="color:#fff">Build a room where people are <span class="serif-script" style="color:var(--gc-lavender-soft)">understood.</span></h1>
         <p class="door-copy" style="color:rgba(255,255,255,.72)">Strategy, HR &amp; people, and program design — with a facilitator who's lived the gap between policy and belonging.</p>
-        <a class="btn btn-primary" href="/work-with-me">Work with me →</a>
+        <a class="btn btn-primary-inverse" href="/work-with-me">Work with me →</a>
       </div>
     </div>
     <div class="door door--cream">
@@ -120,7 +120,7 @@ const teaser = events.slice(0, 3);
     <p class="lede" style="color:rgba(255,255,255,.72);margin:12px auto 26px">The events, workshops, and neighbors worth knowing — warmth, never noise. A <strong style="color:#fff;font-weight:600">52–66% open rate</strong> says it lands.</p>
     <form class="newsletter-form" action="/newsletter" method="get">
       <input class="nl-input" type="email" name="email" placeholder="you@cincinnati.com" required />
-      <button class="btn btn-primary" type="submit">Subscribe</button>
+      <button class="btn btn-primary-inverse" type="submit">Subscribe</button>
     </form>
   </div>
 
@@ -128,8 +128,15 @@ const teaser = events.slice(0, 3);
 </Layout>
 
 <style>
+  /* Page secondary accent: Hydrangea Blue — personality, warmth, community (Brand Identity Guide) */
+  :global(.page) {
+    --gc-emerald: var(--gc-hydrangea);
+    --gc-emerald-soft: var(--gc-hydrangea-soft);
+    --gc-sage-light: var(--gc-hydrangea-wash);
+  }
+
   .brand-strip {
-    background: var(--gc-cream);
+    background: var(--gc-ivory);
     padding: 30px 44px 26px;
     text-align: center;
     border-bottom: 1px solid rgba(45, 52, 71, .06);
@@ -145,9 +152,9 @@ const teaser = events.slice(0, 3);
   .two-door { display: flex; align-items: stretch; }
   .door { width: 50%; padding: 58px 44px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
   .door--navy { background: var(--gc-navy); }
-  .door--cream { background: var(--gc-cream); }
+  .door--cream { background: var(--gc-ivory); }
   .door-glow { position: absolute; width: 300px; height: 300px; border-radius: 50%; }
-  .door-glow--top { top: -80px; left: -60px; background: radial-gradient(circle, rgba(186, 217, 243, .22), transparent 70%); }
+  .door-glow--top { top: -80px; left: -60px; background: radial-gradient(circle, rgba(111, 150, 207, .18), transparent 70%); }
   .door-glow--bottom { bottom: -80px; right: -60px; background: radial-gradient(circle, rgba(79, 178, 134, .14), transparent 70%); }
   .door-content { position: relative; z-index: 2; }
   .door-heading { font-size: 40px; line-height: 1.1; }

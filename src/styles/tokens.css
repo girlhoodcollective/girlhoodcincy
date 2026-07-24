@@ -1,34 +1,56 @@
 :root {
-  /* Brand colors */
-  --gc-cream: #FBFAF7;
-  --gc-navy: #1B2E4A;
-  --gc-navy-deep: #1B2E4A;
-  --gc-slate: #1B2E4A;
-  --gc-emerald: #4FB286;
-  --gc-emerald-soft: #7FCBA6;
-  --gc-lavender: #4FB286;
-  --gc-lavender-soft: #BAD9F3;
-  --gc-blush: #BAD9F3;
-  --gc-sage-light: #EAF3EC;
-  --gc-section: #F4F8FB;
-  --gc-yellow: #F3E184;
-  --gc-gold: #D4A800;
-  --gc-green: #439B75;
+  /* ===================================================================
+     Girlhood Collective — Brand Identity Guide, color palette
+     Primary: use most often. Secondary: rotate, one per page — never
+     combine all three. Accent (Peony): delight only, never a base color.
+     =================================================================== */
 
-  /* Accent pinks used sparingly for card numbering / UGC brand */
-  --gc-pink-pale: #F6C6DD;
-  --gc-pink: #d98cae;
-  --gc-pink-deep: #c96a95;
+  /* Primary */
+  --gc-ivory: #F8F6F0;        /* Warm Ivory — backgrounds, whitespace */
+  --gc-navy: #1D3557;         /* Heritage Navy — anchor: headlines, wordmark, text, trust */
+  --gc-navy-deep: #1D3557;    /* alias of Heritage Navy, used for dark bands/footer */
+  --gc-slate: #1D3557;        /* alias of Heritage Navy, used for heading/body text on light */
+
+  /* Secondary — one per page/application (see per-page overrides). Emerald is the default. */
+  --gc-sage: #94B4A9;         /* soft, calming — wellness/garden-adjacent content */
+  --gc-emerald: #40826D;      /* depth, richness — elevated/editorial moments (default secondary) */
+  --gc-emerald-soft: #7FB39F;
+  --gc-hydrangea: #6F96CF;    /* personality, warmth — social/community content */
+  --gc-hydrangea-soft: #A9C3E9;
+
+  /* Legacy alias names still referenced across markup — pointed at the correct
+     brand secondary so page/component files don't need touching one by one. */
+  --gc-lavender: var(--gc-hydrangea);
+  --gc-lavender-soft: var(--gc-hydrangea-soft);
+  --gc-blush: var(--gc-hydrangea-soft);
+
+  /* Accent — reserved for delight moments only (never backgrounds/borders/CTAs) */
+  --gc-peony: #F971AF;
+  --gc-peony-soft: #F9A8CD;
+  --gc-pink-pale: var(--gc-peony-soft); /* legacy alias, used for small delight eyebrows */
+
+  /* Brass — graphic language: thin rules & dividers */
+  --gc-brass: #B08D57;
+
+  /* Washes — pale tints for section backgrounds / hover states, one per secondary */
+  --gc-sage-wash: #EDF2F0;
+  --gc-emerald-wash: #E7F0EC;
+  --gc-hydrangea-wash: #EDF2FA;
+  --gc-sage-light: var(--gc-emerald-wash); /* legacy alias; overridden per-page below */
+  --gc-section: #F6F4EF;      /* neutral warm alternate-section wash */
 
   /* Text + surfaces */
-  --gc-ink: #2A3542;
-  --gc-ink-muted: #64727D;
-  --gc-border: #DCE5EA;
+  --gc-ink: #29323F;
+  --gc-ink-muted: #66717E;
+  --gc-border: #DEE3E3;
 
-  /* Type families */
-  --font-script: 'Petit Formal Script', cursive;
-  --font-display: 'Abril Fatface', serif;
+  /* ===================================================================
+     Typography — Headlines: Playfair Display. Body: DM Sans.
+     Editorial accent: Playfair Display Italic (expressed via font-style,
+     not a separate family — see .serif-script).
+     =================================================================== */
   --font-serif: 'Playfair Display', serif;
+  --font-display: 'Playfair Display', serif;
   --font-sans: 'DM Sans', sans-serif;
 
   /* Layout */

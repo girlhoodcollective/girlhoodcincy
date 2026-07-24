@@ -10,8 +10,15 @@ import WorthQuiz from '../components/WorthQuiz';
 </Layout>
 
 <style>
+  /* Page secondary accent: Hydrangea Blue — personality, warmth (Brand Identity Guide) */
+  :global(.page) {
+    --gc-emerald: var(--gc-hydrangea);
+    --gc-emerald-soft: var(--gc-hydrangea-soft);
+    --gc-sage-light: var(--gc-hydrangea-wash);
+  }
+
   :global(.quiz-intro) { background: var(--gc-navy); padding: 64px 32px 72px; text-align: center; position: relative; overflow: hidden; }
-  :global(.quiz-glow) { position: absolute; top: -90px; right: -70px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(186, 217, 243, .22), transparent 70%); }
+  :global(.quiz-glow) { position: absolute; top: -90px; right: -70px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(111, 150, 207, .18), transparent 70%); }
   :global(.quiz-intro-inner) { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; }
   :global(.quiz-intro-copy) { font-size: 16px; font-weight: 300; color: rgba(255, 255, 255, .72); line-height: 1.8; max-width: 500px; margin: 20px auto 26px; }
   :global(.quiz-badges) { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 32px; }
@@ -41,7 +48,7 @@ import WorthQuiz from '../components/WorthQuiz';
 
   :global(.stream-list) { display: flex; flex-direction: column; gap: 12px; }
   :global(.stream-card) { background: #fff; border: 1px solid var(--gc-border); border-radius: 12px; border-left: 4px solid var(--gc-emerald); padding: 20px 22px; }
-  :global(.stream-range) { display: inline-block; background: var(--gc-cream); border-radius: 6px; padding: 4px 11px; font-size: 12px; font-weight: 600; color: var(--gc-slate); }
+  :global(.stream-range) { display: inline-block; background: var(--gc-ivory); border-radius: 6px; padding: 4px 11px; font-size: 12px; font-weight: 600; color: var(--gc-slate); }
 
   :global(.imposter-note) { background: var(--gc-sage-light); border-radius: 12px; padding: 20px 22px; margin-top: 20px; font-size: 13px; color: var(--gc-ink); line-height: 1.65; border-left: 3px solid var(--gc-emerald); }
   :global(.reframe-box) { background: var(--gc-slate); border-radius: 14px; padding: 26px 28px; margin-top: 16px; }

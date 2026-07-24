@@ -13,7 +13,7 @@ const navyLinks = [
 const values = [
   { n: '01', title: 'Real Connection', body: 'Rooms where people actually meet — not networks, neighbors.', accent: 'var(--gc-emerald)' },
   { n: '02', title: 'Community First', body: 'Community comes before the algorithm. Always.', accent: 'var(--gc-lavender)' },
-  { n: '03', title: 'Authenticity Over Performance', body: 'Show up as you are. That’s the whole point.', accent: 'var(--gc-pink)' },
+  { n: '03', title: 'Authenticity Over Performance', body: 'Show up as you are. That’s the whole point.', accent: 'var(--gc-emerald)' },
   { n: '04', title: 'Discernment as a Skill', body: 'We choose carefully so you don’t have to. Curation is care.', accent: 'var(--gc-slate)' },
   { n: '05', title: 'Space to Breathe', body: 'No urgency-bait, no noise. Slow, warm, on purpose.', accent: 'var(--gc-emerald)' },
   { n: '06', title: 'Intergenerational Impact', body: 'Women of every age and industry, in the same room.', accent: 'var(--gc-lavender)' },
@@ -54,7 +54,7 @@ const stats = [
 
   <div class="personal">
     <div class="personal-inner">
-      <div class="eyebrow" style="font-weight:700;margin-bottom:20px;color:#F6C6DD">Why this is personal</div>
+      <div class="eyebrow" style="font-weight:700;margin-bottom:20px;color:var(--gc-pink-pale)">Why this is personal</div>
       <div class="serif-heading" style="font-size:30px;line-height:1.28;letter-spacing:-.01em;color:#fff">Diagnosed with ADHD and autism later in life, I know what it's like to navigate a world that wasn't built for the way your brain works best.</div>
       <p class="personal-copy">That journey fuels the work. I love helping others understand themselves, embrace their strengths, and advocate for what they need — and helping organizations learn what it really means to be genuinely inclusive.</p>
       <div class="serif-script" style="font-size:24px;color:var(--gc-lavender-soft);margin-top:24px">— Brittany</div>
@@ -95,6 +95,13 @@ const stats = [
 </Layout>
 
 <style>
+  /* Page secondary accent: Sage — soft, calming, community/values (Brand Identity Guide) */
+  :global(.page) {
+    --gc-emerald: var(--gc-sage);
+    --gc-emerald-soft: var(--gc-sage);
+    --gc-sage-light: var(--gc-sage-wash);
+  }
+
   .hero { background: var(--gc-slate); padding: 56px 44px 52px; }
   .hero-heading { font-size: 52px; color: #fff; line-height: 1.04; max-width: 720px; margin: 0; }
   .hero-copy { font-size: 15px; font-weight: 300; color: rgba(255, 255, 255, .72); line-height: 1.85; max-width: 560px; margin-top: 20px; }

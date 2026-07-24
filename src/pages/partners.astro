@@ -10,7 +10,7 @@ const navyLinks = [
 ];
 
 const partners = [
-  { name: 'Pillar', tag: 'Pelvic Health & PT', accent: 'var(--gc-pink-deep)', body: "Women's pelvic health and physical therapy that meets you with real expertise and even realer talk." },
+  { name: 'Pillar', tag: 'Pelvic Health & PT', accent: 'var(--gc-navy)', body: "Women's pelvic health and physical therapy that meets you with real expertise and even realer talk." },
   { name: 'Trillium', tag: 'Custom Cakes', accent: 'var(--gc-lavender)', body: 'Show-stopping custom cakes for the birthdays, showers, and Saturdays worth gathering around.' },
   { name: 'Endurance in Education', tag: 'Youth Mentorship · Brunch Beneficiary', accent: 'var(--gc-emerald)', body: "Cross-industry mentorship building Cincinnati's next generation of leaders — and the cause behind Better Together." },
 ];
@@ -18,7 +18,7 @@ const partners = [
 const why = [
   { icon: '🤝', title: 'Engaged audience', body: 'Reach women of every age and industry through events, markets, and a newsletter with a 52–66% open rate.', accent: 'var(--gc-emerald)' },
   { icon: '💗', title: 'Real community', body: 'Not impressions — relationships. Our partners become part of the neighborhood, not a logo on a banner.', accent: 'var(--gc-lavender)' },
-  { icon: '🎓', title: 'Tangible impact', body: 'A portion of event proceeds supports youth mentorship. Your name goes toward something that lasts.', accent: 'var(--gc-pink-deep)' },
+  { icon: '🎓', title: 'Tangible impact', body: 'A portion of event proceeds supports youth mentorship. Your name goes toward something that lasts.', accent: 'var(--gc-navy)' },
 ];
 ---
 
@@ -112,6 +112,13 @@ const why = [
 </script>
 
 <style>
+  /* Page secondary accent: Sage — soft, calming, community/values (Brand Identity Guide) */
+  :global(.page) {
+    --gc-emerald: var(--gc-sage);
+    --gc-emerald-soft: var(--gc-sage);
+    --gc-sage-light: var(--gc-sage-wash);
+  }
+
   .hero { background: var(--gc-slate); padding: 56px 44px 52px; }
   .hero-heading { font-size: 52px; color: #fff; line-height: 1.04; max-width: 640px; margin: 0; }
   .hero-copy { font-size: 15px; font-weight: 300; color: rgba(255, 255, 255, .72); line-height: 1.85; max-width: 560px; margin-top: 20px; }

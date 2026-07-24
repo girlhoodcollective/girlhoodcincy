@@ -30,7 +30,7 @@ const navyLinks = [
     </div>
     <form id="nl-form" class="nl-form" data-netlify="true" name="newsletter">
       <input class="nl-input" type="email" name="email" placeholder="you@cincinnati.com" required />
-      <button class="btn btn-primary btn-sm" type="submit">Subscribe</button>
+      <button class="btn btn-primary-inverse btn-sm" type="submit">Subscribe</button>
     </form>
   </div>
 
@@ -67,6 +67,13 @@ const navyLinks = [
 </script>
 
 <style>
+  /* Page secondary accent: Hydrangea Blue — personality, warmth, community (Brand Identity Guide) */
+  :global(.page) {
+    --gc-emerald: var(--gc-hydrangea);
+    --gc-emerald-soft: var(--gc-hydrangea-soft);
+    --gc-sage-light: var(--gc-hydrangea-wash);
+  }
+
   .hero { background: var(--gc-slate); padding: 60px 44px 56px; text-align: center; }
   .hero-copy { font-size: 15px; font-weight: 300; color: rgba(255, 255, 255, .74); line-height: 1.85; max-width: 520px; margin: 16px auto 8px; }
   .open-rate { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 28px; }
