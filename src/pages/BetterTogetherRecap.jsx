@@ -30,7 +30,7 @@ const RESULTS = [
 
 const GALLERY = [
   { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/432_a2c25d8f-0ce8-40d5-b0fe-f1f1d4b17a69.jpg?v=1784653522', alt: 'Guests and panelists together at the Better Together Brunch' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6378.jpg?v=1784590111', alt: 'Better Together Brunch at the Columbia Center' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6378.jpg?v=1784590111', alt: 'Better Together Brunch at the Columbia Center', position: 'center 15%' },
   { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6384.jpg?v=1784581853', alt: 'Guests at the Better Together Brunch' },
   { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4415_1d38b43f-96e0-47ca-96f8-4e8db80ef328.jpg?v=1784581862', alt: 'Speaker addressing the room at the Better Together Brunch' },
 ];
@@ -137,7 +137,7 @@ export default function BetterTogetherRecap() {
               src={g.src}
               alt={g.alt}
               loading="lazy"
-              style={{ width: '100%', height: 340, objectFit: 'cover', borderRadius: 10, border: '1px solid var(--gc-border)', display: 'block' }}
+              style={{ width: '100%', height: 340, objectFit: 'cover', objectPosition: g.position || 'center', borderRadius: 10, border: '1px solid var(--gc-border)', display: 'block' }}
             />
           ))}
         </div>
