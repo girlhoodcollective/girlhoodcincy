@@ -5,7 +5,7 @@ import Footer from '../components/Footer.jsx';
 
 const EVENTS = [
   {
-    id: 'market', mon: 'Sep', day: '13', year: '2026', cat: 'Market',
+    id: 'market', mon: 'Sep', day: '13', year: '2026', cat: 'Market', published: false,
     badgeBg: 'var(--gc-sage-light)', badgeText: 'var(--gc-emerald)',
     title: 'Girlhood Goes to Market', where: 'Fall Makers Market · Cincinnati',
     price: 'Free · All ages',
@@ -122,7 +122,7 @@ const PAST = [
   },
 ];
 
-const CATS = ['All', 'Market', 'Workshop'];
+const CATS = ['All', 'Workshop'];
 
 export default function Events() {
   const [filter, setFilter] = useState('All');
