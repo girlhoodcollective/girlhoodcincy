@@ -11,7 +11,7 @@ const UPCOMING_EVENTS = getUpcomingPublishedEvents(2);
 export default function Home() {
   useSEO({
     title: 'Girlhood Collective — Community, Curated | Cincinnati',
-    description: 'Events, workshops, consulting, and community for women and girls of every age and industry — right here in Greater Cincinnati.',
+    description: 'Events, workshops, consulting, and community, right here in Greater Cincinnati.',
     path: '/',
   });
 
