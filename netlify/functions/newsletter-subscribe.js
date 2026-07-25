@@ -1,28 +1,7 @@
 const NEWSLETTER_SUBSCRIBERS_GROUP_ID = '185503256388044050';
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const TEMP_HEALTHCHECK_TOKEN = 'hc-9f3a7c2e-audit-verify';
-
 export default async (req) => {
-  const url = new URL(req.url);
-  if (req.method === 'GET' && url.searchParams.get('token') === TEMP_HEALTHCHECK_TOKEN) {
-    const apiKey = Netlify.env.get('MAILERLITE_API_KEY');
-    if (!apiKey) {
-      return new Response(JSON.stringify({ configured: false }), {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-      });
-    }
-    const mlRes = await fetch('https://connect.mailerlite.com/api/subscribers?limit=1', {
-      headers: { Authorization: `Bearer ${apiKey}` },
-    });
-    const detail = mlRes.ok ? null : await mlRes.text();
-    return new Response(JSON.stringify({ configured: true, mailerliteStatus: mlRes.status, authValid: mlRes.ok, detail }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
-    });
-  }
-
   if (req.method !== 'POST') {
     return new Response(JSON.stringify({ error: 'Method not allowed' }), {
       status: 405,
