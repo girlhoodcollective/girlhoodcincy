@@ -208,7 +208,7 @@ export default function Home() {
         <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>The newsletter</div>
         <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 42, color: '#fff', lineHeight: 1.1, marginBottom: 8 }}>A Voice That Carries</div>
         <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.8, maxWidth: 500, margin: '12px auto 26px' }}>
-          The events, workshops, and neighbors worth knowing — warmth, never noise. A <strong style={{ color: '#fff', fontWeight: 600 }}>52–66% open rate</strong> says it lands.
+          The events, workshops, and neighbors worth knowing — warmth, never noise.
         </p>
         {submitted ? (
           <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 20, color: '#fff' }}>

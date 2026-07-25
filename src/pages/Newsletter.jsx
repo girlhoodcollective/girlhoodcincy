@@ -16,7 +16,7 @@ const ISSUES = [
 export default function Newsletter() {
   useSEO({
     title: 'The Newsletter: A Voice That Carries — Girlhood Collective',
-    description: 'Join the Girlhood Collective newsletter for Cincinnati events, workshops, and neighbors worth knowing — with a 52–66% open rate.',
+    description: 'Join the Girlhood Collective newsletter for Cincinnati events, workshops, and neighbors worth knowing.',
     path: '/newsletter',
   });
 
@@ -46,13 +46,9 @@ export default function Newsletter() {
       <div style={{ background: 'var(--gc-cream)', padding: '60px 44px 56px', textAlign: 'center' }}>
         <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>The newsletter</div>
         <div className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.08 }}>A Voice That Carries</div>
-        <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, margin: '16px auto 8px' }}>
+        <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, margin: '16px auto 28px' }}>
           The events, workshops, and neighbors worth knowing — delivered with warmth, never noise. Twice a month, from our Greater Cincinnati to your inbox.
         </p>
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 28 }}>
-          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 26, color: 'var(--gc-emerald)' }}>52–66%</span>
-          <span style={{ font: '600 10px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)' }}>open rate</span>
-        </div>
 
         {submitted ? (
           <div style={{ maxWidth: 440, margin: '0 auto', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '28px 24px' }}>
