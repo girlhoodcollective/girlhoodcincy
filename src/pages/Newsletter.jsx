@@ -15,7 +15,7 @@ const ISSUES = [
 export default function Newsletter() {
   useSEO({
     title: 'The Newsletter: A Voice That Carries — Girlhood Collective',
-    description: 'Join the Girlhood Collective newsletter for Cincinnati events, workshops, and neighbors worth knowing — with a 52–66% open rate.',
+    description: 'Join the Girlhood Collective newsletter for Cincinnati events, workshops, and neighbors worth knowing.',
     path: '/newsletter',
   });
 

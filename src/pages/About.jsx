@@ -11,7 +11,6 @@ const STATS = [
   { value: '2025', label: 'Founded' },
   { value: '12+', label: 'Events hosted' },
   { value: '4', label: 'Community partners' },
-  { value: '66%', label: 'Newsletter open rate' },
 ];
 
 export default function About() {
