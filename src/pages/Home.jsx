@@ -67,7 +67,7 @@ export default function Home() {
               Strategy, HR &amp; people, and program design — with a facilitator who's lived the gap between policy and belonging.
             </p>
             <Link className="btn" to="/work-with-me" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>
-              Work with me →
+              Work with us →
             </Link>
           </div>
         </div>
