@@ -118,7 +118,7 @@ export default function Home() {
           </Link>
           <Link className="hover-lift" to="/worth-quiz" style={{ textDecoration: 'none', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.14)', borderRadius: 8, padding: '26px 22px', textAlign: 'left', display: 'block' }}>
             <div style={{ font: '700 9px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>For women · 20 Q</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: '#fff', marginBottom: 6 }}>What Are You Worth?</div>
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: '#fff', marginBottom: 6 }}>Dollars & Cents </div>
             <p style={{ fontSize: 13, fontWeight: 300, color: 'rgba(255,255,255,.6)', lineHeight: 1.6 }}>Map your real, marketable skills to a Cincinnati path.</p>
           </Link>
           <Link className="hover-lift" to="/ugc" style={{ textDecoration: 'none', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.14)', borderRadius: 8, padding: '26px 22px', textAlign: 'left', display: 'block' }}>
