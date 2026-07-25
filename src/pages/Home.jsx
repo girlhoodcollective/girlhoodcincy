@@ -108,9 +108,9 @@ export default function Home() {
         </div>
         <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 30, color: '#fff', marginBottom: 8 }}>Not sure which door?</div>
         <p style={{ fontSize: 14.5, fontWeight: 300, color: 'rgba(255,255,255,.62)', lineHeight: 1.75, maxWidth: 540, margin: '0 auto 30px' }}>
-          Three free tools help you figure out what you actually need — for your organization, your career, or your brand.
+          Two free tools help you figure out what you actually need — for your organization or your career.
         </p>
-        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 14, maxWidth: 900, margin: '0 auto' }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, maxWidth: 640, margin: '0 auto' }}>
           <Link className="hover-lift" to="/consultation-intake" style={{ textDecoration: 'none', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.14)', borderRadius: 8, padding: '26px 22px', textAlign: 'left', display: 'block' }}>
             <div style={{ font: '700 9px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>For orgs · 8 min</div>
             <div style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: '#fff', marginBottom: 6 }}>Consultation Intake</div>
@@ -120,11 +120,6 @@ export default function Home() {
             <div style={{ font: '700 9px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>For women · 20 Q</div>
             <div style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: '#fff', marginBottom: 6 }}>Dollars & Cents </div>
             <p style={{ fontSize: 13, fontWeight: 300, color: 'rgba(255,255,255,.6)', lineHeight: 1.6 }}>Map your real, marketable skills to a Cincinnati path.</p>
-          </Link>
-          <Link className="hover-lift" to="/ugc" style={{ textDecoration: 'none', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.14)', borderRadius: 8, padding: '26px 22px', textAlign: 'left', display: 'block' }}>
-            <div style={{ font: '700 9px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>For brands</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: '#fff', marginBottom: 6 }}>UGC Portfolio</div>
-            <p style={{ fontSize: 13, fontWeight: 300, color: 'rgba(255,255,255,.6)', lineHeight: 1.6 }}>The creator work, the approach, and the rate card.</p>
           </Link>
         </div>
       </div>
@@ -140,7 +135,6 @@ export default function Home() {
             { title: 'Strategic Consultation', desc: 'Think, plan, and decide with an outside voice.' },
             { title: 'HR & People Strategy', desc: 'Culture and environments built for real people.' },
             { title: 'Program Design', desc: 'Build what your community actually needs.' },
-            { title: 'UGC & Creator Partnerships', desc: 'Content brands are felt through, not sold with.' },
           ].map((s, i, arr) => (
             <Link
               key={s.title}

@@ -99,7 +99,6 @@ export default function WorkWithMe() {
         <a className="navlink navlink--onwhite" href="#consultation">Strategic Consultation</a>
         <a className="navlink navlink--onwhite" href="#hr">HR &amp; People Strategy</a>
         <a className="navlink navlink--onwhite" href="#program">Program Design</a>
-        <a className="navlink navlink--onwhite" href="#ugc">UGC &amp; Creator</a>
       </div>
 
       <div style={{ background: '#fff', padding: '60px 44px' }}>
@@ -135,22 +134,6 @@ export default function WorkWithMe() {
               </div>
             </div>
           ))}
-
-          <div id="ugc" className="rgrid" style={{ scrollMarginTop: 80, display: 'grid', gridTemplateColumns: '220px 1fr', gap: 36, padding: '44px 0 8px' }}>
-            <div>
-              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 34, color: 'var(--gc-lavender-soft)', marginBottom: 8 }}>04</div>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--gc-slate)', lineHeight: 1.2 }}>UGC &amp; Creator Partnerships</div>
-              <div style={{ font: '600 10px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginTop: 10 }}>Felt · not sold</div>
-            </div>
-            <div>
-              <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.85, marginBottom: 16 }}>
-                Authentic, community-rooted content for brands who want to be felt before they're sold. Real voice, real audience, real trust — the kind of creator work that reads like a neighbor's recommendation, not an ad.
-              </p>
-              <Link className="navlink navlink--onwhite" to="/ugc" style={{ color: 'var(--gc-emerald)' }}>
-                See the portfolio &amp; rate card →
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
 

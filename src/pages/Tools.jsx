@@ -24,22 +24,12 @@ const TOOLS = [
     cta: 'Take the quiz →',
     ctaColor: 'var(--gc-lavender)',
   },
-  {
-    href: '/ugc',
-    accent: '#d98cae',
-    eyebrow: 'For brands',
-    eyebrowColor: '#c96a95',
-    title: 'UGC Portfolio',
-    body: "See the creator work, the approach, and the rate card. Authentic, community-rooted content for brands who want to be felt before they're sold — content that reads like a neighbor's recommendation, not an ad.",
-    cta: 'View the portfolio →',
-    ctaColor: '#c96a95',
-  },
 ];
 
 export default function Tools() {
   useSEO({
     title: 'Free Tools — Girlhood Collective',
-    description: 'Three free tools to help you figure out what you actually need — for your organization, your career, or your brand.',
+    description: 'Two free tools to help you figure out what you actually need — for your organization or your career.',
     path: '/tools',
   });
 
@@ -57,7 +47,7 @@ export default function Tools() {
             Start with a <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>question.</span>
           </div>
           <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.8, maxWidth: 520, margin: '20px auto 0' }}>
-            Three tools to help you figure out what you actually need — for your organization, your career, or your brand. Answer honestly; the more specific you are, the more useful they get.
+            Two tools to help you figure out what you actually need — for your organization or your career. Answer honestly; the more specific you are, the more useful they get.
           </p>
         </div>
       </div>
