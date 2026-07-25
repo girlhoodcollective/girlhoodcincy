@@ -47,7 +47,7 @@ export default function Home() {
           We believe in <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>doing it differently.</span>
         </div>
         <p style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 600, margin: '10px auto 0' }}>
-          Events, workshops, consulting, and community for women and girls of every age and industry — led by a founder who connects the dots for a living.
+          Events, workshops, consulting, and community, led by a founder who connects the dots for a living.
         </p>
       </div>
 
