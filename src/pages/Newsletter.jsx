@@ -5,12 +5,11 @@ import { subscribeToNewsletter } from '../lib/newsletter.js';
 import { useSEO } from '../lib/seo.js';
 
 const ISSUES = [
-  { vol: 'Vol. 08', date: 'June 2026', accent: 'var(--gc-blush)', title: 'The room where it happens', excerpt: 'A first look at the Better Together brunch, why we chose Endurance in Education, and how to grab a seat.' },
-  { vol: 'Vol. 07', date: 'May 2026', accent: 'var(--gc-emerald)', title: 'Market season is here', excerpt: 'Meet the 20+ makers joining us this fall, plus a florals restock you will want to see.' },
-  { vol: 'Vol. 06', date: 'April 2026', accent: 'var(--gc-lavender)', title: 'Ten girls, four Wednesdays', excerpt: 'Behind the scenes of the Studio Art Series — and what the girls said they were most proud of.' },
-  { vol: 'Vol. 05', date: 'March 2026', accent: '#c96a95', title: 'On doing less, better', excerpt: 'A short note from BG on discernment, saying no, and why we protect the quiet.' },
-  { vol: 'Vol. 04', date: 'February 2026', accent: 'var(--gc-slate)', title: 'Meet our newest partners', excerpt: 'Little Treasurer, Crown & Cape, Pillar Pelvic Health, and Cincy Mom Made — the neighbors making it all possible.' },
-  { vol: 'Vol. 03', date: 'January 2026', accent: 'var(--gc-emerald)', title: 'Starting the year on purpose', excerpt: 'Intentions over resolutions, plus everything on the calendar for the season ahead.' },
+  { vol: 'Issue 05', date: 'June 2026', accent: 'var(--gc-blush)', title: 'One Month Until Our First Fundraiser — Sponsor Highlights & Hyde Park Market Preview', url: 'https://preview.mailerlite.io/preview/1805515/emails/191026880087852582' },
+  { vol: 'Issue 04', date: 'May 2026', accent: 'var(--gc-emerald)', title: 'Brunch News & Market Fun', url: 'https://preview.mailerlite.io/preview/1805515/emails/188546365699130527' },
+  { vol: 'Issue 03', date: 'May 2026', accent: 'var(--gc-lavender)', title: 'Summer Is Coming! Updates Inside', url: 'https://preview.mailerlite.io/preview/1805515/emails/187929868071077793' },
+  { vol: 'Issue 02', date: 'May 2026', accent: '#c96a95', title: 'Girlhood Community Spotlights & News', url: 'https://preview.mailerlite.io/preview/1805515/emails/186202367462474900' },
+  { vol: 'Issue 01', date: 'April 2026', accent: 'var(--gc-slate)', title: 'Girlhood Collective Newsletter Issue 1', url: 'https://preview.mailerlite.io/preview/1805515/emails/185545856632489332' },
 ];
 
 export default function Newsletter() {
@@ -46,14 +45,9 @@ export default function Newsletter() {
       <div style={{ background: 'var(--gc-cream)', padding: '60px 44px 56px', textAlign: 'center' }}>
         <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>The newsletter</div>
         <div className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.08 }}>A Voice That Carries</div>
-        <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, margin: '16px auto 8px' }}>
+        <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, margin: '16px auto 28px' }}>
           The events, workshops, and neighbors worth knowing — delivered with warmth, never noise. Twice a month, from our Greater Cincinnati to your inbox.
         </p>
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 28 }}>
-          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 26, color: 'var(--gc-emerald)' }}>52–66%</span>
-          <span style={{ font: '600 10px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)' }}>open rate</span>
-        </div>
-
         {submitted ? (
           <div style={{ maxWidth: 440, margin: '0 auto', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '28px 24px' }}>
             <div style={{ fontSize: 30, marginBottom: 8 }}>💌</div>
@@ -100,15 +94,14 @@ export default function Newsletter() {
         </p>
         <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
           {ISSUES.map((i) => (
-            <div key={i.vol} className="hover-lift" style={{ border: '1px solid var(--gc-border)', borderRadius: 4, borderTop: `3px solid ${i.accent}`, padding: '24px 26px', cursor: 'pointer' }}>
+            <a key={i.vol} href={i.url} target="_blank" rel="noopener noreferrer" className="hover-lift" style={{ display: 'block', border: '1px solid var(--gc-border)', borderRadius: 4, borderTop: `3px solid ${i.accent}`, padding: '24px 26px', textDecoration: 'none' }}>
               <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12, marginBottom: 10 }}>
                 <span style={{ font: '700 10px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>{i.vol}</span>
                 <span style={{ font: '600 11px var(--font-sans)', color: 'var(--gc-ink-muted)' }}>{i.date}</span>
               </div>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>{i.title}</div>
-              <p style={{ fontSize: 13, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 14 }}>{i.excerpt}</p>
+              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 14 }}>{i.title}</div>
               <span style={{ font: '600 11px var(--font-sans)', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--gc-slate)' }}>Read issue →</span>
-            </div>
+            </a>
           ))}
         </div>
       </div>
