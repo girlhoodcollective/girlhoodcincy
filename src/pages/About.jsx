@@ -4,6 +4,8 @@ import Footer from '../components/Footer.jsx';
 import { useSEO, useStructuredData, SITE_URL } from '../lib/seo.js';
 
 const FOUNDER_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/J8A2562.jpg?v=1774664826';
+const FAMILY_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-brittany-family.jpg?v=1774545413';
+const PERSONAL_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_9211.jpg?v=1774029457';
 
 const CREDIBILITY = [
   { title: 'Junior League of Cincinnati', body: 'Serving since 2016, including as Vice President of Training & Development on the Executive Management Team.' },
@@ -71,6 +73,36 @@ export default function About() {
             <p style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 22, color: 'var(--gc-slate)', lineHeight: 1.5 }}>
               &ldquo;Community and belonging take practice and work — they&rsquo;re a science, not an accident.&rdquo;
             </p>
+          </div>
+        </div>
+      </div>
+
+      {/* WHY THIS IS PERSONAL */}
+      <div style={{ background: 'var(--gc-slate)', padding: '60px 44px' }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: 48, maxWidth: 1000, margin: '0 auto', alignItems: 'center' }}>
+          <div>
+            <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 20 }}>Why this is personal</div>
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: '#fff', lineHeight: 1.4 }}>
+              Diagnosed with ADHD and autism later in life, I know what it&rsquo;s like to navigate a world that wasn&rsquo;t built for the way your brain works best.
+            </div>
+            <p style={{ fontSize: 14.5, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.85, maxWidth: 620, marginTop: 20 }}>
+              That journey fuels the work. I love helping others understand themselves, embrace their strengths, and advocate for what they need — and helping organizations learn what it really means to be genuinely inclusive. It&rsquo;s part of why belonging, not just performance, is the standard every Girlhood Collective engagement is built around.
+            </p>
+            <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 22, color: 'var(--gc-lavender-soft)', marginTop: 20 }}>— Brittany</div>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            <img
+              src={FAMILY_PHOTO + '&width=600'}
+              alt="Brittany with her family"
+              loading="lazy"
+              style={{ width: '100%', height: 180, objectFit: 'cover', borderRadius: 8, display: 'block' }}
+            />
+            <img
+              src={PERSONAL_PHOTO + '&width=600'}
+              alt="Brittany Gruber"
+              loading="lazy"
+              style={{ width: '100%', height: 180, objectFit: 'cover', borderRadius: 8, display: 'block' }}
+            />
           </div>
         </div>
       </div>
