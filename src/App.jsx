@@ -11,6 +11,7 @@ import Partners from './pages/Partners.jsx';
 import ConsultationIntake from './pages/ConsultationIntake.jsx';
 import WorthQuiz from './pages/WorthQuiz.jsx';
 import BetterTogetherRecap from './pages/BetterTogetherRecap.jsx';
+import NotFound from './pages/NotFound.jsx';
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/consultation-intake" element={<ConsultationIntake />} />
         <Route path="/worth-quiz" element={<WorthQuiz />} />
         <Route path="/better-together-recap" element={<BetterTogetherRecap />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

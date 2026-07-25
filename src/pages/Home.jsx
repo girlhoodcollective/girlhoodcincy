@@ -3,8 +3,18 @@ import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
 import { subscribeToNewsletter } from '../lib/newsletter.js';
+import { getUpcomingPublishedEvents } from '../data/events.js';
+import { useSEO } from '../lib/seo.js';
+
+const UPCOMING_EVENTS = getUpcomingPublishedEvents(2);
 
 export default function Home() {
+  useSEO({
+    title: 'Girlhood Collective — Community, Curated | Cincinnati',
+    description: 'Events, workshops, consulting, and community for women and girls of every age and industry — right here in Greater Cincinnati.',
+    path: '/',
+  });
+
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
@@ -158,26 +168,23 @@ export default function Home() {
           <div style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 20 }}>
             Come sit at the <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>table.</span>
           </div>
-          <Link className="hover-shadow" to="/events" style={{ textDecoration: 'none', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '18px 20px', display: 'flex', gap: 16, alignItems: 'center', marginBottom: 12 }}>
-            <div style={{ textAlign: 'center', flexShrink: 0 }}>
-              <div style={{ font: '600 9px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>Sep</div>
-              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 30, color: 'var(--gc-slate)', lineHeight: 1 }}>12</div>
-            </div>
-            <div>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 17, fontWeight: 700, color: 'var(--gc-slate)' }}>Dream Big</div>
-              <p style={{ fontSize: 12.5, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>Monthly Experience · girls 8–12</p>
-            </div>
-          </Link>
-          <Link className="hover-shadow" to="/events" style={{ textDecoration: 'none', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '18px 20px', display: 'flex', gap: 16, alignItems: 'center', marginBottom: 20 }}>
-            <div style={{ textAlign: 'center', flexShrink: 0 }}>
-              <div style={{ font: '600 9px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>Sep</div>
-              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 30, color: 'var(--gc-slate)', lineHeight: 1 }}>13</div>
-            </div>
-            <div>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 17, fontWeight: 700, color: 'var(--gc-slate)' }}>Girlhood Goes to Market</div>
-              <p style={{ fontSize: 12.5, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>Fall makers market · Cincinnati</p>
-            </div>
-          </Link>
+          {UPCOMING_EVENTS.map((e, i) => (
+            <Link
+              key={e.id}
+              className="hover-shadow"
+              to="/events"
+              style={{ textDecoration: 'none', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '18px 20px', display: 'flex', gap: 16, alignItems: 'center', marginBottom: i === UPCOMING_EVENTS.length - 1 ? 20 : 12 }}
+            >
+              <div style={{ textAlign: 'center', flexShrink: 0 }}>
+                <div style={{ font: '600 9px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>{e.mon}</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 30, color: 'var(--gc-slate)', lineHeight: 1 }}>{e.day}</div>
+              </div>
+              <div>
+                <div style={{ fontFamily: 'var(--font-serif)', fontSize: 17, fontWeight: 700, color: 'var(--gc-slate)' }}>{e.title}</div>
+                <p style={{ fontSize: 12.5, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>{e.where}</p>
+              </div>
+            </Link>
+          ))}
           <Link className="navlink navlink--onwhite" to="/events" style={{ color: 'var(--gc-emerald)' }}>
             See all events →
           </Link>
@@ -187,7 +194,7 @@ export default function Home() {
       {/* LIVED-EXPERIENCE BRIDGE */}
       <div style={{ background: 'var(--gc-slate)', padding: '60px 44px', textAlign: 'center' }}>
         <img
-          src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_1964.heic?v=1783122573&format=jpg"
+          src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_1964.heic?v=1783122573&format=jpg&width=240"
           alt="Brittany, founder of Girlhood Collective"
           loading="lazy"
           style={{ width: 120, height: 120, objectFit: 'cover', borderRadius: '50%', border: '2px solid rgba(255,255,255,.24)', display: 'block', margin: '0 auto 24px' }}

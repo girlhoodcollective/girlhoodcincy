@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import NavBar from '../components/NavBar.jsx';
 import { submitNetlifyForm } from '../lib/netlifyForms.js';
+import { useSEO } from '../lib/seo.js';
 
 const ORG_DEFS = [
   { v: 'nonprofit', label: 'Nonprofit / social impact', sub: '501c3, community org, advocacy' },
@@ -158,6 +159,12 @@ function SectionNav({ onNext, onBack, nextLabel = 'Continue →', disabled = fal
 }
 
 export default function ConsultationIntake() {
+  useSEO({
+    title: 'Consultation Intake — Girlhood Collective',
+    description: 'An 8-minute diagnostic to help identify what your organization actually needs, and where we’d start working together.',
+    path: '/consultation-intake',
+  });
+
   const [section, setSection] = useState(1);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

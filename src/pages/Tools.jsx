@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
+import { useSEO } from '../lib/seo.js';
 
 const TOOLS = [
   {
@@ -36,6 +37,12 @@ const TOOLS = [
 ];
 
 export default function Tools() {
+  useSEO({
+    title: 'Free Tools — Girlhood Collective',
+    description: 'Three free tools to help you figure out what you actually need — for your organization, your career, or your brand.',
+    path: '/tools',
+  });
+
   return (
     <div className="page-shell">
       <NavBar variant="white" active="Tools" />

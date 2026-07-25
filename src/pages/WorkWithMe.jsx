@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
+import { useSEO } from '../lib/seo.js';
 
 const SERVICES = [
   {
@@ -39,17 +40,17 @@ const SERVICES = [
 ];
 
 const BRANDS = [
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4419.jpg?v=1784511473', alt: 'Brand we\'ve worked with' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4050.jpg?v=1784511429', alt: 'Brand we\'ve worked with' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4417.jpg?v=1784511337', alt: 'Brand we\'ve worked with' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4418.jpg?v=1784510803', alt: 'Brand we\'ve worked with' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4103.jpg?v=1784510675', alt: 'Brand we\'ve worked with' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Untitled_2Bdesign_2B_25286_2529.webp?v=1784503719', alt: 'Brand we\'ve worked with' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/PillarLogoSalmon_edited_edited.png?v=1784503720', alt: 'Pillar' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/full-ks-logo.png?v=1784503720', alt: 'Brand we\'ve worked with' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo-1.png?v=1784503720', alt: 'Brand we\'ve worked with' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo-web.png?v=1784503719', alt: 'Brand we\'ve worked with' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo.png?v=1784511511', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4419.jpg?v=1784511473&width=400', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4050.jpg?v=1784511429&width=400', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4417.jpg?v=1784511337&width=400', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4418.jpg?v=1784510803&width=400', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4103.jpg?v=1784510675&width=400', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Untitled_2Bdesign_2B_25286_2529.webp?v=1784503719&width=400', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/PillarLogoSalmon_edited_edited.png?v=1784503720&width=400', alt: 'Pillar' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/full-ks-logo.png?v=1784503720&width=400', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo-1.png?v=1784503720&width=400', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo-web.png?v=1784503719&width=400', alt: 'Brand we\'ve worked with' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo.png?v=1784511511&width=400', alt: 'Brand we\'ve worked with' },
 ];
 
 const STEPS = [
@@ -59,6 +60,13 @@ const STEPS = [
 ];
 
 export default function WorkWithMe() {
+  useSEO({
+    title: 'Work With Me — Consulting, HR & Program Design | Girlhood Collective',
+    description: 'Strategic consultation, HR & people strategy, and program design for organizations building rooms where people are truly understood.',
+    path: '/work-with-me',
+    image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3918.jpg?v=1783447727&width=1200',
+  });
+
   return (
     <div className="page-shell">
       <NavBar variant="white" active="Work With Me" />
@@ -198,7 +206,7 @@ export default function WorkWithMe() {
       <div style={{ background: 'var(--gc-slate)', padding: '58px 44px' }}>
         <div className="rgrid" style={{ maxWidth: 900, margin: '0 auto', display: 'grid', gridTemplateColumns: '160px 1fr', gap: 36, alignItems: 'flex-start' }}>
           <img
-            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3918.jpg?v=1783447727"
+            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3918.jpg?v=1783447727&width=320"
             alt="Brittany at work"
             loading="lazy"
             style={{ width: 160, height: 190, objectFit: 'cover', borderRadius: 8, border: '1px solid rgba(255,255,255,.18)', display: 'block' }}

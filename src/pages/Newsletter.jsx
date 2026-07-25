@@ -2,6 +2,7 @@ import { useState } from 'react';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
 import { subscribeToNewsletter } from '../lib/newsletter.js';
+import { useSEO } from '../lib/seo.js';
 
 const ISSUES = [
   { vol: 'Vol. 08', date: 'June 2026', accent: 'var(--gc-blush)', title: 'The room where it happens', excerpt: 'A first look at the Better Together brunch, why we chose Endurance in Education, and how to grab a seat.' },
@@ -13,6 +14,12 @@ const ISSUES = [
 ];
 
 export default function Newsletter() {
+  useSEO({
+    title: 'The Newsletter: A Voice That Carries — Girlhood Collective',
+    description: 'Join the Girlhood Collective newsletter for Cincinnati events, workshops, and neighbors worth knowing — with a 52–66% open rate.',
+    path: '/newsletter',
+  });
+
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
+import { useSEO } from '../lib/seo.js';
 
 const FOUNDER_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/J8A2562.jpg?v=1774664826';
 const FAMILY_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-brittany-family.jpg?v=1774545413';
@@ -14,6 +15,13 @@ const STATS = [
 ];
 
 export default function About() {
+  useSEO({
+    title: 'About Girlhood Collective — Our Story & Founder | Cincinnati',
+    description: 'Meet Brittany Gruber and the story behind Girlhood Collective — uniting makers, teachers, leaders, and learners across Greater Cincinnati since 2025.',
+    path: '/about',
+    image: FOUNDER_PHOTO + '&width=1200',
+  });
+
   return (
     <div className="page-shell">
       <NavBar variant="navy" active="About" />
@@ -36,7 +44,7 @@ export default function About() {
         <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '260px 1fr', gap: 44, alignItems: 'center', maxWidth: 960, margin: '0 auto' }}>
           <div style={{ textAlign: 'center' }}>
             <img
-              src={FOUNDER_PHOTO}
+              src={FOUNDER_PHOTO + '&width=520'}
               alt="Brittany Gruber, founder of Girlhood Collective"
               loading="lazy"
               style={{ width: 260, height: 300, objectFit: 'cover', objectPosition: 'center 10%', borderRadius: 8, display: 'block' }}
@@ -77,13 +85,13 @@ export default function About() {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
             <img
-              src={FAMILY_PHOTO}
+              src={FAMILY_PHOTO + '&width=600'}
               alt="Brittany with her family"
               loading="lazy"
               style={{ width: '100%', height: 220, objectFit: 'cover', borderRadius: 8, display: 'block' }}
             />
             <img
-              src={PERSONAL_PHOTO}
+              src={PERSONAL_PHOTO + '&width=600'}
               alt="Brittany Gruber"
               loading="lazy"
               style={{ width: '100%', height: 220, objectFit: 'cover', borderRadius: 8, display: 'block' }}

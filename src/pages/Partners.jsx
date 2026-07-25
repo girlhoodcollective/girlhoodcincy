@@ -2,6 +2,7 @@ import { useState } from 'react';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
 import { submitNetlifyForm } from '../lib/netlifyForms.js';
+import { useSEO } from '../lib/seo.js';
 
 const DIRECTORY = [
   { border: '#c96a95', name: 'Pillar', tag: 'Pelvic Health & PT', tagColor: '#c96a95', body: "Women's pelvic health and physical therapy that meets you with real expertise and even realer talk." },
@@ -24,6 +25,13 @@ const INTERESTS = [
 ];
 
 export default function Partners() {
+  useSEO({
+    title: 'Partners — Girlhood Collective | Cincinnati',
+    description: 'We partner with women-led businesses, educators, makers, and community leaders across Cincinnati. Become a partner today.',
+    path: '/partners',
+    image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3916.jpg?v=1783447727&width=1200',
+  });
+
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(false);
@@ -60,7 +68,7 @@ export default function Partners() {
           </p>
         </div>
         <img
-          src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3916.jpg?v=1783447727"
+          src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3916.jpg?v=1783447727&width=600"
           alt="Brittany working with a student"
           loading="lazy"
           style={{ width: '100%', height: 320, objectFit: 'cover', borderRadius: 10, border: '1px solid var(--gc-border)', display: 'block' }}

@@ -1,6 +1,7 @@
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
 import ImageSlot from '../components/ImageSlot.jsx';
+import { useSEO } from '../lib/seo.js';
 
 const STATS = [
   { value: '52–66%', label: 'Newsletter open rate' },
@@ -21,6 +22,12 @@ const RATES = [
 ];
 
 export default function UGC() {
+  useSEO({
+    title: 'UGC & Creator Partnerships — Girlhood Collective',
+    description: "Authentic, community-rooted content for brands who want to be felt before they're sold. See the portfolio and rate card.",
+    path: '/ugc',
+  });
+
   return (
     <div className="page-shell">
       <NavBar variant="white" active="Tools" />

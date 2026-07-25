@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
+import { useSEO } from '../lib/seo.js';
 
 const STATS = [
   { value: '$3,000', label: 'Revenue raised' },
@@ -29,27 +30,34 @@ const RESULTS = [
 ];
 
 const SPONSORS = [
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4419.jpg?v=1784511473', alt: 'Better Together Brunch sponsor' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4050.jpg?v=1784511429', alt: 'Better Together Brunch sponsor' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4417.jpg?v=1784511337', alt: 'Better Together Brunch sponsor' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4418.jpg?v=1784510803', alt: 'Better Together Brunch sponsor' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4103.jpg?v=1784510675', alt: 'Better Together Brunch sponsor' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Untitled_2Bdesign_2B_25286_2529.webp?v=1784503719', alt: 'Better Together Brunch sponsor' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/PillarLogoSalmon_edited_edited.png?v=1784503720', alt: 'Pillar' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/full-ks-logo.png?v=1784503720', alt: 'Better Together Brunch sponsor' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo-1.png?v=1784503720', alt: 'Better Together Brunch sponsor' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo-web.png?v=1784503719', alt: 'Better Together Brunch sponsor' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo.png?v=1784511511', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4419.jpg?v=1784511473&width=400', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4050.jpg?v=1784511429&width=400', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4417.jpg?v=1784511337&width=400', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4418.jpg?v=1784510803&width=400', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4103.jpg?v=1784510675&width=400', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Untitled_2Bdesign_2B_25286_2529.webp?v=1784503719&width=400', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/PillarLogoSalmon_edited_edited.png?v=1784503720&width=400', alt: 'Pillar' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/full-ks-logo.png?v=1784503720&width=400', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo-1.png?v=1784503720&width=400', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo-web.png?v=1784503719&width=400', alt: 'Better Together Brunch sponsor' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo.png?v=1784511511&width=400', alt: 'Better Together Brunch sponsor' },
 ];
 
 const GALLERY = [
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/432_a2c25d8f-0ce8-40d5-b0fe-f1f1d4b17a69.jpg?v=1784653522', alt: 'Guests and panelists together at the Better Together Brunch' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6378.jpg?v=1784590111', alt: 'Better Together Brunch at the Columbia Center', position: 'center 15%' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6384.jpg?v=1784581853', alt: 'Guests at the Better Together Brunch' },
-  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4415_1d38b43f-96e0-47ca-96f8-4e8db80ef328.jpg?v=1784581862', alt: 'Speaker addressing the room at the Better Together Brunch' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/432_a2c25d8f-0ce8-40d5-b0fe-f1f1d4b17a69.jpg?v=1784653522&width=1100', alt: 'Guests and panelists together at the Better Together Brunch' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6378.jpg?v=1784590111&width=1100', alt: 'Better Together Brunch at the Columbia Center', position: 'center 15%' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6384.jpg?v=1784581853&width=1100', alt: 'Guests at the Better Together Brunch' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4415_1d38b43f-96e0-47ca-96f8-4e8db80ef328.jpg?v=1784581862&width=1100', alt: 'Speaker addressing the room at the Better Together Brunch' },
 ];
 
 export default function BetterTogetherRecap() {
+  useSEO({
+    title: 'Case Study: Better Together Brunch — Girlhood Collective',
+    description: 'How one event turned into $3,000 raised, 10 new sponsors, and the start of a lasting community for Endurance in Education.',
+    path: '/better-together-recap',
+    image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/432_a2c25d8f-0ce8-40d5-b0fe-f1f1d4b17a69.jpg?v=1784653522&width=1200',
+  });
+
   return (
     <div className="page-shell">
       <NavBar variant="navy" active="Events & Workshops" />

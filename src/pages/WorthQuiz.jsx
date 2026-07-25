@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
+import { useSEO } from '../lib/seo.js';
 
 const QUESTIONS = [
   { type: 'single', text: 'When something at work is broken, what do you actually do?', context: "Not what you should do — what do you instinctively reach for first?", options: [{ text: 'Make a list, assign owners, build a timeline — project mode immediately', skills: ['project_mgmt', 'operations'] }, { text: "Start asking 'why' until I find the real problem underneath", skills: ['analysis', 'systems'] }, { text: 'Call the right person — I know who can actually fix it', skills: ['people', 'communication'] }, { text: 'Write up what\'s happening so everyone sees the same picture', skills: ['writing', 'communication'] }] },
@@ -39,6 +40,12 @@ const ARCHETYPES = {
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 
 export default function WorthQuiz() {
+  useSEO({
+    title: 'What Are You Worth? A Skills Inventory — Girlhood Collective',
+    description: "A warm skills inventory that maps your real, marketable strengths to an income path grounded in Cincinnati's actual market.",
+    path: '/worth-quiz',
+  });
+
   const [phase, setPhase] = useState('intro');
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState({});
