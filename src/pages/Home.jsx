@@ -1,8 +1,29 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
+import { subscribeToNewsletter } from '../lib/newsletter.js';
 
 export default function Home() {
+  const [email, setEmail] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleSubscribe = async () => {
+    if (!email.trim()) return;
+    setSending(true);
+    setError(false);
+    try {
+      await subscribeToNewsletter(email.trim());
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
+  };
+
   return (
     <div className="page-shell">
       <NavBar variant="white" />
@@ -188,17 +209,38 @@ export default function Home() {
         <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.8, maxWidth: 500, margin: '12px auto 26px' }}>
           The events, workshops, and neighbors worth knowing — warmth, never noise. A <strong style={{ color: '#fff', fontWeight: 600 }}>52–66% open rate</strong> says it lands.
         </p>
-        <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <input
-            type="email"
-            placeholder="you@cincinnati.com"
-            className="email-input"
-            style={{ background: 'rgba(255,255,255,.09)', border: '1px solid rgba(255,255,255,.22)', borderRadius: 100, padding: '14px 22px', font: '400 14px var(--font-sans)', color: '#fff', width: 300, outline: 'none' }}
-          />
-          <Link className="btn" to="/newsletter" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>
-            Subscribe
-          </Link>
-        </div>
+        {submitted ? (
+          <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 20, color: '#fff' }}>
+            💌 You're on the list — welcome in.
+          </div>
+        ) : (
+          <div>
+            <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <input
+                type="email"
+                placeholder="you@cincinnati.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && handleSubscribe()}
+                className="email-input"
+                style={{ background: 'rgba(255,255,255,.09)', border: '1px solid rgba(255,255,255,.22)', borderRadius: 100, padding: '14px 22px', font: '400 14px var(--font-sans)', color: '#fff', width: 300, outline: 'none' }}
+              />
+              <button
+                onClick={handleSubscribe}
+                disabled={sending}
+                style={{ cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 12px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', padding: '15px 28px', borderRadius: 100 }}
+              >
+                {sending ? 'Subscribing…' : 'Subscribe'}
+              </button>
+            </div>
+            {error && (
+              <p style={{ fontSize: 13, color: '#ffb4a8', marginTop: 14 }}>
+                Something went wrong — please email us directly at{' '}
+                <a href="mailto:hello@girlhoodcincy.com" style={{ color: '#ffb4a8' }}>hello@girlhoodcincy.com</a> instead.
+              </p>
+            )}
+          </div>
+        )}
       </div>
 
       <Footer showExplore linked={false} />

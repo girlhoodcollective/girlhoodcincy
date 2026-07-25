@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
+import { subscribeToNewsletter } from '../lib/newsletter.js';
 
 const ISSUES = [
   { vol: 'Vol. 08', date: 'June 2026', accent: 'var(--gc-blush)', title: 'The room where it happens', excerpt: 'A first look at the Better Together brunch, why we chose Endurance in Education, and how to grab a seat.' },
@@ -14,6 +15,22 @@ const ISSUES = [
 export default function Newsletter() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleSubscribe = async () => {
+    if (!email.trim()) return;
+    setSending(true);
+    setError(false);
+    try {
+      await subscribeToNewsletter(email.trim());
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
+  };
 
   return (
     <div className="page-shell">
@@ -39,21 +56,31 @@ export default function Newsletter() {
             </p>
           </div>
         ) : (
-          <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <input
-              type="email"
-              placeholder="you@cincinnati.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="fld email-input"
-              style={{ width: 320 }}
-            />
-            <button
-              onClick={() => setSubmitted(true)}
-              style={{ cursor: 'pointer', border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 11px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', padding: '14px 26px', borderRadius: 3 }}
-            >
-              Subscribe
-            </button>
+          <div>
+            <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <input
+                type="email"
+                placeholder="you@cincinnati.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && handleSubscribe()}
+                className="fld email-input"
+                style={{ width: 320 }}
+              />
+              <button
+                onClick={handleSubscribe}
+                disabled={sending}
+                style={{ cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 11px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', padding: '14px 26px', borderRadius: 3 }}
+              >
+                {sending ? 'Subscribing…' : 'Subscribe'}
+              </button>
+            </div>
+            {error && (
+              <p style={{ fontSize: 13, color: '#c0392b', marginTop: 14 }}>
+                Something went wrong sending that — please email us directly at{' '}
+                <a href="mailto:hello@girlhoodcincy.com" style={{ color: '#c0392b' }}>hello@girlhoodcincy.com</a> instead.
+              </p>
+            )}
           </div>
         )}
       </div>
