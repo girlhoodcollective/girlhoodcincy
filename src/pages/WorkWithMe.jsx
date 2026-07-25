@@ -9,10 +9,10 @@ const SERVICES = [
     n: '01',
     title: 'Strategic Consultation',
     kicker: 'Think · plan · decide',
-    body: "A clear-eyed outside voice for the problem underneath the problem. We start with what's actually happening — not the board-meeting version — and find where a small, honest change moves everything downstream.",
+    body: 'An outside voice for the problem beneath the problem — we find the small, honest change that moves everything downstream.',
     bullets: [
-      "For founders, EDs, and leaders navigating something they can't quite name",
-      'You leave with a diagnosis, a first step, and language for the room',
+      "For founders, EDs, and leaders navigating something they can't name",
+      'A diagnosis, a first step, language for the room',
     ],
   },
   {
@@ -20,10 +20,10 @@ const SERVICES = [
     n: '02',
     title: 'HR & People Strategy',
     kicker: 'Culture · hiring · access',
-    body: "Culture and environments designed for how people actually work — including neurodivergent access. Belonging isn't a training; it's how the room is built. I help you build it, from hiring practices to the way meetings run.",
+    body: "Belonging isn't a training — it's how the room is built. I help you build it, from hiring to how meetings run.",
     bullets: [
-      'For teams losing good people quietly, or growing without a culture on purpose',
-      'Environment audits, listening processes, and practical redesign — not policy theater',
+      'For teams quietly losing good people, or growing without culture on purpose',
+      'Real audits and redesign — not policy theater',
     ],
   },
   {
@@ -31,7 +31,7 @@ const SERVICES = [
     n: '03',
     title: 'Program Design',
     kicker: 'Build · rethink · reach',
-    body: "Build or rethink what you offer — starting with the community you're trying to reach, not the program itself. Before we build anything, we learn who isn't showing up, why, and what they actually need. That work shapes everything downstream.",
+    body: "Built around who isn't showing up, not the program itself — we learn why, then build what actually reaches them.",
     bullets: [
       "For nonprofits, schools, and civic orgs whose programming isn't landing",
       'Grounded in real community input, tested in real rooms',
@@ -56,7 +56,7 @@ const BRANDS = [
 const STEPS = [
   { border: 'var(--gc-emerald)', n: '1', title: 'Start with the intake', body: 'An 8-minute diagnostic tells me what you\'re really carrying — before we ever talk.' },
   { border: 'var(--gc-lavender)', n: '2', title: 'A real conversation', body: 'No pitch, no pressure. An honest look at whether I\'m the right person for this.' },
-  { border: '#d98cae', n: '3', title: 'Scoped to the situation', body: 'Every engagement is built for the actual problem — not a menu of packages.' },
+  { border: '#d98cae', n: '3', title: 'Scoped to the situation', body: 'Every engagement is built for your actual problem, not a template.' },
 ];
 
 export default function WorkWithMe() {
