@@ -74,13 +74,13 @@ export default function Home() {
         <div style={{ position: 'absolute', top: -90, left: -70, width: 320, height: 320, borderRadius: '50%', background: 'radial-gradient(circle, rgba(111,150,207,.16), transparent 70%)' }} />
         <div style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.28em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
-            Cincinnati · Rooted in belonging
+            Cincinnati · EST 2025
           </div>
           <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 46, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.1, maxWidth: 680, margin: '0 auto' }}>
             Community takes practice. We&rsquo;ll help you <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>build it.</span>
           </h1>
           <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, margin: '20px auto 30px' }}>
-            Girlhood Collective helps small businesses, health professionals, mission-driven organizations, and community members build real, lasting community — through consulting, events, and experiences rooted in hospitality.
+            Girlhood Collective helps small businesses, independent professionals, mission-driven organizations, and community members build real, lasting community. Consulting, events, and experiences rooted in belonging.
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link className="btn" to="/contact" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '16px 30px' }}>
