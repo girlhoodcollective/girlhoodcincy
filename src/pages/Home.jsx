@@ -77,10 +77,10 @@ export default function Home() {
             Cincinnati · EST 2025
           </div>
           <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 46, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.1, maxWidth: 680, margin: '0 auto' }}>
-            Community takes practice. We&rsquo;ll help you <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>build it.</span>
+            Community takes practice. </span>
           </h1>
           <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, margin: '20px auto 30px' }}>
-            Girlhood Collective helps small businesses, independent professionals, mission-driven organizations, and community members build real, lasting community. Consulting, events, and experiences rooted in belonging.
+            Girlhood Collective helps small businesses, independent professionals, mission-driven organizations, and community members build authentic, lasting community. Advisory services, community events, and experiences built for all.
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link className="btn" to="/contact" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '16px 30px' }}>
