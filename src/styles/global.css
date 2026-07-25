@@ -158,3 +158,101 @@ textarea.fld {
   background: var(--gc-emerald);
   color: #fff;
 }
+
+/* ============ Mobile nav ============ */
+.nav-toggle-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-end;
+}
+.nav-toggle-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--gc-navy);
+  border-radius: 2px;
+  transition: transform 0.2s, width 0.2s;
+}
+.nav-mobile-menu {
+  display: none;
+}
+
+/* ============ Responsive layout primitives ============ */
+/* .rgrid / .rgrid-2: multi-column CSS grids that collapse on small screens.
+   Uses !important because the original column count is set via inline style. */
+.rflex-split,
+.rflex-half {
+  min-width: 0;
+}
+
+@media (max-width: 860px) {
+  .nav-links-desktop {
+    display: none !important;
+  }
+  .nav-toggle-btn {
+    display: flex !important;
+  }
+  .nav-mobile-menu.open {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: #fff;
+    border-bottom: 1px solid var(--gc-border);
+    padding: 6px 20px 18px;
+    position: sticky;
+    top: 53px;
+    z-index: 99;
+  }
+  .nav-mobile-menu.open a {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gc-border);
+  }
+  .nav-mobile-menu.open a:last-of-type {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 780px) {
+  .rgrid {
+    grid-template-columns: 1fr !important;
+  }
+  .rgrid-2 {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .rflex-split {
+    flex-direction: column !important;
+  }
+  .rflex-half {
+    width: 100% !important;
+  }
+  .hero-title {
+    font-size: 30px !important;
+  }
+  .email-input {
+    width: 100% !important;
+  }
+  .card-pad {
+    padding: 26px 22px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell > div,
+  .page-shell > nav,
+  .flow-shell > div,
+  .flow-shell > nav {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .rgrid-2 {
+    grid-template-columns: 1fr !important;
+  }
+}

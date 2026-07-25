@@ -70,7 +70,7 @@ export default function WorkWithMe() {
           <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.28em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
             Consulting · Facilitation · People strategy
           </div>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 50, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.08 }}>
+          <div className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 50, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.08 }}>
             Build a room where people are <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>understood.</span>
           </div>
           <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, margin: '22px 0 28px' }}>
@@ -100,6 +100,7 @@ export default function WorkWithMe() {
             <div
               key={s.id}
               id={s.id}
+              className="rgrid"
               style={{
                 scrollMarginTop: 80,
                 display: 'grid',
@@ -127,7 +128,7 @@ export default function WorkWithMe() {
             </div>
           ))}
 
-          <div id="ugc" style={{ scrollMarginTop: 80, display: 'grid', gridTemplateColumns: '220px 1fr', gap: 36, padding: '44px 0 8px' }}>
+          <div id="ugc" className="rgrid" style={{ scrollMarginTop: 80, display: 'grid', gridTemplateColumns: '220px 1fr', gap: 36, padding: '44px 0 8px' }}>
             <div>
               <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 34, color: 'var(--gc-lavender-soft)', marginBottom: 8 }}>04</div>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--gc-slate)', lineHeight: 1.2 }}>UGC &amp; Creator Partnerships</div>
@@ -152,7 +153,7 @@ export default function WorkWithMe() {
             No packages. Just the <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>right</span> fit.
           </div>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, maxWidth: 900, margin: '0 auto' }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, maxWidth: 900, margin: '0 auto' }}>
           {STEPS.map((s) => (
             <div key={s.n} style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, borderTop: `3px solid ${s.border}`, padding: '26px 24px' }}>
               <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 24, color: 'var(--gc-lavender-soft)', marginBottom: 10 }}>{s.n}</div>
@@ -195,7 +196,7 @@ export default function WorkWithMe() {
       </div>
 
       <div style={{ background: 'var(--gc-slate)', padding: '58px 44px' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', display: 'grid', gridTemplateColumns: '160px 1fr', gap: 36, alignItems: 'flex-start' }}>
+        <div className="rgrid" style={{ maxWidth: 900, margin: '0 auto', display: 'grid', gridTemplateColumns: '160px 1fr', gap: 36, alignItems: 'flex-start' }}>
           <img
             src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3918.jpg?v=1783447727"
             alt="Brittany at work"

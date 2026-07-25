@@ -21,14 +21,14 @@ export default function Home() {
       </div>
 
       {/* TWO-DOOR HERO */}
-      <div style={{ display: 'flex', alignItems: 'stretch' }}>
-        <div style={{ width: '50%', background: 'var(--gc-navy)', padding: '58px 44px', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}>
+      <div className="rflex-split" style={{ display: 'flex', alignItems: 'stretch' }}>
+        <div className="rflex-half" style={{ width: '50%', background: 'var(--gc-navy)', padding: '58px 44px', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: -80, left: -60, width: 300, height: 300, borderRadius: '50%', background: 'radial-gradient(circle, rgba(186,217,243,.22), transparent 70%)' }} />
           <div style={{ position: 'relative', zIndex: 2 }}>
             <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.26em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 18 }}>
               For organizations &amp; leaders
             </div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 40, fontWeight: 700, color: '#fff', lineHeight: 1.1 }}>
+            <div className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 40, fontWeight: 700, color: '#fff', lineHeight: 1.1 }}>
               Build a room where people are{' '}
               <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-lavender-soft)' }}>understood.</span>
             </div>
@@ -40,13 +40,13 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div style={{ width: '50%', background: 'var(--gc-cream)', padding: '58px 44px', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}>
+        <div className="rflex-half" style={{ width: '50%', background: 'var(--gc-cream)', padding: '58px 44px', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', bottom: -80, right: -60, width: 300, height: 300, borderRadius: '50%', background: 'radial-gradient(circle, rgba(79,178,134,.14), transparent 70%)' }} />
           <div style={{ position: 'relative', zIndex: 2 }}>
             <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.26em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
               For women &amp; community
             </div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 40, fontWeight: 700, color: 'var(--gc-slate)', lineHeight: 1.1 }}>
+            <div className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 40, fontWeight: 700, color: 'var(--gc-slate)', lineHeight: 1.1 }}>
               Find your people. Come sit at the{' '}
               <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>table.</span>
             </div>
@@ -79,7 +79,7 @@ export default function Home() {
         <p style={{ fontSize: 14.5, fontWeight: 300, color: 'rgba(255,255,255,.62)', lineHeight: 1.75, maxWidth: 540, margin: '0 auto 30px' }}>
           Three free tools help you figure out what you actually need — for your organization, your career, or your brand.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 14, maxWidth: 900, margin: '0 auto' }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 14, maxWidth: 900, margin: '0 auto' }}>
           <Link className="hover-lift" to="/consultation-intake" style={{ textDecoration: 'none', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.14)', borderRadius: 8, padding: '26px 22px', textAlign: 'left', display: 'block' }}>
             <div style={{ font: '700 9px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>For orgs · 8 min</div>
             <div style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: '#fff', marginBottom: 6 }}>Consultation Intake</div>
@@ -99,8 +99,8 @@ export default function Home() {
       </div>
 
       {/* PARALLEL COLUMNS: WORK WITH ME | EVENTS */}
-      <div style={{ display: 'flex' }}>
-        <div style={{ width: '50%', background: '#fff', padding: '54px 44px', borderRight: '1px solid var(--gc-border)' }}>
+      <div className="rflex-split" style={{ display: 'flex' }}>
+        <div className="rflex-half" style={{ width: '50%', background: '#fff', padding: '54px 44px', borderRight: '1px solid var(--gc-border)' }}>
           <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 8 }}>Work with me</div>
           <div style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 20 }}>
             The same care, brought to <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>your</span> room.
@@ -132,7 +132,7 @@ export default function Home() {
             See services &amp; book →
           </Link>
         </div>
-        <div style={{ width: '50%', background: 'var(--gc-section)', padding: '54px 44px' }}>
+        <div className="rflex-half" style={{ width: '50%', background: 'var(--gc-section)', padding: '54px 44px' }}>
           <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-slate)', marginBottom: 8 }}>Events &amp; community</div>
           <div style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 20 }}>
             Come sit at the <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>table.</span>
@@ -192,6 +192,7 @@ export default function Home() {
           <input
             type="email"
             placeholder="you@cincinnati.com"
+            className="email-input"
             style={{ background: 'rgba(255,255,255,.09)', border: '1px solid rgba(255,255,255,.22)', borderRadius: 100, padding: '14px 22px', font: '400 14px var(--font-sans)', color: '#fff', width: 300, outline: 'none' }}
           />
           <Link className="btn" to="/newsletter" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>

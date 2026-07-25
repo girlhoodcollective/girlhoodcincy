@@ -21,7 +21,7 @@ export default function Newsletter() {
 
       <div style={{ background: 'var(--gc-cream)', padding: '60px 44px 56px', textAlign: 'center' }}>
         <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>The newsletter</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.08 }}>A Voice That Carries</div>
+        <div className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.08 }}>A Voice That Carries</div>
         <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, margin: '16px auto 8px' }}>
           The events, workshops, and neighbors worth knowing — delivered with warmth, never noise. Twice a month, from our Greater Cincinnati to your inbox.
         </p>
@@ -45,7 +45,7 @@ export default function Newsletter() {
               placeholder="you@cincinnati.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="fld"
+              className="fld email-input"
               style={{ width: 320 }}
             />
             <button
@@ -64,7 +64,7 @@ export default function Newsletter() {
         <p style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 520, marginBottom: 28 }}>
           Catch up on what you missed. A little of everything we've been up to.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
           {ISSUES.map((i) => (
             <div key={i.vol} className="hover-lift" style={{ border: '1px solid var(--gc-border)', borderRadius: 4, borderTop: `3px solid ${i.accent}`, padding: '24px 26px', cursor: 'pointer' }}>
               <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12, marginBottom: 10 }}>

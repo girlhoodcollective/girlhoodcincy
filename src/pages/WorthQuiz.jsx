@@ -117,7 +117,7 @@ export default function WorthQuiz() {
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: 'var(--gc-cream)' }}>
+    <div className="flow-shell" style={{ minHeight: '100vh', background: 'var(--gc-cream)' }}>
       <NavBar variant="minimal" label="What Are You Worth? · A skills inventory" />
 
       {phase === 'intro' && (
@@ -127,7 +127,7 @@ export default function WorthQuiz() {
             <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.26em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
               A warm skills inventory · Cincinnati
             </div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 44, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.12 }}>
+            <div className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 44, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.12 }}>
               You were never <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>wrong</span> about yourself.
             </div>
             <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.8, maxWidth: 500, margin: '20px auto 26px' }}>

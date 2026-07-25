@@ -48,11 +48,11 @@ export default function Partners() {
     <div className="page-shell">
       <NavBar variant="navy" active="Partners" />
 
-      <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px', display: 'grid', gridTemplateColumns: '1fr 300px', gap: 40, alignItems: 'center' }}>
+      <div className="rgrid" style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px', display: 'grid', gridTemplateColumns: '1fr 300px', gap: 40, alignItems: 'center' }}>
         <div>
           <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
           <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>The neighborhood</div>
-          <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 640 }}>
+          <div className="hero-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 640 }}>
             Built <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>alongside</span> good people.
           </div>
           <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, marginTop: 20 }}>
@@ -70,7 +70,7 @@ export default function Partners() {
       <div style={{ background: '#fff', padding: '60px 44px' }}>
         <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Our community partners</div>
         <div style={{ fontFamily: 'var(--font-serif)', fontSize: 28, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 28 }}>In good company</div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16 }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16 }}>
           {DIRECTORY.map((p) => (
             <div key={p.name} className="hover-border" style={{ border: '1px solid var(--gc-border)', borderRadius: 4, borderTop: `4px solid ${p.border}`, padding: '28px 26px' }}>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 4 }}>{p.name}</div>
@@ -86,7 +86,7 @@ export default function Partners() {
           <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Why partner with us</div>
           <div style={{ fontFamily: 'var(--font-serif)', fontSize: 28, fontWeight: 700, color: 'var(--gc-slate)' }}>A room worth being in</div>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, maxWidth: 900, margin: '0 auto' }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, maxWidth: 900, margin: '0 auto' }}>
           {WHY.map((w) => (
             <div key={w.title} style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 4, borderTop: `3px solid ${w.border}`, padding: '26px 24px' }}>
               <div style={{ fontSize: 24, marginBottom: 10 }}>{w.icon}</div>
@@ -120,11 +120,11 @@ export default function Partners() {
             </div>
           ) : (
             <div>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 12 }}>
+              <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 12 }}>
                 <input className="fld" placeholder="Business / organization" value={form.org} onChange={setField('org')} />
                 <input className="fld" placeholder="Your name" value={form.name} onChange={setField('name')} />
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 12 }}>
+              <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 12 }}>
                 <input className="fld" placeholder="Email address" value={form.email} onChange={setField('email')} />
                 <select className="fld" value={form.interest} onChange={setField('interest')}>
                   {INTERESTS.map((o) => (

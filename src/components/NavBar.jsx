@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const WHITE_LINKS = [
@@ -14,6 +15,8 @@ const NAVY_LINKS = [
 ];
 
 export default function NavBar({ variant = 'white', active, label }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   if (variant === 'minimal') {
     return (
       <nav
@@ -24,6 +27,8 @@ export default function NavBar({ variant = 'white', active, label }) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
+          flexWrap: 'wrap',
+          rowGap: 6,
         }}
       >
         <Link to="/" style={{ lineHeight: 1, textDecoration: 'none' }}>
@@ -46,6 +51,7 @@ export default function NavBar({ variant = 'white', active, label }) {
             letterSpacing: '.2em',
             textTransform: 'uppercase',
             color: 'var(--gc-ink-muted)',
+            textAlign: 'right',
           }}
         >
           {label}
@@ -58,47 +64,80 @@ export default function NavBar({ variant = 'white', active, label }) {
   const links = isNavy ? NAVY_LINKS : WHITE_LINKS;
 
   return (
-    <nav
-      style={{
-        background: '#fff',
-        borderBottom: '1px solid var(--gc-border)',
-        padding: '16px 40px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        position: 'sticky',
-        top: 0,
-        zIndex: 100,
-      }}
-    >
-      <Link to="/" style={{ lineHeight: 1, textDecoration: 'none' }}>
-        <span style={{ fontFamily: 'var(--font-display)', fontSize: 21, color: 'var(--gc-navy)' }}>Girlhood</span>
-        <span
-          style={{
-            fontFamily: 'var(--font-serif)',
-            fontStyle: 'italic',
-            fontSize: 16,
-            color: 'var(--gc-navy)',
-            marginLeft: 5,
-          }}
+    <>
+      <nav
+        style={{
+          background: '#fff',
+          borderBottom: '1px solid var(--gc-border)',
+          padding: '16px 40px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          position: 'sticky',
+          top: 0,
+          zIndex: 100,
+        }}
+      >
+        <Link to="/" style={{ lineHeight: 1, textDecoration: 'none' }} onClick={() => setMenuOpen(false)}>
+          <span style={{ fontFamily: 'var(--font-display)', fontSize: 21, color: 'var(--gc-navy)' }}>Girlhood</span>
+          <span
+            style={{
+              fontFamily: 'var(--font-serif)',
+              fontStyle: 'italic',
+              fontSize: 16,
+              color: 'var(--gc-navy)',
+              marginLeft: 5,
+            }}
+          >
+            Collective
+          </span>
+        </Link>
+        <div className="nav-links-desktop" style={{ display: 'flex', gap: 26, alignItems: 'center' }}>
+          {links.map((l) => (
+            <Link
+              key={l.label}
+              to={l.href}
+              className={`navlink navlink--onwhite ${active === l.label ? 'active' : ''}`}
+            >
+              {l.label}
+            </Link>
+          ))}
+          <Link to="/newsletter" className="btn" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '11px 20px' }}>
+            Newsletter
+          </Link>
+        </div>
+        <button
+          type="button"
+          className="nav-toggle-btn"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((o) => !o)}
         >
-          Collective
-        </span>
-      </Link>
-      <div style={{ display: 'flex', gap: 26, alignItems: 'center' }}>
+          <span style={{ transform: menuOpen ? 'translateY(7px) rotate(45deg)' : 'none' }} />
+          <span style={{ opacity: menuOpen ? 0 : 1 }} />
+          <span style={{ transform: menuOpen ? 'translateY(-7px) rotate(-45deg)' : 'none' }} />
+        </button>
+      </nav>
+      <div className={`nav-mobile-menu ${menuOpen ? 'open' : ''}`}>
         {links.map((l) => (
           <Link
             key={l.label}
             to={l.href}
             className={`navlink navlink--onwhite ${active === l.label ? 'active' : ''}`}
+            onClick={() => setMenuOpen(false)}
           >
             {l.label}
           </Link>
         ))}
-        <Link to="/newsletter" className="btn" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '11px 20px' }}>
+        <Link
+          to="/newsletter"
+          className="btn"
+          style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '11px 20px', textAlign: 'center', marginTop: 8 }}
+          onClick={() => setMenuOpen(false)}
+        >
           Newsletter
         </Link>
       </div>
-    </nav>
+    </>
   );
 }

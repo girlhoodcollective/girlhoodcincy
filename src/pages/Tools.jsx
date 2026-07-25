@@ -46,7 +46,7 @@ export default function Tools() {
           <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.28em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
             Free · no email wall to look
           </div>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 46, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.1, maxWidth: 640, margin: '0 auto' }}>
+          <div className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 46, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.1, maxWidth: 640, margin: '0 auto' }}>
             Start with a <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>question.</span>
           </div>
           <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.8, maxWidth: 520, margin: '20px auto 0' }}>
@@ -59,7 +59,7 @@ export default function Tools() {
         {TOOLS.map((t) => (
           <Link
             key={t.title}
-            className="hover-lift"
+            className="hover-lift rgrid"
             to={t.href}
             style={{
               textDecoration: 'none',

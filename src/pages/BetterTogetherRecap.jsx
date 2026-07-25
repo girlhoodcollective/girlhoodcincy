@@ -57,7 +57,7 @@ export default function BetterTogetherRecap() {
       <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px', textAlign: 'center' }}>
         <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Case study</div>
         <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 34, fontWeight: 400, color: 'var(--gc-emerald)', marginBottom: 6 }}>Better Together Brunch</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 40, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.15, maxWidth: 680, margin: '0 auto' }}>
+        <div className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 40, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.15, maxWidth: 680, margin: '0 auto' }}>
           From zero awareness to campaign kickoff
         </div>
         <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.8, maxWidth: 560, margin: '18px auto 0' }}>
@@ -66,7 +66,7 @@ export default function BetterTogetherRecap() {
       </div>
 
       <div style={{ background: '#fff', padding: '48px 44px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16, maxWidth: 1000, margin: '0 auto' }}>
+        <div className="rgrid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16, maxWidth: 1000, margin: '0 auto' }}>
           {STATS.map((s) => (
             <div key={s.label} style={{ border: '1px solid var(--gc-border)', borderRadius: 8, padding: '22px 18px', textAlign: 'center' }}>
               <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 28, color: 'var(--gc-slate)', lineHeight: 1 }}>{s.value}</div>
@@ -173,7 +173,7 @@ export default function BetterTogetherRecap() {
       <div style={{ background: 'var(--gc-cream)', padding: '56px 44px', borderTop: '1px solid rgba(45,52,71,.06)' }}>
         <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>From the room</div>
         <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24 }}>A few moments from the morning.</div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 14 }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 14 }}>
           {GALLERY.map((g) => (
             <img
               key={g.src}

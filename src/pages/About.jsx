@@ -22,7 +22,7 @@ export default function About() {
       <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px' }}>
         <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
         <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Our story</div>
-        <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 720 }}>
+        <div className="hero-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 720 }}>
           Uniting makers, teachers, leaders &amp; learners{' '}
           <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>since 2025.</span>
         </div>
@@ -33,8 +33,8 @@ export default function About() {
 
       {/* FOUNDER */}
       <div style={{ background: '#fff', padding: '64px 44px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '260px 1fr', gap: 44, alignItems: 'center', maxWidth: 960, margin: '0 auto' }}>
-          <div>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '260px 1fr', gap: 44, alignItems: 'center', maxWidth: 960, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center' }}>
             <img
               src={FOUNDER_PHOTO}
               alt="Brittany Gruber, founder of Girlhood Collective"
@@ -64,7 +64,7 @@ export default function About() {
 
       {/* WHY THIS IS PERSONAL */}
       <div style={{ background: 'var(--gc-slate)', padding: '60px 44px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: 48, maxWidth: 1000, margin: '0 auto', alignItems: 'center' }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: 48, maxWidth: 1000, margin: '0 auto', alignItems: 'center' }}>
           <div>
             <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 20 }}>Why this is personal</div>
             <div style={{ fontFamily: 'var(--font-serif)', fontSize: 30, fontWeight: 700, color: '#fff', lineHeight: 1.28, letterSpacing: '-.01em' }}>

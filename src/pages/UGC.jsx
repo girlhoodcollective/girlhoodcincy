@@ -32,7 +32,7 @@ export default function UGC() {
           <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.28em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
             UGC &amp; creator partnerships · for brands
           </div>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 48, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.1 }}>
+          <div className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 48, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.1 }}>
             Content that gets <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>felt</span> — before it's sold.
           </div>
           <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, margin: '22px 0 28px' }}>
@@ -63,7 +63,7 @@ export default function UGC() {
         <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 30 }}>
           Formats that <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-lavender)' }}>land.</span>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16 }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16 }}>
           {FORMATS.map((f) => (
             <div key={f.title} style={{ border: '1px solid var(--gc-border)', borderRadius: 8, borderTop: `3px solid ${f.border}`, padding: '26px 24px' }}>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>{f.title}</div>
@@ -76,7 +76,7 @@ export default function UGC() {
       <div style={{ background: 'var(--gc-cream)', padding: '56px 44px', borderTop: '1px solid rgba(45,52,71,.06)' }}>
         <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Selected work</div>
         <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24 }}>A few recent pieces.</div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 14 }}>
+        <div className="rgrid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 14 }}>
           {['Reel / cover', 'Product still', 'Lifestyle', 'Campaign'].map((label) => (
             <ImageSlot key={label} label={label} height={240} radius={10} style={{ background: '#fff', border: '1px solid var(--gc-border)' }} />
           ))}
@@ -106,7 +106,7 @@ export default function UGC() {
             Every brand is scoped to fit. These give you a sense of where things begin.
           </p>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, maxWidth: 920, margin: '0 auto' }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, maxWidth: 920, margin: '0 auto' }}>
           {RATES.map((r) => (
             <div
               key={r.eyebrow}

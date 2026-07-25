@@ -80,7 +80,7 @@ const HINT_STYLE = { fontSize: 12.5, fontWeight: 300, color: 'var(--gc-ink-muted
 
 function CheckGrid({ group, defs }) {
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+    <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
       {defs.map((d) => {
         const sel = group.value.includes(d.v);
         return (
@@ -136,7 +136,7 @@ function PillRow({ value, onChange, defs }) {
 
 function Card({ children }) {
   return (
-    <div style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 14, boxShadow: '0 6px 28px rgba(53,91,116,.08)', padding: 44, marginTop: 36 }}>
+    <div className="card-pad" style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 14, boxShadow: '0 6px 28px rgba(53,91,116,.08)', padding: 44, marginTop: 36 }}>
       {children}
     </div>
   );
@@ -272,7 +272,7 @@ export default function ConsultationIntake() {
     : '';
 
   return (
-    <div style={{ minHeight: '100vh', background: 'var(--gc-cream)' }}>
+    <div className="flow-shell" style={{ minHeight: '100vh', background: 'var(--gc-cream)' }}>
       <NavBar variant="minimal" label="Consultation Intake · Brittany Gruber" />
 
       <div style={{ background: 'var(--gc-cream)', padding: '60px 32px 64px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
@@ -281,7 +281,7 @@ export default function ConsultationIntake() {
           <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.26em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
             Let's figure out what you actually need
           </div>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 42, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.15 }}>
+          <div className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 42, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.15 }}>
             You were never the problem. <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>Let's start there.</span>
           </div>
           <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.8, maxWidth: 500, margin: '18px auto 32px' }}>
