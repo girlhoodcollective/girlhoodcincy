@@ -19,10 +19,10 @@ export default function NotFound() {
           404
         </div>
         <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 44, color: 'var(--gc-navy)', lineHeight: 1.1 }}>
-          We couldn't find that <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>page.</span>
+          This page took a <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>wrong turn.</span>
         </div>
         <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 480, margin: '20px auto 32px' }}>
-          The link might be old, or the page may have moved. Let's get you back somewhere useful.
+          Let's get you back home.
         </p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link className="btn" to="/" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>
@@ -34,7 +34,7 @@ export default function NotFound() {
         </div>
       </div>
 
-      <Footer showExplore linked={false} />
+      <Footer linked={false} />
     </div>
   );
 }

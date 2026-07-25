@@ -1,113 +1,94 @@
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
-import { useSEO } from '../lib/seo.js';
+import { useSEO, useStructuredData, SITE_URL } from '../lib/seo.js';
 
 const FOUNDER_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/J8A2562.jpg?v=1774664826';
-const FAMILY_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-brittany-family.jpg?v=1774545413';
-const PERSONAL_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_9211.jpg?v=1774029457';
 
-const STATS = [
-  { value: '2025', label: 'Founded' },
-  { value: '12+', label: 'Events hosted' },
-  { value: '4', label: 'Community partners' },
-  { value: '66%', label: 'Newsletter open rate' },
+const CREDIBILITY = [
+  { title: 'Junior League of Cincinnati', body: 'Serving since 2016, including as Vice President of Training & Development on the Executive Management Team.' },
+  { title: 'Sweet Cheeks Diaper Bank', body: 'As Program Development Committee Chair, led an 18-month community needs assessment that resulted in a $75,000 seed grant and 800+ volunteer hours.' },
+  { title: 'B.A., Communication & Public Relations', body: 'University of Cincinnati.' },
 ];
 
 export default function About() {
   useSEO({
-    title: 'About Girlhood Collective — Our Story & Founder | Cincinnati',
-    description: 'Meet Brittany Gruber and the story behind Girlhood Collective — uniting makers, teachers, leaders, and learners across Greater Cincinnati since 2025.',
+    title: 'About Brittany Gruber | Girlhood Collective',
+    description: 'Brittany Gruber is the founder of Girlhood Collective, a Cincinnati-based community strategy practice helping small businesses, health professionals, and mission-driven organizations build real, lasting community.',
     path: '/about',
     image: FOUNDER_PHOTO + '&width=1200',
   });
 
+  useStructuredData('person', {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Brittany Gruber',
+    jobTitle: 'Founder, Girlhood Collective',
+    worksFor: { '@type': 'Organization', name: 'Girlhood Collective' },
+    url: `${SITE_URL}/about`,
+    alumniOf: 'University of Cincinnati',
+  });
+
   return (
     <div className="page-shell">
-      <NavBar variant="navy" active="About" />
-
-      {/* HERO */}
-      <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px' }}>
-        <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
-        <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Our story</div>
-        <div className="hero-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 720 }}>
-          Uniting makers, teachers, leaders &amp; learners{' '}
-          <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>since 2025.</span>
-        </div>
-        <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, marginTop: 20 }}>
-          We connect women and girls to the people, programs, and experiences that they've been missing — right here on Cincinnati's Greater Cincinnati.
-        </p>
-      </div>
+      <NavBar variant="white" active="About" />
 
       {/* FOUNDER */}
-      <div style={{ background: '#fff', padding: '64px 44px' }}>
+      <div style={{ background: 'var(--gc-cream)', padding: '64px 44px' }}>
         <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '260px 1fr', gap: 44, alignItems: 'center', maxWidth: 960, margin: '0 auto' }}>
           <div style={{ textAlign: 'center' }}>
             <img
               src={FOUNDER_PHOTO + '&width=520'}
               alt="Brittany Gruber, founder of Girlhood Collective"
               loading="lazy"
-              style={{ width: 260, height: 300, objectFit: 'cover', objectPosition: 'center 10%', borderRadius: 8, display: 'block' }}
+              style={{ width: 260, height: 300, objectFit: 'cover', objectPosition: 'center 10%', borderRadius: 8, display: 'block', margin: '0 auto' }}
             />
           </div>
           <div>
             <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Meet the founder</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 30, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Brittany Gruber</div>
+            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 32, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Brittany Gruber</h1>
             <div style={{ font: '600 12px var(--font-sans)', letterSpacing: '.04em', color: 'var(--gc-ink-muted)', marginBottom: 20 }}>Founder · Girlhood Collective</div>
-            <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.85, marginBottom: 14 }}>
-              Girlhood Collective started the way most good things do — with a room, some folding chairs, and the stubborn belief that women and girls deserve spaces built on connection instead of performance. Because community shouldn't feel manufactured — we all deserve to find our village.
+            <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.85 }}>
+              Brittany Gruber is the founder of Girlhood Collective, a Cincinnati-based community strategy practice helping small businesses, health professionals, and mission-driven organizations build real, lasting community.
             </p>
-            <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.85, marginBottom: 22 }}>
-              What began as a single workshop has grown into a community hub of events, workshops, florals, and neighbors — makers, teachers, leaders, and learners, all in the same room. Connecting the dots, it turns out, is the whole job.
-            </p>
-            <div style={{ borderLeft: '3px solid var(--gc-emerald)', paddingLeft: 18 }}>
-              <p style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 18, color: 'var(--gc-slate)', lineHeight: 1.6, marginBottom: 8 }}>
-                "Connecting the dots is my superpower."
-              </p>
-              <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 22, color: 'var(--gc-lavender)' }}>— BG</div>
-            </div>
           </div>
         </div>
       </div>
 
-      {/* WHY THIS IS PERSONAL */}
-      <div style={{ background: 'var(--gc-slate)', padding: '60px 44px' }}>
-        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: 48, maxWidth: 1000, margin: '0 auto', alignItems: 'center' }}>
-          <div>
-            <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 20 }}>Why this is personal</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 30, fontWeight: 700, color: '#fff', lineHeight: 1.28, letterSpacing: '-.01em' }}>
-              Diagnosed with ADHD and autism later in life, I know what it's like to navigate a world that wasn't built for the way your brain works best.
-            </div>
-            <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.85, maxWidth: 680, marginTop: 24 }}>
-              That journey fuels the work. I love helping others understand themselves, embrace their strengths, and advocate for what they need — and helping organizations learn what it really means to be genuinely inclusive.
+      {/* LONG BIO */}
+      <div style={{ background: '#fff', padding: '60px 44px' }}>
+        <div style={{ maxWidth: 720, margin: '0 auto' }}>
+          <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, marginBottom: 20 }}>
+            Brittany Gruber founded Girlhood Collective in 2024 to help organizations and communities build the kind of belonging that doesn&rsquo;t happen by accident. In its first three months, the platform secured five sponsors and collaborators, grew an email community to 100 subscribers with a roughly 60% open rate, and generated more than 65,000 organic Instagram impressions — all through relationship-first outreach rather than paid growth tactics.
+          </p>
+          <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, marginBottom: 20 }}>
+            Before founding Girlhood Collective, Brittany managed operations for the Megan Stacey Group at Coldwell Banker Realty, supporting a relationship-driven business that closed 419 homes and $220.7M in sales volume. Earlier, as Program Manager at Bake Me Home, she built the organization&rsquo;s first social media measurement framework and coordinated events, volunteers, and partner relationships across a four-county region. Her early career was in talent acquisition and outreach — work that shaped the relationship-building instincts she now applies to community strategy.
+          </p>
+          <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, marginBottom: 32 }}>
+            Brittany has served the Junior League of Cincinnati since 2016, including as Vice President of Training &amp; Development on its Executive Management Team. As Program Development Committee Chair, she led an 18-month community needs assessment that resulted in a $75,000 seed grant and 800+ volunteer hours awarded to Sweet Cheeks Diaper Bank. She holds a B.A. in Communication and Public Relations from the University of Cincinnati.
+          </p>
+          <div style={{ borderLeft: '3px solid var(--gc-emerald)', paddingLeft: 20 }}>
+            <p style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 22, color: 'var(--gc-slate)', lineHeight: 1.5 }}>
+              &ldquo;Community and belonging take practice and work — they&rsquo;re a science, not an accident.&rdquo;
             </p>
-            <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 24, color: 'var(--gc-lavender-soft)', marginTop: 24 }}>— Brittany</div>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            <img
-              src={FAMILY_PHOTO + '&width=600'}
-              alt="Brittany with her family"
-              loading="lazy"
-              style={{ width: '100%', height: 220, objectFit: 'cover', borderRadius: 8, display: 'block' }}
-            />
-            <img
-              src={PERSONAL_PHOTO + '&width=600'}
-              alt="Brittany Gruber"
-              loading="lazy"
-              style={{ width: '100%', height: 220, objectFit: 'cover', borderRadius: 8, display: 'block' }}
-            />
           </div>
         </div>
       </div>
 
-      {/* BY THE NUMBERS */}
-      <div style={{ background: '#fff', padding: '52px 44px', display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
-        {STATS.map((s, i) => (
-          <div key={s.label} style={{ textAlign: 'center', padding: '0 40px', borderRight: i < STATS.length - 1 ? '1px solid var(--gc-border)' : 'none' }}>
-            <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 44, color: 'var(--gc-emerald)', lineHeight: 1 }}>{s.value}</div>
-            <div style={{ font: '600 10px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginTop: 6 }}>{s.label}</div>
-          </div>
-        ))}
+      {/* CREDIBILITY */}
+      <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
+        <div style={{ textAlign: 'center', marginBottom: 30 }}>
+          <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Civic leadership</div>
+          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: 'var(--gc-slate)' }}>Credibility, earned over years.</div>
+        </div>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, maxWidth: 980, margin: '0 auto' }}>
+          {CREDIBILITY.map((c) => (
+            <div key={c.title} style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, borderTop: '3px solid var(--gc-emerald)', padding: '24px 22px' }}>
+              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 16, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>{c.title}</div>
+              <p style={{ fontSize: 13, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{c.body}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* CTA */}
@@ -116,14 +97,14 @@ export default function About() {
           Want to build something <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>together?</span>
         </div>
         <p style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 460, margin: '0 auto 22px' }}>
-          Collaborations, partnerships, and good ideas are always welcome. Reach out directly.
+          Consulting, speaking, and partnerships are always welcome. Reach out directly.
         </p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link className="btn" to="/partners" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>
-            Become a partner
+          <Link className="btn" to="/work-together" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>
+            See how we work together
           </Link>
-          <Link className="btn" to="/newsletter" style={{ border: '1.5px solid var(--gc-emerald)', color: 'var(--gc-emerald)', padding: '13.5px 28px' }}>
-            Join the newsletter
+          <Link className="btn" to="/contact" style={{ border: '1.5px solid var(--gc-emerald)', color: 'var(--gc-emerald)', padding: '13.5px 28px' }}>
+            Let&rsquo;s Schedule a Time to Chat
           </Link>
         </div>
       </div>

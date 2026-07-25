@@ -1,17 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const WHITE_LINKS = [
-  { label: 'Work With Me', href: '/work-with-me' },
+const LINKS = [
+  { label: 'Work Together', href: '/work-together' },
+  { label: 'About', href: '/about' },
   { label: 'Events', href: '/events' },
-  { label: 'Tools', href: '/tools' },
-  { label: 'About', href: '/about' },
-];
-
-const NAVY_LINKS = [
-  { label: 'Events & Workshops', href: '/events' },
-  { label: 'About', href: '/about' },
+  { label: 'Resources', href: '/resources' },
   { label: 'Partners', href: '/partners' },
+  { label: 'Join the Village', href: '/village' },
 ];
 
 export default function NavBar({ variant = 'white', active, label }) {
@@ -60,8 +56,7 @@ export default function NavBar({ variant = 'white', active, label }) {
     );
   }
 
-  const isNavy = variant === 'navy';
-  const links = isNavy ? NAVY_LINKS : WHITE_LINKS;
+  const links = LINKS;
 
   return (
     <>
@@ -92,7 +87,7 @@ export default function NavBar({ variant = 'white', active, label }) {
             Collective
           </span>
         </Link>
-        <div className="nav-links-desktop" style={{ display: 'flex', gap: 26, alignItems: 'center' }}>
+        <div className="nav-links-desktop" style={{ display: 'flex', gap: 18, alignItems: 'center' }}>
           {links.map((l) => (
             <Link
               key={l.label}
@@ -102,8 +97,8 @@ export default function NavBar({ variant = 'white', active, label }) {
               {l.label}
             </Link>
           ))}
-          <Link to="/newsletter" className="btn" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '11px 20px' }}>
-            Newsletter
+          <Link to="/contact" className="btn" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '11px 20px', whiteSpace: 'nowrap' }}>
+            Let's Schedule a Time to Chat
           </Link>
         </div>
         <button
@@ -130,12 +125,12 @@ export default function NavBar({ variant = 'white', active, label }) {
           </Link>
         ))}
         <Link
-          to="/newsletter"
+          to="/contact"
           className="btn"
           style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '11px 20px', textAlign: 'center', marginTop: 8 }}
           onClick={() => setMenuOpen(false)}
         >
-          Newsletter
+          Let's Schedule a Time to Chat
         </Link>
       </div>
     </>
