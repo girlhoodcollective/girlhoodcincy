@@ -85,7 +85,7 @@ export default function Home() {
               Brunches, workshops, and markets for women and girls of every age and industry — right here in Greater Cincinnati.
             </p>
             <Link className="btn" to="/events" style={{ background: 'var(--gc-slate)', color: '#fff', padding: '15px 28px' }}>
-              See what's on →
+              upcoming events →
             </Link>
           </div>
         </div>
