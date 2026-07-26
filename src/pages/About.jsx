@@ -84,9 +84,9 @@ export default function About() {
         <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: 48, maxWidth: 1000, margin: '0 auto', alignItems: 'center' }}>
           <div>
             <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 20 }}>Why this is personal</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: '#fff', lineHeight: 1.4 }}>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: '#fff', lineHeight: 1.4 }}>
               Diagnosed with ADHD and autism later in life, I know what it&rsquo;s like to navigate a world that wasn&rsquo;t built for the way your brain works best.
-            </div>
+            </h2>
             <p style={{ fontSize: 18, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.85, maxWidth: 620, marginTop: 20 }}>
               That journey fuels the work. I love helping others understand themselves, embrace their strengths, and advocate for what they need — and helping organizations learn what it really means to be genuinely inclusive. It&rsquo;s part of why belonging, not just performance, is the standard every Girlhood Collective engagement is built around.
             </p>
@@ -113,12 +113,12 @@ export default function About() {
       <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
         <div style={{ textAlign: 'center', marginBottom: 30 }}>
           <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Credibility</div>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)' }}>Track record.</div>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)' }}>Track record.</h2>
         </div>
         <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16, maxWidth: 700, margin: '0 auto' }}>
           {CREDIBILITY.map((c) => (
             <div key={c.title} style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, borderTop: '3px solid var(--gc-emerald)', padding: '24px 22px' }}>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>{c.title}</div>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>{c.title}</h3>
               <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{c.body}</p>
             </div>
           ))}
@@ -138,7 +138,7 @@ export default function About() {
             See how we work together
           </Link>
           <Link className="btn" to="/contact" style={{ border: '1.5px solid var(--gc-emerald)', color: 'var(--gc-emerald)', padding: '13.5px 28px' }}>
-            Let&rsquo;s Schedule a Time to Chat
+            Request a 20-Minute Fit Call
           </Link>
         </div>
       </div>

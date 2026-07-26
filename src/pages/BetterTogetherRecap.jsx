@@ -86,12 +86,12 @@ export default function BetterTogetherRecap() {
 
       <div style={{ background: 'var(--gc-section)', padding: '56px 44px' }}>
         <div style={{ maxWidth: 760, margin: '0 auto' }}>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 12 }}>The challenge</div>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 12 }}>The challenge</h2>
           <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.85, marginBottom: 36 }}>
             Introduce Endurance in Education to the community and lay a real financial and relational foundation for the campaign ahead. All within a one-month planning window, funded entirely by the event's own revenue.
           </p>
 
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 12 }}>The approach</div>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 12 }}>The approach</h2>
           <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.85, marginBottom: 20 }}>
             Girlhood Collective built the Better Together Brunch Fundraiser as a single event designed to be three things: community introduction, fundraiser, and relationship-building platform for the campaign's future.
           </p>
@@ -107,7 +107,7 @@ export default function BetterTogetherRecap() {
 
       <div style={{ background: '#fff', padding: '56px 44px' }}>
         <div style={{ maxWidth: 760, margin: '0 auto' }}>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 20 }}>The results</div>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 20 }}>The results</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
               <span style={{ color: 'var(--gc-emerald)', fontWeight: 700, marginTop: 2 }}>✓</span>
@@ -151,7 +151,7 @@ export default function BetterTogetherRecap() {
 
       <div style={{ background: 'var(--gc-section)', padding: '56px 44px' }}>
         <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Made possible by</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24 }}>Our sponsors.</div>
+        <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24 }}>Our sponsors.</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 14, maxWidth: 1000 }}>
           {SPONSORS.map((s, i) => (
             <div
@@ -180,7 +180,7 @@ export default function BetterTogetherRecap() {
 
       <div style={{ background: 'var(--gc-cream)', padding: '56px 44px', borderTop: '1px solid rgba(45,52,71,.06)' }}>
         <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>From the room</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24 }}>A few moments from the morning.</div>
+        <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24 }}>A few moments from the morning.</h2>
         <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 14 }}>
           {GALLERY.map((g) => (
             <img

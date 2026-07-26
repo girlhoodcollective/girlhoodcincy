@@ -190,7 +190,7 @@ export default function Events() {
         <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16, marginBottom: 24 }}>
           <div>
             <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Upcoming</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 37.5, fontWeight: 700, color: 'var(--gc-slate)' }}>What's coming up next</div>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 37.5, fontWeight: 700, color: 'var(--gc-slate)' }}>What's coming up next</h2>
           </div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             {CATS.map((c) => (
@@ -216,7 +216,7 @@ export default function Events() {
                   </span>
                   <span style={{ font: '400 15.5px var(--font-sans)', color: 'var(--gc-ink-muted)' }}>{e.where}</span>
                 </div>
-                <div style={{ fontFamily: 'var(--font-serif)', fontSize: 25, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>{e.title}</div>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 25, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>{e.title}</h3>
                 <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.65, maxWidth: 600, marginBottom: 14 }}>{e.desc}</p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
                   {e.buyButtonProductId ? (
@@ -248,7 +248,7 @@ export default function Events() {
 
       <div style={{ background: 'var(--gc-section)', padding: '56px 44px' }}>
         <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Looking back</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 37.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Seriously proud of what we made.</div>
+        <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 37.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Seriously proud of what we made.</h2>
         <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 560, marginBottom: 28 }}>
           A look back at the rooms we've filled since 2025.
         </p>
@@ -264,9 +264,9 @@ export default function Events() {
                   loading="lazy"
                   style={{ width: '100%', height: 180, objectFit: 'cover', borderRadius: 6, display: 'block' }}
                 />
-                <div className="hover-caption-target" style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: 'var(--gc-slate)', marginTop: 12, transition: 'color .2s' }}>
+                <h3 className="hover-caption-target" style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: 'var(--gc-slate)', marginTop: 12, transition: 'color .2s' }}>
                   {p.title}
-                </div>
+                </h3>
                 <div style={{ font: '600 12.5px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginTop: 3 }}>
                   {p.caption}{p.href ? ' · Read the case study →' : ''}
                 </div>

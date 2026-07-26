@@ -106,7 +106,7 @@ export default function NavBar({ variant = 'white', active, label }) {
             </Link>
           ))}
           <Link to="/contact" className="btn" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '11px 20px', whiteSpace: 'nowrap' }}>
-            Let's Schedule a Time to Chat
+            Request a 20-Minute Fit Call
           </Link>
         </div>
         <button
@@ -139,7 +139,7 @@ export default function NavBar({ variant = 'white', active, label }) {
           style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '11px 20px', textAlign: 'center', marginTop: 8 }}
           onClick={() => setMenuOpen(false)}
         >
-          Let's Schedule a Time to Chat
+          Request a 20-Minute Fit Call
         </Link>
       </div>
     </>

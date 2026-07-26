@@ -59,7 +59,7 @@ const ROUTES = [
   {
     path: '/contact',
     sourceFile: 'src/pages/Contact.jsx',
-    title: "Let's Schedule a Time to Chat | Girlhood Collective",
+    title: 'Request a 20-Minute Fit Call | Girlhood Collective',
     description: "Twenty minutes, no pitch — just a conversation about what you're building.",
   },
   {

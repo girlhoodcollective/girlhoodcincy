@@ -47,13 +47,13 @@ export default function Resources() {
       <div style={{ background: 'var(--gc-navy-deep)', padding: '56px 44px' }}>
         <div style={{ textAlign: 'center', marginBottom: 28 }}>
           <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>Free tools</div>
-          <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 35, color: '#fff' }}>Start with a question.</div>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, fontSize: 35, color: '#fff' }}>Start with a question.</h2>
         </div>
         <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, maxWidth: 900, margin: '0 auto' }}>
           {TOOLS.map((t) => (
             <Link key={t.title} className="hover-lift" to={t.href} style={{ textDecoration: 'none', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.14)', borderRadius: 8, padding: '26px 24px', display: 'block' }}>
               <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>{t.eyebrow}</div>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: '#fff', marginBottom: 6 }}>{t.title}</div>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: '#fff', marginBottom: 6 }}>{t.title}</h3>
               <p style={{ fontSize: 16, fontWeight: 300, color: 'rgba(255,255,255,.6)', lineHeight: 1.6, marginBottom: 12 }}>{t.body}</p>
               <span style={{ font: '600 14px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: t.accent }}>{t.cta}</span>
             </Link>

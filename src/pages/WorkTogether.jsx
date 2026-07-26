@@ -66,7 +66,7 @@ export default function WorkTogether() {
             </p>
             <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
               <Link className="btn" to="/contact" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '16px 30px' }}>
-                Let&rsquo;s Schedule a Time to Chat
+                Request a 20-Minute Fit Call
               </Link>
               <Link className="btn" to="/consultation-intake" style={{ border: '1.5px solid var(--gc-navy)', color: 'var(--gc-navy)', padding: '15px 28px' }}>
                 Not sure where to start? Take the intake
@@ -85,7 +85,7 @@ export default function WorkTogether() {
       {/* CURRENT PARTNERS */}
       <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
         <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>Community Collaborators</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24, textAlign: 'center' }}>In good company.</div>
+        <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24, textAlign: 'center' }}>In good company.</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 14, maxWidth: 1000, margin: '0 auto' }}>
           {PARTNER_LOGOS.map((p) => (
             <a
@@ -112,7 +112,7 @@ export default function WorkTogether() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16, maxWidth: 1000, margin: '0 auto' }}>
           {SERVICES.map((s) => (
             <div key={s.id} className="hover-lift" style={{ border: '1px solid var(--gc-border)', borderRadius: 8, padding: '28px 24px', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8, lineHeight: 1.25 }}>{s.title}</div>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8, lineHeight: 1.25 }}>{s.title}</h3>
               <div style={{ font: '600 12.5px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginBottom: 16 }}>{s.cadence}</div>
               <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.7, marginBottom: 12, flexGrow: 1 }}>{s.body}</p>
               <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--gc-ink-muted)' }}>{s.bestFor}</div>
@@ -136,9 +136,9 @@ export default function WorkTogether() {
         <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 320px', gap: 40, maxWidth: 1000, margin: '0 auto', alignItems: 'center' }}>
           <div>
             <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 14 }}>Case study</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: '#fff', marginBottom: 12, lineHeight: 1.3 }}>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: '#fff', marginBottom: 12, lineHeight: 1.3 }}>
               From zero awareness to campaign kickoff.
-            </div>
+            </h2>
             <p style={{ fontSize: 18, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.8, marginBottom: 24, maxWidth: 480 }}>
               The Better Together Brunch turned a first-time nonprofit fundraiser into $3,000 raised, 10 new sponsors, and the start of a lasting community for Endurance in Education — all within a one-month planning window.
             </p>
@@ -195,7 +195,7 @@ export default function WorkTogether() {
         <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, maxWidth: 1000, margin: '0 auto' }}>
           {PARTNERSHIP_TIERS.map((t) => (
             <div key={t.id} className="hover-lift" style={{ border: '1px solid var(--gc-border)', borderRadius: 8, padding: '26px 24px' }}>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 22.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>{t.title}</div>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 22.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>{t.title}</h3>
               <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.08em', color: 'var(--gc-emerald)', marginBottom: 14 }}>{t.price}</div>
               <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{t.body}</p>
             </div>
@@ -218,9 +218,9 @@ export default function WorkTogether() {
         <div style={{ maxWidth: 640, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 28 }}>
             <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Let's talk</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 37.5, fontWeight: 700, color: 'var(--gc-slate)' }}>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 37.5, fontWeight: 700, color: 'var(--gc-slate)' }}>
               Tell us about your <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>business.</span>
-            </div>
+            </h2>
             <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 460, margin: '12px auto 0' }}>
               We&rsquo;ll be in touch within 2 business days.
             </p>
@@ -279,7 +279,7 @@ export default function WorkTogether() {
         <div style={{ maxWidth: 760, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 30 }}>
             <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Questions</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)' }}>What to expect</div>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)' }}>What to expect</h2>
           </div>
           <FaqAccordion items={FAQS} />
         </div>
@@ -294,7 +294,7 @@ export default function WorkTogether() {
         </p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link className="btn" to="/contact" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '16px 30px' }}>
-            Let&rsquo;s Schedule a Time to Chat
+            Request a 20-Minute Fit Call
           </Link>
           <Link className="btn" to="/consultation-intake" style={{ border: '1px solid var(--gc-slate)', color: 'var(--gc-slate)', padding: '15px 28px' }}>
             Start the intake

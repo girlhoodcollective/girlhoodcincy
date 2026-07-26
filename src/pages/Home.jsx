@@ -5,7 +5,9 @@ import Footer from '../components/Footer.jsx';
 import { subscribeToNewsletter } from '../lib/newsletter.js';
 import { getUpcomingPublishedEvents } from '../data/events.js';
 import { useSEO, useStructuredData, SITE_URL, SITE_NAME } from '../lib/seo.js';
-import { PERSONAS, TRUST_STATS } from '../data/content.js';
+import { PERSONAS, TRUST_STATS, SERVICES } from '../data/content.js';
+
+const PERSONA_HREF = (id) => (id === 'community-member' ? '/village' : '/work-together');
 
 const UPCOMING_EVENTS = getUpcomingPublishedEvents(2);
 
@@ -78,11 +80,11 @@ export default function Home() {
             It takes a village. <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>Let&rsquo;s find yours.</span>
           </h1>
           <p style={{ fontSize: 20, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, margin: '20px auto 30px' }}>
-            Girlhood Collective helps small businesses, independent professionals, mission-driven organizations, and community members build authentic, lasting community. Advisory services, community events, and experiences built for all.
+            Community strategy consulting for Cincinnati organizations, small businesses, and neighbors — the community audits, event design, and ongoing advisory work that turn shared interest into real, lasting community.
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link className="btn" to="/contact" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '16px 30px' }}>
-              Let&rsquo;s Schedule a Time to Chat
+              Request a 20-Minute Fit Call
             </Link>
             <Link className="btn" to="/village" style={{ border: '1.5px solid var(--gc-navy)', color: 'var(--gc-navy)', padding: '15px 28px' }}>
               Join the Village
@@ -109,7 +111,7 @@ export default function Home() {
           />
           <div>
             <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Meet the founder</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 10 }}>Hi, I&rsquo;m Brittany.</div>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 10 }}>Hi, I&rsquo;m Brittany.</h2>
             <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, marginBottom: 16 }}>
               I started Girlhood Collective because I believe belonging takes practice, not luck — and I get to do the work of building it, one relationship at a time.
             </p>
@@ -122,27 +124,68 @@ export default function Home() {
 
       {/* PERSONA CARDS */}
       <div style={{ background: 'var(--gc-section)', padding: '52px 44px' }}>
+        <div style={{ textAlign: 'center', marginBottom: 28 }}>
+          <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Who we work with</div>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)' }}>Choose the support that fits your community.</h2>
+        </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, maxWidth: 1000, margin: '0 auto' }}>
           {PERSONAS.map((p) => (
-            <div key={p.id} className="hover-lift" style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 8, padding: '26px 22px' }}>
+            <Link
+              key={p.id}
+              to={PERSONA_HREF(p.id)}
+              className="hover-lift"
+              style={{ textDecoration: 'none', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 8, padding: '26px 22px', display: 'block' }}
+            >
               <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>{p.title}</div>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 22.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8, lineHeight: 1.3 }}>{p.headline}</div>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 22.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8, lineHeight: 1.3 }}>{p.headline}</h3>
               <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{p.body}</p>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* SERVICES TEASER */}
+      <div style={{ background: '#fff', padding: '54px 44px' }}>
+        <div style={{ textAlign: 'center', marginBottom: 30 }}>
+          <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>How we help</div>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)' }}>Four ways to work together.</h2>
+        </div>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, maxWidth: 1000, margin: '0 auto 30px' }}>
+          {SERVICES.map((s) => (
+            <div key={s.id} style={{ border: '1px solid var(--gc-border)', borderRadius: 8, padding: '24px 22px', display: 'flex', flexDirection: 'column' }}>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>{s.title}</h3>
+              <div style={{ font: '600 12px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginBottom: 12 }}>{s.cadence}</div>
+              <p style={{ fontSize: 15.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.6, flexGrow: 1 }}>{s.body}</p>
             </div>
           ))}
         </div>
+        <div style={{ textAlign: 'center' }}>
+          <Link className="btn" to="/work-together" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 30px' }}>
+            See how we work together →
+          </Link>
+        </div>
+      </div>
+
+      {/* CASE STUDY PROOF */}
+      <div style={{ background: 'var(--gc-sage-light)', borderTop: '1px solid #dde6e2', borderBottom: '1px solid #dde6e2', padding: '32px 44px', textAlign: 'center' }}>
+        <p style={{ fontSize: 17, fontWeight: 400, color: 'var(--gc-ink)', marginBottom: 10 }}>
+          $3,000 raised, 10 new sponsors, one month of planning — see how a single event became a lasting community partnership.
+        </p>
+        <Link className="navlink" to="/better-together-recap" style={{ color: 'var(--gc-emerald)', fontWeight: 600 }}>
+          Read the case study →
+        </Link>
       </div>
 
       {/* DIFFERENTIATORS */}
       <div style={{ background: '#fff', padding: '54px 44px' }}>
         <div style={{ textAlign: 'center', marginBottom: 30 }}>
           <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Why Girlhood Collective</div>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)' }}>Not another consultant.</div>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)' }}>Not another consultant.</h2>
         </div>
         <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, maxWidth: 980, margin: '0 auto' }}>
           {DIFFERENTIATORS.map((d) => (
             <div key={d.title} style={{ border: '1px solid var(--gc-border)', borderRadius: 6, borderTop: '3px solid var(--gc-emerald)', padding: '24px 22px' }}>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>{d.title}</div>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>{d.title}</h3>
               <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{d.body}</p>
             </div>
           ))}
@@ -150,7 +193,7 @@ export default function Home() {
       </div>
 
       {/* TRUST STRIP */}
-      <div style={{ background: '#fff', padding: '46px 44px', display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
+      <div style={{ background: '#fff', padding: '46px 44px 24px', display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
         {TRUST_STATS.map((s, i) => (
           <div key={s.label} style={{ textAlign: 'center', padding: '0 34px', borderRight: i < TRUST_STATS.length - 1 ? '1px solid var(--gc-border)' : 'none' }}>
             <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 45, color: 'var(--gc-emerald)', lineHeight: 1 }}>{s.value}</div>
@@ -158,12 +201,15 @@ export default function Home() {
           </div>
         ))}
       </div>
+      <p style={{ textAlign: 'center', fontSize: 14, color: 'var(--gc-ink-muted)', paddingBottom: 46 }}>
+        Since launching in 2025 — and growing every season.
+      </p>
 
       {/* UPCOMING EVENT TEASER */}
       {UPCOMING_EVENTS.length > 0 && (
         <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
           <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>Girlhood Cincy Monthly Experiences</div>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24, textAlign: 'center' }}>Gather beautifully.</div>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24, textAlign: 'center' }}>Gather beautifully.</h2>
           <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, maxWidth: 760, margin: '0 auto 24px' }}>
             <img
               src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2296.jpg?v=1778190542&width=440"
@@ -208,7 +254,7 @@ export default function Home() {
       {/* VILLAGE SIGNUP */}
       <div style={{ background: 'var(--gc-navy)', padding: '58px 44px', textAlign: 'center' }}>
         <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>The Village</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 47.5, color: '#fff', lineHeight: 1.1, marginBottom: 8 }}>You&rsquo;re invited.</div>
+        <h2 style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 47.5, color: '#fff', lineHeight: 1.1, marginBottom: 8 }}>You&rsquo;re invited.</h2>
         <p style={{ fontSize: 19, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.8, maxWidth: 480, margin: '12px auto 26px' }}>
           A free monthly letter for anyone building real community — resources, local favorites, and what&rsquo;s inspiring us right now.
         </p>

@@ -102,7 +102,7 @@ export default function Village() {
       {/* WHAT SUBSCRIBERS GET */}
       <div style={{ background: '#fff', padding: '54px 44px' }}>
         <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>What&rsquo;s inside</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 28, textAlign: 'center' }}>Every issue, a little of everything.</div>
+        <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 28, textAlign: 'center' }}>Every issue, a little of everything.</h2>
         <div className="rgrid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 14, maxWidth: 900, margin: '0 auto' }}>
           {VILLAGE_SECTIONS.map((s) => (
             <div key={s} style={{ border: '1px solid var(--gc-border)', borderRadius: 6, padding: '18px 20px', fontSize: 17, fontWeight: 600, color: 'var(--gc-slate)', textAlign: 'center' }}>
@@ -115,7 +115,7 @@ export default function Village() {
       {/* ARCHIVE */}
       <div style={{ background: 'var(--gc-section)', padding: '56px 44px 64px' }}>
         <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>The archive</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Past issues</div>
+        <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Past issues</h2>
         <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 520, marginBottom: 26 }}>
           Catch up on what you missed. A little of everything we&rsquo;ve been up to.
         </p>
@@ -133,7 +133,7 @@ export default function Village() {
                 <span style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>{i.vol}</span>
                 <span style={{ font: '600 14px var(--font-sans)', color: 'var(--gc-ink-muted)' }}>{i.date}</span>
               </div>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 21, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 10, lineHeight: 1.4 }}>{i.title}</div>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 21, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 10, lineHeight: 1.4 }}>{i.title}</h3>
               <span style={{ font: '600 14px var(--font-sans)', letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>Read this issue →</span>
             </a>
           ))}

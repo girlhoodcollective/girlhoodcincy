@@ -310,7 +310,7 @@ export default function ConsultationIntake() {
         {section === 1 && (
           <Card>
             <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Section 01 · About you</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Tell me who you are.</div>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Tell me who you are.</h2>
             <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 30 }}>
               Not your job title. Not your LinkedIn. Who you are — what you lead, what you carry, and what brought you here.
             </p>
@@ -339,7 +339,7 @@ export default function ConsultationIntake() {
         {section === 2 && (
           <Card>
             <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Section 02 · The real problem</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>What's actually going on?</div>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>What's actually going on?</h2>
             <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 30 }}>
               Not what you'd say in a board meeting. The thing that keeps coming up, the thing that isn't working, the conversation you've been avoiding.
             </p>
@@ -370,7 +370,7 @@ export default function ConsultationIntake() {
         {section === 3 && (
           <Card>
             <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Section 03 · Your people</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Tell me about the humans involved.</div>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Tell me about the humans involved.</h2>
             <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 30 }}>
               Organizations aren't broken in the abstract. People are struggling. Let's get specific about who.
             </p>
@@ -421,7 +421,7 @@ export default function ConsultationIntake() {
         {section === 4 && (
           <Card>
             <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Section 04 · What you're looking for</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>What does success actually look like?</div>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>What does success actually look like?</h2>
             <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 30 }}>
               Not the grant-report version. What do you actually want to be different — and how will you know when it is?
             </p>
@@ -450,7 +450,7 @@ export default function ConsultationIntake() {
         {section === 5 && (
           <Card>
             <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Section 05 · The honest stuff</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>A few harder questions.</div>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>A few harder questions.</h2>
             <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 30 }}>
               This is where most intake forms stop — and where the most useful information lives. All optional, but the more you answer, the more targeted my response.
             </p>
@@ -483,7 +483,7 @@ export default function ConsultationIntake() {
               <div style={{ position: 'absolute', top: -60, right: -60, width: 240, height: 240, borderRadius: '50%', background: 'radial-gradient(circle, rgba(186,217,243,.22), transparent 70%)' }} />
               <div style={{ position: 'relative', zIndex: 2 }}>
                 <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 22.5, color: 'var(--gc-lavender-soft)', marginBottom: 10 }}>Here's what I see.</div>
-                <div style={{ fontFamily: 'var(--font-serif)', fontSize: 37.5, fontWeight: 700, color: '#fff' }}>{firstName}, you're in the right place.</div>
+                <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 37.5, fontWeight: 700, color: '#fff' }}>{firstName}, you're in the right place.</h2>
                 <p style={{ fontSize: 17.5, fontWeight: 300, color: 'rgba(255,255,255,.62)', lineHeight: 1.7, maxWidth: 440, margin: '12px auto 0' }}>
                   A snapshot of what you're carrying, where we'd start, and what working together could look like.
                 </p>
@@ -494,7 +494,7 @@ export default function ConsultationIntake() {
               {buildResultCards().map((c) => (
                 <div key={c.label} style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 12, borderTop: '3px solid var(--gc-emerald)', padding: '28px 30px' }}>
                   <div style={{ font: '700 12px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 8 }}>{c.label}</div>
-                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: 22.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>{c.title}</div>
+                  <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 22.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>{c.title}</h3>
                   <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.75 }}>{c.body}</p>
                 </div>
               ))}

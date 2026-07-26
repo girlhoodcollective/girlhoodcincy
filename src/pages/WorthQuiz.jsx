@@ -181,7 +181,7 @@ export default function WorthQuiz() {
               <div style={{ display: 'inline-block', background: 'var(--gc-sage-light)', borderRadius: 6, padding: '4px 11px', font: '600 12.5px var(--font-sans)', letterSpacing: '.08em', color: 'var(--gc-emerald)', marginBottom: 14, whiteSpace: 'nowrap' }}>
                 {multi ? `Select up to ${q.maxSelect}` : 'Choose one'}
               </div>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 25, fontWeight: 700, lineHeight: 1.4, color: 'var(--gc-slate)', marginBottom: 8 }}>{q.text}</div>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 25, fontWeight: 700, lineHeight: 1.4, color: 'var(--gc-slate)', marginBottom: 8 }}>{q.text}</h2>
               <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', fontStyle: 'italic', lineHeight: 1.6, marginBottom: 22 }}>{q.context}</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
                 {q.options.map((o, i) => {
@@ -238,16 +238,16 @@ export default function WorthQuiz() {
               <div style={{ position: 'absolute', top: -60, right: -60, width: 240, height: 240, borderRadius: '50%', background: 'radial-gradient(circle, rgba(186,217,243,.22), transparent 70%)' }} />
               <div style={{ position: 'relative', zIndex: 2 }}>
                 <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.26em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>Your skill profile</div>
-                <div style={{ fontFamily: 'var(--font-serif)', fontSize: 47.5, fontWeight: 700, color: '#fff', lineHeight: 1.15 }}>
+                <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 47.5, fontWeight: 700, color: '#fff', lineHeight: 1.15 }}>
                   The <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-lavender-soft)' }}>{arch.name}</span>
-                </div>
+                </h2>
                 <p style={{ fontSize: 18, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.7, maxWidth: 460, margin: '14px auto 0' }}>{arch.tagline}</p>
               </div>
             </div>
 
-            <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', margin: '32px 0 14px' }}>
+            <h3 style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', margin: '32px 0 14px' }}>
               Your strongest marketable skills
-            </div>
+            </h3>
             {top.map(([s, v]) => {
               const pct = Math.round((v / max) * 100);
               return (
@@ -263,14 +263,14 @@ export default function WorthQuiz() {
               );
             })}
 
-            <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', margin: '30px 0 14px' }}>
+            <h3 style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', margin: '30px 0 14px' }}>
               Income streams that fit you — in Cincinnati
-            </div>
+            </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {arch.streams.map((s) => (
                 <div key={s.title} style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 12, borderLeft: '4px solid var(--gc-emerald)', padding: '20px 22px' }}>
                   <div style={{ font: '700 12px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 6 }}>{s.label}</div>
-                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: 21, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 5 }}>{s.title}</div>
+                  <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: 21, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 5 }}>{s.title}</h4>
                   <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.55, marginBottom: 10 }}>{s.desc}</p>
                   <span style={{ display: 'inline-block', background: 'var(--gc-cream)', borderRadius: 6, padding: '4px 11px', fontSize: 15, fontWeight: 600, color: 'var(--gc-slate)' }}>{s.range}</span>
                 </div>

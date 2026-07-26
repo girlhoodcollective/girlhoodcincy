@@ -8,7 +8,7 @@ import { CONTACT_FAQS } from '../data/content.js';
 
 export default function Contact() {
   useSEO({
-    title: "Let's Schedule a Time to Chat | Girlhood Collective",
+    title: 'Request a 20-Minute Fit Call | Girlhood Collective',
     description: 'Twenty minutes, no pitch — just a conversation about what you\'re building.',
     path: '/contact',
   });
@@ -43,7 +43,7 @@ export default function Contact() {
       <div style={{ background: 'var(--gc-cream)', padding: '60px 44px 52px', textAlign: 'center' }}>
         <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Contact</div>
         <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 55, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.12, maxWidth: 640, margin: '0 auto' }}>
-          Let&rsquo;s schedule a <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>time to chat.</span>
+          Request a <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>20-minute fit call.</span>
         </h1>
         <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 480, margin: '18px auto 0' }}>
           Twenty minutes, no pitch — just a conversation about what you&rsquo;re building.
@@ -98,7 +98,7 @@ export default function Contact() {
 
       <div style={{ background: 'var(--gc-section)', padding: '52px 44px' }}>
         <div style={{ maxWidth: 560, margin: '0 auto' }}>
-          <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16, textAlign: 'center' }}>Quick questions</div>
+          <h2 style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16, textAlign: 'center' }}>Quick questions</h2>
           <FaqAccordion items={CONTACT_FAQS} />
         </div>
       </div>
