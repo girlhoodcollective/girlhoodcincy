@@ -73,7 +73,7 @@ export const PARTNERSHIP_TIERS = [
     id: 'season-sponsor',
     title: 'Season Sponsor',
     price: '$500–$1,500/season · or $75–$150/month',
-    body: 'Season-long association without leading a session — logo on the Events/Partners page, a mention in every newsletter issue during the sponsorship window, and verbal recognition at each session.',
+    body: 'Season-long association without leading a session — logo on the Work Together page, a mention in every newsletter issue during the sponsorship window, and verbal recognition at each session.',
   },
 ];
 

@@ -6,7 +6,6 @@ import Events from './pages/Events.jsx';
 import Village from './pages/Village.jsx';
 import WorkTogether from './pages/WorkTogether.jsx';
 import Resources from './pages/Resources.jsx';
-import Partners from './pages/Partners.jsx';
 import Contact from './pages/Contact.jsx';
 import ConsultationIntake from './pages/ConsultationIntake.jsx';
 import WorthQuiz from './pages/WorthQuiz.jsx';
@@ -24,7 +23,6 @@ export default function App() {
         <Route path="/village" element={<Village />} />
         <Route path="/work-together" element={<WorkTogether />} />
         <Route path="/resources" element={<Resources />} />
-        <Route path="/partners" element={<Partners />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/consultation-intake" element={<ConsultationIntake />} />
         <Route path="/worth-quiz" element={<WorthQuiz />} />

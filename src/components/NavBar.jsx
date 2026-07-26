@@ -6,7 +6,6 @@ const LINKS = [
   { label: 'About', href: '/about' },
   { label: 'Events', href: '/events' },
   { label: 'Resources', href: '/resources' },
-  { label: 'Partners', href: '/partners' },
   { label: 'Join the Village', href: '/village' },
 ];
 
