@@ -162,9 +162,12 @@ export default function Footer({ linked = true }) {
           >
             Say hello
           </p>
-          <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 27.5, color: 'var(--gc-lavender-soft)', marginBottom: 18 }}>
+          <a
+            href="mailto:hello@girlhoodcincy.com"
+            style={{ display: 'inline-block', fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 27.5, color: 'var(--gc-lavender-soft)', marginBottom: 18, textDecoration: 'none' }}
+          >
             hello@girlhoodcincy.com
-          </div>
+          </a>
           <p
             style={{
               font: '600 12.5px var(--font-sans)',

@@ -18,9 +18,9 @@ export default function NotFound() {
         <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>
           404
         </div>
-        <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 55, color: 'var(--gc-navy)', lineHeight: 1.1 }}>
+        <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 55, color: 'var(--gc-navy)', lineHeight: 1.1 }}>
           This page took a <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>wrong turn.</span>
-        </div>
+        </h1>
         <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 480, margin: '20px auto 32px' }}>
           Let's get you back home.
         </p>

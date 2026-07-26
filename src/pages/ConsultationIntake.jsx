@@ -288,9 +288,9 @@ export default function ConsultationIntake() {
           <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.26em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
             Let's figure out what you actually need
           </div>
-          <div className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 52.5, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.15 }}>
+          <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 52.5, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.15 }}>
             You were never the problem. <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>Let's start there.</span>
-          </div>
+          </h1>
           <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.8, maxWidth: 500, margin: '18px auto 32px' }}>
             This intake takes about 8 minutes. Answer honestly — there are no right answers, and the more specific you are, the more useful this is for both of us.
           </p>

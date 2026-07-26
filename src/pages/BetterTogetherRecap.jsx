@@ -65,9 +65,9 @@ export default function BetterTogetherRecap() {
       <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px', textAlign: 'center' }}>
         <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Case study</div>
         <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 42.5, fontWeight: 400, color: 'var(--gc-emerald)', marginBottom: 6 }}>Better Together Brunch</div>
-        <div className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 50, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.15, maxWidth: 680, margin: '0 auto' }}>
+        <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 50, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.15, maxWidth: 680, margin: '0 auto' }}>
           From zero awareness to campaign kickoff
-        </div>
+        </h1>
         <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.8, maxWidth: 560, margin: '18px auto 0' }}>
           How one event turned from a first-time nonprofit fundraiser into $3,000 raised, 10 new sponsors, and the start of a community.
         </p>

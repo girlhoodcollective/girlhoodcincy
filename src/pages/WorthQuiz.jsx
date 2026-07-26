@@ -134,9 +134,9 @@ export default function WorthQuiz() {
             <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.26em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
               A warm skills inventory · Cincinnati
             </div>
-            <div className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 55, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.12 }}>
+            <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 55, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.12 }}>
               You were never <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>wrong</span> about yourself.
-            </div>
+            </h1>
             <p style={{ fontSize: 20, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.8, maxWidth: 500, margin: '20px auto 26px' }}>
               You were just never given the tools to name what you're actually good at — and what it's worth. Twenty questions, about six minutes, and a lot more clarity than when you started.
             </p>
