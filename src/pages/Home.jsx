@@ -15,12 +15,6 @@ const DIFFERENTIATORS = [
   { title: 'One practice, every sector', body: 'Small business, allied health, mission-driven organizations, and individuals — because belonging isn\'t industry-specific.' },
 ];
 
-const TRUST_STATS = [
-  { value: '$50K', label: 'Year-one revenue goal' },
-  { value: '9', label: 'Girlhood Cincy sessions a year' },
-  { value: '12', label: 'Partnerships a year' },
-  { value: '7%', label: 'Monthly newsletter growth target' },
-];
 
 export default function Home() {
   useSEO({
