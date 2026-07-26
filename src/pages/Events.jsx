@@ -2,9 +2,83 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
+import ShopifyBuyButton from '../components/ShopifyBuyButton.jsx';
 import { submitNetlifyForm } from '../lib/netlifyForms.js';
 import { EVENTS, eventDate } from '../data/events.js';
 import { useSEO, useStructuredData } from '../lib/seo.js';
+
+const BUY_BUTTON_OPTIONS = {
+  product: {
+    styles: {
+      product: {
+        '@media (min-width: 601px)': {
+          'max-width': 'calc(25% - 20px)',
+          'margin-left': '20px',
+          'margin-bottom': '50px',
+        },
+      },
+      button: {
+        'font-family': 'Roboto, sans-serif',
+        ':hover': { 'background-color': '#3a7562' },
+        'background-color': '#40826d',
+        ':focus': { 'background-color': '#3a7562' },
+      },
+    },
+    text: { button: 'Add to cart' },
+    googleFonts: ['Roboto'],
+  },
+  productSet: {
+    styles: {
+      products: {
+        '@media (min-width: 601px)': { 'margin-left': '-20px' },
+      },
+    },
+  },
+  modalProduct: {
+    contents: { img: false, imgWithCarousel: true, button: false, buttonWithQuantity: true },
+    styles: {
+      product: {
+        '@media (min-width: 601px)': {
+          'max-width': '100%',
+          'margin-left': '0px',
+          'margin-bottom': '0px',
+        },
+      },
+      button: {
+        'font-family': 'Roboto, sans-serif',
+        ':hover': { 'background-color': '#3a7562' },
+        'background-color': '#40826d',
+        ':focus': { 'background-color': '#3a7562' },
+      },
+    },
+    googleFonts: ['Roboto'],
+    text: { button: 'Add to cart' },
+  },
+  option: {},
+  cart: {
+    styles: {
+      button: {
+        'font-family': 'Roboto, sans-serif',
+        ':hover': { 'background-color': '#3a7562' },
+        'background-color': '#40826d',
+        ':focus': { 'background-color': '#3a7562' },
+      },
+    },
+    text: { total: 'Subtotal', button: 'Checkout' },
+    googleFonts: ['Roboto'],
+  },
+  toggle: {
+    styles: {
+      toggle: {
+        'font-family': 'Roboto, sans-serif',
+        'background-color': '#40826d',
+        ':hover': { 'background-color': '#3a7562' },
+        ':focus': { 'background-color': '#3a7562' },
+      },
+    },
+    googleFonts: ['Roboto'],
+  },
+};
 
 const PAST = [
   {
@@ -145,7 +219,9 @@ export default function Events() {
                 <div style={{ fontFamily: 'var(--font-serif)', fontSize: 25, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>{e.title}</div>
                 <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.65, maxWidth: 600, marginBottom: 14 }}>{e.desc}</p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
-                  {e.shopifyUrl ? (
+                  {e.buyButtonProductId ? (
+                    <ShopifyBuyButton productId={e.buyButtonProductId} options={BUY_BUTTON_OPTIONS} />
+                  ) : e.shopifyUrl ? (
                     <a
                       href={e.shopifyUrl}
                       target="_blank"
