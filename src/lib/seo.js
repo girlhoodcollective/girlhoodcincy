@@ -46,3 +46,36 @@ export function useSEO({ title, description, path, image = DEFAULT_OG_IMAGE }) {
     upsertMeta('name', 'twitter:image', image);
   }, [title, description, path, image]);
 }
+
+// Injects one or more JSON-LD <script> blocks, keyed by id so re-renders replace
+// rather than duplicate them, and removed on unmount so schema doesn't leak
+// across client-side route changes.
+export function useStructuredData(id, data) {
+  useEffect(() => {
+    if (!data) return undefined;
+    const scriptId = `ld-json-${id}`;
+    let el = document.getElementById(scriptId);
+    if (!el) {
+      el = document.createElement('script');
+      el.type = 'application/ld+json';
+      el.id = scriptId;
+      document.head.appendChild(el);
+    }
+    el.textContent = JSON.stringify(data);
+    return () => {
+      el?.remove();
+    };
+  }, [id, data]);
+}
+
+export function faqSchema(items) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  };
+}

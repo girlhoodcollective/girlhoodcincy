@@ -60,7 +60,7 @@ export default function BetterTogetherRecap() {
 
   return (
     <div className="page-shell">
-      <NavBar variant="navy" active="Events & Workshops" />
+      <NavBar variant="navy" active="Events" />
 
       <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px', textAlign: 'center' }}>
         <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Case study</div>
@@ -203,7 +203,7 @@ export default function BetterTogetherRecap() {
           <Link className="btn" to="/consultation-intake" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>
             Start the intake
           </Link>
-          <Link className="btn" to="/work-with-me" style={{ border: '1.5px solid rgba(255,255,255,.4)', color: '#fff', padding: '13.5px 28px' }}>
+          <Link className="btn" to="/work-together" style={{ border: '1.5px solid rgba(255,255,255,.4)', color: '#fff', padding: '13.5px 28px' }}>
             See services
           </Link>
         </div>

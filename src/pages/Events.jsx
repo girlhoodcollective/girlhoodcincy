@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
 import { submitNetlifyForm } from '../lib/netlifyForms.js';
-import { EVENTS } from '../data/events.js';
-import { useSEO } from '../lib/seo.js';
+import { EVENTS, eventDate } from '../data/events.js';
+import { useSEO, useStructuredData } from '../lib/seo.js';
 
 const PAST = [
   {
@@ -29,11 +29,24 @@ const CATS = ['All', 'Workshop'];
 
 export default function Events() {
   useSEO({
-    title: 'Events & Workshops — Girlhood Collective | Cincinnati',
-    description: "Brunches, markets, and workshops for women and girls of every age across Greater Cincinnati. See what's coming up and reserve your spot.",
+    title: 'Upcoming Events | Girlhood Collective',
+    description: "Girlhood Cincy Monthly Experiences — one Saturday a month, September through May, where girls ages 8–12 meet local women entrepreneurs and build confidence through hands-on projects.",
     path: '/events',
     image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-studio-art-2.jpg?v=1774548572&width=1200',
   });
+
+  const publishedEvents = EVENTS.filter((e) => e.published !== false);
+  useStructuredData(
+    'events',
+    publishedEvents.map((e) => ({
+      '@context': 'https://schema.org',
+      '@type': 'Event',
+      name: e.title,
+      startDate: eventDate(e).toISOString().slice(0, 10),
+      location: { '@type': 'Place', name: e.where, address: 'Cincinnati, OH' },
+      offers: { '@type': 'Offer', priceCurrency: 'USD', price: (e.price.match(/\d+/) || ['0'])[0], url: e.shopifyUrl || 'https://girlhoodcincy.com/events' },
+    }))
+  );
 
   const [filter, setFilter] = useState('All');
   const [detailId, setDetailId] = useState(null);
@@ -70,17 +83,17 @@ export default function Events() {
 
   return (
     <div className="page-shell">
-      <NavBar variant="navy" active="Events & Workshops" />
+      <NavBar variant="navy" active="Events" />
 
       <div className="rgrid" style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px', display: 'grid', gridTemplateColumns: '1fr 220px', gap: 32, alignItems: 'center' }}>
         <div>
           <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
-          <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Events &amp; Workshops</div>
-          <div className="hero-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 640 }}>
-            Gather, make, <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>belong.</span>
-          </div>
+          <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Girlhood Cincy Monthly Experiences</div>
+          <h1 className="hero-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 640 }}>
+            Gather <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>beautifully.</span>
+          </h1>
           <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, marginTop: 20 }}>
-            Brunches that fill a room, markets that build a neighborhood, and workshops where girls find their creative voice. Come as you are.
+            One Saturday a month, September through May, where girls ages 8–12 meet real local women entrepreneurs and build confidence through hands-on projects. Every session is 120 minutes, capped at 15 participants, and led by a Community Collaborator sharing her story and her craft. $40 per session, materials included. Attend one, or attend all nine.
           </p>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>

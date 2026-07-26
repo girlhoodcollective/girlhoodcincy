@@ -190,7 +190,7 @@ textarea.fld {
   min-width: 0;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1180px) {
   .nav-links-desktop {
     display: none !important;
   }
