@@ -74,6 +74,31 @@ export default function WorkTogether() {
         </div>
       </div>
 
+      {/* CURRENT PARTNERS */}
+      <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
+        <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>Community Collaborators</div>
+        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24, textAlign: 'center' }}>In good company.</div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 14, maxWidth: 1000, margin: '0 auto' }}>
+          {PARTNER_LOGOS.map((p) => (
+            <a
+              key={p.href}
+              href={p.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-lift"
+              style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 8, height: 110, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 18 }}
+            >
+              <img
+                src={p.src}
+                alt={p.alt}
+                loading="lazy"
+                style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', display: 'block' }}
+              />
+            </a>
+          ))}
+        </div>
+      </div>
+
       {/* SERVICE LADDER */}
       <div style={{ background: '#fff', padding: '58px 44px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16, maxWidth: 1000, margin: '0 auto' }}>
@@ -122,14 +147,14 @@ export default function WorkTogether() {
               src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/432_a2c25d8f-0ce8-40d5-b0fe-f1f1d4b17a69.jpg?v=1784653522&width=640"
               alt="Guests and panelists together at the Better Together Brunch"
               loading="lazy"
-              style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(0.8)', display: 'block' }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(0.7)', display: 'block' }}
             />
           </div>
         </div>
       </div>
 
       {/* PARTNERSHIP TIERS */}
-      <div style={{ background: '#fff', padding: '58px 44px' }}>
+      <div style={{ background: 'var(--gc-section)', padding: '58px 44px' }}>
         <div style={{ textAlign: 'center', marginBottom: 30 }}>
           <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>The neighborhood</div>
           <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 46, color: 'var(--gc-navy)', lineHeight: 1.1 }}>
@@ -146,31 +171,6 @@ export default function WorkTogether() {
               <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.08em', color: 'var(--gc-emerald)', marginBottom: 14 }}>{t.price}</div>
               <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{t.body}</p>
             </div>
-          ))}
-        </div>
-      </div>
-
-      {/* CURRENT PARTNERS */}
-      <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
-        <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>2026–27 Community Collaborators</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24, textAlign: 'center' }}>In good company.</div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 14, maxWidth: 1000, margin: '0 auto' }}>
-          {PARTNER_LOGOS.map((p) => (
-            <a
-              key={p.href}
-              href={p.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover-lift"
-              style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 8, height: 110, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 18 }}
-            >
-              <img
-                src={p.src}
-                alt={p.alt}
-                loading="lazy"
-                style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', display: 'block' }}
-              />
-            </a>
           ))}
         </div>
       </div>
