@@ -18,7 +18,7 @@ const TOOLS = [
     href: '/worth-quiz',
     accent: 'var(--gc-lavender)',
     eyebrow: 'For individuals · 20 questions',
-    title: 'What Are You Worth?',
+    title: 'Dollars & Cents',
     body: 'A warm skills inventory that maps your real, marketable strengths to an income path that fits you — grounded in Cincinnati\'s actual market.',
     cta: 'Take the quiz →',
   },

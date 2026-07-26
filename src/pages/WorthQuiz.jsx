@@ -41,7 +41,7 @@ const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 
 export default function WorthQuiz() {
   useSEO({
-    title: 'What Are You Worth? A Skills Inventory — Girlhood Collective',
+    title: 'Dollars & Cents: A Skills Inventory — Girlhood Collective',
     description: "A warm skills inventory that maps your real, marketable strengths to an income path grounded in Cincinnati's actual market.",
     path: '/worth-quiz',
   });
@@ -125,7 +125,7 @@ export default function WorthQuiz() {
 
   return (
     <div className="flow-shell" style={{ minHeight: '100vh', background: 'var(--gc-cream)' }}>
-      <NavBar variant="minimal" label="What Are You Worth? · A skills inventory" />
+      <NavBar variant="minimal" label="Dollars & Cents · A skills inventory" />
 
       {phase === 'intro' && (
         <div style={{ background: 'var(--gc-cream)', padding: '64px 32px 72px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
