@@ -5,7 +5,7 @@ import Footer from '../components/Footer.jsx';
 import { subscribeToNewsletter } from '../lib/newsletter.js';
 import { getUpcomingPublishedEvents } from '../data/events.js';
 import { useSEO, useStructuredData, SITE_URL, SITE_NAME } from '../lib/seo.js';
-import { PERSONAS, CORNERSTONE_ARTICLES, TRUST_STATS } from '../data/content.js';
+import { PERSONAS, TRUST_STATS } from '../data/content.js';
 
 const UPCOMING_EVENTS = getUpcomingPublishedEvents(2);
 
@@ -121,17 +121,6 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* FEATURED RESOURCE */}
-      <div style={{ background: 'var(--gc-navy)', padding: '54px 44px', textAlign: 'center' }}>
-        <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 14 }}>From the Resources library</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 26, color: '#fff', maxWidth: 640, margin: '0 auto 20px', lineHeight: 1.4 }}>
-          &ldquo;{CORNERSTONE_ARTICLES[0]}&rdquo;
-        </div>
-        <Link className="navlink navlink--ondark" to="/resources" style={{ color: 'var(--gc-lavender-soft)' }}>
-          Explore Resources →
-        </Link>
       </div>
 
       {/* TRUST STRIP */}

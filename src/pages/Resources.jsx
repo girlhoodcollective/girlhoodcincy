@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
 import { useSEO } from '../lib/seo.js';
-import { RESOURCE_PILLARS, CORNERSTONE_ARTICLES } from '../data/content.js';
 
 const TOOLS = [
   {
@@ -31,9 +29,6 @@ export default function Resources() {
     path: '/resources',
   });
 
-  const [filter, setFilter] = useState('All');
-  const categories = ['All', ...RESOURCE_PILLARS];
-
   return (
     <div className="page-shell">
       <NavBar variant="white" active="Resources" />
@@ -46,43 +41,6 @@ export default function Resources() {
         <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, margin: '18px auto 0' }}>
           Practical ideas for building stronger organizations, neighborhoods, and relationships — the same thinking behind every Girlhood Collective partnership.
         </p>
-      </div>
-
-      {/* CATEGORY FILTER */}
-      <div style={{ background: '#fff', borderBottom: '1px solid var(--gc-border)', padding: '20px 44px', display: 'flex', justifyContent: 'center', gap: 10, flexWrap: 'wrap' }}>
-        {categories.map((c) => (
-          <button key={c} className={`fbtn ${filter === c ? 'active' : ''}`} onClick={() => setFilter(c)}>
-            {c}
-          </button>
-        ))}
-      </div>
-
-      {/* CORNERSTONE ARTICLES */}
-      <div style={{ background: '#fff', padding: '54px 44px' }}>
-        <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>Cornerstone articles</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8, textAlign: 'center' }}>Coming soon.</div>
-        <p style={{ fontSize: 13.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 520, margin: '0 auto 30px', textAlign: 'center' }}>
-          The flagship pieces establishing our thinking on community strategy — in progress. Join the Village to hear when they publish.
-        </p>
-        {filter === 'All' ? (
-          <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 14, maxWidth: 900, margin: '0 auto' }}>
-            {CORNERSTONE_ARTICLES.map((title) => (
-              <div key={title} style={{ border: '1px solid var(--gc-border)', borderRadius: 6, padding: '20px 22px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
-                <div style={{ fontFamily: 'var(--font-serif)', fontSize: 15, fontWeight: 700, color: 'var(--gc-slate)', lineHeight: 1.35 }}>{title}</div>
-                <span style={{ flexShrink: 0, font: '700 9px var(--font-sans)', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', background: 'var(--gc-section)', padding: '4px 10px', borderRadius: 100 }}>
-                  Coming soon
-                </span>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <p style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 420, margin: '0 auto' }}>
-            No resources match that filter yet — check back soon, or{' '}
-            <button onClick={() => setFilter('All')} style={{ background: 'none', border: 'none', padding: 0, font: 'inherit', color: 'var(--gc-emerald)', textDecoration: 'underline', cursor: 'pointer' }}>
-              explore all resources
-            </button>.
-          </p>
-        )}
       </div>
 
       {/* FREE TOOLS */}
