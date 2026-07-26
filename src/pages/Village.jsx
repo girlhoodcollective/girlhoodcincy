@@ -44,59 +44,63 @@ export default function Village() {
     <div className="page-shell">
       <NavBar variant="navy" active="Join the Village" />
 
-      <div style={{ background: 'var(--gc-cream)', padding: '60px 44px 52px', textAlign: 'center' }}>
-        <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>The Village</div>
-        <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 65, color: 'var(--gc-navy)', lineHeight: 1.08 }}>You&rsquo;re invited.</h1>
-        <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, margin: '16px auto 30px' }}>
-          A free monthly letter for anyone building real community — resources, local favorites, and what&rsquo;s inspiring us right now.
-        </p>
-
-        {submitted ? (
-          <div style={{ maxWidth: 440, margin: '0 auto', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '28px 24px' }}>
-            <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 32.5, color: 'var(--gc-navy)', marginBottom: 6 }}>You&rsquo;re in!</div>
-            <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7 }}>
-              Watch your inbox for our next letter.
-            </p>
-          </div>
-        ) : (
+      <div style={{ background: 'var(--gc-cream)', padding: '60px 44px 52px' }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 320px', gap: 44, maxWidth: 1000, margin: '0 auto', alignItems: 'center' }}>
           <div>
-            <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <input
-                type="email"
-                placeholder="you@cincinnati.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleSubscribe()}
-                aria-label="Email address"
-                className="fld email-input"
-                style={{ width: 320 }}
-              />
-              <button
-                onClick={handleSubscribe}
-                disabled={sending}
-                style={{ cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 14px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', padding: '14px 26px', borderRadius: 3 }}
-              >
-                {sending ? 'Joining…' : 'Join the Village'}
-              </button>
-            </div>
-            {error && (
-              <p style={{ fontSize: 16, color: '#c0392b', marginTop: 14 }}>
-                {error} Reach us directly at{' '}
-                <a href="mailto:hello@girlhoodcincy.com" style={{ color: '#c0392b' }}>hello@girlhoodcincy.com</a>.
-              </p>
+            <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>The Village</div>
+            <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 65, color: 'var(--gc-navy)', lineHeight: 1.08 }}>You&rsquo;re invited.</h1>
+            <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 480, margin: '16px 0 30px' }}>
+              A free monthly letter for anyone building real community — resources, local favorites, and what&rsquo;s inspiring us right now.
+            </p>
+
+            {submitted ? (
+              <div style={{ maxWidth: 440, background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '28px 24px' }}>
+                <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 32.5, color: 'var(--gc-navy)', marginBottom: 6 }}>You&rsquo;re in!</div>
+                <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7 }}>
+                  Watch your inbox for our next letter.
+                </p>
+              </div>
+            ) : (
+              <div>
+                <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                  <input
+                    type="email"
+                    placeholder="you@cincinnati.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    onKeyDown={(e) => e.key === 'Enter' && handleSubscribe()}
+                    aria-label="Email address"
+                    className="fld email-input"
+                    style={{ width: 320 }}
+                  />
+                  <button
+                    onClick={handleSubscribe}
+                    disabled={sending}
+                    style={{ cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 14px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', padding: '14px 26px', borderRadius: 3 }}
+                  >
+                    {sending ? 'Joining…' : 'Join the Village'}
+                  </button>
+                </div>
+                {error && (
+                  <p style={{ fontSize: 16, color: '#c0392b', marginTop: 14 }}>
+                    {error} Reach us directly at{' '}
+                    <a href="mailto:hello@girlhoodcincy.com" style={{ color: '#c0392b' }}>hello@girlhoodcincy.com</a>.
+                  </p>
+                )}
+              </div>
             )}
           </div>
-        )}
-      </div>
 
-      {/* PHOTO BANNER */}
-      <div style={{ width: '100%', height: 320, overflow: 'hidden', background: 'var(--gc-navy)' }}>
-        <img
-          src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/CAA8FC72-84E4-4B2C-B072-ED11D93637BE.jpg?v=1785100818&width=1400"
-          alt="Girlhood Collective community gathering"
-          loading="lazy"
-          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
-        />
+          {/* PHOTO */}
+          <div style={{ width: '100%', height: 460, overflow: 'hidden', borderRadius: 10, background: 'var(--gc-navy)' }}>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/CAA8FC72-84E4-4B2C-B072-ED11D93637BE.jpg?v=1785100818&width=800"
+              alt="Girlhood Collective community gathering"
+              loading="lazy"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
+            />
+          </div>
+        </div>
       </div>
 
       {/* WHAT SUBSCRIBERS GET */}

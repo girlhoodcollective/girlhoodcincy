@@ -115,13 +115,23 @@ export default function About() {
           <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Credibility</div>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)' }}>Track record.</h2>
         </div>
-        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16, maxWidth: 700, margin: '0 auto' }}>
-          {CREDIBILITY.map((c) => (
-            <div key={c.title} style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, borderTop: '3px solid var(--gc-emerald)', padding: '24px 22px' }}>
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>{c.title}</h3>
-              <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{c.body}</p>
-            </div>
-          ))}
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '260px 1fr', gap: 24, maxWidth: 700, margin: '0 auto', alignItems: 'stretch' }}>
+          <div style={{ width: '100%', height: '100%', minHeight: 260, overflow: 'hidden', borderRadius: 8 }}>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/E2C08EAF-A1B7-4D74-BEA5-ED8E33947415.jpg?v=1785100809&width=520"
+              alt="Brittany Gruber being interviewed by a local reporter"
+              loading="lazy"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+            />
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            {CREDIBILITY.map((c) => (
+              <div key={c.title} style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, borderTop: '3px solid var(--gc-emerald)', padding: '24px 22px' }}>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>{c.title}</h3>
+                <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{c.body}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
