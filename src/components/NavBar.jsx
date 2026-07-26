@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const LINKS = [
@@ -11,6 +11,15 @@ const LINKS = [
 
 export default function NavBar({ variant = 'white', active, label }) {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') setMenuOpen(false);
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [menuOpen]);
 
   if (variant === 'minimal') {
     return (
@@ -105,6 +114,7 @@ export default function NavBar({ variant = 'white', active, label }) {
           className="nav-toggle-btn"
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={menuOpen}
+          aria-controls="nav-mobile-menu"
           onClick={() => setMenuOpen((o) => !o)}
         >
           <span style={{ transform: menuOpen ? 'translateY(7px) rotate(45deg)' : 'none' }} />
@@ -112,7 +122,7 @@ export default function NavBar({ variant = 'white', active, label }) {
           <span style={{ transform: menuOpen ? 'translateY(-7px) rotate(-45deg)' : 'none' }} />
         </button>
       </nav>
-      <div className={`nav-mobile-menu ${menuOpen ? 'open' : ''}`}>
+      <div id="nav-mobile-menu" className={`nav-mobile-menu ${menuOpen ? 'open' : ''}`}>
         {links.map((l) => (
           <Link
             key={l.label}

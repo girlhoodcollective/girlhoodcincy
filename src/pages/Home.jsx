@@ -18,8 +18,8 @@ const DIFFERENTIATORS = [
 
 export default function Home() {
   useSEO({
-    title: 'Girlhood Collective | Community Strategy Consulting in Cincinnati',
-    description: 'Building community through authentic relationships, trust, and intentional connection. We help people see what’s possible, bring the right voices together, and create the conditions where communities can thrive.',
+    title: 'Girlhood Collective | Community Strategy Consulting',
+    description: 'Building community through authentic relationships, trust, and intentional connection — for organizations, small businesses, and neighbors across Cincinnati.',
     path: '/',
   });
 
@@ -29,6 +29,10 @@ export default function Home() {
     name: SITE_NAME,
     url: SITE_URL,
     logo: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/8.png?v=1784772079&width=512',
+    description: 'Girlhood Collective is a Cincinnati-based community strategy practice helping small businesses, health professionals, and mission-driven organizations build real, lasting community.',
+    email: 'hello@girlhoodcincy.com',
+    areaServed: 'Cincinnati, OH',
+    contactPoint: { '@type': 'ContactPoint', email: 'hello@girlhoodcincy.com', contactType: 'customer service' },
     sameAs: ['https://instagram.com/girlhood_cincy'],
     founder: { '@type': 'Person', name: 'Brittany Gruber' },
   });

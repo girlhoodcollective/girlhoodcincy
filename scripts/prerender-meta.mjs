@@ -7,9 +7,11 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const DIST = join(__dirname, '..', 'dist');
+const ROOT = join(__dirname, '..');
+const DIST = join(ROOT, 'dist');
 const SITE_URL = 'https://girlhoodcincy.com';
 const DEFAULT_IMAGE = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/8.png?v=1784772079&width=1200';
 
@@ -18,53 +20,63 @@ const DEFAULT_IMAGE = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/8.
 const ROUTES = [
   {
     path: '/',
-    title: 'Girlhood Collective | Community Strategy Consulting in Cincinnati',
-    description: 'Building community through authentic relationships, trust, and intentional connection. We help people see what’s possible, bring the right voices together, and create the conditions where communities can thrive.',
+    sourceFile: 'src/pages/Home.jsx',
+    title: 'Girlhood Collective | Community Strategy Consulting',
+    description: 'Building community through authentic relationships, trust, and intentional connection — for organizations, small businesses, and neighbors across Cincinnati.',
   },
   {
     path: '/about',
+    sourceFile: 'src/pages/About.jsx',
     title: 'About Brittany Gruber | Girlhood Collective',
     description: 'Brittany Gruber is the founder of Girlhood Collective, a Cincinnati-based community strategy practice helping small businesses, health professionals, and mission-driven organizations build real, lasting community.',
     image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/J8A2562.jpg?v=1774664826&width=1200',
   },
   {
     path: '/events',
+    sourceFile: 'src/pages/Events.jsx',
     title: 'Upcoming Events | Girlhood Collective',
     description: 'Girlhood Cincy Monthly Experiences — one Saturday a month, September through May, where girls ages 8–12 meet local women entrepreneurs and build confidence through hands-on projects.',
     image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-studio-art-2.jpg?v=1774548572&width=1200',
   },
   {
     path: '/village',
+    sourceFile: 'src/pages/Village.jsx',
     title: 'Join the Village | Girlhood Collective Newsletter',
     description: 'A free monthly letter for anyone building real community — resources, local favorites, and what’s inspiring us right now.',
   },
   {
     path: '/work-together',
+    sourceFile: 'src/pages/WorkTogether.jsx',
     title: 'Work Together | Girlhood Collective Consulting & Speaking',
     description: 'Community Audit & Roadmap, Community Strategy Partnership, Event Design & Facilitation, and Speaking — pick the tier that fits your budget and commitment level.',
   },
   {
     path: '/resources',
+    sourceFile: 'src/pages/Resources.jsx',
     title: 'Resources | Community Strategy Insights from Girlhood Collective',
     description: 'Practical ideas for building stronger organizations, neighborhoods, and relationships — the same thinking behind every Girlhood Collective partnership.',
   },
   {
     path: '/contact',
+    sourceFile: 'src/pages/Contact.jsx',
     title: "Let's Schedule a Time to Chat | Girlhood Collective",
     description: "Twenty minutes, no pitch — just a conversation about what you're building.",
   },
   {
     path: '/consultation-intake',
+    sourceFile: 'src/pages/ConsultationIntake.jsx',
     title: 'Consultation Intake — Girlhood Collective',
     description: 'An 8-minute diagnostic to help identify what your organization actually needs, and where we’d start working together.',
   },
   {
     path: '/worth-quiz',
+    sourceFile: 'src/pages/WorthQuiz.jsx',
     title: 'Dollars & Cents: A Skills Inventory — Girlhood Collective',
     description: "A warm skills inventory that maps your real, marketable strengths to an income path grounded in Cincinnati's actual market.",
   },
   {
     path: '/better-together-recap',
+    sourceFile: 'src/pages/BetterTogetherRecap.jsx',
     title: 'Case Study: Better Together Brunch — Girlhood Collective',
     description: 'How one event turned into $3,000 raised, 10 new sponsors, and the start of a lasting community for Endurance in Education.',
     image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/432_a2c25d8f-0ce8-40d5-b0fe-f1f1d4b17a69.jpg?v=1784653522&width=1200',
@@ -109,3 +121,30 @@ for (const route of ROUTES) {
 }
 
 console.log(`Prerendered per-route meta tags for ${ROUTES.length} routes.`);
+
+// Regenerate the sitemap with a real lastmod per route, pulled from that
+// page's most recent commit. Falls back to today if git history isn't
+// available (e.g. a shallow clone) so the build never fails on this step.
+function lastModFor(sourceFile) {
+  try {
+    const out = execSync(`git log -1 --format=%cs -- "${sourceFile}"`, { cwd: ROOT, encoding: 'utf8' }).trim();
+    if (out) return out;
+  } catch {
+    // fall through to today's date
+  }
+  return new Date().toISOString().slice(0, 10);
+}
+
+const sitemap = [
+  '<?xml version="1.0" encoding="UTF-8"?>',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  ...ROUTES.map((route) => {
+    const url = `${SITE_URL}${route.path === '/' ? '/' : route.path}`;
+    return `  <url><loc>${url}</loc><lastmod>${lastModFor(route.sourceFile)}</lastmod></url>`;
+  }),
+  '</urlset>',
+  '',
+].join('\n');
+
+writeFileSync(join(DIST, 'sitemap.xml'), sitemap);
+console.log('Regenerated sitemap.xml with lastmod dates.');
