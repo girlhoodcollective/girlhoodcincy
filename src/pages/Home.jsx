@@ -25,7 +25,7 @@ const TRUST_STATS = [
 export default function Home() {
   useSEO({
     title: 'Girlhood Collective | Community Strategy Consulting in Cincinnati',
-    description: 'Girlhood Collective helps small businesses, health professionals, mission-driven organizations, and community members build real, lasting community — through consulting, events, and experiences rooted in Cincinnati.',
+    description: 'Building community through authentic relationships, trust, and intentional connection. We help people see what's possible, bring the right voices together, and create the conditions where communities can thrive.',
     path: '/',
   });
 
