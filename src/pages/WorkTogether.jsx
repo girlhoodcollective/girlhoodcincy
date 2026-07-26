@@ -51,12 +51,49 @@ export default function WorkTogether() {
           {SERVICES.map((s) => (
             <div key={s.id} className="hover-lift" style={{ border: '1px solid var(--gc-border)', borderRadius: 8, padding: '28px 24px', display: 'flex', flexDirection: 'column' }}>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8, lineHeight: 1.25 }}>{s.title}</div>
-              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 22, color: 'var(--gc-emerald)' }}>{s.price}</div>
               <div style={{ font: '600 10px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginBottom: 16 }}>{s.cadence}</div>
               <p style={{ fontSize: 13.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.7, marginBottom: 12, flexGrow: 1 }}>{s.body}</p>
               <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--gc-ink-muted)' }}>{s.bestFor}</div>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* CASE STUDY HIGHLIGHT */}
+      <div style={{ background: 'var(--gc-navy)', padding: '58px 44px' }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 320px', gap: 40, maxWidth: 1000, margin: '0 auto', alignItems: 'center' }}>
+          <div>
+            <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 14 }}>Case study</div>
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 28, fontWeight: 700, color: '#fff', marginBottom: 12, lineHeight: 1.3 }}>
+              From zero awareness to campaign kickoff.
+            </div>
+            <p style={{ fontSize: 14.5, fontWeight: 300, color: 'rgba(255,255,255,.72)', lineHeight: 1.8, marginBottom: 24, maxWidth: 480 }}>
+              The Better Together Brunch turned a first-time nonprofit fundraiser into $3,000 raised, 10 new sponsors, and the start of a lasting community for Endurance in Education — all within a one-month planning window.
+            </p>
+            <div style={{ display: 'flex', gap: 28, marginBottom: 28, flexWrap: 'wrap' }}>
+              <div>
+                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 26, color: '#fff' }}>$3,000</div>
+                <div style={{ font: '600 10px var(--font-sans)', letterSpacing: '.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,.55)', marginTop: 4 }}>Raised</div>
+              </div>
+              <div>
+                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 26, color: '#fff' }}>10</div>
+                <div style={{ font: '600 10px var(--font-sans)', letterSpacing: '.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,.55)', marginTop: 4 }}>Sponsors secured</div>
+              </div>
+              <div>
+                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 26, color: '#fff' }}>1 Month</div>
+                <div style={{ font: '600 10px var(--font-sans)', letterSpacing: '.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,.55)', marginTop: 4 }}>Planning timeline</div>
+              </div>
+            </div>
+            <Link className="btn" to="/better-together-recap" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '14px 26px' }}>
+              Read the case study →
+            </Link>
+          </div>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/432_a2c25d8f-0ce8-40d5-b0fe-f1f1d4b17a69.jpg?v=1784653522&width=640"
+            alt="Guests and panelists together at the Better Together Brunch"
+            loading="lazy"
+            style={{ width: '100%', height: 320, objectFit: 'cover', borderRadius: 10, display: 'block' }}
+          />
         </div>
       </div>
 
