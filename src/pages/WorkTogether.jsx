@@ -8,7 +8,7 @@ import { SERVICES, FAQS } from '../data/content.js';
 export default function WorkTogether() {
   useSEO({
     title: 'Work Together | Girlhood Collective Consulting & Speaking',
-    description: 'Community Audit & Roadmap, Community Strategy Partnership, Event Design & Facilitation, and Speaking — pick the tier that fits your budget and commitment level.',
+    description: 'Explore Community Audit & Roadmap, Community Strategy Partnership, Event Design & Facilitation, and Speaking with Girlhood Collective.',
     path: '/work-together',
   });
 
@@ -51,7 +51,6 @@ export default function WorkTogether() {
           {SERVICES.map((s) => (
             <div key={s.id} className="hover-lift" style={{ border: '1px solid var(--gc-border)', borderRadius: 8, padding: '28px 24px', display: 'flex', flexDirection: 'column' }}>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8, lineHeight: 1.25 }}>{s.title}</div>
-              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 22, color: 'var(--gc-emerald)' }}>{s.price}</div>
               <div style={{ font: '600 10px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginBottom: 16 }}>{s.cadence}</div>
               <p style={{ fontSize: 13.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.7, marginBottom: 12, flexGrow: 1 }}>{s.body}</p>
               <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--gc-ink-muted)' }}>{s.bestFor}</div>

@@ -27,7 +27,7 @@ const TOOLS = [
 export default function Resources() {
   useSEO({
     title: 'Resources | Community Strategy Insights from Girlhood Collective',
-    description: 'Practical ideas for building stronger organizations, neighborhoods, and relationships — the same thinking behind every Girlhood Collective partnership.',
+    description: 'Notes on Cincinnati, community, and building stronger organizations, neighborhoods, and relationships.',
     path: '/resources',
   });
 
@@ -41,11 +41,29 @@ export default function Resources() {
       <div style={{ background: 'var(--gc-cream)', padding: '60px 44px 52px', textAlign: 'center' }}>
         <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Resources</div>
         <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 46, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.1, maxWidth: 640, margin: '0 auto' }}>
-          A library, <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>not a blog.</span>
+          Less blog, <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>more library.</span>
         </h1>
         <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, margin: '18px auto 0' }}>
-          Practical ideas for building stronger organizations, neighborhoods, and relationships — the same thinking behind every Girlhood Collective partnership.
+          Notes on Cincinnati, community, and building stronger organizations, neighborhoods, and relationships.
         </p>
+      </div>
+
+      {/* FREE TOOLS */}
+      <div style={{ background: 'var(--gc-navy-deep)', padding: '56px 44px' }}>
+        <div style={{ textAlign: 'center', marginBottom: 28 }}>
+          <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>Free tools</div>
+          <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 28, color: '#fff' }}>Start with a question.</div>
+        </div>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, maxWidth: 900, margin: '0 auto' }}>
+          {TOOLS.map((t) => (
+            <Link key={t.title} className="hover-lift" to={t.href} style={{ textDecoration: 'none', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.14)', borderRadius: 8, padding: '26px 24px', display: 'block' }}>
+              <div style={{ font: '700 9px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>{t.eyebrow}</div>
+              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: '#fff', marginBottom: 6 }}>{t.title}</div>
+              <p style={{ fontSize: 13, fontWeight: 300, color: 'rgba(255,255,255,.6)', lineHeight: 1.6, marginBottom: 12 }}>{t.body}</p>
+              <span style={{ font: '600 11px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: t.accent }}>{t.cta}</span>
+            </Link>
+          ))}
+        </div>
       </div>
 
       {/* CATEGORY FILTER */}
@@ -83,24 +101,6 @@ export default function Resources() {
             </button>.
           </p>
         )}
-      </div>
-
-      {/* FREE TOOLS */}
-      <div style={{ background: 'var(--gc-navy-deep)', padding: '56px 44px' }}>
-        <div style={{ textAlign: 'center', marginBottom: 28 }}>
-          <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>Free tools</div>
-          <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 28, color: '#fff' }}>Start with a question.</div>
-        </div>
-        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, maxWidth: 900, margin: '0 auto' }}>
-          {TOOLS.map((t) => (
-            <Link key={t.title} className="hover-lift" to={t.href} style={{ textDecoration: 'none', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.14)', borderRadius: 8, padding: '26px 24px', display: 'block' }}>
-              <div style={{ font: '700 9px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>{t.eyebrow}</div>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: '#fff', marginBottom: 6 }}>{t.title}</div>
-              <p style={{ fontSize: 13, fontWeight: 300, color: 'rgba(255,255,255,.6)', lineHeight: 1.6, marginBottom: 12 }}>{t.body}</p>
-              <span style={{ font: '600 11px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: t.accent }}>{t.cta}</span>
-            </Link>
-          ))}
-        </div>
       </div>
 
       {/* VILLAGE CTA */}
