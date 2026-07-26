@@ -163,9 +163,9 @@ export default function Home() {
           <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, maxWidth: 760, margin: '0 auto 24px' }}>
             <img
               src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2296.jpg?v=1778190542&width=440"
-              alt="Girls working on a hands-on project at a Girlhood Collective Studio Art session"
+              alt="Brittany and a collaborator holding up finished artwork at a Girlhood Collective session"
               loading="lazy"
-              style={{ width: '100%', height: 180, objectFit: 'cover', borderRadius: 8, display: 'block' }}
+              style={{ width: '100%', height: 180, objectFit: 'cover', objectPosition: 'center 15%', borderRadius: 8, display: 'block' }}
             />
             <img
               src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2455.jpg?v=1778190539&width=440"
