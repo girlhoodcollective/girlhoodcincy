@@ -140,7 +140,7 @@ export default function Village() {
         </div>
       </div>
 
-      <Footer />
+      <Footer newsletterFormOnPage />
     </div>
   );
 }

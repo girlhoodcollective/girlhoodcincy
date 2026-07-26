@@ -115,7 +115,7 @@ export default function WorkTogether() {
               <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8, lineHeight: 1.25 }}>{s.title}</h3>
               <div style={{ font: '600 12.5px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginBottom: 16 }}>{s.cadence}</div>
               <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.7, marginBottom: 12, flexGrow: 1 }}>{s.body}</p>
-              <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--gc-ink-muted)' }}>{s.bestFor}</div>
+              <div style={{ fontSize: 16, fontWeight: 600, color: 'var(--gc-ink-muted)' }}>{s.bestFor}</div>
             </div>
           ))}
         </div>

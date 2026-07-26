@@ -76,8 +76,8 @@ const SAFETY_NOTES = {
   5: 'Strong foundation. Rare — we can move faster and go deeper when people already feel safe.',
 };
 
-const LABEL_STYLE = { display: 'block', font: '600 15.5px var(--font-sans)', color: 'var(--gc-slate)', marginBottom: 8 };
-const HINT_STYLE = { fontSize: 15.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.5, marginBottom: 10 };
+const LABEL_STYLE = { display: 'block', font: '600 16px var(--font-sans)', color: 'var(--gc-slate)', marginBottom: 8 };
+const HINT_STYLE = { fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.5, marginBottom: 10 };
 
 function CheckGrid({ group, defs }) {
   return (
@@ -104,7 +104,7 @@ function CheckGrid({ group, defs }) {
             </div>
             <div>
               <div style={{ fontSize: 17, fontWeight: 500, color: 'var(--gc-slate)', lineHeight: 1.35 }}>{d.label}</div>
-              <div style={{ fontSize: 14.5, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>{d.sub}</div>
+              <div style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>{d.sub}</div>
             </div>
           </div>
         );

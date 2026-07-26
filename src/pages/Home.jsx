@@ -46,6 +46,18 @@ export default function Home() {
     url: SITE_URL,
   });
 
+  useStructuredData('professional-service', {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: SITE_NAME,
+    url: SITE_URL,
+    image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/8.png?v=1784772079&width=512',
+    description: 'Girlhood Collective is a Cincinnati-based community strategy practice helping small businesses, health professionals, and mission-driven organizations build real, lasting community.',
+    email: 'hello@girlhoodcincy.com',
+    areaServed: 'Cincinnati, OH',
+    sameAs: ['https://instagram.com/girlhood_cincy'],
+  });
+
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
@@ -155,7 +167,7 @@ export default function Home() {
             <div key={s.id} style={{ border: '1px solid var(--gc-border)', borderRadius: 8, padding: '24px 22px', display: 'flex', flexDirection: 'column' }}>
               <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>{s.title}</h3>
               <div style={{ font: '600 12px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginBottom: 12 }}>{s.cadence}</div>
-              <p style={{ fontSize: 15.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.6, flexGrow: 1 }}>{s.body}</p>
+              <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.6, flexGrow: 1 }}>{s.body}</p>
             </div>
           ))}
         </div>
@@ -238,7 +250,7 @@ export default function Home() {
                 </div>
                 <div>
                   <div style={{ fontFamily: 'var(--font-serif)', fontSize: 21, fontWeight: 700, color: 'var(--gc-slate)' }}>{e.title}</div>
-                  <p style={{ fontSize: 15.5, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>{e.where}</p>
+                  <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>{e.where}</p>
                 </div>
               </Link>
             ))}
@@ -293,7 +305,7 @@ export default function Home() {
         )}
       </div>
 
-      <Footer />
+      <Footer newsletterFormOnPage />
     </div>
   );
 }

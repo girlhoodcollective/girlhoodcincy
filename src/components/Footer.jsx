@@ -85,7 +85,7 @@ function Brand({ deep }) {
   );
 }
 
-export default function Footer({ linked = true }) {
+export default function Footer({ linked = true, newsletterFormOnPage = false }) {
   const brandMark = <Brand deep={linked} />;
 
   return (
@@ -108,7 +108,7 @@ export default function Footer({ linked = true }) {
         ) : (
           brandMark
         )}
-        <p style={{ fontSize: 16, fontWeight: 300, color: 'rgba(255,255,255,.5)', lineHeight: 1.8, marginBottom: 14 }}>
+        <p style={{ fontSize: 16, fontWeight: 300, color: 'rgba(255,255,255,.6)', lineHeight: 1.8, marginBottom: 14 }}>
           Cincinnati, OH · girlhoodcincy.com
           <br />
           Rooted in belonging. Since 2025.
@@ -136,7 +136,7 @@ export default function Footer({ linked = true }) {
               font: '600 12.5px var(--font-sans)',
               letterSpacing: '.16em',
               textTransform: 'uppercase',
-              color: 'rgba(255,255,255,.4)',
+              color: 'rgba(255,255,255,.6)',
               marginBottom: 12,
             }}
           >
@@ -156,7 +156,7 @@ export default function Footer({ linked = true }) {
               font: '600 12.5px var(--font-sans)',
               letterSpacing: '.16em',
               textTransform: 'uppercase',
-              color: 'rgba(255,255,255,.4)',
+              color: 'rgba(255,255,255,.6)',
               marginBottom: 8,
             }}
           >
@@ -173,13 +173,19 @@ export default function Footer({ linked = true }) {
               font: '600 12.5px var(--font-sans)',
               letterSpacing: '.16em',
               textTransform: 'uppercase',
-              color: 'rgba(255,255,255,.4)',
+              color: 'rgba(255,255,255,.6)',
               marginBottom: 8,
             }}
           >
             Join the Village
           </p>
-          <MiniNewsletterSignup />
+          {newsletterFormOnPage ? (
+            <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.6)' }}>
+              You&rsquo;ll find the sign-up above &uarr;
+            </p>
+          ) : (
+            <MiniNewsletterSignup />
+          )}
         </div>
       </div>
     </div>
