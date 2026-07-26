@@ -15,8 +15,8 @@ export const EVENTS = [
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Dream Big', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
-    desc: "A vision board, a mini dance session, and a letter to your future self — with Jess Evans of Dance Factory Fitness on goal-setting and dreaming with purpose.",
-    long: "Meet Jess Evans and hear her story of leaving NYC to open Dance Factory Fitness. A confidence-building dance-cardio session, hands-on vision board building, and a future-self letter to open in a year. 120 minutes · girls 8–12.",
+    desc: "A vision board, a dance workout and confidence activity, and a letter to your future self — an afternoon on goal-setting and dreaming with purpose.",
+    long: "A confidence-building dance workout and confidence activity, hands-on vision board building, and a future-self letter to open in a year. 120 minutes · girls 8–12.",
   },
   {
     id: 'helping-hands', mon: 'Sep', day: '19', year: '2026', cat: 'Workshop',
