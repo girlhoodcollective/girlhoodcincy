@@ -77,14 +77,21 @@ export const PARTNERSHIP_TIERS = [
   },
 ];
 
-export const CURRENT_PARTNERS = [
-  'Wired to Bloom Therapy & Consulting',
-  'Little Treasurer',
-  'Trillium Cake Co.',
-  'Learn With Me Cincy',
-  'Everything Cincy',
-  'Nava',
-  'Truckshop',
+export const PARTNER_LOGOS = [
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4419.jpg?v=1784511473&width=300', href: 'https://wiredtobloomtherapy.com', alt: 'Wired to Bloom Therapy & Consulting' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4050.jpg?v=1784511429&width=300', href: 'https://navacoffeeco.com', alt: 'Nava Coffee Co.' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4417.jpg?v=1784511337&width=300', href: 'https://meganstaceygroup.com/', alt: 'Megan Stacey Group' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4418.jpg?v=1784510803&width=300', href: 'https://inspiredlivingllc.com', alt: 'Inspired Living LLC' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4103.jpg?v=1784510675&width=300', href: 'https://www.instagram.com/mercantileonmain6869/?hl=en', alt: 'Mercantile on Main' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Untitled_2Bdesign_2B_25286_2529.webp?v=1784503719&width=300', href: 'https://www.figleafhydepark.com', alt: 'Fig Leaf Hyde Park' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/PillarLogoSalmon_edited_edited.png?v=1784503720&width=300', href: 'https://www.pillarpelvichealth.com', alt: 'Pillar Pelvic Health' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/full-ks-logo.png?v=1784503720&width=300', href: 'https://www.kendrascott.com/philanthropy.html?srsltid=AfmBOorghaWL2CioHgHQjpd6fCAS9VMxscUcwGAZ4uDVD59zaPUSlcQ4', alt: 'Kendra Scott' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo-1.png?v=1784503720&width=300', href: 'https://www.aquatechpoolsohio.com', alt: 'Aquatech Pools Ohio' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo-web.png?v=1784503719&width=300', href: 'https://galiacollaborative.com', alt: 'Galia Collaborative' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/logo.png?v=1784511511&width=300', href: 'https://trilliumcake.co', alt: 'Trillium Cake Co.' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Color_logo_-_no_background_125x_21f87626-976f-4163-b973-90c087fdbec3.png?v=1777567240&width=300', href: 'https://www.littletreasurer.com/?srsltid=AfmBOoq5YHiKirwNTE8fcM7yiBkAmRcN8dc-dUlIg073BtUiOK08R83-', alt: 'Little Treasurer' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Untitled_design_6.png?v=1774659894&width=300', href: 'https://cincymommade.com/web-agency-gb-home/', alt: 'Cincy Mom Made' },
+  { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_1526.jpg?v=1774659883&width=300', href: 'https://www.instagram.com/hydeparkmarketcincy/?hl=en', alt: 'Hyde Park Market' },
 ];
 
 export const RESOURCE_PILLARS = [

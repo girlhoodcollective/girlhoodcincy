@@ -5,7 +5,7 @@ import Footer from '../components/Footer.jsx';
 import FaqAccordion from '../components/FaqAccordion.jsx';
 import { submitNetlifyForm } from '../lib/netlifyForms.js';
 import { useSEO, useStructuredData, faqSchema } from '../lib/seo.js';
-import { SERVICES, FAQS, PARTNERSHIP_TIERS, CURRENT_PARTNERS } from '../data/content.js';
+import { SERVICES, FAQS, PARTNERSHIP_TIERS, PARTNER_LOGOS } from '../data/content.js';
 
 const PARTNER_INTERESTS = [
   { value: '', label: "I'm interested in…" },
@@ -154,11 +154,23 @@ export default function WorkTogether() {
       <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
         <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>2026–27 Community Collaborators</div>
         <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24, textAlign: 'center' }}>In good company.</div>
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 12, maxWidth: 900, margin: '0 auto' }}>
-          {CURRENT_PARTNERS.map((name) => (
-            <div key={name} style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 100, padding: '10px 20px', fontSize: 16, fontWeight: 600, color: 'var(--gc-slate)' }}>
-              {name}
-            </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 14, maxWidth: 1000, margin: '0 auto' }}>
+          {PARTNER_LOGOS.map((p) => (
+            <a
+              key={p.href}
+              href={p.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-lift"
+              style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 8, height: 110, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 18 }}
+            >
+              <img
+                src={p.src}
+                alt={p.alt}
+                loading="lazy"
+                style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', display: 'block' }}
+              />
+            </a>
           ))}
         </div>
       </div>
