@@ -5,11 +5,13 @@ import { subscribeToNewsletter } from '../lib/newsletter.js';
 import { useSEO } from '../lib/seo.js';
 import { VILLAGE_SECTIONS } from '../data/content.js';
 
+// Real sent issues, pulled from MailerLite campaign history (Issues 1–5, Apr–Jun 2026).
 const ISSUES = [
-  { vol: 'Vol. 08', date: 'June 2026', accent: 'var(--gc-blush)', title: 'The room where it happens', excerpt: 'A first look at the Better Together brunch, why we chose Endurance in Education, and how to grab a seat.' },
-  { vol: 'Vol. 07', date: 'May 2026', accent: 'var(--gc-emerald)', title: 'Market season is here', excerpt: 'Meet the 20+ makers joining us this fall, plus a florals restock you will want to see.' },
-  { vol: 'Vol. 06', date: 'April 2026', accent: 'var(--gc-lavender)', title: 'Ten girls, four Wednesdays', excerpt: 'Behind the scenes of the Studio Art Series — and what the girls said they were most proud of.' },
-  { vol: 'Vol. 05', date: 'March 2026', accent: '#c96a95', title: 'On doing less, better', excerpt: 'A short note from BG on discernment, saying no, and why we protect the quiet.' },
+  { vol: 'Issue 5', date: 'June 2026', accent: 'var(--gc-blush)', title: 'One Month Until Our First Fundraiser 🎉 Sponsor Highlights 💫 Hyde Park Market Preview 🛍️', url: 'https://preview.mailerlite.io/preview/1805515/emails/191026880087852582' },
+  { vol: 'Issue 4', date: 'May 2026', accent: 'var(--gc-emerald)', title: 'Brunch News & Market Fun', url: 'https://preview.mailerlite.io/preview/1805515/emails/188546365699130527' },
+  { vol: 'Issue 3', date: 'May 2026', accent: 'var(--gc-lavender)', title: 'Summer is coming! Updates Inside 💫', url: 'https://preview.mailerlite.io/preview/1805515/emails/187929868071077793' },
+  { vol: 'Issue 2', date: 'May 2026', accent: '#c96a95', title: 'Girlhood Community Spotlights & News', url: 'https://preview.mailerlite.io/preview/1805515/emails/186202367462474900' },
+  { vol: 'Issue 1', date: 'April 2026', accent: 'var(--gc-blush)', title: 'Girlhood Collective Newsletter Issue 1 💫', url: 'https://preview.mailerlite.io/preview/1805515/emails/185545856632489332' },
 ];
 
 export default function Village() {
@@ -107,16 +109,23 @@ export default function Village() {
         <p style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 520, marginBottom: 26 }}>
           Catch up on what you missed. A little of everything we&rsquo;ve been up to.
         </p>
-        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
           {ISSUES.map((i) => (
-            <div key={i.vol} className="hover-lift" style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 4, borderTop: `3px solid ${i.accent}`, padding: '24px 26px' }}>
+            <a
+              key={i.vol}
+              href={i.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-lift"
+              style={{ textDecoration: 'none', display: 'block', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 4, borderTop: `3px solid ${i.accent}`, padding: '24px 26px' }}
+            >
               <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12, marginBottom: 10 }}>
                 <span style={{ font: '700 10px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>{i.vol}</span>
                 <span style={{ font: '600 11px var(--font-sans)', color: 'var(--gc-ink-muted)' }}>{i.date}</span>
               </div>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>{i.title}</div>
-              <p style={{ fontSize: 13, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{i.excerpt}</p>
-            </div>
+              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 17, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 10, lineHeight: 1.4 }}>{i.title}</div>
+              <span style={{ font: '600 11px var(--font-sans)', letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>Read this issue →</span>
+            </a>
           ))}
         </div>
       </div>
