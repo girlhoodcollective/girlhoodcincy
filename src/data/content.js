@@ -124,6 +124,12 @@ export const VILLAGE_SECTIONS = [
   "What's Inspiring Me",
 ];
 
+export const TRUST_STATS = [
+  { value: '5', label: 'Sponsors & collaborators' },
+  { value: '100+', label: 'Village subscribers' },
+  { value: '65K+', label: 'Organic Instagram impressions' },
+];
+
 export const PERSONAS = [
   {
     id: 'small-business',

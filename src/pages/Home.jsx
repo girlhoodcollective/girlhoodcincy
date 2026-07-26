@@ -5,7 +5,7 @@ import Footer from '../components/Footer.jsx';
 import { subscribeToNewsletter } from '../lib/newsletter.js';
 import { getUpcomingPublishedEvents } from '../data/events.js';
 import { useSEO, useStructuredData, SITE_URL, SITE_NAME } from '../lib/seo.js';
-import { PERSONAS, CORNERSTONE_ARTICLES } from '../data/content.js';
+import { PERSONAS, CORNERSTONE_ARTICLES, TRUST_STATS } from '../data/content.js';
 
 const UPCOMING_EVENTS = getUpcomingPublishedEvents(2);
 
@@ -19,7 +19,7 @@ const DIFFERENTIATORS = [
 export default function Home() {
   useSEO({
     title: 'Girlhood Collective | Community Strategy Consulting in Cincinnati',
-    description: 'Building community through authentic relationships, trust, and intentional connection. We help people see what's possible, bring the right voices together, and create the conditions where communities can thrive.',
+    description: 'Building community through authentic relationships, trust, and intentional connection. We help people see what’s possible, bring the right voices together, and create the conditions where communities can thrive.',
     path: '/',
   });
 
