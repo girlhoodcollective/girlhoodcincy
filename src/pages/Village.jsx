@@ -89,6 +89,14 @@ export default function Village() {
         )}
       </div>
 
+      {/* PHOTO BANNER */}
+      <img
+        src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6385.jpg?v=1784581848&width=1400"
+        alt="Guests gathered at a Girlhood Collective community event"
+        loading="lazy"
+        style={{ width: '100%', height: 320, objectFit: 'cover', objectPosition: 'center 20%', display: 'block' }}
+      />
+
       {/* WHAT SUBSCRIBERS GET */}
       <div style={{ background: '#fff', padding: '54px 44px' }}>
         <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>What&rsquo;s inside</div>

@@ -94,6 +94,28 @@ export default function Home() {
         </p>
       </div>
 
+      {/* MEET THE FOUNDER */}
+      <div style={{ background: '#fff', padding: '0 44px 52px' }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: 36, maxWidth: 860, margin: '0 auto', alignItems: 'center' }}>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/founder-in-studio.jpg?v=1783123475&width=440"
+            alt="Brittany Gruber, founder of Girlhood Collective, in her studio"
+            loading="lazy"
+            style={{ width: '100%', height: 260, objectFit: 'cover', borderRadius: 8, display: 'block' }}
+          />
+          <div>
+            <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Meet the founder</div>
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 10 }}>Hi, I&rsquo;m Brittany.</div>
+            <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, marginBottom: 16 }}>
+              I started Girlhood Collective because I believe belonging takes practice, not luck — and I get to do the work of building it, one relationship at a time.
+            </p>
+            <Link className="navlink navlink--onwhite" to="/about" style={{ color: 'var(--gc-emerald)' }}>
+              Read my story →
+            </Link>
+          </div>
+        </div>
+      </div>
+
       {/* PERSONA CARDS */}
       <div style={{ background: 'var(--gc-section)', padding: '52px 44px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, maxWidth: 1000, margin: '0 auto' }}>
@@ -138,6 +160,20 @@ export default function Home() {
         <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
           <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>Girlhood Cincy Monthly Experiences</div>
           <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24, textAlign: 'center' }}>Gather beautifully.</div>
+          <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, maxWidth: 760, margin: '0 auto 24px' }}>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2296.jpg?v=1778190542&width=440"
+              alt="Girls working on a hands-on project at a Girlhood Collective Studio Art session"
+              loading="lazy"
+              style={{ width: '100%', height: 180, objectFit: 'cover', borderRadius: 8, display: 'block' }}
+            />
+            <img
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2455.jpg?v=1778190539&width=440"
+              alt="A girl showing her finished craft at a Girlhood Collective Studio Art session"
+              loading="lazy"
+              style={{ width: '100%', height: 180, objectFit: 'cover', borderRadius: 8, display: 'block' }}
+            />
+          </div>
           <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, maxWidth: 760, margin: '0 auto' }}>
             {UPCOMING_EVENTS.map((e) => (
               <Link
