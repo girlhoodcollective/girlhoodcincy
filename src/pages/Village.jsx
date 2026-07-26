@@ -90,12 +90,14 @@ export default function Village() {
       </div>
 
       {/* PHOTO BANNER */}
-      <img
-        src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6384.jpg?v=1784581853&width=1400"
-        alt="Guests at the Better Together Brunch, a Girlhood Collective community event"
-        loading="lazy"
-        style={{ width: '100%', height: 320, objectFit: 'cover', objectPosition: 'center 20%', display: 'block' }}
-      />
+      <div style={{ width: '100%', height: 320, overflow: 'hidden', background: 'var(--gc-navy)' }}>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6384.jpg?v=1784581853&width=1400"
+          alt="Guests at the Better Together Brunch, a Girlhood Collective community event"
+          loading="lazy"
+          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%', transform: 'scale(0.55)', display: 'block' }}
+        />
+      </div>
 
       {/* WHAT SUBSCRIBERS GET */}
       <div style={{ background: '#fff', padding: '54px 44px' }}>
