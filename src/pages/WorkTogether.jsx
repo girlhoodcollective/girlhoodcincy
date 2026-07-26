@@ -88,12 +88,14 @@ export default function WorkTogether() {
               Read the case study →
             </Link>
           </div>
-          <img
-            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/432_a2c25d8f-0ce8-40d5-b0fe-f1f1d4b17a69.jpg?v=1784653522&width=640"
-            alt="Guests and panelists together at the Better Together Brunch"
-            loading="lazy"
-            style={{ width: '100%', height: 320, objectFit: 'cover', borderRadius: 10, display: 'block' }}
-          />
+          <div style={{ width: '100%', height: 320, borderRadius: 10, overflow: 'hidden', background: 'var(--gc-navy)' }}>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/432_a2c25d8f-0ce8-40d5-b0fe-f1f1d4b17a69.jpg?v=1784653522&width=640"
+              alt="Guests and panelists together at the Better Together Brunch"
+              loading="lazy"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(0.8)', display: 'block' }}
+            />
+          </div>
         </div>
       </div>
 
