@@ -3,7 +3,7 @@ import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
 import { useSEO, useStructuredData, SITE_URL } from '../lib/seo.js';
 
-const FOUNDER_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/J8A2562.jpg?v=1774664826';
+const FOUNDER_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/J8A2890.jpg?v=1785099356';
 const FAMILY_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-brittany-family.jpg?v=1774545413';
 const PERSONAL_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_9211.jpg?v=1774029457';
 
@@ -42,7 +42,7 @@ export default function About() {
               src={FOUNDER_PHOTO + '&width=520'}
               alt="Brittany Gruber, founder of Girlhood Collective"
               loading="lazy"
-              style={{ width: 260, height: 300, objectFit: 'cover', objectPosition: 'center 10%', borderRadius: 8, display: 'block', margin: '0 auto' }}
+              style={{ width: 260, height: 300, objectFit: 'cover', objectPosition: 'center 8%', borderRadius: 8, display: 'block', margin: '0 auto' }}
             />
           </div>
           <div>
