@@ -92,10 +92,10 @@ export default function Village() {
       {/* PHOTO BANNER */}
       <div style={{ width: '100%', height: 320, overflow: 'hidden', background: 'var(--gc-navy)' }}>
         <img
-          src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6384.jpg?v=1784581853&width=1400"
-          alt="Guests at the Better Together Brunch, a Girlhood Collective community event"
+          src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/CAA8FC72-84E4-4B2C-B072-ED11D93637BE.jpg?v=1785100818&width=1400"
+          alt="Girlhood Collective community gathering"
           loading="lazy"
-          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%', transform: 'scale(0.55)', display: 'block' }}
+          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
         />
       </div>
 
