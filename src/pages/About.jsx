@@ -110,8 +110,8 @@ export default function About() {
       {/* CREDIBILITY */}
       <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
         <div style={{ textAlign: 'center', marginBottom: 30 }}>
-          <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Civic leadership</div>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: 'var(--gc-slate)' }}>Credibility, earned over years.</div>
+          <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}></div>
+          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: 'var(--gc-slate)' }}></div>
         </div>
         <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, maxWidth: 980, margin: '0 auto' }}>
           {CREDIBILITY.map((c) => (
