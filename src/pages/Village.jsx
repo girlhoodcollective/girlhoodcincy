@@ -3,7 +3,6 @@ import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
 import { subscribeToNewsletter } from '../lib/newsletter.js';
 import { useSEO } from '../lib/seo.js';
-import { VILLAGE_SECTIONS } from '../data/content.js';
 
 // Real sent issues, pulled from MailerLite campaign history (Issues 1–5, Apr–Jun 2026).
 const ISSUES = [
@@ -94,25 +93,12 @@ export default function Village() {
           {/* PHOTO */}
           <div style={{ width: '100%', height: 460, overflow: 'hidden', borderRadius: 10, background: 'var(--gc-navy)' }}>
             <img
-              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/CAA8FC72-84E4-4B2C-B072-ED11D93637BE.jpg?v=1785100818&width=800"
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_7498.jpg?v=1785100814&width=800"
               alt="Girlhood Collective community gathering"
               loading="lazy"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
             />
           </div>
-        </div>
-      </div>
-
-      {/* WHAT SUBSCRIBERS GET */}
-      <div style={{ background: '#fff', padding: '54px 44px' }}>
-        <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>What&rsquo;s inside</div>
-        <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 28, textAlign: 'center' }}>Every issue, a little of everything.</h2>
-        <div className="rgrid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 14, maxWidth: 900, margin: '0 auto' }}>
-          {VILLAGE_SECTIONS.map((s) => (
-            <div key={s} style={{ border: '1px solid var(--gc-border)', borderRadius: 6, padding: '18px 20px', fontSize: 17, fontWeight: 600, color: 'var(--gc-slate)', textAlign: 'center' }}>
-              {s}
-            </div>
-          ))}
         </div>
       </div>
 

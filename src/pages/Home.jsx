@@ -83,28 +83,84 @@ export default function Home() {
       <NavBar variant="white" />
 
       {/* HERO */}
-      <div style={{ background: 'var(--gc-cream)', padding: '64px 44px 52px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+      <div style={{ background: 'var(--gc-cream)', padding: '44px 44px 36px', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: -90, left: -70, width: 320, height: 320, borderRadius: '50%', background: 'radial-gradient(circle, rgba(111,150,207,.16), transparent 70%)' }} />
-        <div style={{ position: 'relative', zIndex: 2 }}>
-          <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.28em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
-            Cincinnati · EST 2025
+        <div className="rgrid" style={{ position: 'relative', zIndex: 2, display: 'grid', gridTemplateColumns: '1fr 360px', gap: 40, maxWidth: 1060, margin: '0 auto', alignItems: 'center' }}>
+          <div>
+            <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.28em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 14 }}>
+              Cincinnati · EST 2025
+            </div>
+            <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 46, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.12 }}>
+              It takes a village. <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>Let&rsquo;s find yours.</span>
+            </h1>
+            <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.75, maxWidth: 500, margin: '16px 0 26px' }}>
+              Monthly events for girls and families, a free community newsletter, and strategy consulting for Cincinnati organizations — real connection, built on purpose.
+            </p>
+            <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
+              <Link className="btn" to="/events" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>
+                See Upcoming Events →
+              </Link>
+              <Link className="btn" to="/work-together" style={{ border: '1.5px solid var(--gc-navy)', color: 'var(--gc-navy)', padding: '14px 26px' }}>
+                Work With Us
+              </Link>
+            </div>
           </div>
-          <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 57.5, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.1, maxWidth: 680, margin: '0 auto' }}>
-            It takes a village. <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>Let&rsquo;s find yours.</span>
-          </h1>
-          <p style={{ fontSize: 20, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, margin: '20px auto 30px' }}>
-            Community strategy consulting for Cincinnati organizations, small businesses, and neighbors — the community audits, event design, and ongoing advisory work that turn shared interest into real, lasting community.
-          </p>
-          <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link className="btn" to="/contact" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '16px 30px' }}>
-              Request a 20-Minute Fit Call
-            </Link>
-            <Link className="btn" to="/village" style={{ border: '1.5px solid var(--gc-navy)', color: 'var(--gc-navy)', padding: '15px 28px' }}>
-              Join the Village
-            </Link>
+          <div style={{ width: '100%', height: 340, overflow: 'hidden', borderRadius: 12, background: 'var(--gc-navy)' }}>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-studio-art-2.jpg?v=1774548572&width=560"
+              alt="Girls working on a project at a Girlhood Collective workshop"
+              loading="lazy"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+            />
           </div>
         </div>
       </div>
+
+      {/* UPCOMING EVENT TEASER */}
+      {UPCOMING_EVENTS.length > 0 && (
+        <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
+          <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>Girlhood Cincy Monthly Experiences</div>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24, textAlign: 'center' }}>Gather beautifully.</h2>
+          <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, maxWidth: 760, margin: '0 auto 24px' }}>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2296.jpg?v=1778190542&width=440"
+              alt="Brittany and a collaborator holding up finished artwork at a Girlhood Collective session"
+              loading="lazy"
+              style={{ width: '100%', height: 180, objectFit: 'cover', objectPosition: 'center 15%', borderRadius: 8, display: 'block' }}
+            />
+            <img
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2455.jpg?v=1778190539&width=440"
+              alt="A girl showing her finished craft at a Girlhood Collective Studio Art session"
+              loading="lazy"
+              style={{ width: '100%', height: 180, objectFit: 'cover', borderRadius: 8, display: 'block' }}
+            />
+          </div>
+          <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, maxWidth: 760, margin: '0 auto' }}>
+            {UPCOMING_EVENTS.map((e) => (
+              <Link
+                key={e.id}
+                className="hover-shadow"
+                to="/events"
+                style={{ textDecoration: 'none', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '18px 20px', display: 'flex', gap: 16, alignItems: 'center' }}
+              >
+                <div style={{ textAlign: 'center', flexShrink: 0 }}>
+                  <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>{e.mon}</div>
+                  <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 37.5, color: 'var(--gc-slate)', lineHeight: 1 }}>{e.day}</div>
+                </div>
+                <div>
+                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: 21, fontWeight: 700, color: 'var(--gc-slate)' }}>{e.title}</div>
+                  <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>{e.where}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div style={{ textAlign: 'center', marginTop: 22 }}>
+            <Link className="navlink navlink--onwhite" to="/events" style={{ color: 'var(--gc-emerald)' }}>
+              View Upcoming Events →
+            </Link>
+          </div>
+        </div>
+      )}
 
       {/* INTRO */}
       <div style={{ background: '#fff', padding: '48px 44px', textAlign: 'center' }}>
@@ -191,13 +247,25 @@ export default function Home() {
       </div>
 
       {/* CASE STUDY PROOF */}
-      <div style={{ background: 'var(--gc-sage-light)', borderTop: '1px solid #dde6e2', borderBottom: '1px solid #dde6e2', padding: '32px 44px', textAlign: 'center' }}>
-        <p style={{ fontSize: 17, fontWeight: 400, color: 'var(--gc-ink)', marginBottom: 10 }}>
-          $3,000 raised, 10 new sponsors, one month of planning — see how a single event became a lasting community partnership.
-        </p>
-        <Link className="navlink" to="/better-together-recap" style={{ color: 'var(--gc-emerald)', fontWeight: 600 }}>
-          Read the case study →
-        </Link>
+      <div style={{ background: 'var(--gc-sage-light)', borderTop: '1px solid #dde6e2', borderBottom: '1px solid #dde6e2', padding: '32px 44px' }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '160px 1fr', gap: 24, maxWidth: 800, margin: '0 auto', alignItems: 'center' }}>
+          <div style={{ width: '100%', height: 110, overflow: 'hidden', borderRadius: 8 }}>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6378.jpg?v=1784590111&width=320"
+              alt="Better Together Brunch at the Columbia Center"
+              loading="lazy"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }}
+            />
+          </div>
+          <div>
+            <p style={{ fontSize: 17, fontWeight: 400, color: 'var(--gc-ink)', marginBottom: 8 }}>
+              $3,000 raised, 10 new sponsors, one month of planning — see how a single event became a lasting community partnership.
+            </p>
+            <Link className="navlink" to="/better-together-recap" style={{ color: 'var(--gc-emerald)', fontWeight: 600 }}>
+              Read the case study →
+            </Link>
+          </div>
+        </div>
       </div>
 
       {/* DIFFERENTIATORS */}
@@ -228,52 +296,6 @@ export default function Home() {
       <p style={{ textAlign: 'center', fontSize: 14, color: 'var(--gc-ink-muted)', paddingBottom: 46 }}>
         Since launching in 2025 — and growing every season.
       </p>
-
-      {/* UPCOMING EVENT TEASER */}
-      {UPCOMING_EVENTS.length > 0 && (
-        <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
-          <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>Girlhood Cincy Monthly Experiences</div>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24, textAlign: 'center' }}>Gather beautifully.</h2>
-          <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, maxWidth: 760, margin: '0 auto 24px' }}>
-            <img
-              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2296.jpg?v=1778190542&width=440"
-              alt="Brittany and a collaborator holding up finished artwork at a Girlhood Collective session"
-              loading="lazy"
-              style={{ width: '100%', height: 180, objectFit: 'cover', objectPosition: 'center 15%', borderRadius: 8, display: 'block' }}
-            />
-            <img
-              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2455.jpg?v=1778190539&width=440"
-              alt="A girl showing her finished craft at a Girlhood Collective Studio Art session"
-              loading="lazy"
-              style={{ width: '100%', height: 180, objectFit: 'cover', borderRadius: 8, display: 'block' }}
-            />
-          </div>
-          <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, maxWidth: 760, margin: '0 auto' }}>
-            {UPCOMING_EVENTS.map((e) => (
-              <Link
-                key={e.id}
-                className="hover-shadow"
-                to="/events"
-                style={{ textDecoration: 'none', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '18px 20px', display: 'flex', gap: 16, alignItems: 'center' }}
-              >
-                <div style={{ textAlign: 'center', flexShrink: 0 }}>
-                  <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>{e.mon}</div>
-                  <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 37.5, color: 'var(--gc-slate)', lineHeight: 1 }}>{e.day}</div>
-                </div>
-                <div>
-                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: 21, fontWeight: 700, color: 'var(--gc-slate)' }}>{e.title}</div>
-                  <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>{e.where}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <div style={{ textAlign: 'center', marginTop: 22 }}>
-            <Link className="navlink navlink--onwhite" to="/events" style={{ color: 'var(--gc-emerald)' }}>
-              View Upcoming Events →
-            </Link>
-          </div>
-        </div>
-      )}
 
       {/* VILLAGE SIGNUP */}
       <div style={{ background: 'var(--gc-navy)', padding: '58px 44px', textAlign: 'center' }}>

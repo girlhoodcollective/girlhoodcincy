@@ -117,18 +117,6 @@ export const CORNERSTONE_ARTICLES = [
   'The Hidden Cost of Stakeholder Misalignment',
 ];
 
-export const VILLAGE_SECTIONS = [
-  'Community Reflection',
-  'Local Favorites',
-  'Upcoming Events',
-  'Leadership Insight',
-  'Resource Recommendation',
-  'Community Spotlight',
-  'Volunteer Opportunities',
-  'Partner Highlight',
-  "What's Inspiring Me",
-];
-
 export const TRUST_STATS = [
   { value: '5', label: 'Sponsors & collaborators' },
   { value: '100+', label: 'Village subscribers' },
@@ -136,6 +124,12 @@ export const TRUST_STATS = [
 ];
 
 export const PERSONAS = [
+  {
+    id: 'community-member',
+    title: 'Community Member',
+    headline: 'Find your people',
+    body: 'Join a monthly event, or join The Village — a free newsletter for anyone looking for real connection.',
+  },
   {
     id: 'small-business',
     title: 'Small Business Owner',
@@ -153,12 +147,6 @@ export const PERSONAS = [
     title: 'Mission-Driven Organization',
     headline: 'Strengthen the community you already serve',
     body: 'Move from stakeholder alignment to real, lasting engagement.',
-  },
-  {
-    id: 'community-member',
-    title: 'Community Member',
-    headline: 'Find your people',
-    body: 'Join The Village — a free newsletter for anyone looking for real connection.',
   },
 ];
 
