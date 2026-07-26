@@ -33,7 +33,7 @@ function MiniNewsletterSignup() {
 
   if (state === 'done') {
     return (
-      <p style={{ fontSize: 13, fontWeight: 300, color: 'rgba(255,255,255,.7)' }}>
+      <p style={{ fontSize: 16, fontWeight: 300, color: 'rgba(255,255,255,.7)' }}>
         You're in. Watch your inbox for our next letter.
       </p>
     );
@@ -49,18 +49,18 @@ function MiniNewsletterSignup() {
           onChange={(e) => setEmail(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
           aria-label="Email address"
-          style={{ background: 'rgba(255,255,255,.09)', border: '1px solid rgba(255,255,255,.22)', borderRadius: 100, padding: '10px 16px', font: '400 13px var(--font-sans)', color: '#fff', width: 190, outline: 'none' }}
+          style={{ background: 'rgba(255,255,255,.09)', border: '1px solid rgba(255,255,255,.22)', borderRadius: 100, padding: '10px 16px', font: '400 16px var(--font-sans)', color: '#fff', width: 190, outline: 'none' }}
         />
         <button
           onClick={handleSubmit}
           disabled={state === 'sending'}
-          style={{ cursor: state === 'sending' ? 'default' : 'pointer', opacity: state === 'sending' ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 10px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', padding: '10px 16px', borderRadius: 100, whiteSpace: 'nowrap' }}
+          style={{ cursor: state === 'sending' ? 'default' : 'pointer', opacity: state === 'sending' ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 12.5px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', padding: '10px 16px', borderRadius: 100, whiteSpace: 'nowrap' }}
         >
           Join
         </button>
       </div>
       {state === 'error' && (
-        <p style={{ fontSize: 11.5, color: '#ffb4a8', marginTop: 8 }}>Something went wrong — email us at hello@girlhoodcincy.com instead.</p>
+        <p style={{ fontSize: 14.5, color: '#ffb4a8', marginTop: 8 }}>Something went wrong — email us at hello@girlhoodcincy.com instead.</p>
       )}
     </div>
   );
@@ -69,7 +69,7 @@ function MiniNewsletterSignup() {
 function Brand({ deep }) {
   return (
     <div style={{ lineHeight: 1, marginBottom: deep ? 14 : 12 }}>
-      <span style={{ fontFamily: 'var(--font-display)', fontSize: 22, color: '#fff' }}>Girlhood</span>{' '}
+      <span style={{ fontFamily: 'var(--font-display)', fontSize: 27.5, color: '#fff' }}>Girlhood</span>{' '}
       <span
         style={{
           fontFamily: 'var(--font-serif)',
@@ -107,7 +107,7 @@ export default function Footer({ linked = true }) {
         ) : (
           brandMark
         )}
-        <p style={{ fontSize: 13, fontWeight: 300, color: 'rgba(255,255,255,.5)', lineHeight: 1.8, marginBottom: 14 }}>
+        <p style={{ fontSize: 16, fontWeight: 300, color: 'rgba(255,255,255,.5)', lineHeight: 1.8, marginBottom: 14 }}>
           Cincinnati, OH · girlhoodcincy.com
           <br />
           Rooted in belonging. Since 2025.
@@ -132,7 +132,7 @@ export default function Footer({ linked = true }) {
         <div>
           <p
             style={{
-              font: '600 10px var(--font-sans)',
+              font: '600 12.5px var(--font-sans)',
               letterSpacing: '.16em',
               textTransform: 'uppercase',
               color: 'rgba(255,255,255,.4)',
@@ -152,7 +152,7 @@ export default function Footer({ linked = true }) {
         <div style={{ textAlign: 'right' }}>
           <p
             style={{
-              font: '600 10px var(--font-sans)',
+              font: '600 12.5px var(--font-sans)',
               letterSpacing: '.16em',
               textTransform: 'uppercase',
               color: 'rgba(255,255,255,.4)',
@@ -161,12 +161,12 @@ export default function Footer({ linked = true }) {
           >
             Say hello
           </p>
-          <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 22, color: 'var(--gc-lavender-soft)', marginBottom: 18 }}>
+          <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 27.5, color: 'var(--gc-lavender-soft)', marginBottom: 18 }}>
             hello@girlhoodcincy.com
           </div>
           <p
             style={{
-              font: '600 10px var(--font-sans)',
+              font: '600 12.5px var(--font-sans)',
               letterSpacing: '.16em',
               textTransform: 'uppercase',
               color: 'rgba(255,255,255,.4)',

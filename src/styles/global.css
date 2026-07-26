@@ -30,7 +30,7 @@ input, textarea, select, button {
 }
 
 .page-shell {
-  max-width: 1180px;
+  max-width: 1300px;
   margin: 0 auto;
   background: #fff;
   box-shadow: 0 0 80px rgba(53, 91, 116, 0.06);
@@ -38,10 +38,11 @@ input, textarea, select, button {
 
 /* Nav links */
 .navlink {
-  font: 600 10px/1 var(--font-sans);
+  font: 600 12.5px/1 var(--font-sans);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
+  white-space: nowrap;
   transition: color 0.2s;
 }
 .navlink--onwhite {
@@ -69,7 +70,7 @@ input, textarea, select, button {
   text-decoration: none;
   border: none;
   cursor: pointer;
-  font: 600 12px var(--font-sans);
+  font: 600 15px var(--font-sans);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   border-radius: 100px;
@@ -125,7 +126,7 @@ input, textarea, select, button {
   border: 1px solid var(--gc-border);
   border-radius: 3px;
   padding: 12px 14px;
-  font: 400 14px var(--font-sans);
+  font: 400 17.5px var(--font-sans);
   color: var(--gc-ink);
   outline: none;
   transition: border-color 0.2s;
@@ -142,7 +143,7 @@ textarea.fld {
   border: 1px solid var(--gc-border);
   border-radius: 100px;
   padding: 9px 20px;
-  font: 600 11px var(--font-sans);
+  font: 600 14px var(--font-sans);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   background: #fff;
@@ -190,7 +191,7 @@ textarea.fld {
   min-width: 0;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1300px) {
   .nav-links-desktop {
     display: none !important;
   }
@@ -231,7 +232,7 @@ textarea.fld {
     width: 100% !important;
   }
   .hero-title {
-    font-size: 30px !important;
+    font-size: 37.5px !important;
   }
   .email-input {
     width: 100% !important;

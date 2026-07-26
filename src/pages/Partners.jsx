@@ -44,11 +44,11 @@ export default function Partners() {
       <NavBar variant="navy" active="Partners" />
 
       <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px', textAlign: 'center' }}>
-        <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>The neighborhood</div>
-        <h1 className="hero-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 46, color: 'var(--gc-navy)', lineHeight: 1.1, maxWidth: 640, margin: '0 auto' }}>
+        <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>The neighborhood</div>
+        <h1 className="hero-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 57.5, color: 'var(--gc-navy)', lineHeight: 1.1, maxWidth: 640, margin: '0 auto' }}>
           Partner <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>with us.</span>
         </h1>
-        <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, margin: '20px auto 0' }}>
+        <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, margin: '20px auto 0' }}>
           Three ways to be part of Girlhood Cincy — from leading a session to sponsoring the season.
         </p>
       </div>
@@ -58,9 +58,9 @@ export default function Partners() {
         <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, maxWidth: 1000, margin: '0 auto' }}>
           {PARTNERSHIP_TIERS.map((t) => (
             <div key={t.id} className="hover-lift" style={{ border: '1px solid var(--gc-border)', borderRadius: 8, padding: '26px 24px' }}>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 18, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>{t.title}</div>
-              <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.08em', color: 'var(--gc-emerald)', marginBottom: 14 }}>{t.price}</div>
-              <p style={{ fontSize: 13.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{t.body}</p>
+              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 22.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>{t.title}</div>
+              <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.08em', color: 'var(--gc-emerald)', marginBottom: 14 }}>{t.price}</div>
+              <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{t.body}</p>
             </div>
           ))}
         </div>
@@ -68,11 +68,11 @@ export default function Partners() {
 
       {/* CURRENT PARTNERS */}
       <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
-        <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>2026–27 Community Collaborators</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24, textAlign: 'center' }}>In good company.</div>
+        <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>2026–27 Community Collaborators</div>
+        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24, textAlign: 'center' }}>In good company.</div>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 12, maxWidth: 900, margin: '0 auto' }}>
           {CURRENT_PARTNERS.map((name) => (
-            <div key={name} style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 100, padding: '10px 20px', fontSize: 13, fontWeight: 600, color: 'var(--gc-slate)' }}>
+            <div key={name} style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 100, padding: '10px 20px', fontSize: 16, fontWeight: 600, color: 'var(--gc-slate)' }}>
               {name}
             </div>
           ))}
@@ -83,19 +83,19 @@ export default function Partners() {
       <div style={{ background: '#fff', padding: '60px 44px' }}>
         <div style={{ maxWidth: 640, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 28 }}>
-            <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Let's talk</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 30, fontWeight: 700, color: 'var(--gc-slate)' }}>
+            <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Let's talk</div>
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 37.5, fontWeight: 700, color: 'var(--gc-slate)' }}>
               Tell us about your <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>business.</span>
             </div>
-            <p style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 460, margin: '12px auto 0' }}>
+            <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 460, margin: '12px auto 0' }}>
               We&rsquo;ll be in touch within 2 business days.
             </p>
           </div>
 
           {submitted ? (
             <div style={{ textAlign: 'center', background: 'var(--gc-sage-light)', border: '1px solid #dde6e2', borderRadius: 6, padding: '40px 28px' }}>
-              <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 30, color: 'var(--gc-slate)', marginBottom: 8 }}>Thank you!</div>
-              <p style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 400, margin: '0 auto' }}>
+              <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 37.5, color: 'var(--gc-slate)', marginBottom: 8 }}>Thank you!</div>
+              <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 400, margin: '0 auto' }}>
                 Thanks — we&rsquo;ll be in touch within 2 business days.
               </p>
             </div>
@@ -123,7 +123,7 @@ export default function Partners() {
                 style={{ marginBottom: 16 }}
               />
               {error && (
-                <p style={{ fontSize: 13, color: '#c0392b', marginBottom: 12 }}>
+                <p style={{ fontSize: 16, color: '#c0392b', marginBottom: 12 }}>
                   Something went wrong on our end — try again, or reach us directly at{' '}
                   <a href="mailto:hello@girlhoodcincy.com" style={{ color: '#c0392b' }}>hello@girlhoodcincy.com</a>.
                 </p>
@@ -131,7 +131,7 @@ export default function Partners() {
               <button
                 onClick={handleSubmit}
                 disabled={sending}
-                style={{ width: '100%', cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 11px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', padding: 15, borderRadius: 3 }}
+                style={{ width: '100%', cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 14px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', padding: 15, borderRadius: 3 }}
               >
                 {sending ? 'Sending…' : 'Submit'}
               </button>

@@ -45,16 +45,16 @@ export default function Village() {
       <NavBar variant="navy" active="Join the Village" />
 
       <div style={{ background: 'var(--gc-cream)', padding: '60px 44px 52px', textAlign: 'center' }}>
-        <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>The Village</div>
-        <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.08 }}>You&rsquo;re invited.</h1>
-        <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, margin: '16px auto 30px' }}>
+        <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>The Village</div>
+        <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 65, color: 'var(--gc-navy)', lineHeight: 1.08 }}>You&rsquo;re invited.</h1>
+        <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, margin: '16px auto 30px' }}>
           A free monthly letter for anyone building real community — resources, local favorites, and what&rsquo;s inspiring us right now.
         </p>
 
         {submitted ? (
           <div style={{ maxWidth: 440, margin: '0 auto', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '28px 24px' }}>
-            <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 26, color: 'var(--gc-navy)', marginBottom: 6 }}>You&rsquo;re in!</div>
-            <p style={{ fontSize: 13.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7 }}>
+            <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 32.5, color: 'var(--gc-navy)', marginBottom: 6 }}>You&rsquo;re in!</div>
+            <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7 }}>
               Watch your inbox for our next letter.
             </p>
           </div>
@@ -74,13 +74,13 @@ export default function Village() {
               <button
                 onClick={handleSubscribe}
                 disabled={sending}
-                style={{ cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 11px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', padding: '14px 26px', borderRadius: 3 }}
+                style={{ cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 14px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', padding: '14px 26px', borderRadius: 3 }}
               >
                 {sending ? 'Joining…' : 'Join the Village'}
               </button>
             </div>
             {error && (
-              <p style={{ fontSize: 13, color: '#c0392b', marginTop: 14 }}>
+              <p style={{ fontSize: 16, color: '#c0392b', marginTop: 14 }}>
                 Please enter a valid email, or reach us directly at{' '}
                 <a href="mailto:hello@girlhoodcincy.com" style={{ color: '#c0392b' }}>hello@girlhoodcincy.com</a>.
               </p>
@@ -91,11 +91,11 @@ export default function Village() {
 
       {/* WHAT SUBSCRIBERS GET */}
       <div style={{ background: '#fff', padding: '54px 44px' }}>
-        <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>What&rsquo;s inside</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 28, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 28, textAlign: 'center' }}>Every issue, a little of everything.</div>
+        <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>What&rsquo;s inside</div>
+        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 28, textAlign: 'center' }}>Every issue, a little of everything.</div>
         <div className="rgrid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 14, maxWidth: 900, margin: '0 auto' }}>
           {VILLAGE_SECTIONS.map((s) => (
-            <div key={s} style={{ border: '1px solid var(--gc-border)', borderRadius: 6, padding: '18px 20px', fontSize: 13.5, fontWeight: 600, color: 'var(--gc-slate)', textAlign: 'center' }}>
+            <div key={s} style={{ border: '1px solid var(--gc-border)', borderRadius: 6, padding: '18px 20px', fontSize: 17, fontWeight: 600, color: 'var(--gc-slate)', textAlign: 'center' }}>
               {s}
             </div>
           ))}
@@ -104,9 +104,9 @@ export default function Village() {
 
       {/* ARCHIVE */}
       <div style={{ background: 'var(--gc-section)', padding: '56px 44px 64px' }}>
-        <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>The archive</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Past issues</div>
-        <p style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 520, marginBottom: 26 }}>
+        <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>The archive</div>
+        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Past issues</div>
+        <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 520, marginBottom: 26 }}>
           Catch up on what you missed. A little of everything we&rsquo;ve been up to.
         </p>
         <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
@@ -120,11 +120,11 @@ export default function Village() {
               style={{ textDecoration: 'none', display: 'block', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 4, borderTop: `3px solid ${i.accent}`, padding: '24px 26px' }}
             >
               <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12, marginBottom: 10 }}>
-                <span style={{ font: '700 10px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>{i.vol}</span>
-                <span style={{ font: '600 11px var(--font-sans)', color: 'var(--gc-ink-muted)' }}>{i.date}</span>
+                <span style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>{i.vol}</span>
+                <span style={{ font: '600 14px var(--font-sans)', color: 'var(--gc-ink-muted)' }}>{i.date}</span>
               </div>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 17, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 10, lineHeight: 1.4 }}>{i.title}</div>
-              <span style={{ font: '600 11px var(--font-sans)', letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>Read this issue →</span>
+              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 21, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 10, lineHeight: 1.4 }}>{i.title}</div>
+              <span style={{ font: '600 14px var(--font-sans)', letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>Read this issue →</span>
             </a>
           ))}
         </div>

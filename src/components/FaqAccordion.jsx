@@ -31,12 +31,12 @@ export default function FaqAccordion({ items }) {
                   alignItems: 'center',
                   gap: 16,
                   fontFamily: 'var(--font-serif)',
-                  fontSize: 16,
+                  fontSize: 20,
                   fontWeight: 700,
                 }}
               >
                 <span>{item.q}</span>
-                <span aria-hidden="true" style={{ color: 'var(--gc-emerald)', fontSize: 18, flexShrink: 0, transform: open ? 'rotate(45deg)' : 'none', transition: 'transform .2s' }}>
+                <span aria-hidden="true" style={{ color: 'var(--gc-emerald)', fontSize: 22.5, flexShrink: 0, transform: open ? 'rotate(45deg)' : 'none', transition: 'transform .2s' }}>
                   +
                 </span>
               </button>
@@ -48,7 +48,7 @@ export default function FaqAccordion({ items }) {
               hidden={!open}
               style={{ padding: open ? '0 22px 20px' : 0 }}
             >
-              <p style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.75, margin: 0 }}>{item.a}</p>
+              <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.75, margin: 0 }}>{item.a}</p>
             </div>
           </div>
         );

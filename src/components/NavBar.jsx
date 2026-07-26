@@ -28,12 +28,12 @@ export default function NavBar({ variant = 'white', active, label }) {
         }}
       >
         <Link to="/" style={{ lineHeight: 1, textDecoration: 'none' }}>
-          <span style={{ fontFamily: 'var(--font-display)', fontSize: 20, color: 'var(--gc-navy)' }}>Girlhood</span>
+          <span style={{ fontFamily: 'var(--font-display)', fontSize: 25, color: 'var(--gc-navy)' }}>Girlhood</span>
           <span
             style={{
               fontFamily: 'var(--font-serif)',
               fontStyle: 'italic',
-              fontSize: 15,
+              fontSize: 19,
               color: 'var(--gc-navy)',
               marginLeft: 5,
             }}
@@ -43,7 +43,7 @@ export default function NavBar({ variant = 'white', active, label }) {
         </Link>
         <div
           style={{
-            font: '600 10px var(--font-sans)',
+            font: '600 12.5px var(--font-sans)',
             letterSpacing: '.2em',
             textTransform: 'uppercase',
             color: 'var(--gc-ink-muted)',
@@ -74,12 +74,12 @@ export default function NavBar({ variant = 'white', active, label }) {
         }}
       >
         <Link to="/" style={{ lineHeight: 1, textDecoration: 'none' }} onClick={() => setMenuOpen(false)}>
-          <span style={{ fontFamily: 'var(--font-display)', fontSize: 21, color: 'var(--gc-navy)' }}>Girlhood</span>
+          <span style={{ fontFamily: 'var(--font-display)', fontSize: 26, color: 'var(--gc-navy)' }}>Girlhood</span>
           <span
             style={{
               fontFamily: 'var(--font-serif)',
               fontStyle: 'italic',
-              fontSize: 16,
+              fontSize: 20,
               color: 'var(--gc-navy)',
               marginLeft: 5,
             }}
@@ -87,7 +87,7 @@ export default function NavBar({ variant = 'white', active, label }) {
             Collective
           </span>
         </Link>
-        <div className="nav-links-desktop" style={{ display: 'flex', gap: 18, alignItems: 'center' }}>
+        <div className="nav-links-desktop" style={{ display: 'flex', gap: 14, alignItems: 'center' }}>
           {links.map((l) => (
             <Link
               key={l.label}

@@ -15,13 +15,13 @@ export default function NotFound() {
       <NavBar variant="white" />
 
       <div style={{ background: 'var(--gc-cream)', padding: '90px 44px', textAlign: 'center' }}>
-        <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>
+        <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>
           404
         </div>
-        <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 44, color: 'var(--gc-navy)', lineHeight: 1.1 }}>
+        <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 55, color: 'var(--gc-navy)', lineHeight: 1.1 }}>
           This page took a <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>wrong turn.</span>
         </div>
-        <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 480, margin: '20px auto 32px' }}>
+        <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 480, margin: '20px auto 32px' }}>
           Let's get you back home.
         </p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>

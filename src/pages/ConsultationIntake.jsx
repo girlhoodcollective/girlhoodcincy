@@ -76,8 +76,8 @@ const SAFETY_NOTES = {
   5: 'Strong foundation. Rare — we can move faster and go deeper when people already feel safe.',
 };
 
-const LABEL_STYLE = { display: 'block', font: '600 12.5px var(--font-sans)', color: 'var(--gc-slate)', marginBottom: 8 };
-const HINT_STYLE = { fontSize: 12.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.5, marginBottom: 10 };
+const LABEL_STYLE = { display: 'block', font: '600 15.5px var(--font-sans)', color: 'var(--gc-slate)', marginBottom: 8 };
+const HINT_STYLE = { fontSize: 15.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.5, marginBottom: 10 };
 
 function CheckGrid({ group, defs }) {
   return (
@@ -100,11 +100,11 @@ function CheckGrid({ group, defs }) {
                 border: `2px solid ${sel ? 'var(--gc-emerald)' : '#c3d0d8'}`, background: sel ? 'var(--gc-emerald)' : 'transparent',
               }}
             >
-              {sel && <span style={{ color: '#fff', fontSize: 11, fontWeight: 700 }}>✓</span>}
+              {sel && <span style={{ color: '#fff', fontSize: 14, fontWeight: 700 }}>✓</span>}
             </div>
             <div>
-              <div style={{ fontSize: 13.5, fontWeight: 500, color: 'var(--gc-slate)', lineHeight: 1.35 }}>{d.label}</div>
-              <div style={{ fontSize: 11.5, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>{d.sub}</div>
+              <div style={{ fontSize: 17, fontWeight: 500, color: 'var(--gc-slate)', lineHeight: 1.35 }}>{d.label}</div>
+              <div style={{ fontSize: 14.5, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>{d.sub}</div>
             </div>
           </div>
         );
@@ -124,7 +124,7 @@ function PillRow({ value, onChange, defs }) {
             onClick={() => onChange(d.v)}
             style={{
               padding: '10px 18px', border: `1.5px solid ${sel ? 'var(--gc-navy)' : 'var(--gc-border)'}`, borderRadius: 100, cursor: 'pointer',
-              fontSize: 13.5, color: sel ? '#fff' : 'var(--gc-slate)', background: sel ? 'var(--gc-navy)' : '#fff', transition: 'all .2s', userSelect: 'none',
+              fontSize: 17, color: sel ? '#fff' : 'var(--gc-slate)', background: sel ? 'var(--gc-navy)' : '#fff', transition: 'all .2s', userSelect: 'none',
             }}
           >
             {d.label}
@@ -285,17 +285,17 @@ export default function ConsultationIntake() {
       <div style={{ background: 'var(--gc-cream)', padding: '60px 32px 64px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: -90, right: -70, width: 320, height: 320, borderRadius: '50%', background: 'radial-gradient(circle, rgba(79,178,134,.14), transparent 70%)' }} />
         <div style={{ position: 'relative', zIndex: 2, maxWidth: 640, margin: '0 auto' }}>
-          <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.26em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
+          <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.26em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
             Let's figure out what you actually need
           </div>
-          <div className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 42, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.15 }}>
+          <div className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 52.5, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.15 }}>
             You were never the problem. <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>Let's start there.</span>
           </div>
-          <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.8, maxWidth: 500, margin: '18px auto 32px' }}>
+          <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.8, maxWidth: 500, margin: '18px auto 32px' }}>
             This intake takes about 8 minutes. Answer honestly — there are no right answers, and the more specific you are, the more useful this is for both of us.
           </p>
           <div style={{ maxWidth: 460, margin: '0 auto' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', font: '600 10px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginBottom: 8 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', font: '600 12.5px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginBottom: 8 }}>
               <span>Section {secNum} of 5</span>
               <span>{progressPct}%</span>
             </div>
@@ -309,9 +309,9 @@ export default function ConsultationIntake() {
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '0 24px 80px' }}>
         {section === 1 && (
           <Card>
-            <div style={{ font: '700 10px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Section 01 · About you</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 28, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Tell me who you are.</div>
-            <p style={{ fontSize: 14.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 30 }}>
+            <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Section 01 · About you</div>
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Tell me who you are.</div>
+            <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 30 }}>
               Not your job title. Not your LinkedIn. Who you are — what you lead, what you carry, and what brought you here.
             </p>
 
@@ -338,9 +338,9 @@ export default function ConsultationIntake() {
 
         {section === 2 && (
           <Card>
-            <div style={{ font: '700 10px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Section 02 · The real problem</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 28, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>What's actually going on?</div>
-            <p style={{ fontSize: 14.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 30 }}>
+            <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Section 02 · The real problem</div>
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>What's actually going on?</div>
+            <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 30 }}>
               Not what you'd say in a board meeting. The thing that keeps coming up, the thing that isn't working, the conversation you've been avoiding.
             </p>
 
@@ -369,9 +369,9 @@ export default function ConsultationIntake() {
 
         {section === 3 && (
           <Card>
-            <div style={{ font: '700 10px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Section 03 · Your people</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 28, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Tell me about the humans involved.</div>
-            <p style={{ fontSize: 14.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 30 }}>
+            <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Section 03 · Your people</div>
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Tell me about the humans involved.</div>
+            <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 30 }}>
               Organizations aren't broken in the abstract. People are struggling. Let's get specific about who.
             </p>
 
@@ -386,7 +386,7 @@ export default function ConsultationIntake() {
             </div>
             <div style={{ marginBottom: 24 }}>
               <label style={{ ...LABEL_STYLE, marginBottom: 10 }}>How psychologically safe does your environment feel right now?</label>
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11.5, color: 'var(--gc-ink-muted)', marginBottom: 8 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 14.5, color: 'var(--gc-ink-muted)', marginBottom: 8 }}>
                 <span>People are afraid to speak</span>
                 <span>People say what they think</span>
               </div>
@@ -399,7 +399,7 @@ export default function ConsultationIntake() {
                       onClick={() => setPsychSafety(v)}
                       style={{
                         width: 46, height: 46, border: `1.5px solid ${sel ? 'var(--gc-emerald)' : 'var(--gc-border)'}`, borderRadius: 8, cursor: 'pointer',
-                        fontSize: 15, fontWeight: 600, color: sel ? '#fff' : 'var(--gc-slate)', background: sel ? 'var(--gc-emerald)' : '#fff',
+                        fontSize: 19, fontWeight: 600, color: sel ? '#fff' : 'var(--gc-slate)', background: sel ? 'var(--gc-emerald)' : '#fff',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all .2s', fontFamily: 'var(--font-sans)',
                       }}
                     >
@@ -409,7 +409,7 @@ export default function ConsultationIntake() {
                 })}
               </div>
               {psychSafety && (
-                <div style={{ background: 'var(--gc-sage-light)', borderLeft: '3px solid var(--gc-emerald)', padding: '14px 18px', borderRadius: '0 8px 8px 0', marginTop: 14, fontSize: 13, color: 'var(--gc-ink)', lineHeight: 1.6 }}>
+                <div style={{ background: 'var(--gc-sage-light)', borderLeft: '3px solid var(--gc-emerald)', padding: '14px 18px', borderRadius: '0 8px 8px 0', marginTop: 14, fontSize: 16, color: 'var(--gc-ink)', lineHeight: 1.6 }}>
                   {SAFETY_NOTES[psychSafety]}
                 </div>
               )}
@@ -420,9 +420,9 @@ export default function ConsultationIntake() {
 
         {section === 4 && (
           <Card>
-            <div style={{ font: '700 10px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Section 04 · What you're looking for</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 28, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>What does success actually look like?</div>
-            <p style={{ fontSize: 14.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 30 }}>
+            <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Section 04 · What you're looking for</div>
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>What does success actually look like?</div>
+            <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 30 }}>
               Not the grant-report version. What do you actually want to be different — and how will you know when it is?
             </p>
 
@@ -449,9 +449,9 @@ export default function ConsultationIntake() {
 
         {section === 5 && (
           <Card>
-            <div style={{ font: '700 10px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Section 05 · The honest stuff</div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 28, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>A few harder questions.</div>
-            <p style={{ fontSize: 14.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 30 }}>
+            <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Section 05 · The honest stuff</div>
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>A few harder questions.</div>
+            <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 30 }}>
               This is where most intake forms stop — and where the most useful information lives. All optional, but the more you answer, the more targeted my response.
             </p>
 
@@ -482,9 +482,9 @@ export default function ConsultationIntake() {
             <div style={{ background: 'var(--gc-navy)', borderRadius: 14, padding: 44, textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
               <div style={{ position: 'absolute', top: -60, right: -60, width: 240, height: 240, borderRadius: '50%', background: 'radial-gradient(circle, rgba(186,217,243,.22), transparent 70%)' }} />
               <div style={{ position: 'relative', zIndex: 2 }}>
-                <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 18, color: 'var(--gc-lavender-soft)', marginBottom: 10 }}>Here's what I see.</div>
-                <div style={{ fontFamily: 'var(--font-serif)', fontSize: 30, fontWeight: 700, color: '#fff' }}>{firstName}, you're in the right place.</div>
-                <p style={{ fontSize: 14, fontWeight: 300, color: 'rgba(255,255,255,.62)', lineHeight: 1.7, maxWidth: 440, margin: '12px auto 0' }}>
+                <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 22.5, color: 'var(--gc-lavender-soft)', marginBottom: 10 }}>Here's what I see.</div>
+                <div style={{ fontFamily: 'var(--font-serif)', fontSize: 37.5, fontWeight: 700, color: '#fff' }}>{firstName}, you're in the right place.</div>
+                <p style={{ fontSize: 17.5, fontWeight: 300, color: 'rgba(255,255,255,.62)', lineHeight: 1.7, maxWidth: 440, margin: '12px auto 0' }}>
                   A snapshot of what you're carrying, where we'd start, and what working together could look like.
                 </p>
               </div>
@@ -493,24 +493,24 @@ export default function ConsultationIntake() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginTop: 16 }}>
               {buildResultCards().map((c) => (
                 <div key={c.label} style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 12, borderTop: '3px solid var(--gc-emerald)', padding: '28px 30px' }}>
-                  <div style={{ font: '700 9.5px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 8 }}>{c.label}</div>
-                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: 18, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>{c.title}</div>
-                  <p style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.75 }}>{c.body}</p>
+                  <div style={{ font: '700 12px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 8 }}>{c.label}</div>
+                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: 22.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>{c.title}</div>
+                  <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.75 }}>{c.body}</p>
                 </div>
               ))}
             </div>
 
             <div style={{ background: 'var(--gc-slate)', borderRadius: 12, padding: '26px 30px', marginTop: 14, textAlign: 'center' }}>
-              <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 18, color: '#fff', lineHeight: 1.6 }}>{quote}</div>
+              <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 22.5, color: '#fff', lineHeight: 1.6 }}>{quote}</div>
             </div>
 
             <div style={{ textAlign: 'center', padding: '40px 20px 10px' }}>
-              <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 20, color: 'var(--gc-emerald)', marginBottom: 8 }}>Let's get to work.</div>
-              <p style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 440, margin: '0 auto 22px' }}>
+              <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 25, color: 'var(--gc-emerald)', marginBottom: 8 }}>Let's get to work.</div>
+              <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 440, margin: '0 auto 22px' }}>
                 The next step is a real conversation — no pitch, no pressure. Just an honest look at whether I'm the right person for what you're facing.
               </p>
               {submitError && (
-                <p style={{ fontSize: 13, color: '#c0392b', maxWidth: 440, margin: '0 auto 20px' }}>
+                <p style={{ fontSize: 16, color: '#c0392b', maxWidth: 440, margin: '0 auto 20px' }}>
                   Heads up — your intake summary didn't send automatically. Please use the button below to reach out directly so nothing gets lost.
                 </p>
               )}
