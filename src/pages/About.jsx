@@ -97,7 +97,7 @@ export default function About() {
               src={FAMILY_PHOTO + '&width=600'}
               alt="Brittany with her family"
               loading="lazy"
-              style={{ width: '100%', height: 180, objectFit: 'cover', borderRadius: 8, display: 'block' }}
+              style={{ width: '100%', height: 180, objectFit: 'cover', objectPosition: 'center 10%', borderRadius: 8, display: 'block' }}
             />
             <img
               src={PERSONAL_PHOTO + '&width=600'}
