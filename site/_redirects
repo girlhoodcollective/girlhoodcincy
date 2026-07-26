@@ -1,0 +1,16 @@
+/work-with-me            /work-together   301
+/newsletter               /village         301
+/tools                    /resources       301
+
+/                          /index.html   200
+/about                     /index.html   200
+/events                    /index.html   200
+/village                   /index.html   200
+/work-together             /index.html   200
+/resources                 /index.html   200
+/partners                  /index.html   200
+/contact                   /index.html   200
+/consultation-intake       /index.html   200
+/worth-quiz                /index.html   200
+/better-together-recap     /index.html   200
+/*                         /index.html   404
