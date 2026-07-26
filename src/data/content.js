@@ -117,18 +117,6 @@ export const CORNERSTONE_ARTICLES = [
   'The Hidden Cost of Stakeholder Misalignment',
 ];
 
-export const VILLAGE_SECTIONS = [
-  'Community Reflection',
-  'Local Favorites',
-  'Upcoming Events',
-  'Leadership Insight',
-  'Resource Recommendation',
-  'Community Spotlight',
-  'Volunteer Opportunities',
-  'Partner Highlight',
-  "What's Inspiring Me",
-];
-
 export const TRUST_STATS = [
   { value: '5', label: 'Sponsors & collaborators' },
   { value: '100+', label: 'Village subscribers' },
