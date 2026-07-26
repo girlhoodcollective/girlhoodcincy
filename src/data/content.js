@@ -78,7 +78,6 @@ export const PARTNERSHIP_TIERS = [
 ];
 
 export const CURRENT_PARTNERS = [
-  'Dance Factory Fitness',
   'Wired to Bloom Therapy & Consulting',
   'Little Treasurer',
   'Trillium Cake Co.',

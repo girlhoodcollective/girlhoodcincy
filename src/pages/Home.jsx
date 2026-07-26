@@ -70,19 +70,19 @@ export default function Home() {
       <NavBar variant="white" />
 
       {/* HERO */}
-      <div style={{ background: 'var(--gc-cream)', padding: '64px 44px 52px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: -90, left: -70, width: 320, height: 320, borderRadius: '50%', background: 'radial-gradient(circle, rgba(111,150,207,.16), transparent 70%)' }} />
-        <div style={{ position: 'relative', zIndex: 2 }}>
+      <div className="home-hero">
+        <div className="home-hero-glow" />
+        <div className="home-hero-copy">
           <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.28em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
             Cincinnati · EST 2025
           </div>
-          <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 46, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.1, maxWidth: 680, margin: '0 auto' }}>
+          <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 54, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 590, margin: 0 }}>
             Community takes practice.
           </h1>
-          <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, margin: '20px auto 30px' }}>
+          <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, margin: '22px 0 30px' }}>
             Girlhood Collective helps small businesses, independent professionals, mission-driven organizations, and community members build authentic, lasting community. Advisory services, community events, and experiences built for all.
           </p>
-          <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
             <Link className="btn" to="/contact" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '16px 30px' }}>
               Let&rsquo;s Schedule a Time to Chat
             </Link>
@@ -91,11 +91,28 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        <div className="home-hero-gallery" aria-label="Girlhood Collective community moments">
+          <figure className="home-hero-photo home-hero-photo-primary">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/founder-in-studio.jpg?v=1783123475"
+              alt="Girlhood Collective founder standing in a bright studio"
+              fetchPriority="high"
+            />
+          </figure>
+          <figure className="home-hero-photo home-hero-photo-secondary">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2295.jpg?v=1777676514"
+              alt="A joyful Girlhood Collective community gathering"
+              loading="lazy"
+            />
+          </figure>
+          <div className="home-hero-note">Built in Cincinnati.<br />Made for belonging.</div>
+        </div>
       </div>
 
       {/* INTRO */}
-      <div style={{ background: '#fff', padding: '48px 44px', textAlign: 'center' }}>
-        <p style={{ fontSize: 15.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, maxWidth: 720, margin: '0 auto' }}>
+      <div className="home-intro">
+        <p style={{ fontSize: 15.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, maxWidth: 760, margin: '0 auto' }}>
           Real community isn&rsquo;t an accident. It takes practice — the same way any skill does. Girlhood Collective works with small businesses, health professionals, mission-driven organizations, and community members across Cincinnati to build the kind of belonging people actually stay for.
         </p>
       </div>
