@@ -8,7 +8,6 @@ const FAMILY_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-
 const PERSONAL_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_9211.jpg?v=1774029457';
 
 const CREDIBILITY = [
-  { title: 'Junior League of Cincinnati', body: 'Serving since 2016, including as Vice President of Training & Development on the Executive Management Team.' },
   { title: 'Sweet Cheeks Diaper Bank', body: 'As Program Development Committee Chair, participated in an 18-month community needs assessment that resulted in a $75,000 seed grant and 800+ volunteer hours.' },
   { title: 'B.A., Communication & Public Relations', body: 'University of Cincinnati.' },
 ];
@@ -67,7 +66,7 @@ export default function About() {
             Before founding Girlhood Collective, Brittany managed listing operations for the Megan Stacey Group at Coldwell Banker Realty, supporting a relationship-driven business that closed 419 homes and $220.7M in sales volume. Earlier, as Program Manager at Bake Me Home, she built the organization&rsquo;s social media measurement framework and coordinated events, volunteers, and partner relationships across a four-county region. Her early career was in talent acquisition and outreach, work that shaped the relationship-building instincts she now applies to community strategy.
           </p>
           <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, marginBottom: 32 }}>
-            Brittany has served the Junior League of Cincinnati since 2016, including as Vice President of Training &amp; Development on its Executive Management Team. As Program Development Committee Chair, she led an 18-month community needs assessment that resulted in a $75,000 seed grant and 800+ volunteer hours awarded to Sweet Cheeks Diaper Bank. She holds a B.A. in Communication and Public Relations from the University of Cincinnati.
+            As Program Development Committee Chair for a local nonprofit board, Brittany led an 18-month community needs assessment that resulted in a $75,000 seed grant and 800+ volunteer hours awarded to Sweet Cheeks Diaper Bank. She holds a B.A. in Communication and Public Relations from the University of Cincinnati.
           </p>
           <div style={{ borderLeft: '3px solid var(--gc-emerald)', paddingLeft: 20 }}>
             <p style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 22, color: 'var(--gc-slate)', lineHeight: 1.5 }}>
@@ -113,7 +112,7 @@ export default function About() {
           <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Credibility</div>
           <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: 'var(--gc-slate)' }}>Track record.</div>
         </div>
-        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, maxWidth: 980, margin: '0 auto' }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16, maxWidth: 700, margin: '0 auto' }}>
           {CREDIBILITY.map((c) => (
             <div key={c.title} style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, borderTop: '3px solid var(--gc-emerald)', padding: '24px 22px' }}>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 16, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>{c.title}</div>

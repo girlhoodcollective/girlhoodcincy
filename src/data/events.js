@@ -86,7 +86,7 @@ export const EVENTS = [
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Ready to Lead', where: 'Monthly Experience · Girls 8–12',
     price: '$40 · materials included',
-    desc: 'A team challenge and an intro to emergency preparedness, with an American Red Cross volunteer.',
+    desc: 'A team challenge and an intro to emergency preparedness, with a guest safety volunteer.',
     long: "An intro-level taste of preparedness (not a certification course): build a mini emergency kit, practice a scenario as a team, and talk through what to do and who to call. Every girl leaves with a take-home preparedness resource kit. 120 minutes · girls 8–12.",
   },
   {
