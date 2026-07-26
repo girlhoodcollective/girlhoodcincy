@@ -8,7 +8,7 @@ const FAMILY_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-
 const PERSONAL_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_9211.jpg?v=1774029457';
 
 const CREDIBILITY = [
-  { title: 'Sweet Cheeks Diaper Bank', body: 'As Program Development Committee Chair, participated in an 18-month community needs assessment that resulted in a $75,000 seed grant and 800+ volunteer hours.' },
+  { title: 'Community Needs Assessment', body: 'As Program Development Committee Chair for a local nonprofit board, participated in an 18-month community needs assessment that resulted in a $75,000 seed grant and 800+ volunteer hours.' },
   { title: 'B.A., Communication & Public Relations', body: 'University of Cincinnati.' },
 ];
 
@@ -60,13 +60,16 @@ export default function About() {
       <div style={{ background: '#fff', padding: '60px 44px' }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
           <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, marginBottom: 20 }}>
-            Brittany Gruber founded Girlhood Collective in 2024 to help organizations and communities build the kind of belonging that doesn&rsquo;t happen by accident. In its first three months, the platform secured five sponsors and collaborators, grew an email community to 100 subscribers with a roughly 60% open rate, and generated more than 65,000 organic Instagram impressions — all through relationship-first outreach rather than paid growth tactics.
+            Girlhood Collective exists to build stronger communities by creating meaningful connections between individuals, families, nonprofits, schools, and businesses.
           </p>
           <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, marginBottom: 20 }}>
-            Before founding Girlhood Collective, Brittany managed listing operations for the Megan Stacey Group at Coldwell Banker Realty, supporting a relationship-driven business that closed 419 homes and $220.7M in sales volume. Earlier, as Program Manager at Bake Me Home, she built the organization&rsquo;s social media measurement framework and coordinated events, volunteers, and partner relationships across a four-county region. Her early career was in talent acquisition and outreach, work that shaped the relationship-building instincts she now applies to community strategy.
+            Founded in Cincinnati, Girlhood Collective brings people together through thoughtfully designed events, educational programming, strategic partnerships, and community-centered consulting. Whether we&rsquo;re helping a local business engage with its community, creating experiences that foster belonging, or developing programs that inspire the next generation of leaders, our work is rooted in one belief: when people feel connected, communities thrive.
+          </p>
+          <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, marginBottom: 20 }}>
+            We believe community doesn&rsquo;t happen by accident. It is built intentionally through shared experiences, authentic relationships, and opportunities for everyone to contribute.
           </p>
           <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, marginBottom: 32 }}>
-            As Program Development Committee Chair for a local nonprofit board, Brittany led an 18-month community needs assessment that resulted in a $75,000 seed grant and 800+ volunteer hours awarded to Sweet Cheeks Diaper Bank. She holds a B.A. in Communication and Public Relations from the University of Cincinnati.
+            Today, Girlhood Collective serves as both a trusted community platform and a strategic partner for organizations looking to create lasting local impact. Every event, collaboration, and initiative is designed with the same goal: helping people find connection, discover opportunity, and build something bigger together.
           </p>
           <div style={{ borderLeft: '3px solid var(--gc-emerald)', paddingLeft: 20 }}>
             <p style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 27.5, color: 'var(--gc-slate)', lineHeight: 1.5 }}>
