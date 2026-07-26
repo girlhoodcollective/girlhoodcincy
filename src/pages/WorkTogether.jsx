@@ -121,6 +121,16 @@ export default function WorkTogether() {
         </div>
       </div>
 
+      {/* EMAIL CTA — after services */}
+      <div style={{ background: 'var(--gc-sage-light)', borderTop: '1px solid #dde6e2', borderBottom: '1px solid #dde6e2', padding: '36px 44px', textAlign: 'center' }}>
+        <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink)', marginBottom: 14 }}>
+          Not sure which one fits? Skip the form — email me directly.
+        </p>
+        <a className="btn" href="mailto:hello@girlhoodcincy.com" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '14px 28px' }}>
+          Email hello@girlhoodcincy.com →
+        </a>
+      </div>
+
       {/* CASE STUDY HIGHLIGHT */}
       <div style={{ background: 'var(--gc-navy)', padding: '58px 44px' }}>
         <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 320px', gap: 40, maxWidth: 1000, margin: '0 auto', alignItems: 'center' }}>
@@ -161,6 +171,16 @@ export default function WorkTogether() {
         </div>
       </div>
 
+      {/* EMAIL CTA — after case study */}
+      <div style={{ background: 'var(--gc-cream)', padding: '36px 44px', textAlign: 'center' }}>
+        <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink)', marginBottom: 14 }}>
+          Want results like this for your organization? Let&rsquo;s talk — no pitch, just a conversation.
+        </p>
+        <a className="btn" href="mailto:hello@girlhoodcincy.com" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '14px 28px' }}>
+          Email hello@girlhoodcincy.com →
+        </a>
+      </div>
+
       {/* PARTNERSHIP TIERS */}
       <div style={{ background: 'var(--gc-section)', padding: '58px 44px' }}>
         <div style={{ textAlign: 'center', marginBottom: 30 }}>
@@ -181,6 +201,16 @@ export default function WorkTogether() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* EMAIL CTA — after partnership tiers */}
+      <div style={{ background: 'var(--gc-sage-light)', borderTop: '1px solid #dde6e2', borderBottom: '1px solid #dde6e2', padding: '36px 44px', textAlign: 'center' }}>
+        <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink)', marginBottom: 14 }}>
+          Prefer to skip the form below? Email me directly about partnering.
+        </p>
+        <a className="btn" href="mailto:hello@girlhoodcincy.com" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '14px 28px' }}>
+          Email hello@girlhoodcincy.com →
+        </a>
       </div>
 
       {/* PARTNER INQUIRY FORM */}
