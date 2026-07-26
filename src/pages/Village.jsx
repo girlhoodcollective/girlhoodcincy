@@ -91,8 +91,8 @@ export default function Village() {
 
       {/* PHOTO BANNER */}
       <img
-        src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6385.jpg?v=1784581848&width=1400"
-        alt="Guests gathered at a Girlhood Collective community event"
+        src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6384.jpg?v=1784581853&width=1400"
+        alt="Guests at the Better Together Brunch, a Girlhood Collective community event"
         loading="lazy"
         style={{ width: '100%', height: 320, objectFit: 'cover', objectPosition: 'center 20%', display: 'block' }}
       />
