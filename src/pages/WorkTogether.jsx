@@ -22,7 +22,7 @@ export default function WorkTogether() {
         <div style={{ position: 'absolute', top: -90, right: -70, width: 340, height: 340, borderRadius: '50%', background: 'radial-gradient(circle, rgba(64,130,109,.14), transparent 70%)' }} />
         <div style={{ position: 'relative', zIndex: 2, maxWidth: 720 }}>
           <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
-          <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.28em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
+          <div style={{ font: '600 16px var(--font-sans)', letterSpacing: '.28em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
             Consulting · Events · Speaking
           </div>
           <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 46, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.1 }}>
@@ -31,7 +31,7 @@ export default function WorkTogether() {
           <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, margin: '22px 0 10px' }}>
             Girlhood Collective helps small businesses, health professionals, mission-driven organizations, and community members build real, lasting community — not through networking events or marketing gimmicks, but through the same hospitality and intentionality it takes to host a great gathering.
           </p>
-          <p style={{ fontSize: 14, fontWeight: 400, color: 'var(--gc-ink)', marginTop: 18, marginBottom: 28 }}>
+          <p style={{ fontSize: 16, fontWeight: 400, color: 'var(--gc-ink)', marginTop: 18, marginBottom: 28 }}>
             Every partnership starts the same way — a conversation, not a pitch.
           </p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
@@ -52,9 +52,9 @@ export default function WorkTogether() {
             <div key={s.id} className="hover-lift" style={{ border: '1px solid var(--gc-border)', borderRadius: 8, padding: '28px 24px', display: 'flex', flexDirection: 'column' }}>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8, lineHeight: 1.25 }}>{s.title}</div>
               <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 22, color: 'var(--gc-emerald)' }}>{s.price}</div>
-              <div style={{ font: '600 10px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginBottom: 16 }}>{s.cadence}</div>
-              <p style={{ fontSize: 13.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.7, marginBottom: 12, flexGrow: 1 }}>{s.body}</p>
-              <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--gc-ink-muted)' }}>{s.bestFor}</div>
+              <div style={{ font: '600 16px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginBottom: 16 }}>{s.cadence}</div>
+              <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.7, marginBottom: 12, flexGrow: 1 }}>{s.body}</p>
+              <div style={{ fontSize: 16, fontWeight: 600, color: 'var(--gc-ink-muted)' }}>{s.bestFor}</div>
             </div>
           ))}
         </div>
@@ -64,7 +64,7 @@ export default function WorkTogether() {
       <div style={{ background: 'var(--gc-section)', padding: '58px 44px' }}>
         <div style={{ maxWidth: 760, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 30 }}>
-            <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Questions</div>
+            <div style={{ font: '700 16px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Questions</div>
             <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: 'var(--gc-slate)' }}>What to expect</div>
           </div>
           <FaqAccordion items={FAQS} />
@@ -75,7 +75,7 @@ export default function WorkTogether() {
         <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>
           Not sure which one fits? <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>Let&rsquo;s talk it through.</span>
         </div>
-        <p style={{ fontSize: 14.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.75, maxWidth: 480, margin: '0 auto 24px' }}>
+        <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.75, maxWidth: 480, margin: '0 auto 24px' }}>
           The intake makes our conversation ten times more useful — or reach out directly and we&rsquo;ll find a time.
         </p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>

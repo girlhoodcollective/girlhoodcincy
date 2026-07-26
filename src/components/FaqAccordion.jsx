@@ -48,7 +48,7 @@ export default function FaqAccordion({ items }) {
               hidden={!open}
               style={{ padding: open ? '0 22px 20px' : 0 }}
             >
-              <p style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.75, margin: 0 }}>{item.a}</p>
+              <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.75, margin: 0 }}>{item.a}</p>
             </div>
           </div>
         );

@@ -33,7 +33,7 @@ export default function NavBar({ variant = 'white', active, label }) {
             style={{
               fontFamily: 'var(--font-serif)',
               fontStyle: 'italic',
-              fontSize: 15,
+              fontSize: 16,
               color: 'var(--gc-navy)',
               marginLeft: 5,
             }}
@@ -43,7 +43,7 @@ export default function NavBar({ variant = 'white', active, label }) {
         </Link>
         <div
           style={{
-            font: '600 10px var(--font-sans)',
+            font: '600 16px var(--font-sans)',
             letterSpacing: '.2em',
             textTransform: 'uppercase',
             color: 'var(--gc-ink-muted)',

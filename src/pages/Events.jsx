@@ -88,11 +88,11 @@ export default function Events() {
       <div className="rgrid" style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px', display: 'grid', gridTemplateColumns: '1fr 220px', gap: 32, alignItems: 'center' }}>
         <div>
           <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
-          <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Girlhood Cincy Monthly Experiences</div>
+          <div style={{ font: '600 16px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Girlhood Cincy Monthly Experiences</div>
           <h1 className="hero-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 52, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 640 }}>
             Gather <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>beautifully.</span>
           </h1>
-          <p style={{ fontSize: 15, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, marginTop: 20 }}>
+          <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, marginTop: 20 }}>
             One Saturday a month, September through May, where girls ages 8–12 meet real local women entrepreneurs and build confidence through hands-on projects. Every session is 120 minutes, capped at 15 participants, and led by a Community Collaborator sharing her story and her craft. $40 per session, materials included. Attend one, or attend all nine.
           </p>
         </div>
@@ -115,7 +115,7 @@ export default function Events() {
       <div style={{ background: '#fff', padding: '56px 44px 40px' }}>
         <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16, marginBottom: 24 }}>
           <div>
-            <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Upcoming</div>
+            <div style={{ font: '700 16px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Upcoming</div>
             <div style={{ fontFamily: 'var(--font-serif)', fontSize: 30, fontWeight: 700, color: 'var(--gc-slate)' }}>What's coming up next</div>
           </div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
@@ -131,38 +131,38 @@ export default function Events() {
           {visible.map((e) => (
             <div key={e.id} className="hover-shadow" style={{ display: 'flex', border: '1px solid var(--gc-border)', borderRadius: 4, overflow: 'hidden' }}>
               <div style={{ background: 'var(--gc-slate)', width: 120, flexShrink: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '22px 12px' }}>
-                <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)' }}>{e.mon}</div>
+                <div style={{ font: '600 16px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)' }}>{e.mon}</div>
                 <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 44, color: '#fff', lineHeight: 1 }}>{e.day}</div>
-                <div style={{ font: '400 12px var(--font-sans)', color: 'rgba(255,255,255,.55)' }}>{e.year}</div>
+                <div style={{ font: '400 16px var(--font-sans)', color: 'rgba(255,255,255,.55)' }}>{e.year}</div>
               </div>
               <div style={{ padding: '22px 28px', flex: 1, minWidth: 0 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10, flexWrap: 'wrap' }}>
-                  <span style={{ display: 'inline-block', font: '700 10px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', padding: '4px 10px', borderRadius: 2, background: e.badgeBg, color: e.badgeText }}>
+                  <span style={{ display: 'inline-block', font: '700 16px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', padding: '4px 10px', borderRadius: 2, background: e.badgeBg, color: e.badgeText }}>
                     {e.cat}
                   </span>
-                  <span style={{ font: '400 12.5px var(--font-sans)', color: 'var(--gc-ink-muted)' }}>{e.where}</span>
+                  <span style={{ font: '400 16px var(--font-sans)', color: 'var(--gc-ink-muted)' }}>{e.where}</span>
                 </div>
                 <div style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>{e.title}</div>
-                <p style={{ fontSize: 13.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.65, maxWidth: 600, marginBottom: 14 }}>{e.desc}</p>
+                <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.65, maxWidth: 600, marginBottom: 14 }}>{e.desc}</p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
                   {e.shopifyUrl ? (
                     <a
                       href={e.shopifyUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      style={{ display: 'inline-block', cursor: 'pointer', border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 10px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', padding: '11px 20px', borderRadius: 3, textDecoration: 'none' }}
+                      style={{ display: 'inline-block', cursor: 'pointer', border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 16px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', padding: '11px 20px', borderRadius: 3, textDecoration: 'none' }}
                     >
                       Get your ticket →
                     </a>
                   ) : (
                     <button
                       onClick={() => openDetail(e.id)}
-                      style={{ cursor: 'pointer', border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 10px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', padding: '11px 20px', borderRadius: 3 }}
+                      style={{ cursor: 'pointer', border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 16px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', padding: '11px 20px', borderRadius: 3 }}
                     >
                       Details &amp; RSVP
                     </button>
                   )}
-                  <span style={{ font: '600 12px var(--font-sans)', color: 'var(--gc-ink-muted)' }}>{e.price}</span>
+                  <span style={{ font: '600 16px var(--font-sans)', color: 'var(--gc-ink-muted)' }}>{e.price}</span>
                 </div>
               </div>
             </div>
@@ -171,9 +171,9 @@ export default function Events() {
       </div>
 
       <div style={{ background: 'var(--gc-section)', padding: '56px 44px' }}>
-        <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Looking back</div>
+        <div style={{ font: '700 16px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Looking back</div>
         <div style={{ fontFamily: 'var(--font-serif)', fontSize: 30, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Seriously proud of what we made.</div>
-        <p style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 560, marginBottom: 28 }}>
+        <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 560, marginBottom: 28 }}>
           A look back at the rooms we've filled since 2025.
         </p>
         <div className="rgrid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16 }}>
@@ -188,10 +188,10 @@ export default function Events() {
                   loading="lazy"
                   style={{ width: '100%', height: 180, objectFit: 'cover', borderRadius: 6, display: 'block' }}
                 />
-                <div className="hover-caption-target" style={{ fontFamily: 'var(--font-serif)', fontSize: 15, fontWeight: 700, color: 'var(--gc-slate)', marginTop: 12, transition: 'color .2s' }}>
+                <div className="hover-caption-target" style={{ fontFamily: 'var(--font-serif)', fontSize: 16, fontWeight: 700, color: 'var(--gc-slate)', marginTop: 12, transition: 'color .2s' }}>
                   {p.title}
                 </div>
-                <div style={{ font: '600 10px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginTop: 3 }}>
+                <div style={{ font: '600 16px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginTop: 3 }}>
                   {p.caption}{p.href ? ' · Read the case study →' : ''}
                 </div>
               </Wrapper>
@@ -215,11 +215,11 @@ export default function Events() {
               >
                 ×
               </button>
-              <span style={{ display: 'inline-block', font: '700 10px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', padding: '4px 10px', borderRadius: 2, background: detail.badgeBg, color: detail.badgeText, marginBottom: 12 }}>
+              <span style={{ display: 'inline-block', font: '700 16px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', padding: '4px 10px', borderRadius: 2, background: detail.badgeBg, color: detail.badgeText, marginBottom: 12 }}>
                 {detail.cat}
               </span>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: '#fff', marginBottom: 6 }}>{detail.title}</div>
-              <div style={{ font: '400 13px var(--font-sans)', color: 'rgba(255,255,255,.72)' }}>
+              <div style={{ font: '400 16px var(--font-sans)', color: 'rgba(255,255,255,.72)' }}>
                 {detail.mon} {detail.day}, {detail.year} · {detail.where}
               </div>
             </div>
@@ -228,20 +228,20 @@ export default function Events() {
                 <div style={{ textAlign: 'center', padding: '24px 0' }}>
                   <div style={{ fontSize: 34, marginBottom: 10 }}>🎉</div>
                   <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 30, color: 'var(--gc-slate)', marginBottom: 8 }}>You're in!</div>
-                  <p style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 360, margin: '0 auto 20px' }}>
+                  <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 360, margin: '0 auto 20px' }}>
                     We'll reach out within a day or two with everything you need. Can't wait to see you there.
                   </p>
                   <button
                     onClick={closeDetail}
-                    style={{ cursor: 'pointer', border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 10px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', padding: '12px 24px', borderRadius: 3 }}
+                    style={{ cursor: 'pointer', border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 16px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', padding: '12px 24px', borderRadius: 3 }}
                   >
                     Back to events
                   </button>
                 </div>
               ) : (
                 <div>
-                  <p style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.7, marginBottom: 20 }}>{detail.long}</p>
-                  <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 14 }}>Reserve your spot</div>
+                  <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.7, marginBottom: 20 }}>{detail.long}</p>
+                  <div style={{ font: '700 16px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 14 }}>Reserve your spot</div>
                   <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 12 }}>
                     <input className="fld" placeholder="Your name" value={form.name} onChange={setField('name')} />
                     <input className="fld" placeholder="Email address" value={form.email} onChange={setField('email')} />
@@ -265,7 +265,7 @@ export default function Events() {
                     style={{ marginBottom: 16 }}
                   />
                   {rsvpError && (
-                    <p style={{ fontSize: 13, color: '#c0392b', marginBottom: 12 }}>
+                    <p style={{ fontSize: 16, color: '#c0392b', marginBottom: 12 }}>
                       Something went wrong sending that — please email us directly at{' '}
                       <a href="mailto:hello@girlhoodcincy.com" style={{ color: '#c0392b' }}>hello@girlhoodcincy.com</a> instead.
                     </p>
@@ -273,7 +273,7 @@ export default function Events() {
                   <button
                     onClick={handleRsvp}
                     disabled={sending}
-                    style={{ width: '100%', cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 11px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', padding: 15, borderRadius: 3 }}
+                    style={{ width: '100%', cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 16px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', padding: 15, borderRadius: 3 }}
                   >
                     {sending ? 'Sending…' : 'Confirm my RSVP'}
                   </button>
