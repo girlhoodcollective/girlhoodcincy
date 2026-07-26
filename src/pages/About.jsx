@@ -9,7 +9,7 @@ const PERSONAL_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/I
 
 const CREDIBILITY = [
   { title: 'Junior League of Cincinnati', body: 'Serving since 2016, including as Vice President of Training & Development on the Executive Management Team.' },
-  { title: 'Sweet Cheeks Diaper Bank', body: 'As Program Development Committee Chair, led an 18-month community needs assessment that resulted in a $75,000 seed grant and 800+ volunteer hours.' },
+  { title: 'Sweet Cheeks Diaper Bank', body: 'As Program Development Committee Chair, participated in an 18-month community needs assessment that resulted in a $75,000 seed grant and 800+ volunteer hours.' },
   { title: 'B.A., Communication & Public Relations', body: 'University of Cincinnati.' },
 ];
 
