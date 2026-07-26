@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
+import YouTubeEmbed from '../components/YouTubeEmbed.jsx';
 import { subscribeToNewsletter } from '../lib/newsletter.js';
 import { getUpcomingPublishedEvents } from '../data/events.js';
 import { useSEO, useStructuredData, SITE_URL, SITE_NAME } from '../lib/seo.js';
@@ -175,6 +176,17 @@ export default function Home() {
           <Link className="btn" to="/work-together" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 30px' }}>
             See how we work together →
           </Link>
+        </div>
+      </div>
+
+      {/* EXPLAINER VIDEO */}
+      <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
+        <div style={{ maxWidth: 760, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: 26 }}>
+            <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>See it in action</div>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)' }}>What we do, in two minutes.</h2>
+          </div>
+          <YouTubeEmbed videoId="RutKIsejsmo" title="Girlhood Collective — what we do" />
         </div>
       </div>
 
