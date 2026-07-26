@@ -43,17 +43,17 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubscribe = async () => {
     if (!email.trim()) return;
     setSending(true);
-    setError(false);
+    setError('');
     try {
       await subscribeToNewsletter(email.trim());
       setSubmitted(true);
-    } catch {
-      setError(true);
+    } catch (err) {
+      setError(err.message || 'Something went wrong.');
     } finally {
       setSending(false);
     }
@@ -199,7 +199,7 @@ export default function Home() {
             </div>
             {error && (
               <p style={{ fontSize: 16, color: '#ffb4a8', marginTop: 14 }}>
-                Please enter a valid email, or reach us directly at{' '}
+                {error} Reach us directly at{' '}
                 <a href="mailto:hello@girlhoodcincy.com" style={{ color: '#ffb4a8' }}>hello@girlhoodcincy.com</a>.
               </p>
             )}

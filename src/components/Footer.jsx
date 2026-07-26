@@ -19,6 +19,7 @@ const SOCIAL_LINKS = [
 function MiniNewsletterSignup() {
   const [email, setEmail] = useState('');
   const [state, setState] = useState('idle');
+  const [error, setError] = useState('');
 
   const handleSubmit = async () => {
     if (!email.trim()) return;
@@ -26,7 +27,8 @@ function MiniNewsletterSignup() {
     try {
       await subscribeToNewsletter(email.trim());
       setState('done');
-    } catch {
+    } catch (err) {
+      setError(err.message || 'Something went wrong.');
       setState('error');
     }
   };
@@ -60,7 +62,7 @@ function MiniNewsletterSignup() {
         </button>
       </div>
       {state === 'error' && (
-        <p style={{ fontSize: 14.5, color: '#ffb4a8', marginTop: 8 }}>Something went wrong — email us at hello@girlhoodcincy.com instead.</p>
+        <p style={{ fontSize: 14.5, color: '#ffb4a8', marginTop: 8 }}>{error} Email us at hello@girlhoodcincy.com instead.</p>
       )}
     </div>
   );
