@@ -9,7 +9,7 @@ export const FAQS = [
   },
   {
     q: 'How much does it cost?',
-    a: 'Project-based work starts around $1,800. Ongoing partnerships run $1,400–$1,800/month. Event design and speaking are quoted based on scope.',
+    a: "Project-based work is quoted as a flat fee, ongoing partnerships run on a monthly retainer, and event design and speaking are quoted based on scope. Reach out and we'll talk specifics.",
   },
   {
     q: 'How long until we see results?',
@@ -66,13 +66,13 @@ export const PARTNERSHIP_TIERS = [
   {
     id: 'giveaway-product',
     title: 'Giveaway / Product Partner',
-    price: 'Free · or $50–$150 inclusion fee',
+    price: 'Free · or a modest inclusion fee',
     body: 'Provide product samples or branded items for take-home kits, no session required. Gets a mention and a giveaway credit.',
   },
   {
     id: 'season-sponsor',
     title: 'Season Sponsor',
-    price: '$500–$1,500/season · or $75–$150/month',
+    price: 'Season-long or monthly options available',
     body: 'Season-long association without leading a session — logo on the Work Together page, a mention in every newsletter issue during the sponsorship window, and verbal recognition at each session.',
   },
 ];
