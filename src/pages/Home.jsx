@@ -5,22 +5,9 @@ import Footer from '../components/Footer.jsx';
 import { subscribeToNewsletter } from '../lib/newsletter.js';
 import { getUpcomingPublishedEvents } from '../data/events.js';
 import { useSEO, useStructuredData, SITE_URL, SITE_NAME } from '../lib/seo.js';
-import { PERSONAS, CORNERSTONE_ARTICLES } from '../data/content.js';
+import { PERSONAS } from '../data/content.js';
 
 const UPCOMING_EVENTS = getUpcomingPublishedEvents(2);
-
-const DIFFERENTIATORS = [
-  { title: 'We write about it, not just do it', body: 'A genuine Resources library — cornerstone articles and real thinking, not marketing content dressed up as insight.' },
-  { title: 'Rooted in Cincinnati, not generic', body: "Real local connections — this city's neighborhoods and its people — not \"anywhere\" consulting." },
-  { title: 'One practice, every sector', body: 'Small business, allied health, mission-driven organizations, and individuals — because belonging isn\'t industry-specific.' },
-];
-
-const TRUST_STATS = [
-  { value: '$50K', label: 'Year-one revenue goal' },
-  { value: '9', label: 'Girlhood Cincy sessions a year' },
-  { value: '12', label: 'Partnerships a year' },
-  { value: '7%', label: 'Monthly newsletter growth target' },
-];
 
 export default function Home() {
   useSEO({
@@ -96,7 +83,7 @@ export default function Home() {
       {/* INTRO */}
       <div style={{ background: '#fff', padding: '48px 44px', textAlign: 'center' }}>
         <p style={{ fontSize: 15.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, maxWidth: 720, margin: '0 auto' }}>
-          Real community isn&rsquo;t an accident. It takes practice — the same way any skill does. Girlhood Collective works with small businesses, health professionals, mission-driven organizations, and community members across Cincinnati to build the kind of belonging people actually stay for.
+          Girlhood Collective works with small businesses, professionals, mission-driven organizations, and community members across Cincinnati to build the kind of belonging people strive to be a part of.
         </p>
       </div>
 
@@ -111,43 +98,6 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* DIFFERENTIATORS */}
-      <div style={{ background: '#fff', padding: '54px 44px' }}>
-        <div style={{ textAlign: 'center', marginBottom: 30 }}>
-          <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Why Girlhood Collective</div>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 28, fontWeight: 700, color: 'var(--gc-slate)' }}>Not another consultant.</div>
-        </div>
-        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, maxWidth: 980, margin: '0 auto' }}>
-          {DIFFERENTIATORS.map((d) => (
-            <div key={d.title} style={{ border: '1px solid var(--gc-border)', borderRadius: 6, borderTop: '3px solid var(--gc-emerald)', padding: '24px 22px' }}>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 16, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>{d.title}</div>
-              <p style={{ fontSize: 13, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{d.body}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* FEATURED RESOURCE */}
-      <div style={{ background: 'var(--gc-navy)', padding: '54px 44px', textAlign: 'center' }}>
-        <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 14 }}>From the Resources library</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 26, color: '#fff', maxWidth: 640, margin: '0 auto 20px', lineHeight: 1.4 }}>
-          &ldquo;{CORNERSTONE_ARTICLES[0]}&rdquo;
-        </div>
-        <Link className="navlink navlink--ondark" to="/resources" style={{ color: 'var(--gc-lavender-soft)' }}>
-          Explore Resources →
-        </Link>
-      </div>
-
-      {/* TRUST STRIP */}
-      <div style={{ background: '#fff', padding: '46px 44px', display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
-        {TRUST_STATS.map((s, i) => (
-          <div key={s.label} style={{ textAlign: 'center', padding: '0 34px', borderRight: i < TRUST_STATS.length - 1 ? '1px solid var(--gc-border)' : 'none' }}>
-            <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 36, color: 'var(--gc-emerald)', lineHeight: 1 }}>{s.value}</div>
-            <div style={{ font: '600 10px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginTop: 6 }}>{s.label}</div>
-          </div>
-        ))}
       </div>
 
       {/* UPCOMING EVENT TEASER */}
