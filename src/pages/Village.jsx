@@ -15,7 +15,7 @@ const ISSUES = [
 
 export default function Village() {
   useSEO({
-    title: 'Join the Village | Girlhood Collective Newsletter',
+    title: 'Subscribe to Our Updates | Girlhood Collective Newsletter',
     description: 'A free monthly letter for anyone building real community — resources, local favorites, and what’s inspiring us right now.',
     path: '/village',
   });
@@ -41,7 +41,7 @@ export default function Village() {
 
   return (
     <div className="page-shell">
-      <NavBar variant="navy" active="Join the Village" />
+      <NavBar variant="navy" active="Subscribe" />
 
       <div style={{ background: 'var(--gc-cream)', padding: '60px 44px 52px' }}>
         <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 320px', gap: 44, maxWidth: 1000, margin: '0 auto', alignItems: 'center' }}>
@@ -77,7 +77,7 @@ export default function Village() {
                     disabled={sending}
                     style={{ cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 14px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', padding: '14px 26px', borderRadius: 3 }}
                   >
-                    {sending ? 'Joining…' : 'Join the Village'}
+                    {sending ? 'Subscribing…' : 'Subscribe to Updates'}
                   </button>
                 </div>
                 {error && (

@@ -289,7 +289,7 @@ export default function Home() {
                 disabled={sending}
                 style={{ cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 15px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', padding: '15px 28px', borderRadius: 100 }}
               >
-                {sending ? 'Joining…' : 'Join the Village'}
+                {sending ? 'Subscribing…' : 'Subscribe to Updates'}
               </button>
             </div>
             {error && (

@@ -41,7 +41,7 @@ const ROUTES = [
   {
     path: '/village',
     sourceFile: 'src/pages/Village.jsx',
-    title: 'Join the Village | Girlhood Collective Newsletter',
+    title: 'Subscribe to Our Updates | Girlhood Collective Newsletter',
     description: 'A free monthly letter for anyone building real community — resources, local favorites, and what’s inspiring us right now.',
   },
   {

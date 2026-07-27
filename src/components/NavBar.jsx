@@ -6,7 +6,7 @@ const LINKS = [
   { label: 'About', href: '/about' },
   { label: 'Events', href: '/events' },
   { label: 'Resources', href: '/resources' },
-  { label: 'Join the Village', href: '/village' },
+  { label: 'Subscribe', href: '/village' },
 ];
 
 export default function NavBar({ variant = 'white', active, label }) {

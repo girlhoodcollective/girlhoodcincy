@@ -7,7 +7,7 @@ const EXPLORE_LINKS = [
   { label: 'About', href: '/about' },
   { label: 'Events', href: '/events' },
   { label: 'Resources', href: '/resources' },
-  { label: 'Join the Village', href: '/village' },
+  { label: 'Subscribe', href: '/village' },
   { label: 'Contact', href: '/contact' },
 ];
 
@@ -57,7 +57,7 @@ function MiniNewsletterSignup() {
           disabled={state === 'sending'}
           style={{ cursor: state === 'sending' ? 'default' : 'pointer', opacity: state === 'sending' ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 12.5px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', padding: '10px 16px', borderRadius: 100, whiteSpace: 'nowrap' }}
         >
-          Join
+          Subscribe
         </button>
       </div>
       {state === 'error' && (
@@ -168,23 +168,21 @@ export default function Footer({ linked = true, newsletterFormOnPage = false }) 
           >
             hello@girlhoodcincy.com
           </a>
-          <p
-            style={{
-              font: '600 12.5px var(--font-sans)',
-              letterSpacing: '.16em',
-              textTransform: 'uppercase',
-              color: 'rgba(255,255,255,.6)',
-              marginBottom: 8,
-            }}
-          >
-            Join the Village
-          </p>
-          {newsletterFormOnPage ? (
-            <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.6)' }}>
-              You&rsquo;ll find the sign-up above &uarr;
-            </p>
-          ) : (
-            <MiniNewsletterSignup />
+          {!newsletterFormOnPage && (
+            <>
+              <p
+                style={{
+                  font: '600 12.5px var(--font-sans)',
+                  letterSpacing: '.16em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(255,255,255,.6)',
+                  marginBottom: 8,
+                }}
+              >
+                Subscribe to Updates
+              </p>
+              <MiniNewsletterSignup />
+            </>
           )}
         </div>
       </div>

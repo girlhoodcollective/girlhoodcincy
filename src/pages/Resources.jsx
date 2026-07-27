@@ -96,7 +96,7 @@ export default function Resources() {
           The Village gets first look at every new article, plus local favorites and what&rsquo;s inspiring us.
         </p>
         <Link className="btn" to="/village" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>
-          Join the Village
+          Subscribe to Updates
         </Link>
       </div>
 
