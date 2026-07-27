@@ -289,7 +289,7 @@ export default function ConsultationIntake() {
             Let's figure out what you actually need
           </div>
           <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 52.5, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.15 }}>
-            You were never the problem. <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>Let's start there.</span>
+            Room for improvement? <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>We&rsquo;re here to help.</span>
           </h1>
           <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.8, maxWidth: 500, margin: '18px auto 32px' }}>
             This intake takes about 8 minutes. Answer honestly — there are no right answers, and the more specific you are, the more useful this is for both of us.
