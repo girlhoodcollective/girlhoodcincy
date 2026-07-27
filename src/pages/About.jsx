@@ -79,6 +79,19 @@ export default function About() {
         </div>
       </div>
 
+      {/* COLLABORATIVE NETWORK */}
+      <div style={{ background: 'var(--gc-sage-light)', borderTop: '1px solid #dde6e2', borderBottom: '1px solid #dde6e2', padding: '52px 44px' }}>
+        <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
+          <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>How I work</div>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 30, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 14 }}>
+            Girlhood Collective is me — but you&rsquo;re never getting just one perspective.
+          </h2>
+          <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.85 }}>
+            I collaborate with a trusted network of doctors, teachers, community leaders, and local brands, so every partnership brings in real expertise and the right connections — whatever the scenario calls for.
+          </p>
+        </div>
+      </div>
+
       {/* WHY THIS IS PERSONAL */}
       <div style={{ background: 'var(--gc-slate)', padding: '60px 44px' }}>
         <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: 48, maxWidth: 1000, margin: '0 auto', alignItems: 'center' }}>
