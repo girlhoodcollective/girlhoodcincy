@@ -40,14 +40,26 @@ export default function Contact() {
     <div className="page-shell">
       <NavBar variant="white" active="Contact" />
 
-      <div style={{ background: 'var(--gc-cream)', padding: '60px 44px 52px', textAlign: 'center' }}>
-        <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Contact</div>
-        <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 55, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.12, maxWidth: 640, margin: '0 auto' }}>
-          Request a <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>20-minute fit call.</span>
-        </h1>
-        <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 480, margin: '18px auto 0' }}>
-          Twenty minutes, no pitch — just a conversation about what you&rsquo;re building.
-        </p>
+      <div style={{ background: 'var(--gc-cream)', padding: '60px 44px 52px' }}>
+        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 280px', gap: 40, maxWidth: 900, margin: '0 auto', alignItems: 'center' }}>
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Contact</div>
+            <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 55, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.12 }}>
+              Request a <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>20-minute fit call.</span>
+            </h1>
+            <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 480, margin: '18px auto 0' }}>
+              Twenty minutes, no pitch — just a conversation about what you&rsquo;re building.
+            </p>
+          </div>
+          <div style={{ width: '100%', height: 300, overflow: 'hidden', borderRadius: 10 }}>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/A7A448E8-7BB0-45D0-9E7E-3CB54F38642E.jpg?v=1785100807&width=560"
+              alt="Brittany Gruber outdoors, leaning against a stone railing"
+              loading="lazy"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+            />
+          </div>
+        </div>
       </div>
 
       <div style={{ background: '#fff', padding: '56px 44px' }}>

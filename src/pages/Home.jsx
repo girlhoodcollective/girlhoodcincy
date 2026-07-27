@@ -190,6 +190,14 @@ export default function Home() {
           <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Who we work with</div>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)' }}>Choose the support that fits your community.</h2>
         </div>
+        <div style={{ width: '100%', maxWidth: 1000, height: 240, overflow: 'hidden', borderRadius: 10, margin: '0 auto 24px' }}>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2660.png?v=1785100854&width=1200"
+            alt="A group of young women from the Girlhood Collective community posing together outdoors"
+            loading="lazy"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+        </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, maxWidth: 1000, margin: '0 auto' }}>
           {PERSONAS.map((p) => (
             <Link

@@ -178,10 +178,10 @@ export default function Events() {
             style={{ width: '100%', height: 145, objectFit: 'cover', borderRadius: 8, border: '1px solid var(--gc-border)', display: 'block' }}
           />
           <img
-            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2308.jpg?v=1778190541&width=440"
-            alt="Girls working on a project at a Girlhood Collective workshop"
+            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_9209.jpg?v=1785100838&width=440"
+            alt="Girlhood Collective community event booth in Cincinnati"
             loading="lazy"
-            style={{ width: '100%', height: 145, objectFit: 'cover', borderRadius: 8, border: '1px solid var(--gc-border)', display: 'block' }}
+            style={{ width: '100%', height: 145, objectFit: 'cover', objectPosition: 'center 25%', borderRadius: 8, border: '1px solid var(--gc-border)', display: 'block' }}
           />
         </div>
       </div>
