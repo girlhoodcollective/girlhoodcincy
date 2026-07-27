@@ -6,18 +6,11 @@ import YouTubeEmbed from '../components/YouTubeEmbed.jsx';
 import { subscribeToNewsletter } from '../lib/newsletter.js';
 import { getUpcomingPublishedEvents } from '../data/events.js';
 import { useSEO, useStructuredData, SITE_URL, SITE_NAME } from '../lib/seo.js';
-import { PERSONAS, TRUST_STATS, SERVICES } from '../data/content.js';
+import { PERSONAS, TRUST_STATS } from '../data/content.js';
 
 const PERSONA_HREF = (id) => (id === 'community-member' ? '/village' : '/work-together');
 
 const UPCOMING_EVENTS = getUpcomingPublishedEvents(2);
-
-const DIFFERENTIATORS = [
-  { title: 'We write about it, not just do it', body: 'A genuine Resources library — cornerstone articles and real thinking, not marketing content dressed up as insight.' },
-  { title: 'Rooted in Cincinnati, not generic', body: "Real local connections — this city's neighborhoods and its people — not \"anywhere\" consulting." },
-  { title: 'One practice, every sector', body: 'Small business, allied health, mission-driven organizations, and individuals — because belonging isn\'t industry-specific.' },
-];
-
 
 export default function Home() {
   useSEO({
@@ -213,28 +206,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* SERVICES TEASER */}
-      <div style={{ background: '#fff', padding: '54px 44px' }}>
-        <div style={{ textAlign: 'center', marginBottom: 30 }}>
-          <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>How we help</div>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)' }}>Four ways to work together.</h2>
-        </div>
-        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, maxWidth: 1000, margin: '0 auto 30px' }}>
-          {SERVICES.map((s) => (
-            <div key={s.id} style={{ border: '1px solid var(--gc-border)', borderRadius: 8, padding: '24px 22px', display: 'flex', flexDirection: 'column' }}>
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>{s.title}</h3>
-              <div style={{ font: '600 12px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginBottom: 12 }}>{s.cadence}</div>
-              <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.6, flexGrow: 1 }}>{s.body}</p>
-            </div>
-          ))}
-        </div>
-        <div style={{ textAlign: 'center' }}>
-          <Link className="btn" to="/work-together" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 30px' }}>
-            See how we work together →
-          </Link>
-        </div>
-      </div>
-
       {/* EXPLAINER VIDEO */}
       <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
         <div style={{ maxWidth: 760, margin: '0 auto' }}>
@@ -265,22 +236,6 @@ export default function Home() {
               Read the case study →
             </Link>
           </div>
-        </div>
-      </div>
-
-      {/* DIFFERENTIATORS */}
-      <div style={{ background: '#fff', padding: '54px 44px' }}>
-        <div style={{ textAlign: 'center', marginBottom: 30 }}>
-          <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Why Girlhood Collective</div>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)' }}>Not another consultant.</h2>
-        </div>
-        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, maxWidth: 980, margin: '0 auto' }}>
-          {DIFFERENTIATORS.map((d) => (
-            <div key={d.title} style={{ border: '1px solid var(--gc-border)', borderRadius: 6, borderTop: '3px solid var(--gc-emerald)', padding: '24px 22px' }}>
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>{d.title}</h3>
-              <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{d.body}</p>
-            </div>
-          ))}
         </div>
       </div>
 
