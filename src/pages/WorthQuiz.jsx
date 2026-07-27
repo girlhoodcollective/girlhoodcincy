@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import { useSEO } from '../lib/seo.js';
+import { submitNetlifyForm } from '../lib/netlifyForms.js';
 
 const QUESTIONS = [
   { type: 'single', text: 'When something at work is broken, what do you actually do?', context: "Not what you should do — what do you instinctively reach for first?", options: [{ text: 'Make a list, assign owners, build a timeline — project mode immediately', skills: ['project_mgmt', 'operations'] }, { text: "Start asking 'why' until I find the real problem underneath", skills: ['analysis', 'systems'] }, { text: 'Call the right person — I know who can actually fix it', skills: ['people', 'communication'] }, { text: 'Write up what\'s happening so everyone sees the same picture', skills: ['writing', 'communication'] }] },
@@ -49,6 +50,10 @@ export default function WorthQuiz() {
   const [phase, setPhase] = useState('intro');
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState({});
+  const [email, setEmail] = useState('');
+  const [sending, setSending] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   const start = () => {
     setPhase('quiz');
@@ -106,6 +111,41 @@ export default function WorthQuiz() {
       if (sc > bs) { bs = sc; best = k; }
     }
     return best;
+  };
+
+  const buildAnswersSummary = () => {
+    return QUESTIONS.map((q, qi) => {
+      const a = answers[qi];
+      if (a === undefined || a === null) return null;
+      let answerText;
+      if (q.type === 'multi' && Array.isArray(a)) {
+        answerText = a.map((ix) => q.options[ix].text).join(' | ');
+      } else if (typeof a === 'number') {
+        answerText = q.options[a].text;
+      } else {
+        return null;
+      }
+      return `Q${qi + 1}: ${q.text}\nA: ${answerText}`;
+    }).filter(Boolean).join('\n\n');
+  };
+
+  const submitResults = async (archName, topSkillsList) => {
+    if (!email.trim()) return;
+    setSending(true);
+    setSubmitError(false);
+    try {
+      await submitNetlifyForm('worth-quiz', {
+        email: email.trim(),
+        archetype: archName,
+        topSkills: topSkillsList.join(', '),
+        answers: buildAnswersSummary(),
+      });
+      setSubmitted(true);
+    } catch {
+      setSubmitError(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   const retake = () => {
@@ -284,6 +324,51 @@ export default function WorthQuiz() {
             <div style={{ background: 'var(--gc-slate)', borderRadius: 14, padding: '26px 28px', marginTop: 16 }}>
               <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>Your reframe</div>
               <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 22.5, color: '#fff', lineHeight: 1.55 }}>{arch.reframe}</div>
+            </div>
+
+            <div style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 14, padding: 28, marginTop: 16 }}>
+              {submitted ? (
+                <div style={{ textAlign: 'center' }}>
+                  <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 24, color: 'var(--gc-slate)', marginBottom: 6 }}>Got it — thank you!</div>
+                  <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.6 }}>
+                    We'll follow up with a copy of your results and what's next.
+                  </p>
+                </div>
+              ) : (
+                <div style={{ textAlign: 'center' }}>
+                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: 22.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>
+                    Want this sent to you?
+                  </div>
+                  <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.6, marginBottom: 16, maxWidth: 440, margin: '0 auto 16px' }}>
+                    Drop your email and we'll send you a copy of your {arch.name} results — plus keep you posted on Girlhood Collective events and opportunities.
+                  </p>
+                  <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', maxWidth: 440, margin: '0 auto' }}>
+                    <input
+                      className="fld"
+                      type="email"
+                      placeholder="you@email.com"
+                      aria-label="Your email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      style={{ flex: 1, minWidth: 220 }}
+                    />
+                    <button
+                      className="btn"
+                      onClick={() => submitResults(arch.name, top.map(([s]) => SKILL_LABELS[s] || s))}
+                      disabled={sending || !email.trim()}
+                      style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '13px 22px', cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1 }}
+                    >
+                      {sending ? 'Sending…' : 'Email me my results'}
+                    </button>
+                  </div>
+                  {submitError && (
+                    <p style={{ fontSize: 15, color: '#c0392b', marginTop: 12 }}>
+                      Something went wrong — try again, or reach us at{' '}
+                      <a href="mailto:hello@girlhoodcincy.com" style={{ color: '#c0392b' }}>hello@girlhoodcincy.com</a>.
+                    </p>
+                  )}
+                </div>
+              )}
             </div>
 
             <div style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 14, padding: 28, textAlign: 'center', marginTop: 16 }}>
