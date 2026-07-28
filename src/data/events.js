@@ -10,7 +10,7 @@ export const EVENTS = [
     long: 'A free, open-to-all afternoon market featuring 20+ local women makers, seasonal florals from the shop, and live music. Bring a friend, bring your kids, bring cash for the makers.',
   },
   {
-    id: 'dream-big', mon: 'Sep', day: '12', year: '2026', cat: 'Workshop',
+    id: 'dream-big', mon: 'Sep', day: '12', year: '2026', cat: 'Workshop', published: false,
     shopifyUrl: 'https://shop.girlhoodcincy.com/products/dream-big-monthly-experience-sep-12-2026',
     buyButtonProductId: '7764329365600',
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',

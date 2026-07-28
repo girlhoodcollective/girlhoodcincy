@@ -84,7 +84,7 @@ export default function Home() {
               Cincinnati · EST 2025
             </div>
             <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 46, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.12 }}>
-              It takes a village. <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>Let&rsquo;s find yours.</span>
+              It takes a village. <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>Let&rsquo;s build yours.</span>
             </h1>
             <p style={{ fontSize: 18, fontWeight: 500, color: 'var(--gc-ink-muted)', lineHeight: 1.6, maxWidth: 500, margin: '16px 0 6px' }}>
               Engagement & Operations Support for Entrepreneurs and Institutions
@@ -117,13 +117,7 @@ export default function Home() {
         <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
           <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>Girlhood Cincy Monthly Experiences</div>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24, textAlign: 'center' }}>Gather beautifully.</h2>
-          <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, maxWidth: 760, margin: '0 auto 24px' }}>
-            <img
-              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/DreamBigFlyerFinal.png?v=1785087823&width=440"
-              alt="Dream Big monthly experience flyer for girls ages 8–12"
-              loading="lazy"
-              style={{ width: '100%', height: 180, objectFit: 'contain', background: '#fff', borderRadius: 8, display: 'block' }}
-            />
+          <div style={{ maxWidth: 400, margin: '0 auto 24px' }}>
             <img
               src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Helping_Hands.png?v=1784921222&width=440"
               alt="Helping Hands parent-child volunteer experience flyer"
