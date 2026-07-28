@@ -116,16 +116,16 @@ export default function Home() {
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24, textAlign: 'center' }}>Gather beautifully.</h2>
           <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, maxWidth: 760, margin: '0 auto 24px' }}>
             <img
-              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2296.jpg?v=1778190542&width=440"
-              alt="Brittany and a collaborator holding up finished artwork at a Girlhood Collective session"
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/DreamBigFlyerFinal.png?v=1785087823&width=440"
+              alt="Dream Big monthly experience flyer for girls ages 8–12"
               loading="lazy"
-              style={{ width: '100%', height: 180, objectFit: 'cover', objectPosition: 'center 15%', borderRadius: 8, display: 'block' }}
+              style={{ width: '100%', height: 180, objectFit: 'contain', background: '#fff', borderRadius: 8, display: 'block' }}
             />
             <img
-              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2455.jpg?v=1778190539&width=440"
-              alt="A girl showing her finished craft at a Girlhood Collective Studio Art session"
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Helping_Hands.png?v=1784921222&width=440"
+              alt="Helping Hands parent-child volunteer experience flyer"
               loading="lazy"
-              style={{ width: '100%', height: 180, objectFit: 'cover', borderRadius: 8, display: 'block' }}
+              style={{ width: '100%', height: 180, objectFit: 'contain', background: '#fff', borderRadius: 8, display: 'block' }}
             />
           </div>
           <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, maxWidth: 760, margin: '0 auto' }}>
