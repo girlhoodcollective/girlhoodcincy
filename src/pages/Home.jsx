@@ -86,8 +86,11 @@ export default function Home() {
             <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 46, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.12 }}>
               It takes a village. <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>Let&rsquo;s find yours.</span>
             </h1>
-            <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.75, maxWidth: 500, margin: '16px 0 26px' }}>
-              Monthly events for girls and families, a free community newsletter, and boutique advisory services for organizational and community health — real connection, built on purpose.
+            <p style={{ fontSize: 18, fontWeight: 500, color: 'var(--gc-ink-muted)', lineHeight: 1.6, maxWidth: 500, margin: '16px 0 6px' }}>
+              Engagement & Operations Support for Entrepreneurs and Institutions
+            </p>
+            <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.6, maxWidth: 500, margin: '10px 0 26px' }}>
+              Events, Resources, and Community for All.
             </p>
             <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
               <Link className="btn" to="/events" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>
