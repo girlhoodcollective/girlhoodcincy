@@ -5,7 +5,7 @@ import Footer from '../components/Footer.jsx';
 import FaqAccordion from '../components/FaqAccordion.jsx';
 import { submitNetlifyForm } from '../lib/netlifyForms.js';
 import { useSEO, useStructuredData, faqSchema } from '../lib/seo.js';
-import { SERVICES, FAQS, PARTNERSHIP_TIERS } from '../data/content.js';
+import { SERVICES, FAQS, PARTNERSHIP_TIERS, PARTNER_LOGOS } from '../data/content.js';
 
 const PARTNER_INTERESTS = [
   { value: '', label: "I'm interested in…" },
@@ -89,6 +89,35 @@ export default function WorkTogether() {
           <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.85 }}>
             I collaborate with a trusted network of doctors, teachers, community leaders, and local brands, so every partnership brings in real expertise and the right connections — whatever the scenario calls for.
           </p>
+        </div>
+      </div>
+
+      {/* COMMUNITY COLLABORATORS */}
+      <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
+        <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>Community Collaborators</div>
+        <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24, textAlign: 'center' }}>In good company.</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 20, maxWidth: 1000, margin: '0 auto' }}>
+          {PARTNER_LOGOS.map((p) => (
+            <div key={p.href} style={{ display: 'flex', flexDirection: 'column' }}>
+              <a
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover-lift"
+                style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 8, height: 110, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 18, overflow: 'hidden' }}
+              >
+                <img
+                  src={p.src}
+                  alt={p.alt}
+                  loading="lazy"
+                  style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', display: 'block', transform: p.zoom ? `scale(${p.zoom})` : undefined }}
+                />
+              </a>
+              <p style={{ fontSize: 14, fontStyle: 'normal', fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.5, textAlign: 'center', margin: '10px 4px 0' }}>
+                {p.quote}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
