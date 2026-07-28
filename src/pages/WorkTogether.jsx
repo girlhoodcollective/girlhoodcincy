@@ -16,8 +16,8 @@ const PARTNER_INTERESTS = [
 
 export default function WorkTogether() {
   useSEO({
-    title: 'Work Together | Girlhood Collective Consulting & Speaking',
-    description: 'Community Audit & Roadmap, Community Strategy Partnership, Event Design & Facilitation, and Speaking — pick the tier that fits your budget and commitment level.',
+    title: 'Work Together | Girlhood Collective Advisory Services',
+    description: 'Community Partnership Strategy, Grants & Sponsorship Support, ERG & Workshop Facilitation, Leadership Coaching, and Fractional Operational Exec Services — pick the engagement that fits.',
     path: '/work-together',
   });
 
@@ -53,13 +53,13 @@ export default function WorkTogether() {
           <div>
             <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
             <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.28em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
-              Consulting · Events · Speaking
+              Organizational & Community Health
             </div>
             <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 57.5, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.1 }}>
               Let&rsquo;s build something real, <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>together.</span>
             </h1>
             <p style={{ fontSize: 20, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, margin: '22px 0 10px' }}>
-              Girlhood Collective helps small businesses, health professionals, mission-driven organizations, and community members build real, lasting community — not through networking events or marketing gimmicks, but through the same hospitality and intentionality it takes to host a great gathering.
+              Girlhood Collective is a boutique advisory specializing in organizational and community health — helping small businesses, health professionals, and mission-driven organizations build stronger leadership, healthier teams, and lasting community, with the same hospitality and intentionality it takes to host a great gathering.
             </p>
             <p style={{ fontSize: 17.5, fontWeight: 400, color: 'var(--gc-ink)', marginTop: 18, marginBottom: 28 }}>
               Every partnership starts the same way — a conversation, not a pitch.

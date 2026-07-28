@@ -25,7 +25,7 @@ const TOOLS = [
 
 export default function Resources() {
   useSEO({
-    title: 'Resources | Community Strategy Insights from Girlhood Collective',
+    title: 'Resources | Insights from Girlhood Collective',
     description: 'Practical ideas for building stronger organizations, neighborhoods, and relationships — the same thinking behind every Girlhood Collective partnership.',
     path: '/resources',
   });

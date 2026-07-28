@@ -15,7 +15,7 @@ const CREDIBILITY = [
 export default function About() {
   useSEO({
     title: 'About Brittany Gruber | Girlhood Collective',
-    description: 'Brittany Gruber is the founder of Girlhood Collective, a Cincinnati-based community strategy practice helping small businesses, health professionals, and mission-driven organizations build real, lasting community.',
+    description: 'Brittany Gruber is the founder of Girlhood Collective, a Cincinnati-based boutique advisory specializing in organizational and community health, helping small businesses, health professionals, and mission-driven organizations build stronger leadership and lasting community.',
     path: '/about',
     image: FOUNDER_PHOTO + '&width=1200',
   });
@@ -50,7 +50,7 @@ export default function About() {
             <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 40, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Brittany Gruber</h1>
             <div style={{ font: '600 15px var(--font-sans)', letterSpacing: '.04em', color: 'var(--gc-ink-muted)', marginBottom: 20 }}>Founder · Girlhood Collective</div>
             <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.85 }}>
-              Brittany Gruber is the founder of Girlhood Collective, a Cincinnati-based community strategy practice helping small businesses, health professionals, and mission-driven organizations build real, lasting community.
+              Brittany Gruber is the founder of Girlhood Collective, a Cincinnati-based boutique advisory specializing in organizational and community health, helping small businesses, health professionals, and mission-driven organizations build stronger leadership and lasting community.
             </p>
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function About() {
             Girlhood Collective exists to build stronger communities by creating meaningful connections between individuals, families, nonprofits, schools, and businesses.
           </p>
           <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, marginBottom: 20 }}>
-            Founded in Cincinnati, Girlhood Collective brings people together through thoughtfully designed events, educational programming, strategic partnerships, and community-centered consulting. Whether we&rsquo;re helping a local business engage with its community, creating experiences that foster belonging, or developing programs that inspire the next generation of leaders, our work is rooted in one belief: when people feel connected, communities thrive.
+            Founded in Cincinnati, Girlhood Collective brings people together through thoughtfully designed events, educational programming, strategic partnerships, and boutique advisory services in organizational and community health. Whether we&rsquo;re helping a local business engage with its community, creating experiences that foster belonging, or developing programs that inspire the next generation of leaders, our work is rooted in one belief: when people feel connected, communities thrive.
           </p>
           <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, marginBottom: 20 }}>
             We believe community doesn&rsquo;t happen by accident. It is built intentionally through shared experiences, authentic relationships, and opportunities for everyone to contribute.
@@ -154,7 +154,7 @@ export default function About() {
           Want to build something <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>together?</span>
         </div>
         <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 460, margin: '0 auto 22px' }}>
-          Consulting, speaking, and partnerships are always welcome. Reach out directly.
+          Advisory services, coaching, and partnerships are always welcome. Reach out directly.
         </p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link className="btn" to="/work-together" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>

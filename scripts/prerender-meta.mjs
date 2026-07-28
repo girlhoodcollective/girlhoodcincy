@@ -21,14 +21,14 @@ const ROUTES = [
   {
     path: '/',
     sourceFile: 'src/pages/Home.jsx',
-    title: 'Girlhood Collective | Community Strategy Consulting',
-    description: 'Building community through authentic relationships, trust, and intentional connection — for organizations, small businesses, and neighbors across Cincinnati.',
+    title: 'Girlhood Collective | Boutique Advisory for Organizational & Community Health',
+    description: 'A boutique advisory specializing in organizational and community health — plus monthly community events and a free newsletter for Cincinnati families and neighbors.',
   },
   {
     path: '/about',
     sourceFile: 'src/pages/About.jsx',
     title: 'About Brittany Gruber | Girlhood Collective',
-    description: 'Brittany Gruber is the founder of Girlhood Collective, a Cincinnati-based community strategy practice helping small businesses, health professionals, and mission-driven organizations build real, lasting community.',
+    description: 'Brittany Gruber is the founder of Girlhood Collective, a Cincinnati-based boutique advisory specializing in organizational and community health, helping small businesses, health professionals, and mission-driven organizations build stronger leadership and lasting community.',
     image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/J8A2562.jpg?v=1774664826&width=1200',
   },
   {
@@ -47,13 +47,13 @@ const ROUTES = [
   {
     path: '/work-together',
     sourceFile: 'src/pages/WorkTogether.jsx',
-    title: 'Work Together | Girlhood Collective Consulting & Speaking',
-    description: 'Community Audit & Roadmap, Community Strategy Partnership, Event Design & Facilitation, and Speaking — pick the tier that fits your budget and commitment level.',
+    title: 'Work Together | Girlhood Collective Advisory Services',
+    description: 'Community Partnership Strategy, Grants & Sponsorship Support, ERG & Workshop Facilitation, Leadership Coaching, and Fractional Operational Exec Services — pick the engagement that fits.',
   },
   {
     path: '/resources',
     sourceFile: 'src/pages/Resources.jsx',
-    title: 'Resources | Community Strategy Insights from Girlhood Collective',
+    title: 'Resources | Insights from Girlhood Collective',
     description: 'Practical ideas for building stronger organizations, neighborhoods, and relationships — the same thinking behind every Girlhood Collective partnership.',
   },
   {

@@ -14,8 +14,8 @@ const UPCOMING_EVENTS = getUpcomingPublishedEvents(2);
 
 export default function Home() {
   useSEO({
-    title: 'Girlhood Collective | Community Strategy Consulting',
-    description: 'Building community through authentic relationships, trust, and intentional connection — for organizations, small businesses, and neighbors across Cincinnati.',
+    title: 'Girlhood Collective | Boutique Advisory for Organizational & Community Health',
+    description: 'A boutique advisory specializing in organizational and community health — plus monthly community events and a free newsletter for Cincinnati families and neighbors.',
     path: '/',
   });
 
@@ -25,7 +25,7 @@ export default function Home() {
     name: SITE_NAME,
     url: SITE_URL,
     logo: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/8.png?v=1784772079&width=512',
-    description: 'Girlhood Collective is a Cincinnati-based community strategy practice helping small businesses, health professionals, and mission-driven organizations build real, lasting community.',
+    description: 'Girlhood Collective is a Cincinnati-based boutique advisory specializing in organizational and community health, helping small businesses, health professionals, and mission-driven organizations build stronger leadership and lasting community.',
     email: 'hello@girlhoodcincy.com',
     areaServed: 'Cincinnati, OH',
     contactPoint: { '@type': 'ContactPoint', email: 'hello@girlhoodcincy.com', contactType: 'customer service' },
@@ -46,7 +46,7 @@ export default function Home() {
     name: SITE_NAME,
     url: SITE_URL,
     image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/8.png?v=1784772079&width=512',
-    description: 'Girlhood Collective is a Cincinnati-based community strategy practice helping small businesses, health professionals, and mission-driven organizations build real, lasting community.',
+    description: 'Girlhood Collective is a Cincinnati-based boutique advisory specializing in organizational and community health, helping small businesses, health professionals, and mission-driven organizations build stronger leadership and lasting community.',
     email: 'hello@girlhoodcincy.com',
     areaServed: 'Cincinnati, OH',
     sameAs: ['https://instagram.com/girlhood_cincy'],
@@ -87,7 +87,7 @@ export default function Home() {
               It takes a village. <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>Let&rsquo;s find yours.</span>
             </h1>
             <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.75, maxWidth: 500, margin: '16px 0 26px' }}>
-              Monthly events for girls and families, a free community newsletter, and strategy consulting for Cincinnati organizations — real connection, built on purpose.
+              Monthly events for girls and families, a free community newsletter, and boutique advisory services for organizational and community health — real connection, built on purpose.
             </p>
             <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
               <Link className="btn" to="/events" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>

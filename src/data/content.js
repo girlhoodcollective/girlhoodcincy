@@ -5,54 +5,57 @@
 export const FAQS = [
   {
     q: 'What does an engagement actually look like?',
-    a: "Most partnerships start with a free 20–30 minute conversation. From there, it's either a focused Community Audit & Roadmap (2–3 weeks) or an ongoing Community Strategy Partnership (3–6 month minimum retainer).",
+    a: "Most partnerships start with a free 20–30 minute conversation. From there, we scope the right fit — whether that's a focused project like Grants & Sponsorship Support or a single workshop, or an ongoing partnership like Community Partnership Strategy or Fractional Operational Exec Services.",
   },
   {
     q: 'How much does it cost?',
-    a: "Project-based work is quoted as a flat fee, ongoing partnerships run on a monthly retainer, and event design and speaking are quoted based on scope. Reach out and we'll talk specifics.",
+    a: "Every engagement is scoped and quoted individually, based on what you actually need. Reach out and we'll talk specifics.",
   },
   {
     q: 'How long until we see results?',
-    a: 'Real community takes practice, not a quick fix — most partners see meaningful movement within one full retainer cycle (3+ months).',
+    a: 'Real organizational and community health takes practice, not a quick fix — most partners see meaningful movement within one full engagement cycle (3+ months).',
   },
   {
     q: "What if I'm not ready for a full retainer?",
-    a: "Start with the Audit & Roadmap — it's the lower-commitment way to test fit.",
+    a: "Start with a smaller, focused engagement like Grants & Sponsorship Support or a single workshop — it's the lower-commitment way to test fit.",
   },
 ];
 
 export const SERVICES = [
   {
-    id: 'audit-roadmap',
-    title: 'Community Audit & Roadmap',
-    price: '$1,800–$2,500',
-    cadence: 'flat fee · 2–3 weeks',
-    body: 'A focused starting point: we assess where you are, talk to the people who matter, and hand you a clear roadmap.',
-    bestFor: 'Best for testing the waters.',
+    id: 'community-partnership-strategy',
+    title: 'Community Partnership Strategy',
+    cadence: 'Custom scope — let’s talk',
+    body: 'Strategic guidance for building the partnerships, sponsorships, and collaborations that make your organization’s work possible — from first outreach to a lasting relationship.',
+    bestFor: 'Best for building a partner pipeline from scratch.',
   },
   {
-    id: 'strategy-partnership',
-    title: 'Community Strategy Partnership',
-    price: '$1,400–$1,800',
-    cadence: '/month · 3–6 month minimum',
-    body: 'Our signature offer: ongoing strategic partnership to build and sustain real community over time.',
-    bestFor: 'Best for organizations ready to invest in the long game.',
+    id: 'grants-sponsorship-support',
+    title: 'Grants & Sponsorship Support',
+    cadence: 'Custom scope — let’s talk',
+    body: 'Hands-on support identifying, pursuing, and winning the grants and sponsorships that fund your mission — from prospect research to a proposal that actually gets read.',
+    bestFor: 'Best for organizations ready to diversify their funding.',
   },
   {
-    id: 'event-design',
-    title: 'Event Design & Facilitation',
-    price: '$2,000–$6,000+',
-    cadence: 'project-based · plus costs',
-    body: 'We design and run the kind of gathering people actually remember.',
-    bestFor: 'Best for a launch, milestone, or flagship gathering.',
+    id: 'erg-workshop-facilitation',
+    title: 'ERG & Workshop Facilitation',
+    cadence: 'Custom scope — let’s talk',
+    body: 'Facilitation for employee resource groups, leadership retreats, and internal workshops — built to create real connection, not another meeting nobody asked for.',
+    bestFor: 'Best for organizations investing in their people.',
   },
   {
-    id: 'speaking',
-    title: 'Speaking',
-    price: '$500–$2,500',
-    cadence: 'community/nonprofit to corporate',
-    body: 'Practical, story-driven talks on community, partnership, and relationship-centered leadership.',
-    bestFor: 'Best for conferences, retreats, and team offsites.',
+    id: 'leadership-coaching',
+    title: 'Leadership Coaching',
+    cadence: 'Custom scope — let’s talk',
+    body: 'One-on-one coaching for leaders navigating growth, culture, and the relationships that make or break an organization’s health.',
+    bestFor: 'Best for leaders who want a thinking partner, not a lecture.',
+  },
+  {
+    id: 'fractional-operational-exec',
+    title: 'Fractional Operational Exec Services',
+    cadence: 'Custom scope — let’s talk',
+    body: 'Embedded, senior-level operational leadership — without the cost of a full-time hire — for organizations that need someone steering day-to-day execution.',
+    bestFor: 'Best for organizations that have outgrown DIY, but aren’t ready for full-time.',
   },
 ];
 
@@ -153,7 +156,7 @@ export const PERSONAS = [
 export const CONTACT_FAQS = [
   {
     q: 'What does an engagement actually look like?',
-    a: "Most partnerships start with a free 20–30 minute conversation. From there, it's either a focused Community Audit & Roadmap or an ongoing Community Strategy Partnership — whichever fits.",
+    a: "Most partnerships start with a free 20–30 minute conversation. From there, we'll scope the engagement that fits — project-based, retainer, or fractional — whichever makes sense for where you are.",
   },
   {
     q: 'Do you travel for speaking or work outside Cincinnati?',
