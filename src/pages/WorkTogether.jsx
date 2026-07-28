@@ -58,10 +58,7 @@ export default function WorkTogether() {
             <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 57.5, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.1 }}>
               Let&rsquo;s build something real, <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>together.</span>
             </h1>
-            <p style={{ fontSize: 20, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 560, margin: '22px 0 10px' }}>
-              Girlhood Collective is a boutique advisory specializing in organizational and community health — helping small businesses, health professionals, and mission-driven organizations build stronger leadership, healthier teams, and lasting community, with the same hospitality and intentionality it takes to host a great gathering.
-            </p>
-            <p style={{ fontSize: 17.5, fontWeight: 400, color: 'var(--gc-ink)', marginTop: 18, marginBottom: 28 }}>
+            <p style={{ fontSize: 17.5, fontWeight: 400, color: 'var(--gc-ink)', marginTop: 22, marginBottom: 28 }}>
               Every partnership starts the same way — a conversation, not a pitch.
             </p>
             <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
