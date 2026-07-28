@@ -191,10 +191,7 @@ export default function Home() {
           />
           <div>
             <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Meet the founder</div>
-            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 10 }}>Hi, I&rsquo;m Brittany.</h2>
-            <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, marginBottom: 16 }}>
-              I started Girlhood Collective because I believe belonging takes practice, not luck — and I get to do the work of building it, one relationship at a time.
-            </p>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 18 }}>Hi, I&rsquo;m Brittany.</h2>
             <Link className="navlink navlink--onwhite" to="/about" style={{ color: 'var(--gc-emerald)' }}>
               Read my story →
             </Link>

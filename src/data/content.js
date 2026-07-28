@@ -116,9 +116,8 @@ export const CORNERSTONE_ARTICLES = [
 ];
 
 export const TRUST_STATS = [
-  { value: '5', label: 'Sponsors & collaborators' },
-  { value: '100+', label: 'Village subscribers' },
-  { value: '65K+', label: 'Organic Instagram impressions' },
+  { value: '15', label: 'Sponsors & collaborators' },
+  { value: '1,000+', label: 'Followers' },
 ];
 
 export const PERSONAS = [
