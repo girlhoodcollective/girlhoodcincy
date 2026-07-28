@@ -114,19 +114,19 @@ export default function Home() {
 
       {/* UPCOMING EVENT TEASER */}
       {UPCOMING_EVENTS.length > 0 && (
-        <div style={{ background: 'var(--gc-section)', borderTop: '1px solid var(--gc-border)', borderBottom: '1px solid var(--gc-border)', padding: '14px 44px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: '6px 12px', maxWidth: 900, margin: '0 auto', fontSize: 15 }}>
-            <span style={{ font: '700 11px var(--font-sans)', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>Upcoming</span>
+        <div style={{ background: 'var(--gc-section)', borderTop: '1px solid var(--gc-border)', borderBottom: '1px solid var(--gc-border)', padding: '18px 44px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: '8px 14px', maxWidth: 900, margin: '0 auto', fontSize: 16.5 }}>
+            <span style={{ font: '700 12px var(--font-sans)', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>Upcoming</span>
             {UPCOMING_EVENTS.map((e, i) => (
-              <span key={e.id} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+              <span key={e.id} style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
                 <Link to="/events" style={{ textDecoration: 'none', color: 'var(--gc-slate)' }}>
                   <strong style={{ fontWeight: 700 }}>{e.title}</strong>
-                  <span style={{ fontWeight: 300, color: 'var(--gc-ink-muted)' }}> — {e.mon} {e.day} · {e.where}</span>
+                  <span style={{ fontWeight: 400, color: 'var(--gc-ink-muted)' }}> — {e.mon} {e.day} · {e.where}</span>
                 </Link>
                 {i < UPCOMING_EVENTS.length - 1 && <span style={{ color: 'var(--gc-border)' }}>|</span>}
               </span>
             ))}
-            <Link className="navlink navlink--onwhite" to="/events" style={{ color: 'var(--gc-emerald)', fontSize: 13, fontWeight: 600 }}>
+            <Link className="navlink navlink--onwhite" to="/events" style={{ color: 'var(--gc-peony)', fontSize: 14, fontWeight: 700 }}>
               View Upcoming Events →
             </Link>
           </div>
