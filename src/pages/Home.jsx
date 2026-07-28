@@ -114,38 +114,19 @@ export default function Home() {
 
       {/* UPCOMING EVENT TEASER */}
       {UPCOMING_EVENTS.length > 0 && (
-        <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
-          <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10, textAlign: 'center' }}>Girlhood Cincy Monthly Experiences</div>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 24, textAlign: 'center' }}>Gather beautifully.</h2>
-          <div style={{ maxWidth: 400, margin: '0 auto 24px' }}>
-            <img
-              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Helping_Hands.png?v=1784921222&width=440"
-              alt="Helping Hands parent-child volunteer experience flyer"
-              loading="lazy"
-              style={{ width: '100%', height: 180, objectFit: 'contain', background: '#fff', borderRadius: 8, display: 'block' }}
-            />
-          </div>
-          <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, maxWidth: 760, margin: '0 auto' }}>
-            {UPCOMING_EVENTS.map((e) => (
-              <Link
-                key={e.id}
-                className="hover-shadow"
-                to="/events"
-                style={{ textDecoration: 'none', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 6, padding: '18px 20px', display: 'flex', gap: 16, alignItems: 'center' }}
-              >
-                <div style={{ textAlign: 'center', flexShrink: 0 }}>
-                  <div style={{ font: '600 11px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>{e.mon}</div>
-                  <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 37.5, color: 'var(--gc-slate)', lineHeight: 1 }}>{e.day}</div>
-                </div>
-                <div>
-                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: 21, fontWeight: 700, color: 'var(--gc-slate)' }}>{e.title}</div>
-                  <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', marginTop: 2 }}>{e.where}</p>
-                </div>
-              </Link>
+        <div style={{ background: 'var(--gc-section)', borderTop: '1px solid var(--gc-border)', borderBottom: '1px solid var(--gc-border)', padding: '14px 44px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: '6px 12px', maxWidth: 900, margin: '0 auto', fontSize: 15 }}>
+            <span style={{ font: '700 11px var(--font-sans)', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>Upcoming</span>
+            {UPCOMING_EVENTS.map((e, i) => (
+              <span key={e.id} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                <Link to="/events" style={{ textDecoration: 'none', color: 'var(--gc-slate)' }}>
+                  <strong style={{ fontWeight: 700 }}>{e.title}</strong>
+                  <span style={{ fontWeight: 300, color: 'var(--gc-ink-muted)' }}> — {e.mon} {e.day} · {e.where}</span>
+                </Link>
+                {i < UPCOMING_EVENTS.length - 1 && <span style={{ color: 'var(--gc-border)' }}>|</span>}
+              </span>
             ))}
-          </div>
-          <div style={{ textAlign: 'center', marginTop: 22 }}>
-            <Link className="navlink navlink--onwhite" to="/events" style={{ color: 'var(--gc-emerald)' }}>
+            <Link className="navlink navlink--onwhite" to="/events" style={{ color: 'var(--gc-emerald)', fontSize: 13, fontWeight: 600 }}>
               View Upcoming Events →
             </Link>
           </div>
