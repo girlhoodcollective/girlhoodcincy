@@ -159,13 +159,25 @@ export default function Home() {
       )}
 
       {/* INTRO */}
-      <div style={{ background: '#fff', padding: '48px 44px', textAlign: 'center' }}>
-        <p style={{ fontSize: 19.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, maxWidth: 720, margin: '0 auto 20px' }}>
+      <div style={{ background: '#fff', padding: '56px 44px', textAlign: 'center' }}>
+        <p style={{ fontFamily: 'var(--font-serif)', fontSize: 27, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.5, maxWidth: 700, margin: '0 auto' }}>
           Fractional support when you need a hand, not a full-time hire. A fresh set of eyes when you need to build genuine internal culture or community presence.
         </p>
-        <p style={{ fontSize: 19.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, maxWidth: 720, margin: '0 auto' }}>
+        <div style={{ width: 54, height: 3, background: 'var(--gc-emerald)', borderRadius: 2, margin: '32px auto' }} />
+        <p style={{ fontFamily: 'var(--font-serif)', fontSize: 27, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.5, maxWidth: 700, margin: '0 auto' }}>
           Events designed to encourage and empower. Programs and resources built to move you forward.
         </p>
+      </div>
+
+      {/* EXPLAINER VIDEO */}
+      <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
+        <div style={{ maxWidth: 760, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: 26 }}>
+            <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>See it in action</div>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)' }}>What we do, in two minutes.</h2>
+          </div>
+          <YouTubeEmbed videoId="RutKIsejsmo" title="Girlhood Collective — what we do" />
+        </div>
       </div>
 
       {/* MEET THE FOUNDER */}
@@ -175,7 +187,7 @@ export default function Home() {
             src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/j8a2636.jpg?v=1785100844&width=440"
             alt="Brittany Gruber, founder of Girlhood Collective"
             loading="lazy"
-            style={{ width: '100%', height: 260, objectFit: 'cover', borderRadius: 8, display: 'block' }}
+            style={{ width: '100%', height: 260, objectFit: 'cover', objectPosition: 'center top', borderRadius: 8, display: 'block' }}
           />
           <div>
             <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>Meet the founder</div>
@@ -217,17 +229,6 @@ export default function Home() {
               <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{p.body}</p>
             </Link>
           ))}
-        </div>
-      </div>
-
-      {/* EXPLAINER VIDEO */}
-      <div style={{ background: 'var(--gc-section)', padding: '54px 44px' }}>
-        <div style={{ maxWidth: 760, margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: 26 }}>
-            <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>See it in action</div>
-            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)' }}>What we do, in two minutes.</h2>
-          </div>
-          <YouTubeEmbed videoId="RutKIsejsmo" title="Girlhood Collective — what we do" />
         </div>
       </div>
 
