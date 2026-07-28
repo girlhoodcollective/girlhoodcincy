@@ -103,8 +103,8 @@ export default function Home() {
           </div>
           <div style={{ width: '100%', height: 340, overflow: 'hidden', borderRadius: 12, background: 'var(--gc-navy)' }}>
             <img
-              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-studio-art-2.jpg?v=1774548572&width=560"
-              alt="Girls working on a project at a Girlhood Collective workshop"
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_4415_1d38b43f-96e0-47ca-96f8-4e8db80ef328.jpg?v=1784581862&width=560"
+              alt="Girlhood Collective community"
               loading="lazy"
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
             />
@@ -161,10 +161,10 @@ export default function Home() {
       {/* INTRO */}
       <div style={{ background: '#fff', padding: '48px 44px', textAlign: 'center' }}>
         <p style={{ fontSize: 19.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, maxWidth: 720, margin: '0 auto 20px' }}>
-          Fractional support when you need support, but not a full-time hire. A fresh take when you don&rsquo;t have the time or space to build culture and community.
+          Fractional support when you need a hand, not a full-time hire. A fresh set of eyes when you need to build genuine internal culture or community presence.
         </p>
         <p style={{ fontSize: 19.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, maxWidth: 720, margin: '0 auto' }}>
-          Events based on building a performance-free, authentic community. Programs and resources designed to move you forward.
+          Events designed to encourage and empower. Programs and resources built to move you forward.
         </p>
       </div>
 
@@ -172,8 +172,8 @@ export default function Home() {
       <div style={{ background: '#fff', padding: '0 44px 52px' }}>
         <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: 36, maxWidth: 860, margin: '0 auto', alignItems: 'center' }}>
           <img
-            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/founder-in-studio.jpg?v=1783123475&width=440"
-            alt="Brittany Gruber, founder of Girlhood Collective, in her studio"
+            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/j8a2636.jpg?v=1785100844&width=440"
+            alt="Brittany Gruber, founder of Girlhood Collective"
             loading="lazy"
             style={{ width: '100%', height: 260, objectFit: 'cover', borderRadius: 8, display: 'block' }}
           />
