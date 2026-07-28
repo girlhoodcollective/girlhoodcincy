@@ -160,8 +160,11 @@ export default function Home() {
 
       {/* INTRO */}
       <div style={{ background: '#fff', padding: '48px 44px', textAlign: 'center' }}>
+        <p style={{ fontSize: 19.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, maxWidth: 720, margin: '0 auto 20px' }}>
+          Fractional support when you need support, but not a full-time hire. A fresh take when you don&rsquo;t have the time or space to build culture and community.
+        </p>
         <p style={{ fontSize: 19.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.9, maxWidth: 720, margin: '0 auto' }}>
-          Real community isn&rsquo;t an accident. It takes practice — the same way any skill does. Girlhood Collective works with small businesses, health professionals, mission-driven organizations, and community members across Cincinnati to build the kind of belonging people actually stay for.
+          Events based on building a performance-free, authentic community. Programs and resources designed to move you forward.
         </p>
       </div>
 
