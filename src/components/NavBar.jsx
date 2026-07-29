@@ -95,7 +95,7 @@ export default function NavBar({ variant = 'white', active, label }) {
             Collective
           </span>
         </Link>
-        <div className="nav-links-desktop" style={{ display: 'flex', gap: 14, alignItems: 'center' }}>
+        <div className="nav-links-desktop" style={{ display: 'flex', gap: 34, alignItems: 'center' }}>
           {links.map((l) => (
             <Link
               key={l.label}

@@ -12,6 +12,31 @@ const PERSONA_HREF = (id) => (id === 'community-member' ? '/village' : '/work-to
 
 const UPCOMING_EVENTS = getUpcomingPublishedEvents(2);
 
+// Hand-drawn-style accent marks — used sparingly to add personality with the brand's pink.
+function Circled({ children }) {
+  return (
+    <span style={{ position: 'relative', display: 'inline-block', padding: '0 8px' }}>
+      <svg
+        viewBox="0 0 200 70"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        style={{ position: 'absolute', top: '-22%', left: '-6%', width: '112%', height: '150%', zIndex: 0, pointerEvents: 'none' }}
+      >
+        <ellipse cx="100" cy="35" rx="97" ry="32" fill="none" stroke="var(--gc-peony)" strokeWidth="5" vectorEffect="non-scaling-stroke" />
+      </svg>
+      <span style={{ position: 'relative', zIndex: 1 }}>{children}</span>
+    </span>
+  );
+}
+
+function Underlined({ children }) {
+  return (
+    <span style={{ textDecoration: 'underline', textDecorationColor: 'var(--gc-peony)', textDecorationThickness: 3, textUnderlineOffset: 5 }}>
+      {children}
+    </span>
+  );
+}
+
 export default function Home() {
   useSEO({
     title: 'Girlhood Collective | Boutique Advisory for Organizational & Community Health',
@@ -84,13 +109,10 @@ export default function Home() {
               Cincinnati · EST 2025
             </div>
             <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 46, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.12 }}>
-              It takes a village. <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>Let&rsquo;s build yours.</span>
+              It takes a <Circled>village</Circled>. <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>Let&rsquo;s build yours.</span>
             </h1>
-            <p style={{ fontSize: 18, fontWeight: 500, color: 'var(--gc-ink-muted)', lineHeight: 1.6, maxWidth: 500, margin: '16px 0 6px' }}>
-              Engagement & Operations Support for Entrepreneurs and Institutions
-            </p>
-            <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.6, maxWidth: 500, margin: '10px 0 26px' }}>
-              Events, Resources, and Community for All.
+            <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.75, maxWidth: 500, margin: '16px 0 26px' }}>
+              We build communities people strive to belong to, while helping the organizations, schools, and brands who partner with us turn that belonging into engagement, loyalty, and <Underlined>measurable impact</Underlined>.
             </p>
             <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
               <Link className="btn" to="/events" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>
@@ -136,11 +158,11 @@ export default function Home() {
       {/* INTRO */}
       <div style={{ background: '#fff', padding: '56px 44px', textAlign: 'center' }}>
         <p style={{ fontFamily: 'var(--font-serif)', fontSize: 27, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.5, maxWidth: 700, margin: '0 auto' }}>
-          Fractional support when you need a hand, not a full-time hire. A fresh set of eyes when you need to build genuine internal culture or community presence.
+          Fractional support when you need a <Circled>hand</Circled>, not a full-time hire. A fresh set of eyes when you need to build genuine internal culture or community presence.
         </p>
         <div style={{ width: 54, height: 3, background: 'var(--gc-emerald)', borderRadius: 2, margin: '32px auto' }} />
         <p style={{ fontFamily: 'var(--font-serif)', fontSize: 27, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.5, maxWidth: 700, margin: '0 auto' }}>
-          Events designed to encourage and empower. Programs and resources built to move you forward.
+          Events designed to <Underlined>encourage and empower</Underlined>. Programs and resources built to move you forward.
         </p>
       </div>
 
