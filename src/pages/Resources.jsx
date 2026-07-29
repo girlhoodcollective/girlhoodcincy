@@ -32,21 +32,21 @@ export default function Resources() {
 
   return (
     <div className="page-shell">
-      <Link
-        to="/village#archive"
-        style={{
-          display: 'block',
-          textDecoration: 'none',
-          background: 'linear-gradient(90deg, var(--gc-navy) 0%, var(--gc-emerald) 25%, var(--gc-emerald-soft) 50%, #6F96CF 75%, var(--gc-peony) 100%)',
-          padding: '13px 44px',
-          textAlign: 'center',
-        }}
-      >
-        <span style={{ font: '700 13.5px var(--font-sans)', letterSpacing: '.06em', color: '#fff', textShadow: '0 1px 3px rgba(0,0,0,.3)' }}>
-          Catch up on The Village — read the full newsletter archive →
-        </span>
-      </Link>
       <NavBar variant="white" active="Resources" />
+
+      <Link to="/village#archive" style={{ display: 'block', textDecoration: 'none' }}>
+        <div style={{ background: 'var(--gc-navy)', padding: '13px 44px', textAlign: 'center' }}>
+          <span style={{ font: '700 13.5px var(--font-sans)', letterSpacing: '.06em', color: '#fff' }}>
+            Catch up on The Village — read the full newsletter archive →
+          </span>
+        </div>
+        <div style={{ display: 'flex', height: 5 }}>
+          <div style={{ flex: 1, background: 'var(--gc-emerald)' }} />
+          <div style={{ flex: 1, background: 'var(--gc-emerald-soft)' }} />
+          <div style={{ flex: 1, background: '#6F96CF' }} />
+          <div style={{ flex: 1, background: 'var(--gc-peony)' }} />
+        </div>
+      </Link>
 
       <div style={{ background: 'var(--gc-cream)', padding: '60px 44px 52px', textAlign: 'center' }}>
         <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Resources</div>
