@@ -1,4 +1,4 @@
-import { useId, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
@@ -11,78 +11,6 @@ import { PERSONAS, TRUST_STATS } from '../data/content.js';
 const PERSONA_HREF = (id) => (id === 'community-member' ? '/village' : '/work-together');
 
 const UPCOMING_EVENTS = getUpcomingPublishedEvents(2);
-
-// Hand-drawn, marker-script-style accent marks — used sparingly to add personality
-// with the brand's pink. A wobbly path run through an SVG turbulence/displacement
-// filter gives it a sketchy, imperfect texture instead of a clean geometric line.
-function Circled({ children }) {
-  const uid = useId().replace(/[^a-zA-Z0-9]/g, '');
-  return (
-    <span style={{ position: 'relative', display: 'inline-block', padding: '2px 10px' }}>
-      <svg
-        viewBox="0 0 200 80"
-        preserveAspectRatio="none"
-        aria-hidden="true"
-        style={{ position: 'absolute', top: '-30%', left: '-7%', width: '114%', height: '160%', zIndex: 0, pointerEvents: 'none', overflow: 'visible' }}
-      >
-        <defs>
-          <filter id={`rough-c-${uid}`}>
-            <feTurbulence type="fractalNoise" baseFrequency="0.045 0.14" numOctaves="2" seed="4" result="noise" />
-            <feDisplacementMap in="SourceGraphic" in2="noise" scale="7" xChannelSelector="R" yChannelSelector="G" />
-          </filter>
-        </defs>
-        <path
-          d="M 24,42 C 19,16 62,4 102,5 C 152,6 187,17 189,41 C 191,61 146,75 99,74 C 51,73 16,63 21,44 C 22,40 20,44 24,42"
-          fill="none"
-          stroke="var(--gc-peony)"
-          strokeWidth="6"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          vectorEffect="non-scaling-stroke"
-          filter={`url(#rough-c-${uid})`}
-        />
-      </svg>
-      <span style={{ position: 'relative', zIndex: 1 }}>{children}</span>
-    </span>
-  );
-}
-
-function Underlined({ children }) {
-  const uid = useId().replace(/[^a-zA-Z0-9]/g, '');
-  return (
-    <span style={{ position: 'relative', display: 'inline-block' }}>
-      {children}
-      <svg
-        viewBox="0 0 200 20"
-        preserveAspectRatio="none"
-        aria-hidden="true"
-        style={{ position: 'absolute', left: '-2%', bottom: -7, width: '104%', height: 16, pointerEvents: 'none', overflow: 'visible' }}
-      >
-        <defs>
-          <linearGradient id={`fade-${uid}`} x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0%" stopColor="var(--gc-peony)" stopOpacity="0" />
-            <stop offset="14%" stopColor="var(--gc-peony)" stopOpacity="1" />
-            <stop offset="86%" stopColor="var(--gc-peony)" stopOpacity="1" />
-            <stop offset="100%" stopColor="var(--gc-peony)" stopOpacity="0" />
-          </linearGradient>
-          <filter id={`rough-u-${uid}`}>
-            <feTurbulence type="fractalNoise" baseFrequency="0.05 0.35" numOctaves="2" seed="7" result="noise" />
-            <feDisplacementMap in="SourceGraphic" in2="noise" scale="4.5" xChannelSelector="R" yChannelSelector="G" />
-          </filter>
-        </defs>
-        <path
-          d="M4,10 C40,6 70,13 100,9 C130,5 160,12 196,8"
-          fill="none"
-          stroke={`url(#fade-${uid})`}
-          strokeWidth="4.5"
-          strokeLinecap="round"
-          vectorEffect="non-scaling-stroke"
-          filter={`url(#rough-u-${uid})`}
-        />
-      </svg>
-    </span>
-  );
-}
 
 export default function Home() {
   useSEO({
@@ -156,10 +84,10 @@ export default function Home() {
               Cincinnati · EST 2025
             </div>
             <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 46, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.12 }}>
-              It takes a <Circled>village</Circled>. <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>Let&rsquo;s build yours.</span>
+              It takes a village. <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>Let&rsquo;s build yours.</span>
             </h1>
             <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.75, maxWidth: 500, margin: '16px 0 26px' }}>
-              We build communities people strive to belong to, while helping the organizations, schools, and brands who partner with us turn that belonging into engagement, loyalty, and <Underlined>measurable impact</Underlined>.
+              We build communities people strive to belong to, while helping the organizations, schools, and brands who partner with us turn that belonging into engagement, loyalty, and measurable impact.
             </p>
             <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
               <Link className="btn" to="/events" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>
@@ -205,11 +133,11 @@ export default function Home() {
       {/* INTRO */}
       <div style={{ background: '#fff', padding: '56px 44px', textAlign: 'center' }}>
         <p style={{ fontFamily: 'var(--font-serif)', fontSize: 27, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.5, maxWidth: 700, margin: '0 auto' }}>
-          Fractional support when you need a <Circled>hand</Circled>, not a full-time hire. A fresh set of eyes when you need to build genuine internal culture or community presence.
+          Fractional support when you need a hand, not a full-time hire. A fresh set of eyes when you need to build genuine internal culture or community presence.
         </p>
         <div style={{ width: 54, height: 3, background: 'var(--gc-emerald)', borderRadius: 2, margin: '32px auto' }} />
         <p style={{ fontFamily: 'var(--font-serif)', fontSize: 27, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.5, maxWidth: 700, margin: '0 auto' }}>
-          Events designed to <Underlined>encourage and empower</Underlined>. Programs and resources built to move you forward.
+          Events designed to encourage and empower. Programs and resources built to move you forward.
         </p>
       </div>
 
