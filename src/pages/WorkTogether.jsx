@@ -58,8 +58,8 @@ export default function WorkTogether() {
             <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 57.5, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.1 }}>
               Let&rsquo;s build something real, <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>together.</span>
             </h1>
-            <p style={{ fontSize: 17.5, fontWeight: 400, color: 'var(--gc-ink)', marginTop: 22, marginBottom: 28 }}>
-              Every partnership starts the same way — a conversation, not a pitch.
+            <p style={{ fontSize: 17.5, fontWeight: 400, color: 'var(--gc-ink)', lineHeight: 1.7, marginTop: 22, marginBottom: 28 }}>
+              In the last 30 days, Girlhood Collective content reached over 7,000 unique accounts at a 5.4% engagement rate — nearly double the industry average for lifestyle brands. Our email list opens at 57%, almost 3x the industry standard. Numbers like that don&rsquo;t happen by accident. They happen because we build community people actually want to be part of — and that&rsquo;s exactly what your partnership buys into.
             </p>
             <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
               <Link className="btn" to="/contact" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '16px 30px' }}>
