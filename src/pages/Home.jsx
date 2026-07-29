@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useId, useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
@@ -12,17 +12,35 @@ const PERSONA_HREF = (id) => (id === 'community-member' ? '/village' : '/work-to
 
 const UPCOMING_EVENTS = getUpcomingPublishedEvents(2);
 
-// Hand-drawn-style accent marks — used sparingly to add personality with the brand's pink.
+// Hand-drawn, marker-script-style accent marks — used sparingly to add personality
+// with the brand's pink. A wobbly path run through an SVG turbulence/displacement
+// filter gives it a sketchy, imperfect texture instead of a clean geometric line.
 function Circled({ children }) {
+  const uid = useId().replace(/[^a-zA-Z0-9]/g, '');
   return (
-    <span style={{ position: 'relative', display: 'inline-block', padding: '0 8px' }}>
+    <span style={{ position: 'relative', display: 'inline-block', padding: '2px 10px' }}>
       <svg
-        viewBox="0 0 200 70"
+        viewBox="0 0 200 80"
         preserveAspectRatio="none"
         aria-hidden="true"
-        style={{ position: 'absolute', top: '-22%', left: '-6%', width: '112%', height: '150%', zIndex: 0, pointerEvents: 'none' }}
+        style={{ position: 'absolute', top: '-30%', left: '-7%', width: '114%', height: '160%', zIndex: 0, pointerEvents: 'none', overflow: 'visible' }}
       >
-        <ellipse cx="100" cy="35" rx="97" ry="32" fill="none" stroke="var(--gc-peony)" strokeWidth="5" vectorEffect="non-scaling-stroke" />
+        <defs>
+          <filter id={`rough-c-${uid}`}>
+            <feTurbulence type="fractalNoise" baseFrequency="0.045 0.14" numOctaves="2" seed="4" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="7" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+        </defs>
+        <path
+          d="M 24,42 C 19,16 62,4 102,5 C 152,6 187,17 189,41 C 191,61 146,75 99,74 C 51,73 16,63 21,44 C 22,40 20,44 24,42"
+          fill="none"
+          stroke="var(--gc-peony)"
+          strokeWidth="6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          vectorEffect="non-scaling-stroke"
+          filter={`url(#rough-c-${uid})`}
+        />
       </svg>
       <span style={{ position: 'relative', zIndex: 1 }}>{children}</span>
     </span>
@@ -30,9 +48,38 @@ function Circled({ children }) {
 }
 
 function Underlined({ children }) {
+  const uid = useId().replace(/[^a-zA-Z0-9]/g, '');
   return (
-    <span style={{ textDecoration: 'underline', textDecorationColor: 'var(--gc-peony)', textDecorationThickness: 3, textUnderlineOffset: 5 }}>
+    <span style={{ position: 'relative', display: 'inline-block' }}>
       {children}
+      <svg
+        viewBox="0 0 200 20"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        style={{ position: 'absolute', left: '-2%', bottom: -7, width: '104%', height: 16, pointerEvents: 'none', overflow: 'visible' }}
+      >
+        <defs>
+          <linearGradient id={`fade-${uid}`} x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stopColor="var(--gc-peony)" stopOpacity="0" />
+            <stop offset="14%" stopColor="var(--gc-peony)" stopOpacity="1" />
+            <stop offset="86%" stopColor="var(--gc-peony)" stopOpacity="1" />
+            <stop offset="100%" stopColor="var(--gc-peony)" stopOpacity="0" />
+          </linearGradient>
+          <filter id={`rough-u-${uid}`}>
+            <feTurbulence type="fractalNoise" baseFrequency="0.05 0.35" numOctaves="2" seed="7" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="4.5" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+        </defs>
+        <path
+          d="M4,10 C40,6 70,13 100,9 C130,5 160,12 196,8"
+          fill="none"
+          stroke={`url(#fade-${uid})`}
+          strokeWidth="4.5"
+          strokeLinecap="round"
+          vectorEffect="non-scaling-stroke"
+          filter={`url(#rough-u-${uid})`}
+        />
+      </svg>
     </span>
   );
 }
