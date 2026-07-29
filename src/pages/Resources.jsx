@@ -32,6 +32,20 @@ export default function Resources() {
 
   return (
     <div className="page-shell">
+      <Link
+        to="/village#archive"
+        style={{
+          display: 'block',
+          textDecoration: 'none',
+          background: 'linear-gradient(90deg, var(--gc-navy) 0%, var(--gc-emerald) 25%, var(--gc-emerald-soft) 50%, #6F96CF 75%, var(--gc-peony) 100%)',
+          padding: '13px 44px',
+          textAlign: 'center',
+        }}
+      >
+        <span style={{ font: '700 13.5px var(--font-sans)', letterSpacing: '.06em', color: '#fff', textShadow: '0 1px 3px rgba(0,0,0,.3)' }}>
+          Catch up on The Village — read the full newsletter archive →
+        </span>
+      </Link>
       <NavBar variant="white" active="Resources" />
 
       <div style={{ background: 'var(--gc-cream)', padding: '60px 44px 52px', textAlign: 'center' }}>

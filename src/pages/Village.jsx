@@ -103,7 +103,7 @@ export default function Village() {
       </div>
 
       {/* ARCHIVE */}
-      <div style={{ background: 'var(--gc-section)', padding: '56px 44px 64px' }}>
+      <div id="archive" style={{ background: 'var(--gc-section)', padding: '56px 44px 64px', scrollMarginTop: 80 }}>
         <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>The archive</div>
         <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Past issues</h2>
         <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 520, marginBottom: 26 }}>
