@@ -8,7 +8,9 @@ const LINKS = [
   { label: 'Subscribe', href: '/village' },
 ];
 
-export default function NavBar({ variant = 'white', active, label }) {
+const DEFAULT_CTA = { label: 'Join The Village', href: '/village' };
+
+export default function NavBar({ variant = 'white', active, label, cta = DEFAULT_CTA }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -104,8 +106,8 @@ export default function NavBar({ variant = 'white', active, label }) {
               {l.label}
             </Link>
           ))}
-          <Link to="/contact" className="btn" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '11px 20px', whiteSpace: 'nowrap' }}>
-            Request a 20-Minute Fit Call
+          <Link to={cta.href} className="btn" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '11px 20px', whiteSpace: 'nowrap' }}>
+            {cta.label}
           </Link>
         </div>
         <button
@@ -133,12 +135,12 @@ export default function NavBar({ variant = 'white', active, label }) {
           </Link>
         ))}
         <Link
-          to="/contact"
+          to={cta.href}
           className="btn"
           style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '11px 20px', textAlign: 'center', marginTop: 8 }}
           onClick={() => setMenuOpen(false)}
         >
-          Request a 20-Minute Fit Call
+          {cta.label}
         </Link>
       </div>
     </>

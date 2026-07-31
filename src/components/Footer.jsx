@@ -7,7 +7,6 @@ const EXPLORE_LINKS = [
   { label: 'Events', href: '/events' },
   { label: 'Resources', href: '/resources' },
   { label: 'Subscribe', href: '/village' },
-  { label: 'Contact', href: '/contact' },
 ];
 
 const SOCIAL_LINKS = [

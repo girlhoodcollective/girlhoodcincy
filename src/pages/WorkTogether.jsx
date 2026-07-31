@@ -45,7 +45,7 @@ export default function WorkTogether() {
 
   return (
     <div className="page-shell">
-      <NavBar variant="white" active="Work Together" />
+      <NavBar variant="white" cta={{ label: 'Request a 20-Minute Fit Call', href: '/contact' }} />
 
       <div style={{ background: 'var(--gc-cream)', padding: '64px 44px 58px', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: -90, right: -70, width: 340, height: 340, borderRadius: '50%', background: 'radial-gradient(circle, rgba(64,130,109,.14), transparent 70%)' }} />
