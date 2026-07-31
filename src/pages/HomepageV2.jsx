@@ -223,7 +223,7 @@ export default function HomepageV2() {
             </div>
             <div style={{ background: 'var(--gc-section)', borderRadius: 6, padding: '16px 18px' }}>
               <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)' }}>
-                Community is more than events or follower counts. It&rsquo;s creating environments where people feel seen and connected, so reputation and partnerships grow stronger.
+                Community is more than events or follower counts. It&rsquo;s the discipline behind stronger workforce retention, a deeper community footprint, and strategic partner initiatives that actually get executed.
               </div>
             </div>
           </div>
