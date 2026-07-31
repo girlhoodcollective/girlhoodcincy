@@ -120,47 +120,31 @@ export default function HomepageV2() {
       </div>
 
       {/* HERO */}
-      <div id="top" className="hv2-section-pad" style={{ padding: '64px 48px 48px', textAlign: 'center', background: '#fff', position: 'relative', overflow: 'hidden' }}>
+      <div id="top" className="hv2-section-pad" style={{ padding: '64px 48px 48px', textAlign: 'center', background: '#fff' }}>
         <div
-          aria-hidden="true"
+          className="hv2-hero-title"
           style={{
-            position: 'absolute',
-            top: -120,
-            left: -100,
-            width: 360,
-            height: 360,
-            borderRadius: '50%',
-            background: `radial-gradient(circle, ${SAGE}33, transparent 70%)`,
-            pointerEvents: 'none',
-            zIndex: 0,
+            fontFamily: 'var(--font-serif)',
+            fontWeight: 400,
+            fontSize: 'clamp(26px,3.4vw,40px)',
+            color: 'var(--gc-navy)',
+            maxWidth: 860,
+            margin: '0 auto',
+            lineHeight: 1.22,
           }}
-        />
-        <div style={{ position: 'relative', zIndex: 1 }}>
-          <div
-            className="hv2-hero-title"
-            style={{
-              fontFamily: 'var(--font-serif)',
-              fontWeight: 400,
-              fontSize: 'clamp(26px,3.4vw,40px)',
-              color: 'var(--gc-navy)',
-              maxWidth: 860,
-              margin: '0 auto',
-              lineHeight: 1.22,
-            }}
-          >
-            Helping build communities people can&rsquo;t wait to be a part of.
-          </div>
-          <div style={{ ...TYPE.body, color: 'var(--gc-ink-muted)', maxWidth: 680, margin: '20px auto 0' }}>
-            Programs and events that create measurable impact. Bridging corporate culture, non-profit impact, and community engagement across Greater Cincinnati.
-          </div>
-          <div className="hv2-hero-cta" style={{ marginTop: 28, display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="#contact" className="hv2-pill-cta">
-              Ready to get to work? Let&rsquo;s chat.
-            </a>
-            <a href="#services" className="hv2-pill-outline">
-              Explore Our Services
-            </a>
-          </div>
+        >
+          Helping build communities people can&rsquo;t wait to be a part of.
+        </div>
+        <div style={{ ...TYPE.body, color: 'var(--gc-ink-muted)', maxWidth: 680, margin: '20px auto 0' }}>
+          Programs and events that create measurable impact. Bridging corporate culture, non-profit impact, and community engagement across Greater Cincinnati.
+        </div>
+        <div className="hv2-hero-cta" style={{ marginTop: 28, display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <a href="#contact" className="hv2-pill-cta">
+            Ready to get to work? Let&rsquo;s chat.
+          </a>
+          <a href="#services" className="hv2-pill-outline">
+            Explore Our Services
+          </a>
         </div>
       </div>
 

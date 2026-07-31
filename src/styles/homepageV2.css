@@ -230,7 +230,10 @@
     gap: 36px !important;
   }
   .hv2-sticky-img {
-    position: static !important;
+    /* relative (not static) so the decorative block absolutely positioned
+       inside it still anchors here instead of the viewport's initial
+       containing block once sticky positioning is turned off. */
+    position: relative !important;
     top: auto !important;
   }
   .hv2-stats-row {
