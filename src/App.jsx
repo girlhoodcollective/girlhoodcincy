@@ -6,7 +6,6 @@ import HomepageV2 from './pages/HomepageV2.jsx';
 import About from './pages/About.jsx';
 import Events from './pages/Events.jsx';
 import Village from './pages/Village.jsx';
-import WorkTogether from './pages/WorkTogether.jsx';
 import Resources from './pages/Resources.jsx';
 import Contact from './pages/Contact.jsx';
 import ConsultationIntake from './pages/ConsultationIntake.jsx';
@@ -25,7 +24,6 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
         <Route path="/village" element={<Village />} />
-        <Route path="/work-together" element={<WorkTogether />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/consultation-intake" element={<ConsultationIntake />} />
