@@ -227,6 +227,13 @@ export default function HomepageV2() {
         </div>
       </div>
 
+      {/* EXPLAINER VIDEO — paired with the About section above */}
+      <div className="hv2-section-pad" style={{ padding: '0 48px 48px', background: '#fff' }}>
+        <div style={{ maxWidth: 420, margin: '0 auto', borderRadius: 6, overflow: 'hidden' }}>
+          <YouTubeEmbed videoId="RutKIsejsmo" title="Girlhood Collective — what we do" />
+        </div>
+      </div>
+
       {/* CLIENTS COME TO US WHEN */}
       <div className="hv2-section-pad" style={{ padding: '56px 48px', background: 'var(--gc-section)' }}>
         <div style={{ maxWidth: 680, margin: '0 auto' }}>
@@ -442,13 +449,6 @@ export default function HomepageV2() {
           <a href="#contact" className="hv2-pill-white">
             Ready to get to work? Let&rsquo;s chat.
           </a>
-        </div>
-      </div>
-
-      {/* EXPLAINER VIDEO */}
-      <div className="hv2-section-pad" style={{ padding: '48px 48px', background: '#fff' }}>
-        <div style={{ maxWidth: 520, margin: '0 auto', borderRadius: 6, overflow: 'hidden' }}>
-          <YouTubeEmbed videoId="RutKIsejsmo" title="Girlhood Collective — what we do" />
         </div>
       </div>
 
