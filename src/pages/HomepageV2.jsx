@@ -3,14 +3,28 @@ import { Link } from 'react-router-dom';
 import YouTubeEmbed from '../components/YouTubeEmbed.jsx';
 import { useSEO } from '../lib/seo.js';
 import { HOW_WE_HELP, CLIENTS_LIST, STATS_V2, PARTNERS_V2, AUDIENCE_V2 } from '../data/homepageV2Content.js';
+import { EVENTS } from '../data/events.js';
 import '../styles/homepageV2.css';
 
+const FEATURED_EVENT = EVENTS.find((e) => e.id === 'helping-hands');
+const FEATURED_EVENT_IMAGE = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Helping_Hands.png?v=1784921222';
+
 const ACCENT = 'var(--gc-emerald-soft)'; // Sage — default secondaryAccent per design system
+
+// Brittany's brand palette (see Brittany_Gruber_Color_Codes.pdf) — used for repeated
+// decorative moments (stat bars, tag borders, list dots) so no two spots feel identical.
+const SAGE = 'var(--gc-emerald-soft)';
+const EMERALD = 'var(--gc-emerald)';
+const HYDRANGEA = '#6F96CF';
+const PEONY = 'var(--gc-peony)';
+const ACCENT_CYCLE = [SAGE, EMERALD, HYDRANGEA, PEONY];
+const TAG_CYCLE = [SAGE, EMERALD, HYDRANGEA];
 
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
   { label: 'Results', href: '#results' },
+  { label: 'Events', href: '#events' },
   { label: 'Tools', href: '#tools' },
   { label: 'Partners', href: '#partners' },
 ];
@@ -62,6 +76,8 @@ export default function HomepageV2() {
 
   return (
     <div className="hv2" style={{ background: '#fff', fontFamily: 'var(--font-sans)', color: 'var(--gc-navy)' }}>
+      <div style={{ height: 4, background: `linear-gradient(90deg, var(--gc-navy), ${SAGE}, ${EMERALD}, ${HYDRANGEA}, ${PEONY})` }} />
+
       {/* NAV */}
       <div
         className="hv2-section-pad"
@@ -105,31 +121,47 @@ export default function HomepageV2() {
       </div>
 
       {/* HERO */}
-      <div id="top" className="hv2-section-pad" style={{ padding: '64px 48px 48px', textAlign: 'center', background: '#fff' }}>
+      <div id="top" className="hv2-section-pad" style={{ padding: '64px 48px 48px', textAlign: 'center', background: '#fff', position: 'relative', overflow: 'hidden' }}>
         <div
-          className="hv2-hero-title"
+          aria-hidden="true"
           style={{
-            fontFamily: 'var(--font-serif)',
-            fontWeight: 400,
-            fontSize: 'clamp(26px,3.4vw,40px)',
-            color: 'var(--gc-navy)',
-            maxWidth: 860,
-            margin: '0 auto',
-            lineHeight: 1.22,
+            position: 'absolute',
+            top: -120,
+            left: -100,
+            width: 360,
+            height: 360,
+            borderRadius: '50%',
+            background: `radial-gradient(circle, ${SAGE}33, transparent 70%)`,
+            pointerEvents: 'none',
+            zIndex: 0,
           }}
-        >
-          Helping build communities people can&rsquo;t wait to be a part of.
-        </div>
-        <div style={{ ...TYPE.body, color: 'var(--gc-ink-muted)', maxWidth: 620, margin: '20px auto 0' }}>
-          Community strategy, organizational culture, and community programs that create measurable impact.
-        </div>
-        <div className="hv2-hero-cta" style={{ marginTop: 28, display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="#contact" className="hv2-pill-cta">
-            Ready to get to work? Let&rsquo;s chat.
-          </a>
-          <a href="#services" className="hv2-pill-outline">
-            Explore Our Services
-          </a>
+        />
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          <div
+            className="hv2-hero-title"
+            style={{
+              fontFamily: 'var(--font-serif)',
+              fontWeight: 400,
+              fontSize: 'clamp(26px,3.4vw,40px)',
+              color: 'var(--gc-navy)',
+              maxWidth: 860,
+              margin: '0 auto',
+              lineHeight: 1.22,
+            }}
+          >
+            Helping build communities people can&rsquo;t wait to be a part of.
+          </div>
+          <div style={{ ...TYPE.body, color: 'var(--gc-ink-muted)', maxWidth: 620, margin: '20px auto 0' }}>
+            Community strategy, organizational culture, and community programs that create measurable impact.
+          </div>
+          <div className="hv2-hero-cta" style={{ marginTop: 28, display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href="#contact" className="hv2-pill-cta">
+              Ready to get to work? Let&rsquo;s chat.
+            </a>
+            <a href="#services" className="hv2-pill-outline">
+              Explore Our Services
+            </a>
+          </div>
         </div>
       </div>
 
@@ -144,14 +176,16 @@ export default function HomepageV2() {
       <div id="services" className="hv2-section-pad" style={{ padding: '64px 48px', background: '#fff' }}>
         <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 32 }}>How We Help</div>
         <div className="hv2-grid-2col" style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 48, alignItems: 'start' }}>
-          <img
-            src={cdnResize('https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3916.jpg?v=1783447727', 900)}
-            alt="Girlhood Collective community event"
-            loading="lazy"
-            decoding="async"
-            className="hv2-sticky-img"
-            style={{ width: '100%', aspectRatio: '3 / 4', objectFit: 'cover', display: 'block', borderRadius: 6, position: 'sticky', top: 90 }}
-          />
+          <div className="hv2-sticky-img" style={{ position: 'sticky', top: 90 }}>
+            <div aria-hidden="true" style={{ position: 'absolute', top: 14, left: -14, right: -14, bottom: -14, background: HYDRANGEA, opacity: 0.35, borderRadius: 6, zIndex: 0 }} />
+            <img
+              src={cdnResize('https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3916.jpg?v=1783447727', 900)}
+              alt="Girlhood Collective community event"
+              loading="lazy"
+              decoding="async"
+              style={{ width: '100%', aspectRatio: '3 / 4', objectFit: 'cover', display: 'block', borderRadius: 6, position: 'relative', zIndex: 1 }}
+            />
+          </div>
           <div>
             {HOW_WE_HELP.map((item, i) => {
               const isOpen = !!openItems[i];
@@ -187,7 +221,8 @@ export default function HomepageV2() {
       {/* WHY GIRLHOOD COLLECTIVE */}
       <div id="why" className="hv2-section-pad" style={{ padding: '64px 48px', background: 'var(--gc-navy)' }}>
         <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
-          <div style={{ ...TYPE.h2, color: '#f8f6f0', marginBottom: 22 }}>Why Girlhood Collective?</div>
+          <div style={{ ...TYPE.h2, color: '#f8f6f0', marginBottom: 14 }}>Why Girlhood Collective?</div>
+          <div style={{ width: 40, height: 3, background: SAGE, borderRadius: 2, margin: '0 auto 22px' }} />
           <div style={{ ...TYPE.body, color: 'rgba(248,246,240,.72)', marginBottom: 18 }}>
             There are plenty of consultants who can hand you a strategy deck.
           </div>
@@ -197,7 +232,7 @@ export default function HomepageV2() {
               color: '#f8f6f0',
               margin: '0 auto 18px',
               maxWidth: 560,
-              borderLeft: '2px solid var(--gc-peony)',
+              borderLeft: `2px solid ${HYDRANGEA}`,
               paddingLeft: 18,
               display: 'inline-block',
               textAlign: 'left',
@@ -237,8 +272,8 @@ export default function HomepageV2() {
               We partner with organizations that understand people are their greatest asset.
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-              {AUDIENCE_V2.map((who) => (
-                <div key={who} style={{ color: 'var(--gc-navy)', background: '#fff', fontSize: 14, fontWeight: 500, padding: '7px 14px', borderRadius: 999, border: `1.5px solid ${ACCENT}` }}>
+              {AUDIENCE_V2.map((who, i) => (
+                <div key={who} style={{ color: 'var(--gc-navy)', background: '#fff', fontSize: 14, fontWeight: 500, padding: '7px 14px', borderRadius: 999, border: `1.5px solid ${TAG_CYCLE[i % TAG_CYCLE.length]}` }}>
                   {who}
                 </div>
               ))}
@@ -254,9 +289,9 @@ export default function HomepageV2() {
             Clients come to us when&hellip;
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-            {CLIENTS_LIST.map((line) => (
+            {CLIENTS_LIST.map((line, i) => (
               <div key={line} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
-                <div style={{ width: 7, height: 7, borderRadius: '50%', background: ACCENT, marginTop: 8, flex: 'none' }} />
+                <div style={{ width: 7, height: 7, borderRadius: '50%', background: ACCENT_CYCLE[i % ACCENT_CYCLE.length], marginTop: 8, flex: 'none' }} />
                 <div style={{ ...TYPE.body, color: 'var(--gc-navy)' }}>{line}</div>
               </div>
             ))}
@@ -270,9 +305,9 @@ export default function HomepageV2() {
           Real community, real results
         </div>
         <div className="hv2-stats-row" style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4,1fr)' }}>
-          {STATS_V2.map((stat) => (
+          {STATS_V2.map((stat, i) => (
             <div key={stat.label} className="hv2-stat-col" style={{ textAlign: 'center', padding: '0 20px', borderLeft: '1px solid rgba(29,53,87,.14)' }}>
-              <div style={{ width: 24, height: 3, background: ACCENT, borderRadius: 2, margin: '0 auto 12px' }} />
+              <div style={{ width: 24, height: 3, background: ACCENT_CYCLE[i % ACCENT_CYCLE.length], borderRadius: 2, margin: '0 auto 12px' }} />
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 38, color: 'var(--gc-navy)', marginBottom: 8 }}>{stat.value}</div>
               <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)' }}>{stat.label}</div>
             </div>
@@ -336,6 +371,37 @@ export default function HomepageV2() {
         </div>
       </div>
 
+      {/* UPCOMING COMMUNITY EVENTS */}
+      {FEATURED_EVENT && (
+        <div id="events" className="hv2-section-pad" style={{ padding: '56px 48px', background: 'var(--gc-section)' }}>
+          <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 10 }}>Upcoming Community Events</div>
+          <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 32px' }}>
+            Join us in person — here&rsquo;s what&rsquo;s next.
+          </div>
+          <div className="hv2-grid-2col" style={{ maxWidth: 980, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: 36, alignItems: 'center', background: '#fff', borderRadius: 8, border: '1px solid rgba(29,53,87,.14)', overflow: 'hidden' }}>
+            <img
+              src={cdnResize(FEATURED_EVENT_IMAGE, 700)}
+              alt={FEATURED_EVENT.title}
+              loading="lazy"
+              decoding="async"
+              style={{ width: '100%', aspectRatio: '4 / 3', objectFit: 'cover', display: 'block' }}
+            />
+            <div style={{ padding: '8px 32px 8px 0' }}>
+              <div style={{ display: 'inline-block', fontSize: 12, fontWeight: 600, letterSpacing: '.08em', textTransform: 'uppercase', color: '#fff', background: HYDRANGEA, padding: '5px 12px', borderRadius: 999, marginBottom: 14 }}>
+                {FEATURED_EVENT.mon} {FEATURED_EVENT.day}, {FEATURED_EVENT.year}
+              </div>
+              <div style={{ ...TYPE.h3, color: 'var(--gc-navy)', marginBottom: 6 }}>{FEATURED_EVENT.title}</div>
+              <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', marginBottom: 12 }}>{FEATURED_EVENT.where}</div>
+              <div style={{ ...TYPE.body, color: 'var(--gc-navy)', marginBottom: 16 }}>{FEATURED_EVENT.desc}</div>
+              <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--gc-navy)', marginBottom: 20 }}>{FEATURED_EVENT.price}</div>
+              <a href={FEATURED_EVENT.shopifyUrl} target="_blank" rel="noopener noreferrer" className="hv2-pill-cta">
+                Reserve Your Spot
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* TOOLS */}
       <div id="tools" className="hv2-section-pad" style={{ padding: '56px 48px', background: 'var(--gc-section)' }}>
         <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 10 }}>Start a Conversation</div>
@@ -344,13 +410,13 @@ export default function HomepageV2() {
         </div>
         <div style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
           <a href="https://girlhoodeventrequest.netlify.app" target="_blank" rel="noopener noreferrer" className="hv2-tool-card">
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 14, color: 'var(--gc-emerald-soft)' }}>01</div>
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 14, color: SAGE }}>01</div>
             <div style={{ fontSize: 17, fontWeight: 600, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.4 }}>
               Submit a request to partner on an event or collaboration.
             </div>
           </a>
           <Link to="/consultation-intake" className="hv2-tool-card">
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 14, color: 'var(--gc-emerald-soft)' }}>02</div>
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 14, color: EMERALD }}>02</div>
             <div style={{ fontSize: 17, fontWeight: 600, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.4 }}>
               Curious what support could look like? Start the intake quiz.
             </div>
@@ -375,16 +441,32 @@ export default function HomepageV2() {
       </div>
 
       {/* MID CTA */}
-      <div className="hv2-section-pad" style={{ padding: '56px 48px', background: 'var(--gc-navy)', textAlign: 'center' }}>
-        <div style={{ ...TYPE.h2, color: '#f8f6f0', maxWidth: 700, margin: '0 auto 14px' }}>
-          Let&rsquo;s build something people want to be part of.
+      <div className="hv2-section-pad" style={{ padding: '56px 48px', background: 'var(--gc-navy)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+        <div
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            bottom: -140,
+            right: -110,
+            width: 380,
+            height: 380,
+            borderRadius: '50%',
+            background: `radial-gradient(circle, ${EMERALD}40, transparent 70%)`,
+            pointerEvents: 'none',
+            zIndex: 0,
+          }}
+        />
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          <div style={{ ...TYPE.h2, color: '#f8f6f0', maxWidth: 700, margin: '0 auto 14px' }}>
+            Let&rsquo;s build something people want to be part of.
+          </div>
+          <div style={{ ...TYPE.small, color: 'rgba(248,246,240,.72)', maxWidth: 560, margin: '0 auto 24px' }}>
+            Whether it&rsquo;s internal culture, community relationships, or experiences people remember, we&rsquo;re here to help.
+          </div>
+          <a href="#contact" className="hv2-pill-white">
+            Ready to get to work? Let&rsquo;s chat.
+          </a>
         </div>
-        <div style={{ ...TYPE.small, color: 'rgba(248,246,240,.72)', maxWidth: 560, margin: '0 auto 24px' }}>
-          Whether it&rsquo;s internal culture, community relationships, or experiences people remember, we&rsquo;re here to help.
-        </div>
-        <a href="#contact" className="hv2-pill-white">
-          Ready to get to work? Let&rsquo;s chat.
-        </a>
       </div>
 
       {/* EXPLAINER VIDEO */}
