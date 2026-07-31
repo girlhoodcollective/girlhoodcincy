@@ -88,6 +88,17 @@
   transition: transform 200ms ease;
   display: inline-block;
 }
+
+.hv2-story-card {
+  text-decoration: none;
+  display: block;
+}
+.hv2-story-title {
+  transition: color 200ms ease;
+}
+.hv2-story-card:hover .hv2-story-title {
+  color: var(--gc-emerald-soft);
+}
 .hv2-cta-link:hover .hv2-arrow {
   transform: translateX(4px);
 }

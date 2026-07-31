@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import YouTubeEmbed from '../components/YouTubeEmbed.jsx';
 import { useSEO } from '../lib/seo.js';
 import { HOW_WE_HELP, CLIENTS_LIST, STATS_V2, PARTNERS_V2, AUDIENCE_V2 } from '../data/homepageV2Content.js';
-import { EVENTS } from '../data/events.js';
+import { EVENTS, PAST_EVENTS } from '../data/events.js';
 import '../styles/homepageV2.css';
 
 const FEATURED_EVENT = EVENTS.find((e) => e.id === 'helping-hands');
@@ -362,6 +362,37 @@ export default function HomepageV2() {
           </div>
         </div>
       )}
+
+      {/* EVENTS WE'RE PROUD OF */}
+      <div className="hv2-section-pad" style={{ padding: '56px 48px', background: '#fff' }}>
+        <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 10 }}>Seriously proud of what we made.</div>
+        <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 32px' }}>
+          A look back at the rooms we&rsquo;ve filled since 2025.
+        </div>
+        <div style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 24 }}>
+          {PAST_EVENTS.map((p, i) => {
+            const Wrapper = p.href ? Link : 'div';
+            const wrapperProps = p.href ? { to: p.href } : {};
+            return (
+              <Wrapper key={p.title} className="hv2-story-card" {...wrapperProps}>
+                <img
+                  src={cdnResize(p.photo, 500)}
+                  alt={p.title}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ width: '100%', aspectRatio: '4 / 3', objectFit: 'cover', display: 'block', borderRadius: 6 }}
+                />
+                <div style={{ width: 24, height: 3, background: ACCENT_CYCLE[i % ACCENT_CYCLE.length], borderRadius: 2, margin: '14px 0 10px' }} />
+                <div className="hv2-story-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 18, color: 'var(--gc-navy)', marginBottom: 4 }}>{p.title}</div>
+                <div style={{ fontSize: 13, fontWeight: 600, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)' }}>
+                  {p.caption}
+                  {p.href ? ' · Read the case study →' : ''}
+                </div>
+              </Wrapper>
+            );
+          })}
+        </div>
+      </div>
 
       {/* TOOLS */}
       <div id="tools" className="hv2-section-pad" style={{ padding: '56px 48px', background: 'var(--gc-section)' }}>
