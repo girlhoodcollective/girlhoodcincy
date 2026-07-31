@@ -151,7 +151,7 @@ export default function HomepageV2() {
             Helping build communities people can&rsquo;t wait to be a part of.
           </div>
           <div style={{ ...TYPE.body, color: 'var(--gc-ink-muted)', maxWidth: 680, margin: '20px auto 0' }}>
-            Community strategy, organizational culture, and community programs that create measurable impact. Bridging corporate culture, non-profit impact, and community engagement across Greater Cincinnati.
+            Programs and events that create measurable impact. Bridging corporate culture, non-profit impact, and community engagement across Greater Cincinnati.
           </div>
           <div className="hv2-hero-cta" style={{ marginTop: 28, display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="#contact" className="hv2-pill-cta">
