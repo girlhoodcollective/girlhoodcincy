@@ -15,51 +15,8 @@ const NAV_LINKS = [
   { label: 'Partners', href: '#partners' },
 ];
 
-function Icon({ src, alt = '', size = 24, square = false, style, ...rest }) {
-  const dims = square ? { width: size, height: size, objectFit: 'contain' } : { width: size, height: 'auto' };
-  return <img src={src} alt={alt} style={{ display: 'block', ...dims, ...style }} {...rest} />;
-}
-
-function PhoneIcon(props) {
-  return <Icon src="/icons/phone.png" size={18} {...props} />;
-}
-
-function CheckIcon(props) {
-  return <Icon src="/icons/checkmark.png" size={22} {...props} />;
-}
-
-function LightbulbIcon(props) {
-  return <Icon src="/icons/lightbulb.png" size={34} {...props} />;
-}
-
-function ArrowIcon(props) {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
-      <path d="M5 12h14M13 6l6 6-6 6" />
-    </svg>
-  );
-}
-
-function AccentSquiggle(props) {
-  return (
-    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true" {...props}>
-      <path d="M4 34c6-14 12 12 18-2s12 12 18-2" stroke="var(--gc-peony)" strokeWidth="2.4" strokeLinecap="round" fill="none" />
-      <circle cx="44" cy="12" r="2.6" fill="var(--gc-peony)" />
-    </svg>
-  );
-}
-
-function SwirlIcon(props) {
-  return <Icon src="/icons/swirl.png" size={44} {...props} />;
-}
-
-function PartyHatIcon(props) {
-  return <Icon src="/icons/party-hat.png" size={96} square {...props} />;
-}
-
-function BriefcaseIcon(props) {
-  return <Icon src="/icons/briefcase.png" size={96} square {...props} />;
-}
+// Requests an appropriately-sized asset from Shopify's CDN instead of the full original file.
+const cdnResize = (url, width) => `${url}${url.includes('?') ? '&' : '?'}width=${width}`;
 
 export default function HomepageV2() {
   useSEO({
@@ -105,7 +62,7 @@ export default function HomepageV2() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          padding: '20px 48px',
+          padding: '22px 48px',
           background: '#fff',
           borderBottom: '1px solid rgba(29,53,87,.14)',
         }}
@@ -120,7 +77,7 @@ export default function HomepageV2() {
               {l.label}
             </a>
           ))}
-          <a href="#contact" className="hv2-pill-cta">
+          <a href="#contact" className="hv2-pill-cta hv2-nav-cta">
             Let&rsquo;s chat
           </a>
         </div>
@@ -138,12 +95,12 @@ export default function HomepageV2() {
       </div>
 
       {/* HERO */}
-      <div id="top" className="hv2-section-pad" style={{ padding: '72px 48px 56px', textAlign: 'center', background: '#fff' }}>
+      <div id="top" className="hv2-section-pad" style={{ padding: '96px 48px 64px', textAlign: 'center', background: '#fff' }}>
         <div
           className="hv2-hero-title"
           style={{
             fontFamily: 'var(--font-serif)',
-            fontWeight: 600,
+            fontWeight: 400,
             fontSize: 'clamp(26px,3.4vw,42px)',
             color: 'var(--gc-navy)',
             maxWidth: 900,
@@ -157,8 +114,7 @@ export default function HomepageV2() {
           Community strategy, organizational culture, and community programs that create measurable impact.
         </div>
         <div className="hv2-hero-cta" style={{ marginTop: 36, display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="#contact" className="hv2-pill-cta" style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}>
-            <PhoneIcon style={{ filter: 'brightness(0) invert(1)' }} />
+          <a href="#contact" className="hv2-pill-cta">
             Ready to get to work? Let&rsquo;s chat.
           </a>
           <a href="#services" className="hv2-pill-outline">
@@ -168,28 +124,25 @@ export default function HomepageV2() {
       </div>
 
       {/* TRUST BAR */}
-      <div style={{ padding: '22px 48px', textAlign: 'center', background: '#fff', borderTop: '1px solid rgba(29,53,87,.14)', borderBottom: '1px solid rgba(29,53,87,.14)' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, transform: 'rotate(-0.5deg)' }}>
-          <CheckIcon />
-          <div style={{ fontSize: 16, color: 'var(--gc-ink-muted)', letterSpacing: '.02em' }}>
-            Trusted by organizations, nonprofits, healthcare leaders, and community partners across Greater Cincinnati.
-          </div>
+      <div style={{ padding: '24px 48px', textAlign: 'center', background: '#fff', borderTop: '1px solid rgba(29,53,87,.14)', borderBottom: '1px solid rgba(29,53,87,.14)' }}>
+        <div style={{ fontSize: 13, fontWeight: 600, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)' }}>
+          Trusted by organizations, nonprofits, healthcare leaders, and community partners across Greater Cincinnati
         </div>
       </div>
 
       {/* HOW WE HELP */}
-      <div id="services" className="hv2-section-pad" style={{ padding: '72px 48px', background: '#fff' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14, marginBottom: 40 }}>
-          <LightbulbIcon />
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 36, color: 'var(--gc-navy)', textAlign: 'center' }}>How We Help</div>
+      <div id="services" className="hv2-section-pad" style={{ padding: '96px 48px', background: '#fff' }}>
+        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(28px,4vw,36px)', color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 48 }}>
+          How We Help
         </div>
         <div className="hv2-grid-2col" style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 56, alignItems: 'start' }}>
           <img
-            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3916.jpg?v=1783447727"
+            src={cdnResize('https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3916.jpg?v=1783447727', 900)}
             alt="Girlhood Collective community event"
             loading="lazy"
+            decoding="async"
             className="hv2-sticky-img"
-            style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 20, position: 'sticky', top: 100, transform: 'rotate(-1deg)' }}
+            style={{ width: '100%', aspectRatio: '3 / 4', objectFit: 'cover', display: 'block', borderRadius: 6, position: 'sticky', top: 100 }}
           />
           <div>
             {HOW_WE_HELP.map((item, i) => {
@@ -209,9 +162,9 @@ export default function HomepageV2() {
                   <div className={`hv2-accordion-panel${isOpen ? ' open' : ''}`}>
                     <div style={{ padding: '0 4px 32px', maxWidth: 760 }}>
                       <div style={{ fontSize: 17, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 18 }}>{item.desc}</div>
-                      <a href={item.href} style={{ textDecoration: 'none', fontSize: 16, fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: 6, color: ACCENT }}>
+                      <a href={item.href} className="hv2-cta-link" style={{ color: ACCENT }}>
                         {item.ctaLabel}
-                        <ArrowIcon />
+                        <span className="hv2-arrow" aria-hidden="true">&rarr;</span>
                       </a>
                     </div>
                   </div>
@@ -224,12 +177,9 @@ export default function HomepageV2() {
       </div>
 
       {/* WHY GIRLHOOD COLLECTIVE */}
-      <div id="why" className="hv2-section-pad" style={{ padding: '72px 48px', background: 'var(--gc-navy)' }}>
-        <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center', position: 'relative' }}>
-          <div style={{ position: 'relative', display: 'inline-block' }}>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 36, color: '#f8f6f0', marginBottom: 28 }}>Why Girlhood Collective?</div>
-            <AccentSquiggle style={{ position: 'absolute', top: -31, left: '100%', marginLeft: -30, transform: 'rotate(-8deg)' }} />
-          </div>
+      <div id="why" className="hv2-section-pad" style={{ padding: '96px 48px', background: 'var(--gc-navy)' }}>
+        <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
+          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(28px,4vw,36px)', color: '#f8f6f0', marginBottom: 28 }}>Why Girlhood Collective?</div>
           <div style={{ fontSize: 18, color: 'rgba(248,246,240,.72)', lineHeight: 1.65, marginBottom: 22 }}>
             There are plenty of consultants who can hand you a strategy deck.
           </div>
@@ -260,18 +210,17 @@ export default function HomepageV2() {
       </div>
 
       {/* WHY THIS WORK MATTERS + WHO WE WORK WITH */}
-      <div id="about" className="hv2-section-pad" style={{ padding: '48px 48px', background: '#fff' }}>
-        <div className="hv2-grid-2col" style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 48, position: 'relative' }}>
-          <div style={{ position: 'relative' }}>
-            <SwirlIcon style={{ position: 'absolute', top: -18, right: 0, transform: 'rotate(6deg)' }} />
+      <div id="about" className="hv2-section-pad" style={{ padding: '64px 48px', background: '#fff' }}>
+        <div className="hv2-grid-2col" style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 48 }}>
+          <div>
             <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, color: 'var(--gc-navy)', marginBottom: 14 }}>Why this work matters</div>
             <div style={{ fontSize: 16, color: 'var(--gc-navy)', lineHeight: 1.6, marginBottom: 12 }}>
               Organizations don&rsquo;t struggle because they lack good intentions. They struggle because building genuine engagement takes time, strategy, and capacity they don&rsquo;t have to spare.
             </div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 20, color: 'var(--gc-navy)', lineHeight: 1.4, marginBottom: 14, transform: 'rotate(-0.4deg)' }}>
+            <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 20, color: 'var(--gc-navy)', lineHeight: 1.4, marginBottom: 14 }}>
               That&rsquo;s where we come in.
             </div>
-            <div style={{ background: 'var(--gc-section)', borderRadius: 16, padding: '18px 20px' }}>
+            <div style={{ background: 'var(--gc-section)', borderRadius: 6, padding: '18px 20px' }}>
               <div style={{ fontSize: 16, color: 'var(--gc-ink-muted)', lineHeight: 1.6 }}>
                 Community is more than events or follower counts. It&rsquo;s creating environments where people feel seen and connected, so reputation and partnerships grow stronger.
               </div>
@@ -294,9 +243,9 @@ export default function HomepageV2() {
       </div>
 
       {/* CLIENTS COME TO US WHEN */}
-      <div className="hv2-section-pad" style={{ padding: '64px 48px', background: 'var(--gc-section)' }}>
+      <div className="hv2-section-pad" style={{ padding: '80px 48px', background: 'var(--gc-section)' }}>
         <div style={{ maxWidth: 700, margin: '0 auto' }}>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32, color: 'var(--gc-navy)', marginBottom: 24, textAlign: 'center' }}>
+          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(24px,3.5vw,32px)', color: 'var(--gc-navy)', marginBottom: 24, textAlign: 'center' }}>
             Clients come to us when&hellip;
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -311,20 +260,20 @@ export default function HomepageV2() {
       </div>
 
       {/* RESULTS */}
-      <div id="results" className="hv2-section-pad" style={{ padding: '72px 48px', background: '#fff' }}>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 40 }}>
+      <div id="results" className="hv2-section-pad" style={{ padding: '96px 48px', background: '#fff' }}>
+        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(24px,3.5vw,32px)', color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 48 }}>
           Real community, real results
         </div>
         <div className="hv2-stats-row" style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4,1fr)' }}>
           {STATS_V2.map((stat) => (
-            <div key={stat.label} className="hv2-stat-col" style={{ textAlign: 'center', padding: '0 24px', borderLeft: '1px solid rgba(29,53,87,.14)', marginTop: stat.offset }}>
+            <div key={stat.label} className="hv2-stat-col" style={{ textAlign: 'center', padding: '0 24px', borderLeft: '1px solid rgba(29,53,87,.14)' }}>
               <div style={{ width: 28, height: 3, background: ACCENT, borderRadius: 2, margin: '0 auto 14px' }} />
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 44, color: 'var(--gc-navy)', marginBottom: 10 }}>{stat.value}</div>
               <div style={{ fontSize: 16, color: 'var(--gc-ink-muted)', lineHeight: 1.5 }}>{stat.label}</div>
             </div>
           ))}
         </div>
-        <div style={{ maxWidth: 820, margin: '56px auto 0', borderLeft: '2px solid var(--gc-peony)', paddingLeft: 32 }}>
+        <div style={{ maxWidth: 820, margin: '64px auto 0', borderLeft: '2px solid var(--gc-peony)', paddingLeft: 32 }}>
           <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 24, color: 'var(--gc-navy)', lineHeight: 1.5, marginBottom: 20 }}>
             &ldquo;Co-hosting the community brunch alongside Girlhood Collective was an absolute high point for us at Endurance in Education. The room curated by Girlhood Collective embodied everything we stand for: genuine connections, community strength, and people passionate about building a stronger talent pipeline for Cincinnati.&rdquo;
           </div>
@@ -335,30 +284,33 @@ export default function HomepageV2() {
             Allyson Place<span style={{ fontWeight: 400, color: 'var(--gc-ink-muted)' }}>, Founder, Endurance in Education</span>
           </div>
         </div>
-        <div className="hv2-img-pair" style={{ maxWidth: 900, margin: '40px auto 0', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+        <div className="hv2-img-pair" style={{ maxWidth: 900, margin: '48px auto 0', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
           <img
-            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_8694.jpg?v=1785375920"
+            src={cdnResize('https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_8694.jpg?v=1785375920', 700)}
             alt="Girlhood Collective community event"
             loading="lazy"
-            style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 20, transform: 'rotate(-1deg)' }}
+            decoding="async"
+            style={{ width: '100%', aspectRatio: '4 / 3', objectFit: 'cover', display: 'block', borderRadius: 6 }}
           />
           <img
-            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6378.jpg?v=1785376026"
+            src={cdnResize('https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_6378.jpg?v=1785376026', 700)}
             alt="Girlhood Collective community event"
             loading="lazy"
-            style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 20, transform: 'rotate(1deg)' }}
+            decoding="async"
+            style={{ width: '100%', aspectRatio: '4 / 3', objectFit: 'cover', display: 'block', borderRadius: 6 }}
           />
         </div>
       </div>
 
       {/* MEET BRITTANY */}
-      <div className="hv2-section-pad" style={{ padding: '72px 48px', background: '#fff' }}>
+      <div className="hv2-section-pad" style={{ padding: '96px 48px', background: '#fff' }}>
         <div className="hv2-grid-2col" style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.85fr 1.15fr', gap: 64, alignItems: 'center' }}>
           <img
-            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/J8A2874.jpg?v=1785099357"
+            src={cdnResize('https://cdn.shopify.com/s/files/1/0656/4328/2528/files/J8A2874.jpg?v=1785099357', 800)}
             alt="Brittany Gruber"
             loading="lazy"
-            style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 20, transform: 'rotate(1deg)' }}
+            decoding="async"
+            style={{ width: '100%', aspectRatio: '4 / 5', objectFit: 'cover', display: 'block', borderRadius: 6 }}
           />
           <div>
             <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32, color: 'var(--gc-navy)', marginBottom: 22 }}>Meet Brittany</div>
@@ -383,20 +335,20 @@ export default function HomepageV2() {
       </div>
 
       {/* TOOLS */}
-      <div id="tools" className="hv2-section-pad" style={{ padding: '64px 48px', background: 'var(--gc-section)' }}>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 36, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 12 }}>Start a Conversation</div>
-        <div style={{ fontSize: 18, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 36px', lineHeight: 1.6 }}>
+      <div id="tools" className="hv2-section-pad" style={{ padding: '80px 48px', background: 'var(--gc-section)' }}>
+        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(28px,4vw,36px)', color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 12 }}>Start a Conversation</div>
+        <div style={{ fontSize: 18, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 40px', lineHeight: 1.6 }}>
           Two quick ways to get started.
         </div>
         <div style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 28 }}>
           <a href="https://girlhoodeventrequest.netlify.app" target="_blank" rel="noopener noreferrer" className="hv2-tool-card">
-            <PartyHatIcon />
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 15, color: 'var(--gc-emerald-soft)' }}>01</div>
             <div style={{ fontSize: 18, fontWeight: 600, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.4 }}>
               Submit a request to partner on an event or collaboration.
             </div>
           </a>
           <Link to="/consultation-intake" className="hv2-tool-card">
-            <BriefcaseIcon />
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 15, color: 'var(--gc-emerald-soft)' }}>02</div>
             <div style={{ fontSize: 18, fontWeight: 600, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.4 }}>
               Curious what support could look like? Start the intake quiz.
             </div>
@@ -405,15 +357,15 @@ export default function HomepageV2() {
       </div>
 
       {/* PARTNERS */}
-      <div id="partners" className="hv2-section-pad" style={{ padding: '64px 48px', background: '#fff', borderTop: '1px solid rgba(29,53,87,.14)' }}>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 36, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 12 }}>Our Partners</div>
-        <div style={{ fontSize: 18, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 36px', lineHeight: 1.6 }}>
+      <div id="partners" className="hv2-section-pad" style={{ padding: '80px 48px', background: '#fff', borderTop: '1px solid rgba(29,53,87,.14)' }}>
+        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(28px,4vw,36px)', color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 12 }}>Our Partners</div>
+        <div style={{ fontSize: 18, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 40px', lineHeight: 1.6 }}>
           Local businesses and organizations we&rsquo;ve had the privilege of building community with.
         </div>
         <div style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 24 }}>
           {PARTNERS_V2.map((p) => (
             <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" className="hv2-partner-card">
-              <img src={p.logo} alt={p.name} loading="lazy" style={{ width: '100%', height: 56, objectFit: 'contain' }} />
+              <img src={cdnResize(p.logo, 200)} alt={p.name} loading="lazy" decoding="async" style={{ width: '100%', height: 56, objectFit: 'contain' }} />
               <div style={{ fontSize: 16, fontWeight: 500, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.3 }}>{p.name}</div>
             </a>
           ))}
@@ -421,8 +373,8 @@ export default function HomepageV2() {
       </div>
 
       {/* MID CTA */}
-      <div className="hv2-section-pad" style={{ padding: '64px 48px', background: 'var(--gc-navy)', textAlign: 'center' }}>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 28, color: '#f8f6f0', maxWidth: 700, margin: '0 auto 18px', lineHeight: 1.2 }}>
+      <div className="hv2-section-pad" style={{ padding: '80px 48px', background: 'var(--gc-navy)', textAlign: 'center' }}>
+        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(22px,3.5vw,28px)', color: '#f8f6f0', maxWidth: 700, margin: '0 auto 18px', lineHeight: 1.2 }}>
           Let&rsquo;s build something people want to be part of.
         </div>
         <div style={{ fontSize: 18, color: 'rgba(248,246,240,.72)', maxWidth: 600, margin: '0 auto 32px', lineHeight: 1.6 }}>
@@ -434,8 +386,8 @@ export default function HomepageV2() {
       </div>
 
       {/* EXPLAINER VIDEO */}
-      <div className="hv2-section-pad" style={{ padding: '56px 48px', background: '#fff' }}>
-        <div style={{ maxWidth: 520, margin: '0 auto', borderRadius: 20, overflow: 'hidden' }}>
+      <div className="hv2-section-pad" style={{ padding: '64px 48px', background: '#fff' }}>
+        <div style={{ maxWidth: 520, margin: '0 auto', borderRadius: 6, overflow: 'hidden' }}>
           <YouTubeEmbed videoId="RutKIsejsmo" title="Girlhood Collective — what we do" />
         </div>
       </div>
@@ -448,7 +400,7 @@ export default function HomepageV2() {
           </div>
         </div>
         {formSubmitted ? (
-          <div style={{ maxWidth: 520, margin: '0 auto', textAlign: 'center', padding: '40px 24px', border: '1.5px solid var(--gc-emerald-soft)', borderRadius: 20 }}>
+          <div style={{ maxWidth: 520, margin: '0 auto', textAlign: 'center', padding: '40px 24px', border: '1.5px solid var(--gc-emerald-soft)', borderRadius: 6 }}>
             <div style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: 'var(--gc-navy)', marginBottom: 10 }}>Thanks for reaching out.</div>
             <div style={{ fontSize: 16, color: 'var(--gc-ink-muted)', lineHeight: 1.6 }}>We&rsquo;ll be in touch soon.</div>
           </div>
