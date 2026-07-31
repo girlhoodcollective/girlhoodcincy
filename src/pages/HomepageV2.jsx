@@ -389,21 +389,15 @@ export default function HomepageV2() {
       <div id="tools" className="hv2-section-pad" style={{ padding: '56px 48px', background: 'var(--gc-section)' }}>
         <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 10 }}>Start a Conversation</div>
         <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 28px' }}>
-          Two quick ways to get started.
+          One quick way to get started.
         </div>
-        <div style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
+        <div style={{ maxWidth: 400, margin: '0 auto' }}>
           <a href="https://girlhoodeventrequest.netlify.app" target="_blank" rel="noopener noreferrer" className="hv2-tool-card">
             <div style={{ fontFamily: 'var(--font-serif)', fontSize: 14, color: SAGE }}>01</div>
             <div style={{ fontSize: 17, fontWeight: 600, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.4 }}>
               Submit a request to partner on an event or collaboration.
             </div>
           </a>
-          <Link to="/consultation-intake" className="hv2-tool-card">
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 14, color: EMERALD }}>02</div>
-            <div style={{ fontSize: 17, fontWeight: 600, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.4 }}>
-              Curious what support could look like? Start the intake quiz.
-            </div>
-          </Link>
         </div>
       </div>
 
