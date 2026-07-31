@@ -1,29 +1,50 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
-import { useSEO } from '../lib/seo.js';
+import { useSEO, useStructuredData, SITE_URL, SITE_NAME } from '../lib/seo.js';
 
 export default function Gateway() {
   useSEO({
-    title: 'Girlhood Collective | Start Here',
-    description: 'Staged concept: a homepage fork sending community neighbors and organizations/businesses to the experience built for them.',
-    path: '/gateway',
+    title: 'Girlhood Collective | Community & Boutique Advisory in Cincinnati',
+    description: 'A monthly community and events experience for Cincinnati neighbors — and a boutique advisory for organizations building real culture and community.',
+    path: '/',
   });
 
-  useEffect(() => {
-    let tag = document.querySelector('meta[name="robots"]');
-    if (!tag) {
-      tag = document.createElement('meta');
-      tag.setAttribute('name', 'robots');
-      document.head.appendChild(tag);
-    }
-    tag.setAttribute('content', 'noindex, nofollow');
-    return () => tag?.setAttribute('content', 'index, follow');
-  }, []);
+  useStructuredData('organization', {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/8.png?v=1784772079&width=512',
+    description: 'Girlhood Collective is a Cincinnati-based boutique advisory specializing in organizational and community health, helping small businesses, health professionals, and mission-driven organizations build stronger leadership and lasting community.',
+    email: 'hello@girlhoodcincy.com',
+    areaServed: 'Cincinnati, OH',
+    contactPoint: { '@type': 'ContactPoint', email: 'hello@girlhoodcincy.com', contactType: 'customer service' },
+    sameAs: ['https://instagram.com/girlhood_cincy'],
+    founder: { '@type': 'Person', name: 'Brittany Gruber' },
+  });
+
+  useStructuredData('website', {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE_NAME,
+    url: SITE_URL,
+  });
+
+  useStructuredData('professional-service', {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: SITE_NAME,
+    url: SITE_URL,
+    image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/8.png?v=1784772079&width=512',
+    description: 'Girlhood Collective is a Cincinnati-based boutique advisory specializing in organizational and community health, helping small businesses, health professionals, and mission-driven organizations build stronger leadership and lasting community.',
+    email: 'hello@girlhoodcincy.com',
+    areaServed: 'Cincinnati, OH',
+    sameAs: ['https://instagram.com/girlhood_cincy'],
+  });
 
   return (
     <div className="flow-shell" style={{ minHeight: '100vh', background: 'var(--gc-cream)' }}>
-      <NavBar variant="minimal" label="Start Here · Concept" />
+      <NavBar variant="minimal" label="Cincinnati · Est. 2025" />
 
       <div style={{ padding: '64px 32px 24px', textAlign: 'center' }}>
         <h1
@@ -65,7 +86,7 @@ export default function Gateway() {
         }}
       >
         <Link
-          to="/"
+          to="/community"
           className="hover-lift"
           style={{
             textDecoration: 'none',
@@ -113,7 +134,7 @@ export default function Gateway() {
       </div>
 
       <p style={{ textAlign: 'center', fontSize: 14, color: 'var(--gc-ink-muted)', paddingBottom: 48 }}>
-        Not sure? <Link to="/" style={{ color: 'var(--gc-emerald)', fontWeight: 600 }}>Start with the community side</Link> — you can always find your way to the other.
+        Not sure? <Link to="/community" style={{ color: 'var(--gc-emerald)', fontWeight: 600 }}>Start with the community side</Link> — you can always find your way to the other.
       </p>
     </div>
   );

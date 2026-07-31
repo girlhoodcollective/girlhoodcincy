@@ -5,51 +5,18 @@ import Footer from '../components/Footer.jsx';
 import YouTubeEmbed from '../components/YouTubeEmbed.jsx';
 import { subscribeToNewsletter } from '../lib/newsletter.js';
 import { getUpcomingPublishedEvents } from '../data/events.js';
-import { useSEO, useStructuredData, SITE_URL, SITE_NAME } from '../lib/seo.js';
+import { useSEO } from '../lib/seo.js';
 import { PERSONAS, TRUST_STATS } from '../data/content.js';
 
 const PERSONA_HREF = (id) => (id === 'community-member' ? '/village' : '/work-together');
 
 const UPCOMING_EVENTS = getUpcomingPublishedEvents(2);
 
-export default function Home() {
+export default function Community() {
   useSEO({
-    title: 'Girlhood Collective | Boutique Advisory for Organizational & Community Health',
-    description: 'A boutique advisory specializing in organizational and community health — plus monthly community events and a free newsletter for Cincinnati families and neighbors.',
-    path: '/',
-  });
-
-  useStructuredData('organization', {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: SITE_NAME,
-    url: SITE_URL,
-    logo: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/8.png?v=1784772079&width=512',
-    description: 'Girlhood Collective is a Cincinnati-based boutique advisory specializing in organizational and community health, helping small businesses, health professionals, and mission-driven organizations build stronger leadership and lasting community.',
-    email: 'hello@girlhoodcincy.com',
-    areaServed: 'Cincinnati, OH',
-    contactPoint: { '@type': 'ContactPoint', email: 'hello@girlhoodcincy.com', contactType: 'customer service' },
-    sameAs: ['https://instagram.com/girlhood_cincy'],
-    founder: { '@type': 'Person', name: 'Brittany Gruber' },
-  });
-
-  useStructuredData('website', {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: SITE_NAME,
-    url: SITE_URL,
-  });
-
-  useStructuredData('professional-service', {
-    '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    name: SITE_NAME,
-    url: SITE_URL,
-    image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/8.png?v=1784772079&width=512',
-    description: 'Girlhood Collective is a Cincinnati-based boutique advisory specializing in organizational and community health, helping small businesses, health professionals, and mission-driven organizations build stronger leadership and lasting community.',
-    email: 'hello@girlhoodcincy.com',
-    areaServed: 'Cincinnati, OH',
-    sameAs: ['https://instagram.com/girlhood_cincy'],
+    title: 'Girlhood Collective | Community Events & The Village Newsletter',
+    description: 'Monthly community events and a free newsletter for Cincinnati families and neighbors looking for real connection.',
+    path: '/community',
   });
 
   const [email, setEmail] = useState('');
