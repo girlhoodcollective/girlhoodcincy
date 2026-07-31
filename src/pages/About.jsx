@@ -151,17 +151,17 @@ export default function About() {
       {/* CTA */}
       <div style={{ background: 'var(--gc-sage-light)', borderTop: '1px solid #dde6e2', padding: '52px 44px', textAlign: 'center' }}>
         <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>
-          Want to build something <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>together?</span>
+          Want to stay <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>in the loop?</span>
         </div>
         <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 460, margin: '0 auto 22px' }}>
-          Advisory services, coaching, and partnerships are always welcome. Reach out directly.
+          Join The Village for a free monthly letter, or see what&rsquo;s coming up next.
         </p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link className="btn" to="/work-together" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>
-            See how we work together
+          <Link className="btn" to="/village" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>
+            Join The Village
           </Link>
-          <Link className="btn" to="/contact" style={{ border: '1.5px solid var(--gc-emerald)', color: 'var(--gc-emerald)', padding: '13.5px 28px' }}>
-            Request a 20-Minute Fit Call
+          <Link className="btn" to="/events" style={{ border: '1.5px solid var(--gc-emerald)', color: 'var(--gc-emerald)', padding: '13.5px 28px' }}>
+            See Upcoming Events
           </Link>
         </div>
       </div>

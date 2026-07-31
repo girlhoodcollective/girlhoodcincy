@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const LINKS = [
-  { label: 'Work Together', href: '/work-together' },
   { label: 'About', href: '/about' },
   { label: 'Events', href: '/events' },
   { label: 'Resources', href: '/resources' },

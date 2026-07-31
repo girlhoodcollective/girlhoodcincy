@@ -6,9 +6,7 @@ import YouTubeEmbed from '../components/YouTubeEmbed.jsx';
 import { subscribeToNewsletter } from '../lib/newsletter.js';
 import { getUpcomingPublishedEvents } from '../data/events.js';
 import { useSEO } from '../lib/seo.js';
-import { PERSONAS, TRUST_STATS } from '../data/content.js';
-
-const PERSONA_HREF = (id) => (id === 'community-member' ? '/village' : '/work-together');
+import { TRUST_STATS } from '../data/content.js';
 
 const UPCOMING_EVENTS = getUpcomingPublishedEvents(2);
 
@@ -60,8 +58,8 @@ export default function Community() {
               <Link className="btn" to="/events" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>
                 See Upcoming Events →
               </Link>
-              <Link className="btn" to="/work-together" style={{ border: '1.5px solid var(--gc-navy)', color: 'var(--gc-navy)', padding: '14px 26px' }}>
-                Work With Us
+              <Link className="btn" to="/village" style={{ border: '1.5px solid var(--gc-navy)', color: 'var(--gc-navy)', padding: '14px 26px' }}>
+                Join The Village
               </Link>
             </div>
           </div>
@@ -135,36 +133,6 @@ export default function Community() {
               Read my story →
             </Link>
           </div>
-        </div>
-      </div>
-
-      {/* PERSONA CARDS */}
-      <div style={{ background: 'var(--gc-section)', padding: '52px 44px' }}>
-        <div style={{ textAlign: 'center', marginBottom: 28 }}>
-          <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Who we work with</div>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 35, fontWeight: 700, color: 'var(--gc-slate)' }}>Choose the support that fits your community.</h2>
-        </div>
-        <div style={{ width: '100%', maxWidth: 1000, height: 240, overflow: 'hidden', borderRadius: 10, margin: '0 auto 24px' }}>
-          <img
-            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2660.png?v=1785100854&width=1200"
-            alt="A group of young women from the Girlhood Collective community posing together outdoors"
-            loading="lazy"
-            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-          />
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, maxWidth: 1000, margin: '0 auto' }}>
-          {PERSONAS.map((p) => (
-            <Link
-              key={p.id}
-              to={PERSONA_HREF(p.id)}
-              className="hover-lift"
-              style={{ textDecoration: 'none', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 8, padding: '26px 22px', display: 'block' }}
-            >
-              <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 12 }}>{p.title}</div>
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 22.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8, lineHeight: 1.3 }}>{p.headline}</h3>
-              <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65 }}>{p.body}</p>
-            </Link>
-          ))}
         </div>
       </div>
 
