@@ -35,7 +35,6 @@ const TYPE = {
   h3: { fontFamily: 'var(--font-serif)', fontSize: 22, lineHeight: 1.3 },
   body: { fontSize: 17, lineHeight: 1.6 },
   small: { fontSize: 15, lineHeight: 1.5 },
-  eyebrow: { fontSize: 13, fontWeight: 600, letterSpacing: '.1em', textTransform: 'uppercase' },
   quote: { fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 21, lineHeight: 1.5 },
 };
 
@@ -165,13 +164,6 @@ export default function HomepageV2() {
         </div>
       </div>
 
-      {/* TRUST BAR */}
-      <div style={{ padding: '18px 48px', textAlign: 'center', background: '#fff', borderTop: '1px solid rgba(29,53,87,.14)', borderBottom: '1px solid rgba(29,53,87,.14)' }}>
-        <div style={{ ...TYPE.eyebrow, color: 'var(--gc-ink-muted)' }}>
-          Trusted by organizations, nonprofits, healthcare leaders, and community partners across Greater Cincinnati
-        </div>
-      </div>
-
       {/* HOW WE HELP */}
       <div id="services" className="hv2-section-pad" style={{ padding: '64px 48px', background: '#fff' }}>
         <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 32 }}>How We Help</div>
@@ -214,37 +206,6 @@ export default function HomepageV2() {
               );
             })}
             <div style={{ borderTop: '1px solid rgba(29,53,87,.14)' }} />
-          </div>
-        </div>
-      </div>
-
-      {/* WHY GIRLHOOD COLLECTIVE */}
-      <div id="why" className="hv2-section-pad" style={{ padding: '64px 48px', background: 'var(--gc-navy)' }}>
-        <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
-          <div style={{ ...TYPE.h2, color: '#f8f6f0', marginBottom: 14 }}>Why Girlhood Collective?</div>
-          <div style={{ width: 40, height: 3, background: SAGE, borderRadius: 2, margin: '0 auto 22px' }} />
-          <div style={{ ...TYPE.body, color: 'rgba(248,246,240,.72)', marginBottom: 18 }}>
-            There are plenty of consultants who can hand you a strategy deck.
-          </div>
-          <div
-            style={{
-              ...TYPE.quote,
-              color: '#f8f6f0',
-              margin: '0 auto 18px',
-              maxWidth: 560,
-              borderLeft: `2px solid ${HYDRANGEA}`,
-              paddingLeft: 18,
-              display: 'inline-block',
-              textAlign: 'left',
-            }}
-          >
-            We believe real community work starts with relationships.
-          </div>
-          <div style={{ ...TYPE.body, color: 'rgba(248,246,240,.72)', marginBottom: 18 }}>
-            Everything we recommend is grounded in lived experience — community building, executive leadership, communications, and organizational development. No performative initiatives, no one-size-fits-all solutions. Just the work that helps people trust your organization, feel like they belong, and stay connected.
-          </div>
-          <div style={{ fontSize: 18, color: '#f8f6f0', fontWeight: 600, lineHeight: 1.5 }}>
-            Because when people feel connected, organizations grow stronger.
           </div>
         </div>
       </div>
