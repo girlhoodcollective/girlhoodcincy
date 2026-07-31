@@ -10,7 +10,7 @@ export const HOW_WE_HELP = [
   },
   {
     title: 'Organizational Culture',
-    desc: "Strong culture doesn't happen by accident, it's built and maintained on purpose. We work alongside leadership as a strategic thought partner, helping you align your team around shared values, navigate growth or change, and create the kind of internal culture that keeps people invested and engaged. Think of it as executive-level support without adding another executive.",
+    desc: "Strong culture is built on purpose, not accident. We work alongside leadership as a strategic thought partner — aligning your team, navigating growth or change, and building the kind of culture that keeps people invested. Executive-level support, without adding another executive.",
     ctaLabel: 'Learn more',
     href: '#contact',
   },
