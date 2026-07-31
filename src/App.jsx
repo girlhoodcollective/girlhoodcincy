@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop.jsx';
 import Home from './pages/Home.jsx';
 import HomepageV2 from './pages/HomepageV2.jsx';
+import Gateway from './pages/Gateway.jsx';
 import About from './pages/About.jsx';
 import Events from './pages/Events.jsx';
 import Village from './pages/Village.jsx';
@@ -20,6 +21,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/homepage-v2" element={<HomepageV2 />} />
+        <Route path="/gateway" element={<Gateway />} />
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
         <Route path="/village" element={<Village />} />
