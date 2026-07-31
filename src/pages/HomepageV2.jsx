@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import YouTubeEmbed from '../components/YouTubeEmbed.jsx';
 import { useSEO } from '../lib/seo.js';
+import { submitNetlifyForm } from '../lib/netlifyForms.js';
 import { HOW_WE_HELP, CLIENTS_LIST, STATS_V2, PARTNERS_V2, AUDIENCE_V2 } from '../data/homepageV2Content.js';
 import { EVENTS, PAST_EVENTS } from '../data/events.js';
 import '../styles/homepageV2.css';
@@ -43,32 +44,33 @@ const cdnResize = (url, width) => `${url}${url.includes('?') ? '&' : '?'}width=$
 
 export default function HomepageV2() {
   useSEO({
-    title: 'Girlhood Collective | Homepage Design Preview',
-    description: 'Design-handoff preview of the Girlhood Collective consultancy homepage. Not linked from primary navigation.',
+    title: 'Girlhood Collective | Community & Culture Advisory for Organizations',
+    description: 'Fractional community strategy, culture, and events consulting for small businesses, allied health practices, and mission-driven organizations across Cincinnati.',
     path: '/homepage-v2',
   });
-
-  useEffect(() => {
-    let tag = document.querySelector('meta[name="robots"]');
-    if (!tag) {
-      tag = document.createElement('meta');
-      tag.setAttribute('name', 'robots');
-      document.head.appendChild(tag);
-    }
-    tag.setAttribute('content', 'noindex, nofollow');
-    return () => tag?.setAttribute('content', 'index, follow');
-  }, []);
 
   const [navOpen, setNavOpen] = useState(false);
   const [openItems, setOpenItems] = useState({ 0: true });
   const [form, setForm] = useState({ name: '', org: '', email: '', message: '' });
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formSending, setFormSending] = useState(false);
+  const [formError, setFormError] = useState(false);
 
   const setField = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormSubmitted(true);
+    if (!form.name.trim() || !form.email.trim()) return;
+    setFormSending(true);
+    setFormError(false);
+    try {
+      await submitNetlifyForm('homepage-v2-contact', form);
+      setFormSubmitted(true);
+    } catch {
+      setFormError(true);
+    } finally {
+      setFormSending(false);
+    }
   };
 
   const toggleItem = (i) => setOpenItems((s) => ({ ...s, [i]: !s[i] }));
@@ -484,9 +486,15 @@ export default function HomepageV2() {
               </label>
               <textarea id="hv2-message" required rows={4} value={form.message} onChange={setField('message')} className="hv2-field" style={{ resize: 'vertical' }} />
             </div>
-            <button type="submit" className="hv2-submit">
-              Send message
+            <button type="submit" className="hv2-submit" disabled={formSending}>
+              {formSending ? 'Sending…' : 'Send message'}
             </button>
+            {formError && (
+              <p style={{ fontSize: 14, color: '#c0392b', textAlign: 'center' }}>
+                Something went wrong. Please email us directly at{' '}
+                <a href="mailto:hello@girlhoodcincy.com">hello@girlhoodcincy.com</a>.
+              </p>
+            )}
           </form>
         )}
         <div style={{ maxWidth: 1160, margin: '48px auto 0', paddingTop: 20, borderTop: '1px solid rgba(29,53,87,.14)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>

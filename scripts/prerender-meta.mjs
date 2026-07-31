@@ -20,9 +20,21 @@ const DEFAULT_IMAGE = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/8.
 const ROUTES = [
   {
     path: '/',
-    sourceFile: 'src/pages/Home.jsx',
-    title: 'Girlhood Collective | Boutique Advisory for Organizational & Community Health',
-    description: 'A boutique advisory specializing in organizational and community health — plus monthly community events and a free newsletter for Cincinnati families and neighbors.',
+    sourceFile: 'src/pages/Gateway.jsx',
+    title: 'Girlhood Collective | Community & Boutique Advisory in Cincinnati',
+    description: 'A monthly community and events experience for Cincinnati neighbors — and a boutique advisory for organizations building real culture and community.',
+  },
+  {
+    path: '/community',
+    sourceFile: 'src/pages/Community.jsx',
+    title: 'Girlhood Collective | Community Events & The Village Newsletter',
+    description: 'Monthly community events and a free newsletter for Cincinnati families and neighbors looking for real connection.',
+  },
+  {
+    path: '/homepage-v2',
+    sourceFile: 'src/pages/HomepageV2.jsx',
+    title: 'Girlhood Collective | Community & Culture Advisory for Organizations',
+    description: 'Fractional community strategy, culture, and events consulting for small businesses, allied health practices, and mission-driven organizations across Cincinnati.',
   },
   {
     path: '/about',
@@ -43,12 +55,6 @@ const ROUTES = [
     sourceFile: 'src/pages/Village.jsx',
     title: 'Subscribe to Our Updates | Girlhood Collective Newsletter',
     description: 'A free monthly letter for anyone building real community — resources, local favorites, and what’s inspiring us right now.',
-  },
-  {
-    path: '/work-together',
-    sourceFile: 'src/pages/WorkTogether.jsx',
-    title: 'Work Together | Girlhood Collective Advisory Services',
-    description: 'Community Partnership Strategy, Grants & Sponsorship Support, ERG & Workshop Facilitation, Leadership Coaching, and Fractional Operational Exec Services — pick the engagement that fits.',
   },
   {
     path: '/resources',
