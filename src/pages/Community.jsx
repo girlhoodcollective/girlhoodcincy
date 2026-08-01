@@ -179,13 +179,8 @@ export default function Community() {
         <div className="cm-bio cm-section">
           <Reveal className="cm-bio-inner">
             <p>Girlhood Collective exists to build stronger communities by creating meaningful connections between individuals, families, nonprofits, schools, and businesses.</p>
-            <p>Founded in Cincinnati, Girlhood Collective brings people together through thoughtfully designed events, educational programming, strategic partnerships, and boutique advisory services in organizational and community health. Whether we&rsquo;re helping a local business engage with its community, creating experiences that foster belonging, or developing programs that inspire the next generation of leaders, our work is rooted in one belief: when people feel connected, communities thrive.</p>
-            <p>We believe community doesn&rsquo;t happen by accident. It is built intentionally through shared experiences, authentic relationships, and opportunities for everyone to contribute.</p>
-            <p>Today, Girlhood Collective serves as both a trusted community platform and a strategic partner for organizations looking to create lasting local impact. Every event, collaboration, and initiative is designed with the same goal: helping people find connection, discover opportunity, and build something bigger together.</p>
-            <div className="cm-pullquote">
-              <div className="cm-pullquote-mark" aria-hidden="true">&ldquo;</div>
-              <p>Community and belonging take practice and work — they&rsquo;re a science, not an accident.</p>
-            </div>
+            <p>Whether we&rsquo;re helping a local business engage with its community, creating experiences that foster belonging, or developing programs that inspire the next generation of leaders, our work is rooted in one belief: when people feel connected, communities thrive.</p>
+            <p>We believe community doesn&rsquo;t happen by accident. It is built intentionally. Every event, collaboration, and initiative is designed with the same goal: helping people find connection, discover opportunity, and build something bigger together.</p>
           </Reveal>
         </div>
 
