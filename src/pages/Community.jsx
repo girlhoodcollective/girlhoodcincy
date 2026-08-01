@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, Award, GraduationCap, Mail } from 'lucide-react';
+import { ArrowUpRight, Mail } from 'lucide-react';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
 import Reveal from '../components/Reveal.jsx';
@@ -16,11 +16,6 @@ const UPCOMING_EVENTS = getUpcomingPublishedEvents(2);
 const FOUNDER_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/J8A2890.jpg?v=1785099356';
 const FAMILY_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-brittany-family.jpg?v=1774545413';
 const PERSONAL_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_9211.jpg?v=1774029457';
-
-const CREDIBILITY = [
-  { icon: Award, title: 'Community Needs Assessment', body: 'As Program Development Committee Chair for a local nonprofit board, participated in an 18-month community needs assessment that resulted in a $75,000 seed grant and 800+ volunteer hours.' },
-  { icon: GraduationCap, title: 'B.A., Communication & Public Relations', body: 'University of Cincinnati.' },
-];
 
 export default function Community() {
   useSEO({
@@ -237,37 +232,6 @@ export default function Community() {
                 loading="lazy"
               />
             </Reveal>
-          </div>
-        </div>
-
-        {/* CREDIBILITY */}
-        <div className="cm-credibility cm-section">
-          <div className="cm-credibility-inner">
-            <Reveal className="cm-credibility-heading">
-              <div className="cm-eyebrow">
-                <span className="cm-dot" aria-hidden="true" />
-                Credibility
-              </div>
-              <h2>Track record.</h2>
-            </Reveal>
-            <div className="cm-credibility-grid">
-              <Reveal className="cm-credibility-photo">
-                <img
-                  src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/E2C08EAF-A1B7-4D74-BEA5-ED8E33947415.jpg?v=1785100809&width=520"
-                  alt="Brittany Gruber being interviewed by a local reporter"
-                  loading="lazy"
-                />
-              </Reveal>
-              <Reveal delay={120} className="cm-credibility-cards">
-                {CREDIBILITY.map((c) => (
-                  <div key={c.title} className="cm-credibility-card">
-                    <c.icon aria-hidden="true" />
-                    <h3>{c.title}</h3>
-                    <p>{c.body}</p>
-                  </div>
-                ))}
-              </Reveal>
-            </div>
           </div>
         </div>
       </div>
