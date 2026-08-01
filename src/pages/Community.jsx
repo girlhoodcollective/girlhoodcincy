@@ -140,11 +140,7 @@ export default function Community() {
       {/* EXPLAINER VIDEO */}
       <div className="cm-section" style={{ background: 'var(--gc-section)' }}>
         <Reveal className="cm-video-wrap">
-          <div className="cm-eyebrow">
-            <span className="cm-dot" aria-hidden="true" />
-            See it in action
-          </div>
-          <h2 className="cm-video-heading">What we do, in two minutes.</h2>
+          <h2 className="cm-video-heading">Our Why</h2>
           <YouTubeEmbed videoId="RutKIsejsmo" title="Girlhood Collective — what we do" />
         </Reveal>
       </div>
