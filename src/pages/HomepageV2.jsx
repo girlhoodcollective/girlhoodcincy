@@ -100,6 +100,9 @@ export default function HomepageV2() {
           <span style={{ fontStyle: 'italic', fontSize: 15, alignSelf: 'flex-end', marginTop: -4 }}>Collective</span>
         </a>
         <div className={`hv2-nav-links${navOpen ? ' open' : ''}`} onClick={() => setNavOpen(false)}>
+          <Link to="/" className="hv2-navlink">
+            Home
+          </Link>
           {NAV_LINKS.map((l) => (
             <a key={l.label} href={l.href} className="hv2-navlink">
               {l.label}

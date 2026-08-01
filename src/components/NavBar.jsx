@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const LINKS = [
+  { label: 'Home', href: '/' },
   { label: 'About', href: '/community#about' },
   { label: 'Events', href: '/events' },
   { label: 'Resources', href: '/resources' },
