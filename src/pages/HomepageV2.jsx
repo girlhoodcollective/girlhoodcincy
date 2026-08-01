@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import YouTubeEmbed from '../components/YouTubeEmbed.jsx';
+import Reveal from '../components/Reveal.jsx';
 import { useSEO } from '../lib/seo.js';
 import { submitNetlifyForm } from '../lib/netlifyForms.js';
 import { HOW_WE_HELP, CLIENTS_LIST, STATS_V2, PARTNERS_V2, AUDIENCE_V2 } from '../data/homepageV2Content.js';
@@ -122,39 +123,52 @@ export default function HomepageV2() {
       </div>
 
       {/* HERO */}
-      <div id="top" className="hv2-section-pad" style={{ padding: '64px 48px 48px', textAlign: 'center', background: '#fff' }}>
-        <div
-          className="hv2-hero-title"
-          style={{
-            fontFamily: 'var(--font-serif)',
-            fontWeight: 400,
-            fontSize: 'clamp(26px,3.4vw,40px)',
-            color: 'var(--gc-navy)',
-            maxWidth: 860,
-            margin: '0 auto',
-            lineHeight: 1.22,
-          }}
-        >
-          Helping build communities people can&rsquo;t wait to be a part of.
-        </div>
-        <div style={{ ...TYPE.body, color: 'var(--gc-ink-muted)', maxWidth: 680, margin: '20px auto 0' }}>
-          Programs and events that create measurable impact. Bridging corporate culture, non-profit impact, and community engagement across Greater Cincinnati.
-        </div>
-        <div className="hv2-hero-cta" style={{ marginTop: 28, display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="#contact" className="hv2-pill-cta">
-            Ready to get to work? Let&rsquo;s chat.
-          </a>
-          <a href="#services" className="hv2-pill-outline">
-            Explore Our Services
-          </a>
-        </div>
+      <div id="top" className="hv2-section-pad" style={{ padding: '64px 48px 48px', textAlign: 'center', background: '#fff', position: 'relative', overflow: 'hidden' }}>
+        <div className="hv2-ghost" aria-hidden="true" style={{ top: '-4%', right: '2vw', fontSize: 'clamp(140px,16vw,260px)' }}>&amp;</div>
+        <Reveal style={{ position: 'relative', zIndex: 1 }}>
+          <div className="hv2-eyebrow" style={{ justifyContent: 'center' }}>
+            <span className="hv2-dot" aria-hidden="true" />
+            Community &amp; Culture Advisory
+          </div>
+          <div
+            className="hv2-hero-title"
+            style={{
+              fontFamily: 'var(--font-serif)',
+              fontWeight: 400,
+              fontSize: 'clamp(26px,3.4vw,40px)',
+              color: 'var(--gc-navy)',
+              maxWidth: 860,
+              margin: '0 auto',
+              lineHeight: 1.22,
+            }}
+          >
+            Helping build communities people can&rsquo;t wait to be a part of.
+          </div>
+          <div style={{ ...TYPE.body, color: 'var(--gc-ink-muted)', maxWidth: 680, margin: '20px auto 0' }}>
+            Programs and events that create measurable impact. Bridging corporate culture, non-profit impact, and community engagement across Greater Cincinnati.
+          </div>
+          <div className="hv2-hero-cta" style={{ marginTop: 28, display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href="#contact" className="hv2-pill-cta">
+              Ready to get to work? Let&rsquo;s chat.
+            </a>
+            <a href="#services" className="hv2-pill-outline">
+              Explore Our Services
+            </a>
+          </div>
+        </Reveal>
       </div>
 
       {/* HOW WE HELP */}
       <div id="services" className="hv2-section-pad" style={{ padding: '64px 48px', background: '#fff' }}>
+        <Reveal>
+          <div className="hv2-eyebrow" style={{ justifyContent: 'center' }}>
+            <span className="hv2-dot" aria-hidden="true" />
+            What we do
+          </div>
+        </Reveal>
         <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 32 }}>How We Help</div>
         <div className="hv2-grid-2col" style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 48, alignItems: 'start' }}>
-          <div className="hv2-sticky-img" style={{ position: 'sticky', top: 90 }}>
+          <Reveal as="div" className="hv2-sticky-img" style={{ position: 'sticky', top: 90 }}>
             <div aria-hidden="true" style={{ position: 'absolute', top: 14, left: -14, right: -14, bottom: -14, background: HYDRANGEA, opacity: 0.35, borderRadius: 6, zIndex: 0 }} />
             <img
               src={cdnResize('https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3916.jpg?v=1783447727', 900)}
@@ -163,14 +177,14 @@ export default function HomepageV2() {
               decoding="async"
               style={{ width: '100%', aspectRatio: '3 / 4', objectFit: 'cover', display: 'block', borderRadius: 6, position: 'relative', zIndex: 1 }}
             />
-          </div>
-          <div>
+          </Reveal>
+          <Reveal as="div" delay={100}>
             {HOW_WE_HELP.map((item, i) => {
               const isOpen = !!openItems[i];
               return (
                 <div key={item.title} style={{ borderTop: '1px solid rgba(29,53,87,.14)' }}>
                   <button type="button" className="hv2-accordion-row" onClick={() => toggleItem(i)} aria-expanded={isOpen}>
-                    <div style={{ fontFamily: 'var(--font-serif)', fontSize: 14, color: 'var(--gc-emerald-soft)', width: 30, flex: 'none' }}>
+                    <div className="hv2-accordion-num" style={{ fontFamily: 'var(--font-serif)', fontSize: 14, color: 'var(--gc-emerald-soft)', width: 30, flex: 'none' }}>
                       0{i + 1}
                     </div>
                     <div style={{ ...TYPE.h3, color: 'var(--gc-navy)', flex: 1 }}>{item.title}</div>
@@ -192,13 +206,13 @@ export default function HomepageV2() {
               );
             })}
             <div style={{ borderTop: '1px solid rgba(29,53,87,.14)' }} />
-          </div>
+          </Reveal>
         </div>
       </div>
 
       {/* WHY THIS WORK MATTERS + WHO WE WORK WITH */}
       <div id="about" className="hv2-section-pad" style={{ padding: '48px 48px', background: '#fff' }}>
-        <div className="hv2-grid-2col" style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 40 }}>
+        <Reveal className="hv2-grid-2col" style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 40 }}>
           <div>
             <div style={{ ...TYPE.h3, color: 'var(--gc-navy)', marginBottom: 12 }}>Why this work matters</div>
             <div style={{ ...TYPE.body, color: 'var(--gc-navy)', marginBottom: 10 }}>
@@ -226,19 +240,20 @@ export default function HomepageV2() {
               ))}
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
 
       {/* EXPLAINER VIDEO — paired with the About section above */}
       <div className="hv2-section-pad" style={{ padding: '0 48px 48px', background: '#fff' }}>
-        <div style={{ maxWidth: 420, margin: '0 auto', borderRadius: 6, overflow: 'hidden' }}>
+        <Reveal style={{ maxWidth: 420, margin: '0 auto', borderRadius: 6, overflow: 'hidden' }}>
           <YouTubeEmbed videoId="RutKIsejsmo" title="Girlhood Collective — what we do" />
-        </div>
+        </Reveal>
       </div>
 
       {/* CLIENTS COME TO US WHEN */}
-      <div className="hv2-section-pad" style={{ padding: '56px 48px', background: 'var(--gc-section)' }}>
-        <div style={{ maxWidth: 680, margin: '0 auto' }}>
+      <div className="hv2-section-pad" style={{ padding: '56px 48px', background: 'var(--gc-section)', position: 'relative', overflow: 'hidden' }}>
+        <div className="hv2-grain" style={{ position: 'absolute' }} />
+        <Reveal style={{ maxWidth: 680, margin: '0 auto', position: 'relative', zIndex: 1 }}>
           <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', marginBottom: 20, textAlign: 'center' }}>
             Clients come to us when&hellip;
           </div>
@@ -250,26 +265,28 @@ export default function HomepageV2() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </div>
 
       {/* RESULTS */}
-      <div id="results" className="hv2-section-pad" style={{ padding: '64px 48px', background: '#fff' }}>
-        <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 32 }}>
+      <div id="results" className="hv2-section-pad" style={{ padding: '64px 48px', background: '#fff', position: 'relative', overflow: 'hidden' }}>
+        <div className="hv2-ghost" aria-hidden="true" style={{ bottom: '-4%', left: '1vw', fontSize: 'clamp(120px,14vw,220px)' }}>&rdquo;</div>
+        <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 32, position: 'relative', zIndex: 1 }}>
           Real community, real results
         </div>
-        <div className="hv2-stats-row" style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4,1fr)' }}>
+        <Reveal as="div" className="hv2-stats-row" style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', position: 'relative', zIndex: 1 }}>
           {STATS_V2.map((stat, i) => (
-            <div key={stat.label} className="hv2-stat-col" style={{ textAlign: 'center', padding: '0 20px', borderLeft: '1px solid rgba(29,53,87,.14)' }}>
+            <div key={stat.label} className="hv2-stat-col" style={{ textAlign: 'center', padding: '0 20px', borderLeft: '1px solid rgba(29,53,87,.14)', transform: i % 2 === 1 ? 'translateY(-10px)' : undefined }}>
               <div style={{ width: 24, height: 3, background: ACCENT_CYCLE[i % ACCENT_CYCLE.length], borderRadius: 2, margin: '0 auto 12px' }} />
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 38, color: 'var(--gc-navy)', marginBottom: 8 }}>{stat.value}</div>
               <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)' }}>{stat.label}</div>
             </div>
           ))}
-        </div>
-        <div style={{ maxWidth: 800, margin: '40px auto 0', borderLeft: '2px solid var(--gc-peony)', paddingLeft: 28 }}>
+        </Reveal>
+        <Reveal delay={100} style={{ maxWidth: 800, margin: '40px auto 0', position: 'relative', zIndex: 1 }}>
+          <span className="hv2-pullquote-mark" aria-hidden="true">&ldquo;</span>
           <div style={{ ...TYPE.quote, color: 'var(--gc-navy)', marginBottom: 16 }}>
-            &ldquo;Co-hosting the community brunch alongside Girlhood Collective was an absolute high point for us at Endurance in Education. The room curated by Girlhood Collective embodied everything we stand for: genuine connections, community strength, and people passionate about building a stronger talent pipeline for Cincinnati.&rdquo;
+            Co-hosting the community brunch alongside Girlhood Collective was an absolute high point for us at Endurance in Education. The room curated by Girlhood Collective embodied everything we stand for: genuine connections, community strength, and people passionate about building a stronger talent pipeline for Cincinnati.
           </div>
           <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', marginBottom: 16 }}>
             Brittany curated an incredible panel of female leaders spanning business, nonprofit development, and education — and led the charge from day one. We raised $1,000 in direct donations to EIE while reaching a wider audience.
@@ -277,8 +294,8 @@ export default function HomepageV2() {
           <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--gc-navy)' }}>
             Allyson Place<span style={{ fontWeight: 400, color: 'var(--gc-ink-muted)' }}>, Founder, Endurance in Education</span>
           </div>
-        </div>
-        <div className="hv2-img-pair" style={{ maxWidth: 900, margin: '32px auto 0', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+        </Reveal>
+        <div className="hv2-img-pair" style={{ maxWidth: 900, margin: '32px auto 0', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, position: 'relative', zIndex: 1 }}>
           <img
             src={cdnResize('https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_8694.jpg?v=1785375920', 700)}
             alt="Girlhood Collective community event"
@@ -299,14 +316,20 @@ export default function HomepageV2() {
       {/* MEET BRITTANY */}
       <div className="hv2-section-pad" style={{ padding: '64px 48px', background: '#fff' }}>
         <div className="hv2-grid-2col" style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.85fr 1.15fr', gap: 48, alignItems: 'center' }}>
-          <img
-            src={cdnResize('https://cdn.shopify.com/s/files/1/0656/4328/2528/files/J8A2874.jpg?v=1785099357', 800)}
-            alt="Brittany Gruber"
-            loading="lazy"
-            decoding="async"
-            style={{ width: '100%', aspectRatio: '4 / 5', objectFit: 'cover', display: 'block', borderRadius: 6 }}
-          />
-          <div>
+          <Reveal as="div" className="hv2-photo-frame-wrap">
+            <img
+              src={cdnResize('https://cdn.shopify.com/s/files/1/0656/4328/2528/files/J8A2874.jpg?v=1785099357', 800)}
+              alt="Brittany Gruber"
+              loading="lazy"
+              decoding="async"
+              style={{ width: '100%', aspectRatio: '4 / 5', objectFit: 'cover', display: 'block', borderRadius: 6 }}
+            />
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="hv2-eyebrow">
+              <span className="hv2-dot" aria-hidden="true" />
+              Meet the founder
+            </div>
             <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', marginBottom: 16 }}>Meet Brittany</div>
             <div style={{ ...TYPE.body, color: 'var(--gc-navy)', marginBottom: 14 }}>
               What started as a passion for creating spaces where people can grow with confidence has become a full ecosystem of support, consulting, and events.
@@ -321,7 +344,7 @@ export default function HomepageV2() {
             <a href="#contact" className="hv2-pill-cta">
               Ready to get to work? Let&rsquo;s chat.
             </a>
-          </div>
+          </Reveal>
         </div>
       </div>
 
@@ -332,7 +355,7 @@ export default function HomepageV2() {
           <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 32px' }}>
             Join us in person — here&rsquo;s what&rsquo;s next.
           </div>
-          <div className="hv2-grid-2col" style={{ maxWidth: 980, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: 36, alignItems: 'center', background: '#fff', borderRadius: 8, border: '1px solid rgba(29,53,87,.14)', overflow: 'hidden' }}>
+          <Reveal className="hv2-grid-2col" style={{ maxWidth: 980, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: 36, alignItems: 'center', background: '#fff', borderRadius: 8, border: '1px solid rgba(29,53,87,.14)', overflow: 'hidden' }}>
             <img
               src={cdnResize(FEATURED_EVENT_IMAGE, 700)}
               alt={FEATURED_EVENT.title}
@@ -352,7 +375,7 @@ export default function HomepageV2() {
                 Reserve Your Spot
               </a>
             </div>
-          </div>
+          </Reveal>
         </div>
       )}
 
@@ -362,19 +385,21 @@ export default function HomepageV2() {
         <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 32px' }}>
           A look back at the rooms we&rsquo;ve filled since 2025.
         </div>
-        <div style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 24 }}>
+        <Reveal style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 24 }}>
           {PAST_EVENTS.map((p, i) => {
             const Wrapper = p.href ? Link : 'div';
             const wrapperProps = p.href ? { to: p.href } : {};
             return (
               <Wrapper key={p.title} className="hv2-story-card" {...wrapperProps}>
-                <img
-                  src={cdnResize(p.photo, 500)}
-                  alt={p.title}
-                  loading="lazy"
-                  decoding="async"
-                  style={{ width: '100%', aspectRatio: '4 / 3', objectFit: 'cover', display: 'block', borderRadius: 6 }}
-                />
+                <div className="hv2-story-img-wrap">
+                  <img
+                    src={cdnResize(p.photo, 500)}
+                    alt={p.title}
+                    loading="lazy"
+                    decoding="async"
+                    style={{ width: '100%', aspectRatio: '4 / 3', objectFit: 'cover', display: 'block' }}
+                  />
+                </div>
                 <div style={{ width: 24, height: 3, background: ACCENT_CYCLE[i % ACCENT_CYCLE.length], borderRadius: 2, margin: '14px 0 10px' }} />
                 <div className="hv2-story-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 18, color: 'var(--gc-navy)', marginBottom: 4 }}>{p.title}</div>
                 <div style={{ fontSize: 13, fontWeight: 600, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)' }}>
@@ -384,23 +409,24 @@ export default function HomepageV2() {
               </Wrapper>
             );
           })}
-        </div>
+        </Reveal>
       </div>
 
       {/* TOOLS */}
-      <div id="tools" className="hv2-section-pad" style={{ padding: '56px 48px', background: 'var(--gc-section)' }}>
-        <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 10 }}>Start a Conversation</div>
-        <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 28px' }}>
+      <div id="tools" className="hv2-section-pad" style={{ padding: '56px 48px', background: 'var(--gc-section)', position: 'relative', overflow: 'hidden' }}>
+        <div className="hv2-grain" style={{ position: 'absolute' }} />
+        <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 10, position: 'relative', zIndex: 1 }}>Start a Conversation</div>
+        <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 28px', position: 'relative', zIndex: 1 }}>
           One quick way to get started.
         </div>
-        <div style={{ maxWidth: 400, margin: '0 auto' }}>
+        <Reveal style={{ maxWidth: 400, margin: '0 auto', position: 'relative', zIndex: 1 }}>
           <a href="https://girlhoodeventrequest.netlify.app" target="_blank" rel="noopener noreferrer" className="hv2-tool-card">
             <div style={{ fontFamily: 'var(--font-serif)', fontSize: 14, color: SAGE }}>01</div>
             <div style={{ fontSize: 17, fontWeight: 600, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.4 }}>
               Submit a request to partner on an event or collaboration.
             </div>
           </a>
-        </div>
+        </Reveal>
       </div>
 
       {/* PARTNERS */}
@@ -409,18 +435,19 @@ export default function HomepageV2() {
         <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 28px' }}>
           Local businesses and organizations we&rsquo;ve had the privilege of building community with.
         </div>
-        <div style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 20 }}>
+        <Reveal style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 20 }}>
           {PARTNERS_V2.map((p) => (
             <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" className="hv2-partner-card">
               <img src={cdnResize(p.logo, 200)} alt={p.name} loading="lazy" decoding="async" style={{ width: '100%', height: 52, objectFit: 'contain' }} />
               <div style={{ fontSize: 14, fontWeight: 500, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.3 }}>{p.name}</div>
             </a>
           ))}
-        </div>
+        </Reveal>
       </div>
 
       {/* MID CTA */}
       <div className="hv2-section-pad" style={{ padding: '56px 48px', background: 'var(--gc-navy)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+        <div className="hv2-grain-dark" aria-hidden="true" />
         <div
           aria-hidden="true"
           style={{
@@ -435,7 +462,12 @@ export default function HomepageV2() {
             zIndex: 0,
           }}
         />
-        <div style={{ position: 'relative', zIndex: 1 }}>
+        <div className="hv2-ghost hv2-ghost--onlight" aria-hidden="true" style={{ top: '-8%', left: '2vw', fontSize: 'clamp(120px,15vw,220px)' }}>&amp;</div>
+        <Reveal style={{ position: 'relative', zIndex: 1 }}>
+          <div className="hv2-eyebrow hv2-eyebrow--onlight" style={{ justifyContent: 'center' }}>
+            <span className="hv2-dot" aria-hidden="true" />
+            Let&rsquo;s talk
+          </div>
           <div style={{ ...TYPE.h2, color: '#f8f6f0', maxWidth: 700, margin: '0 auto 14px' }}>
             Let&rsquo;s build something people want to be part of.
           </div>
@@ -445,16 +477,20 @@ export default function HomepageV2() {
           <a href="#contact" className="hv2-pill-white">
             Ready to get to work? Let&rsquo;s chat.
           </a>
-        </div>
+        </Reveal>
       </div>
 
       {/* CONTACT / FOOTER */}
       <div id="contact" className="hv2-section-pad" style={{ padding: '48px 48px 40px', background: '#fff' }}>
-        <div style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
+        <Reveal style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
+          <div className="hv2-eyebrow" style={{ justifyContent: 'center' }}>
+            <span className="hv2-dot" aria-hidden="true" />
+            Get in touch
+          </div>
           <div style={{ ...TYPE.body, color: 'var(--gc-ink-muted)', marginBottom: 24 }}>
             Let&rsquo;s chat. Reach out below and we&rsquo;ll get back to you ASAP.
           </div>
-        </div>
+        </Reveal>
         {formSubmitted ? (
           <div style={{ maxWidth: 520, margin: '0 auto', textAlign: 'center', padding: '32px 24px', border: '1.5px solid var(--gc-emerald-soft)', borderRadius: 6 }}>
             <div style={{ fontFamily: 'var(--font-serif)', fontSize: 21, color: 'var(--gc-navy)', marginBottom: 8 }}>Thanks for reaching out.</div>
