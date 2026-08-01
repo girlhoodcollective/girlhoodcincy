@@ -118,7 +118,10 @@ export default function Gateway() {
 
       <div className="gw-hero">
         <div className="gw-hero-inner">
-          <div className="gw-eyebrow gw-reveal gw-d1">Two ways in</div>
+          <div className="gw-eyebrow gw-reveal gw-d1">
+            <span className="gw-dot" aria-hidden="true" />
+            Two ways in
+          </div>
           <h1 className="gw-headline gw-reveal gw-d2">
             The best of <em>both worlds.</em>
           </h1>
@@ -177,6 +180,7 @@ export default function Gateway() {
       <div className="gw-footer-line gw-reveal gw-d6">
         <div className="gw-rule" />
         <p>
+          <span className="gw-dot" aria-hidden="true" />
           Not sure?{' '}
           <Link to="/community">
             Start with the community side

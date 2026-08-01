@@ -41,7 +41,7 @@
   left: -10%;
   width: 480px;
   height: 480px;
-  background: radial-gradient(circle, rgba(249, 113, 175, 0.09), rgba(249, 113, 175, 0) 70%);
+  background: radial-gradient(circle, rgba(249, 113, 175, 0.14), rgba(249, 113, 175, 0) 70%);
 }
 
 .gw-header {
@@ -85,7 +85,19 @@
 .gw-meta svg {
   width: 13px;
   height: 13px;
-  opacity: 0.75;
+  color: var(--gc-peony);
+  opacity: 0.9;
+}
+
+.gw-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  flex: none;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: var(--gc-peony);
 }
 
 .gw-hero {
@@ -101,7 +113,6 @@
 .gw-eyebrow {
   display: flex;
   align-items: center;
-  gap: 12px;
   font: 700 13px var(--font-sans);
   letter-spacing: 0.24em;
   text-transform: uppercase;
@@ -112,6 +123,7 @@
   content: '';
   width: 34px;
   height: 1px;
+  margin-right: 12px;
   background: var(--gc-emerald);
   opacity: 0.55;
 }
@@ -213,6 +225,11 @@
   box-shadow: 0 28px 56px rgba(29, 53, 87, 0.12);
   border-color: rgba(64, 130, 109, 0.35);
 }
+.gw-panel--a::before {
+  /* Warmer than the shared panel spotlight — a small peony-tinted
+     glow, kept as a hover-only accent rather than a fill. */
+  background: radial-gradient(320px circle at var(--mx, 50%) var(--my, 0%), rgba(249, 113, 175, 0.12), transparent 60%);
+}
 
 .gw-panel--b {
   background: var(--gc-navy);
@@ -310,10 +327,11 @@
 .gw-panel-cta svg {
   width: 15px;
   height: 15px;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
 }
 .gw-panel:hover .gw-panel-cta svg {
   transform: translate(3px, -3px);
+  color: var(--gc-peony);
 }
 
 .gw-footer-line {
