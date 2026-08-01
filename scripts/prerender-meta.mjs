@@ -56,12 +56,6 @@ const ROUTES = [
     description: 'Practical ideas for building stronger organizations, neighborhoods, and relationships — the same thinking behind every Girlhood Collective partnership.',
   },
   {
-    path: '/contact',
-    sourceFile: 'src/pages/Contact.jsx',
-    title: 'Request a 20-Minute Fit Call | Girlhood Collective',
-    description: "Twenty minutes, no pitch — just a conversation about what you're building.",
-  },
-  {
     path: '/consultation-intake',
     sourceFile: 'src/pages/ConsultationIntake.jsx',
     title: 'Consultation Intake — Girlhood Collective',
