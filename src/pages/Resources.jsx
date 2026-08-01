@@ -6,14 +6,6 @@ import { PARTNER_LOGOS } from '../data/content.js';
 
 const TOOLS = [
   {
-    href: '/consultation-intake',
-    accent: 'var(--gc-emerald)',
-    eyebrow: 'For organizations · 8 min',
-    title: 'Consultation Intake',
-    body: "A five-part diagnostic for leaders. Tell us what's actually going on and get a personalized read on the pattern underneath and where we'd start.",
-    cta: 'Begin the intake →',
-  },
-  {
     href: '/worth-quiz',
     accent: 'var(--gc-lavender)',
     eyebrow: 'For individuals · 20 questions',
@@ -64,7 +56,7 @@ export default function Resources() {
           <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>Free tools</div>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, fontSize: 35, color: '#fff' }}>Start with a question.</h2>
         </div>
-        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, maxWidth: 900, margin: '0 auto' }}>
+        <div style={{ maxWidth: 420, margin: '0 auto' }}>
           {TOOLS.map((t) => (
             <Link key={t.title} className="hover-lift" to={t.href} style={{ textDecoration: 'none', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.14)', borderRadius: 8, padding: '26px 24px', display: 'block' }}>
               <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>{t.eyebrow}</div>
