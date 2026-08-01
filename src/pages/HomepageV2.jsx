@@ -115,9 +115,9 @@ export default function HomepageV2() {
           aria-expanded={navOpen}
           onClick={() => setNavOpen((o) => !o)}
         >
-          <span />
-          <span />
-          <span />
+          <span style={{ transform: navOpen ? 'translateY(7px) rotate(45deg)' : 'none' }} />
+          <span style={{ opacity: navOpen ? 0 : 1 }} />
+          <span style={{ width: navOpen ? '100%' : undefined, transform: navOpen ? 'translateY(-7px) rotate(-45deg)' : 'none' }} />
         </button>
       </div>
 
@@ -502,7 +502,10 @@ export default function HomepageV2() {
             Girlhood Collective
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--gc-peony)', display: 'inline-block' }} />
           </div>
-          <div style={{ fontSize: 14, color: 'var(--gc-ink-muted)' }}>© 2026 Girlhood Collective. All rights reserved.</div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 18, fontSize: 14, color: 'var(--gc-ink-muted)' }}>
+            <span>© 2026 Girlhood Collective. All rights reserved.</span>
+            <Link to="/privacy" style={{ color: 'var(--gc-ink-muted)' }}>Privacy</Link>
+          </div>
         </div>
       </div>
     </div>

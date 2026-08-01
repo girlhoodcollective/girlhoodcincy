@@ -74,6 +74,12 @@ const ROUTES = [
     description: 'How one event turned into $3,000 raised, 10 new sponsors, and the start of a lasting community for Endurance in Education.',
     image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/432_a2c25d8f-0ce8-40d5-b0fe-f1f1d4b17a69.jpg?v=1784653522&width=1200',
   },
+  {
+    path: '/privacy',
+    sourceFile: 'src/pages/Privacy.jsx',
+    title: 'Privacy Policy | Girlhood Collective',
+    description: 'What information Girlhood Collective collects through its forms and newsletter, how it is used, and who it is shared with.',
+  },
 ];
 
 function escapeHtml(s) {
