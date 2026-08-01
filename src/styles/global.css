@@ -56,13 +56,31 @@ select:focus-visible,
   transition: color 0.2s;
 }
 .navlink--onwhite {
+  position: relative;
   color: var(--gc-ink-muted);
+  padding-bottom: 6px;
+}
+.navlink--onwhite::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--gc-peony);
+  transition: width 250ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 .navlink--onwhite:hover {
   color: var(--gc-emerald);
 }
+.navlink--onwhite:hover::after {
+  width: 100%;
+}
 .navlink--onwhite.active {
   color: var(--gc-emerald);
+}
+.navlink--onwhite.active::after {
+  width: 100%;
 }
 .navlink--ondark {
   color: rgba(255, 255, 255, 0.55);
