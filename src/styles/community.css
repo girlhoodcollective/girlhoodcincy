@@ -488,6 +488,7 @@
   top: 0;
   left: 0;
   z-index: 1;
+  object-position: center 10%;
 }
 .cm-personal-photos img:last-child {
   bottom: 0;
@@ -814,6 +815,10 @@
   }
   .cm-credibility-cards {
     margin-left: 0;
+  }
+  .cm-case-photo-wrap img {
+    height: 220px;
+    object-position: center 30%;
   }
   .cm-personal-photos {
     height: auto;
