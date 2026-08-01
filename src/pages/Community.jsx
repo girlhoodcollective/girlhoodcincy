@@ -52,7 +52,7 @@ export default function Community() {
               It takes a village. <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>Let&rsquo;s build yours.</span>
             </h1>
             <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.75, maxWidth: 500, margin: '16px 0 26px' }}>
-              We build communities people strive to belong to, while helping the organizations, schools, and brands who partner with us turn that belonging into engagement, loyalty, and measurable impact.
+              Creating spaces that foster meaningful relationships, improve local communities, and promote a genuine sense of belonging.
             </p>
             <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
               <Link className="btn" to="/events" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>
