@@ -9,7 +9,7 @@ const LINKS = [
   { label: 'Subscribe', href: '/village' },
 ];
 
-const DEFAULT_CTA = { label: 'Join our email list to stay up to date', href: '/village' };
+const DEFAULT_CTA = { label: 'Join our emails list', href: '/village' };
 
 export default function NavBar({ variant = 'white', active, label, cta = DEFAULT_CTA }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -53,7 +53,7 @@ export default function NavBar({ variant = 'white', active, label, cta = DEFAULT
         </Link>
         <div
           style={{
-            font: '600 12.5px var(--font-sans)',
+            font: '600 16px var(--font-sans)',
             letterSpacing: '.2em',
             textTransform: 'uppercase',
             color: 'var(--gc-ink-muted)',
@@ -74,7 +74,7 @@ export default function NavBar({ variant = 'white', active, label, cta = DEFAULT
         style={{
           background: '#fff',
           borderBottom: '1px solid var(--gc-border)',
-          padding: '16px 40px',
+          padding: '16px 28px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -97,7 +97,7 @@ export default function NavBar({ variant = 'white', active, label, cta = DEFAULT
             Collective
           </span>
         </Link>
-        <div className="nav-links-desktop" style={{ display: 'flex', gap: 34, alignItems: 'center' }}>
+        <div className="nav-links-desktop" style={{ display: 'flex', gap: 20, alignItems: 'center' }}>
           {links.map((l) => (
             <Link
               key={l.label}
@@ -107,7 +107,7 @@ export default function NavBar({ variant = 'white', active, label, cta = DEFAULT
               {l.label}
             </Link>
           ))}
-          <Link to={cta.href} className="btn" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '11px 20px', whiteSpace: 'nowrap' }}>
+          <Link to={cta.href} className="btn" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '11px 16px', whiteSpace: 'nowrap' }}>
             {cta.label}
           </Link>
         </div>

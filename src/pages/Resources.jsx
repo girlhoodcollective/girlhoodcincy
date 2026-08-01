@@ -32,7 +32,7 @@ export default function Resources() {
 
       <Link to="/village#archive" style={{ display: 'block', textDecoration: 'none' }}>
         <div style={{ background: 'var(--gc-navy)', padding: '13px 44px', textAlign: 'center' }}>
-          <span style={{ font: '700 13.5px var(--font-sans)', letterSpacing: '.06em', color: '#fff' }}>
+          <span style={{ font: '700 16px var(--font-sans)', letterSpacing: '.06em', color: '#fff' }}>
             Catch up on The Village — read the full newsletter archive →
           </span>
         </div>
@@ -78,7 +78,7 @@ export default function Resources() {
               to={t.href}
               style={{ textDecoration: 'none', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.14)', borderRadius: 8, padding: '26px 24px', display: 'block' }}
             >
-              <div style={{ font: '700 11px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>{t.eyebrow}</div>
+              <div style={{ font: '700 16px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>{t.eyebrow}</div>
               <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: '#fff', marginBottom: 6 }}>{t.title}</h3>
               <p style={{ fontSize: 16, fontWeight: 300, color: 'rgba(255,255,255,.6)', lineHeight: 1.6, marginBottom: 12 }}>{t.body}</p>
               <span className="up-cta" style={{ color: t.accent }}>
@@ -116,7 +116,7 @@ export default function Resources() {
                   style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', display: 'block', transform: p.zoom ? `scale(${p.zoom})` : undefined }}
                 />
               </a>
-              <p style={{ fontSize: 14, fontStyle: 'normal', fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.5, textAlign: 'center', margin: '10px 4px 0' }}>
+              <p style={{ fontSize: 16, fontStyle: 'normal', fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.5, textAlign: 'center', margin: '10px 4px 0' }}>
                 {p.quote}
               </p>
             </div>

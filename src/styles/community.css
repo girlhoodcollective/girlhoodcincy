@@ -26,7 +26,7 @@
 .cm-eyebrow {
   display: flex;
   align-items: center;
-  font: 700 12.5px var(--font-sans);
+  font: 700 16px var(--font-sans);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gc-emerald);
@@ -47,7 +47,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font: 600 14px var(--font-sans);
+  font: 600 16px var(--font-sans);
   color: var(--gc-emerald);
   text-decoration: none;
   position: relative;
@@ -152,7 +152,7 @@
   gap: 8px;
   background: var(--gc-emerald);
   color: #fff;
-  font: 600 14.5px var(--font-sans);
+  font: 600 16px var(--font-sans);
   padding: 15px 26px;
   border-radius: 3px;
   text-decoration: none;
@@ -171,7 +171,7 @@
   border: 1.5px solid var(--gc-navy);
   color: var(--gc-navy);
   background: transparent;
-  font: 600 14.5px var(--font-sans);
+  font: 600 16px var(--font-sans);
   padding: 13.5px 24px;
   border-radius: 3px;
   text-decoration: none;
@@ -221,12 +221,12 @@
   gap: 8px 16px;
   max-width: 960px;
   margin: 0 auto;
-  font-size: 15.5px;
+  font-size: 16px;
 }
 .cm-ticker-tag {
   display: inline-flex;
   align-items: center;
-  font: 700 11.5px var(--font-sans);
+  font: 700 16px var(--font-sans);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gc-emerald);
@@ -334,7 +334,7 @@
   margin-bottom: 8px;
 }
 .cm-founder-role {
-  font: 600 14.5px var(--font-sans);
+  font: 600 16px var(--font-sans);
   letter-spacing: 0.03em;
   color: var(--gc-ink-muted);
   margin-bottom: 20px;
@@ -408,7 +408,7 @@
   align-items: start;
 }
 .cm-work-label {
-  font: 700 12.5px var(--font-sans);
+  font: 700 16px var(--font-sans);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gc-emerald);
@@ -578,7 +578,7 @@
   margin-bottom: 6px;
 }
 .cm-credibility-card p {
-  font-size: 15.5px;
+  font-size: 16px;
   font-weight: 300;
   color: var(--gc-ink-muted);
   line-height: 1.6;
@@ -654,7 +654,7 @@
   line-height: 1;
 }
 .cm-trust-label {
-  font: 600 12px var(--font-sans);
+  font: 600 16px var(--font-sans);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gc-ink-muted);
@@ -662,7 +662,7 @@
 }
 .cm-trust-note {
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--gc-ink-muted);
   padding: 8px 0 44px;
 }
@@ -711,7 +711,7 @@
 .cm-village-eyebrow {
   display: inline-flex;
   align-items: center;
-  font: 700 13px var(--font-sans);
+  font: 700 16px var(--font-sans);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gc-lavender-soft);
@@ -762,7 +762,7 @@
   border: none;
   background: var(--gc-emerald);
   color: #fff;
-  font: 600 14px var(--font-sans);
+  font: 600 16px var(--font-sans);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 15px 26px;
@@ -784,7 +784,7 @@
   color: #fff;
 }
 .cm-village-error {
-  font-size: 15px;
+  font-size: 16px;
   color: #ffb4a8;
   margin-top: 14px;
 }

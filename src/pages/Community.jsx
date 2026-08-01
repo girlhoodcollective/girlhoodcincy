@@ -80,7 +80,7 @@ export default function Community() {
                 See Upcoming Events <ArrowUpRight aria-hidden="true" width={16} height={16} />
               </Link>
               <Link className="cm-btn-outline" to="/village">
-                Join our email list to stay up to date
+                Join our emails list
               </Link>
             </div>
           </Reveal>

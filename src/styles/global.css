@@ -48,8 +48,8 @@ select:focus-visible,
 
 /* Nav links */
 .navlink {
-  font: 600 12.5px/1 var(--font-sans);
-  letter-spacing: 0.2em;
+  font: 600 16px/1 var(--font-sans);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
@@ -98,7 +98,7 @@ select:focus-visible,
   text-decoration: none;
   border: none;
   cursor: pointer;
-  font: 600 15px var(--font-sans);
+  font: 600 16px var(--font-sans);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   border-radius: 100px;
@@ -191,7 +191,7 @@ textarea.fld {
   border: 1px solid var(--gc-border);
   border-radius: 100px;
   padding: 9px 20px;
-  font: 600 14px var(--font-sans);
+  font: 600 16px var(--font-sans);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   background: #fff;
@@ -239,7 +239,7 @@ textarea.fld {
   min-width: 0;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1220px) {
   .nav-links-desktop {
     display: none !important;
   }

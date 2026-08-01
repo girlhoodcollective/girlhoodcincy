@@ -171,7 +171,7 @@ export default function WorthQuiz() {
         <div style={{ background: 'var(--gc-cream)', padding: '64px 32px 72px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: -90, right: -70, width: 320, height: 320, borderRadius: '50%', background: 'radial-gradient(circle, rgba(79,178,134,.14), transparent 70%)' }} />
           <div style={{ position: 'relative', zIndex: 2, maxWidth: 640, margin: '0 auto' }}>
-            <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.26em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
+            <div style={{ font: '600 16px var(--font-sans)', letterSpacing: '.26em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 18 }}>
               A warm skills inventory · Cincinnati
             </div>
             <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 55, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.12 }}>
@@ -181,10 +181,10 @@ export default function WorthQuiz() {
               You were just never given the tools to name what you're actually good at — and what it's worth. Twenty questions, about six minutes, and a lot more clarity than when you started.
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: 10, flexWrap: 'wrap', marginBottom: 32 }}>
-              <span style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 100, padding: '7px 16px', fontSize: 15, color: 'var(--gc-ink-muted)' }}>
+              <span style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 100, padding: '7px 16px', fontSize: 16, color: 'var(--gc-ink-muted)' }}>
                 Names the skills you call "just common sense"
               </span>
-              <span style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 100, padding: '7px 16px', fontSize: 15, color: 'var(--gc-ink-muted)' }}>
+              <span style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 100, padding: '7px 16px', fontSize: 16, color: 'var(--gc-ink-muted)' }}>
                 Grounded in Cincinnati's real market
               </span>
             </div>
@@ -207,7 +207,7 @@ export default function WorthQuiz() {
           <div style={{ maxWidth: 680, margin: '0 auto', padding: '28px 24px 70px' }}>
             <div style={{ padding: '20px 0 14px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
-                <span style={{ font: '600 12.5px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)' }}>Progress</span>
+                <span style={{ font: '600 16px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)' }}>Progress</span>
                 <span style={{ fontFamily: 'var(--font-serif)', fontSize: 22.5, fontWeight: 700, color: 'var(--gc-slate)' }}>
                   {qi + 1} / {QUESTIONS.length}
                 </span>
@@ -218,7 +218,7 @@ export default function WorthQuiz() {
             </div>
 
             <div style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 14, boxShadow: '0 4px 24px rgba(53,91,116,.07)', padding: '36px 32px' }}>
-              <div style={{ display: 'inline-block', background: 'var(--gc-sage-light)', borderRadius: 6, padding: '4px 11px', font: '600 12.5px var(--font-sans)', letterSpacing: '.08em', color: 'var(--gc-emerald)', marginBottom: 14, whiteSpace: 'nowrap' }}>
+              <div style={{ display: 'inline-block', background: 'var(--gc-sage-light)', borderRadius: 6, padding: '4px 11px', font: '600 16px var(--font-sans)', letterSpacing: '.08em', color: 'var(--gc-emerald)', marginBottom: 14, whiteSpace: 'nowrap' }}>
                 {multi ? `Select up to ${q.maxSelect}` : 'Choose one'}
               </div>
               <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 25, fontWeight: 700, lineHeight: 1.4, color: 'var(--gc-slate)', marginBottom: 8 }}>{q.text}</h2>
@@ -240,7 +240,7 @@ export default function WorthQuiz() {
                         style={{
                           flexShrink: 0, width: 24, height: 24, borderRadius: multi ? 5 : '50%',
                           background: sel ? 'var(--gc-emerald)' : 'rgba(45,52,71,.08)', color: sel ? '#fff' : 'var(--gc-ink-muted)',
-                          display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 700, marginTop: 1, transition: 'all .18s',
+                          display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, fontWeight: 700, marginTop: 1, transition: 'all .18s',
                         }}
                       >
                         {LETTERS[i]}
@@ -277,7 +277,7 @@ export default function WorthQuiz() {
             <div style={{ background: 'var(--gc-navy)', borderRadius: 16, padding: '42px 32px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
               <div style={{ position: 'absolute', top: -60, right: -60, width: 240, height: 240, borderRadius: '50%', background: 'radial-gradient(circle, rgba(186,217,243,.22), transparent 70%)' }} />
               <div style={{ position: 'relative', zIndex: 2 }}>
-                <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.26em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>Your skill profile</div>
+                <div style={{ font: '600 16px var(--font-sans)', letterSpacing: '.26em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>Your skill profile</div>
                 <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 47.5, fontWeight: 700, color: '#fff', lineHeight: 1.15 }}>
                   The <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-lavender-soft)' }}>{arch.name}</span>
                 </h2>
@@ -285,7 +285,7 @@ export default function WorthQuiz() {
               </div>
             </div>
 
-            <h3 style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', margin: '32px 0 14px' }}>
+            <h3 style={{ font: '700 16px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', margin: '32px 0 14px' }}>
               Your strongest marketable skills
             </h3>
             {top.map(([s, v]) => {
@@ -294,7 +294,7 @@ export default function WorthQuiz() {
                 <div key={s} style={{ marginBottom: 14 }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
                     <span style={{ fontWeight: 600, fontSize: 17.5, color: 'var(--gc-slate)' }}>{SKILL_LABELS[s] || s}</span>
-                    <span style={{ fontSize: 15, color: 'var(--gc-emerald)', fontWeight: 600 }}>{pct}%</span>
+                    <span style={{ fontSize: 16, color: 'var(--gc-emerald)', fontWeight: 600 }}>{pct}%</span>
                   </div>
                   <div style={{ height: 8, background: 'rgba(45,52,71,.08)', borderRadius: 4, overflow: 'hidden' }}>
                     <div style={{ width: `${pct}%`, height: '100%', borderRadius: 4, background: 'var(--gc-emerald)' }} />
@@ -303,16 +303,16 @@ export default function WorthQuiz() {
               );
             })}
 
-            <h3 style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', margin: '30px 0 14px' }}>
+            <h3 style={{ font: '700 16px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', margin: '30px 0 14px' }}>
               Income streams that fit you — in Cincinnati
             </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {arch.streams.map((s) => (
                 <div key={s.title} style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 12, borderLeft: '4px solid var(--gc-emerald)', padding: '20px 22px' }}>
-                  <div style={{ font: '700 12px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 6 }}>{s.label}</div>
+                  <div style={{ font: '700 16px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 6 }}>{s.label}</div>
                   <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: 21, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 5 }}>{s.title}</h4>
                   <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.55, marginBottom: 10 }}>{s.desc}</p>
-                  <span style={{ display: 'inline-block', background: 'var(--gc-cream)', borderRadius: 6, padding: '4px 11px', fontSize: 15, fontWeight: 600, color: 'var(--gc-slate)' }}>{s.range}</span>
+                  <span style={{ display: 'inline-block', background: 'var(--gc-cream)', borderRadius: 6, padding: '4px 11px', fontSize: 16, fontWeight: 600, color: 'var(--gc-slate)' }}>{s.range}</span>
                 </div>
               ))}
             </div>
@@ -322,7 +322,7 @@ export default function WorthQuiz() {
             </div>
 
             <div style={{ background: 'var(--gc-slate)', borderRadius: 14, padding: '26px 28px', marginTop: 16 }}>
-              <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>Your reframe</div>
+              <div style={{ font: '700 16px var(--font-sans)', letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>Your reframe</div>
               <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 22.5, color: '#fff', lineHeight: 1.55 }}>{arch.reframe}</div>
             </div>
 
@@ -362,7 +362,7 @@ export default function WorthQuiz() {
                     </button>
                   </div>
                   {submitError && (
-                    <p style={{ fontSize: 15, color: '#c0392b', marginTop: 12 }}>
+                    <p style={{ fontSize: 16, color: '#c0392b', marginTop: 12 }}>
                       Something went wrong — try again, or reach us at{' '}
                       <a href="mailto:hello@girlhoodcincy.com" style={{ color: '#c0392b' }}>hello@girlhoodcincy.com</a>.
                     </p>

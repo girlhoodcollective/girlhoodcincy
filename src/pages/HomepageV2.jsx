@@ -36,7 +36,7 @@ const TYPE = {
   h2: { fontFamily: 'var(--font-serif)', fontSize: 'clamp(26px,3.2vw,32px)', lineHeight: 1.2 },
   h3: { fontFamily: 'var(--font-serif)', fontSize: 22, lineHeight: 1.3 },
   body: { fontSize: 17, lineHeight: 1.6 },
-  small: { fontSize: 15, lineHeight: 1.5 },
+  small: { fontSize: 16, lineHeight: 1.5 },
   quote: { fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 21, lineHeight: 1.5 },
 };
 
@@ -97,7 +97,7 @@ export default function HomepageV2() {
       >
         <a href="#top" style={{ textDecoration: 'none', fontFamily: 'var(--font-serif)', fontSize: 22, lineHeight: 1, color: 'var(--gc-navy)', display: 'flex', flexDirection: 'column' }}>
           <span>Girlhood</span>
-          <span style={{ fontStyle: 'italic', fontSize: 15, alignSelf: 'flex-end', marginTop: -4 }}>Collective</span>
+          <span style={{ fontStyle: 'italic', fontSize: 16, alignSelf: 'flex-end', marginTop: -4 }}>Collective</span>
         </a>
         <div className={`hv2-nav-links${navOpen ? ' open' : ''}`} onClick={() => setNavOpen(false)}>
           <Link to="/" className="hv2-navlink">
@@ -187,7 +187,7 @@ export default function HomepageV2() {
               return (
                 <div key={item.title} style={{ borderTop: '1px solid rgba(29,53,87,.14)' }}>
                   <button type="button" className="hv2-accordion-row" onClick={() => toggleItem(i)} aria-expanded={isOpen}>
-                    <div className="hv2-accordion-num" style={{ fontFamily: 'var(--font-serif)', fontSize: 14, color: 'var(--gc-emerald-soft)', width: 30, flex: 'none' }}>
+                    <div className="hv2-accordion-num" style={{ fontFamily: 'var(--font-serif)', fontSize: 16, color: 'var(--gc-emerald-soft)', width: 30, flex: 'none' }}>
                       0{i + 1}
                     </div>
                     <div style={{ ...TYPE.h3, color: 'var(--gc-navy)', flex: 1 }}>{item.title}</div>
@@ -237,7 +237,7 @@ export default function HomepageV2() {
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
               {AUDIENCE_V2.map((who, i) => (
-                <div key={who} style={{ color: 'var(--gc-navy)', background: '#fff', fontSize: 14, fontWeight: 500, padding: '7px 14px', borderRadius: 999, border: `1.5px solid ${TAG_CYCLE[i % TAG_CYCLE.length]}` }}>
+                <div key={who} style={{ color: 'var(--gc-navy)', background: '#fff', fontSize: 16, fontWeight: 500, padding: '7px 14px', borderRadius: 999, border: `1.5px solid ${TAG_CYCLE[i % TAG_CYCLE.length]}` }}>
                   {who}
                 </div>
               ))}
@@ -294,7 +294,7 @@ export default function HomepageV2() {
           <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', marginBottom: 16 }}>
             Brittany curated an incredible panel of female leaders spanning business, nonprofit development, and education — and led the charge from day one. We raised $1,000 in direct donations to EIE while reaching a wider audience.
           </div>
-          <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--gc-navy)' }}>
+          <div style={{ fontSize: 16, fontWeight: 600, color: 'var(--gc-navy)' }}>
             Allyson Place<span style={{ fontWeight: 400, color: 'var(--gc-ink-muted)' }}>, Founder, Endurance in Education</span>
           </div>
         </Reveal>
@@ -342,7 +342,7 @@ export default function HomepageV2() {
             </div>
             <div style={{ paddingTop: 18, borderTop: '1px solid rgba(29,53,87,.14)', marginBottom: 20 }}>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 19, color: 'var(--gc-navy)', marginBottom: 2 }}>Brittany Gruber</div>
-              <div style={{ fontSize: 15, color: 'var(--gc-emerald-soft)', fontWeight: 600 }}>Founder &amp; Executive Director, Girlhood Collective</div>
+              <div style={{ fontSize: 16, color: 'var(--gc-emerald-soft)', fontWeight: 600 }}>Founder &amp; Executive Director, Girlhood Collective</div>
             </div>
             <a href="#contact" className="hv2-pill-cta">
               Ready to get to work? Let&rsquo;s chat.
@@ -367,13 +367,13 @@ export default function HomepageV2() {
               style={{ width: '100%', aspectRatio: '4 / 3', objectFit: 'cover', display: 'block' }}
             />
             <div style={{ padding: '8px 32px 8px 0' }}>
-              <div style={{ display: 'inline-block', fontSize: 12, fontWeight: 600, letterSpacing: '.08em', textTransform: 'uppercase', color: '#fff', background: HYDRANGEA, padding: '5px 12px', borderRadius: 999, marginBottom: 14 }}>
+              <div style={{ display: 'inline-block', fontSize: 16, fontWeight: 600, letterSpacing: '.08em', textTransform: 'uppercase', color: '#fff', background: HYDRANGEA, padding: '5px 12px', borderRadius: 999, marginBottom: 14 }}>
                 {FEATURED_EVENT.mon} {FEATURED_EVENT.day}, {FEATURED_EVENT.year}
               </div>
               <div style={{ ...TYPE.h3, color: 'var(--gc-navy)', marginBottom: 6 }}>{FEATURED_EVENT.title}</div>
               <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', marginBottom: 12 }}>{FEATURED_EVENT.where}</div>
               <div style={{ ...TYPE.body, color: 'var(--gc-navy)', marginBottom: 16 }}>{FEATURED_EVENT.desc}</div>
-              <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--gc-navy)', marginBottom: 20 }}>{FEATURED_EVENT.price}</div>
+              <div style={{ fontSize: 16, fontWeight: 600, color: 'var(--gc-navy)', marginBottom: 20 }}>{FEATURED_EVENT.price}</div>
               <a href={FEATURED_EVENT.shopifyUrl} target="_blank" rel="noopener noreferrer" className="hv2-pill-cta">
                 Reserve Your Spot
               </a>
@@ -405,7 +405,7 @@ export default function HomepageV2() {
                 </div>
                 <div style={{ width: 24, height: 3, background: ACCENT_CYCLE[i % ACCENT_CYCLE.length], borderRadius: 2, margin: '14px 0 10px' }} />
                 <div className="hv2-story-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 18, color: 'var(--gc-navy)', marginBottom: 4 }}>{p.title}</div>
-                <div style={{ fontSize: 13, fontWeight: 600, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)' }}>
+                <div style={{ fontSize: 16, fontWeight: 600, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)' }}>
                   {p.caption}
                   {p.href ? ' · Read the case study →' : ''}
                 </div>
@@ -424,7 +424,7 @@ export default function HomepageV2() {
         </div>
         <Reveal style={{ maxWidth: 400, margin: '0 auto', position: 'relative', zIndex: 1 }}>
           <a href="https://girlhoodeventrequest.netlify.app" target="_blank" rel="noopener noreferrer" className="hv2-tool-card">
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 14, color: SAGE }}>01</div>
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 16, color: SAGE }}>01</div>
             <div style={{ fontSize: 17, fontWeight: 600, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.4 }}>
               Submit a request to partner on an event or collaboration.
             </div>
@@ -442,7 +442,7 @@ export default function HomepageV2() {
           {PARTNERS_V2.map((p) => (
             <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" className="hv2-partner-card">
               <img src={cdnResize(p.logo, 200)} alt={p.name} loading="lazy" decoding="async" style={{ width: '100%', height: 52, objectFit: 'contain' }} />
-              <div style={{ fontSize: 14, fontWeight: 500, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.3 }}>{p.name}</div>
+              <div style={{ fontSize: 16, fontWeight: 500, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.3 }}>{p.name}</div>
             </a>
           ))}
         </Reveal>
@@ -502,25 +502,25 @@ export default function HomepageV2() {
         ) : (
           <form onSubmit={handleSubmit} style={{ maxWidth: 520, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 14 }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 5, textAlign: 'left' }}>
-              <label htmlFor="hv2-name" style={{ fontSize: 14, fontWeight: 600, color: 'var(--gc-navy)' }}>
+              <label htmlFor="hv2-name" style={{ fontSize: 16, fontWeight: 600, color: 'var(--gc-navy)' }}>
                 Name
               </label>
               <input id="hv2-name" type="text" required value={form.name} onChange={setField('name')} className="hv2-field" />
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 5, textAlign: 'left' }}>
-              <label htmlFor="hv2-org" style={{ fontSize: 14, fontWeight: 600, color: 'var(--gc-navy)' }}>
+              <label htmlFor="hv2-org" style={{ fontSize: 16, fontWeight: 600, color: 'var(--gc-navy)' }}>
                 Organization
               </label>
               <input id="hv2-org" type="text" value={form.org} onChange={setField('org')} className="hv2-field" />
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 5, textAlign: 'left' }}>
-              <label htmlFor="hv2-email" style={{ fontSize: 14, fontWeight: 600, color: 'var(--gc-navy)' }}>
+              <label htmlFor="hv2-email" style={{ fontSize: 16, fontWeight: 600, color: 'var(--gc-navy)' }}>
                 Email
               </label>
               <input id="hv2-email" type="email" required value={form.email} onChange={setField('email')} className="hv2-field" />
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 5, textAlign: 'left' }}>
-              <label htmlFor="hv2-message" style={{ fontSize: 14, fontWeight: 600, color: 'var(--gc-navy)' }}>
+              <label htmlFor="hv2-message" style={{ fontSize: 16, fontWeight: 600, color: 'var(--gc-navy)' }}>
                 Message
               </label>
               <textarea id="hv2-message" required rows={4} value={form.message} onChange={setField('message')} className="hv2-field" style={{ resize: 'vertical' }} />
@@ -529,7 +529,7 @@ export default function HomepageV2() {
               {formSending ? 'Sending…' : 'Send message'}
             </button>
             {formError && (
-              <p style={{ fontSize: 14, color: '#c0392b', textAlign: 'center' }}>
+              <p style={{ fontSize: 16, color: '#c0392b', textAlign: 'center' }}>
                 Something went wrong. Please email us directly at{' '}
                 <a href="mailto:hello@girlhoodcincy.com">hello@girlhoodcincy.com</a>.
               </p>
@@ -541,7 +541,7 @@ export default function HomepageV2() {
             Girlhood Collective
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--gc-peony)', display: 'inline-block' }} />
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 18, fontSize: 14, color: 'var(--gc-ink-muted)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 18, fontSize: 16, color: 'var(--gc-ink-muted)' }}>
             <span>© 2026 Girlhood Collective. All rights reserved.</span>
             <Link to="/privacy" style={{ color: 'var(--gc-ink-muted)' }}>Privacy</Link>
           </div>
