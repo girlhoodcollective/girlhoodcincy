@@ -24,7 +24,7 @@
 .up-eyebrow {
   display: flex;
   align-items: center;
-  font: 700 13px var(--font-sans);
+  font: 700 16px var(--font-sans);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gc-emerald);
@@ -78,7 +78,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font: 600 14px var(--font-sans);
+  font: 600 16px var(--font-sans);
   text-decoration: none;
   position: relative;
 }

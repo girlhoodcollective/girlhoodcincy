@@ -17,7 +17,7 @@ export default function Privacy() {
       <NavBar variant="white" />
 
       <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 44px', textAlign: 'center' }}>
-        <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Legal</div>
+        <div style={{ font: '600 16px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Legal</div>
         <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 46, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.15, maxWidth: 640, margin: '0 auto' }}>
           Privacy Policy
         </h1>

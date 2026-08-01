@@ -83,7 +83,7 @@ export default function Village() {
                   <button
                     onClick={handleSubscribe}
                     disabled={sending}
-                    style={{ cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 14px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', padding: '14px 26px', borderRadius: 3 }}
+                    style={{ cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 16px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', padding: '14px 26px', borderRadius: 3 }}
                   >
                     {sending ? 'Subscribing…' : 'Subscribe to Updates'}
                   </button>
@@ -136,8 +136,8 @@ export default function Village() {
               style={{ textDecoration: 'none', display: 'block', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 4, borderTop: `3px solid ${i.accent}`, padding: '24px 26px' }}
             >
               <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12, marginBottom: 10 }}>
-                <span style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>{i.vol}</span>
-                <span style={{ font: '600 14px var(--font-sans)', color: 'var(--gc-ink-muted)' }}>{i.date}</span>
+                <span style={{ font: '700 16px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>{i.vol}</span>
+                <span style={{ font: '600 16px var(--font-sans)', color: 'var(--gc-ink-muted)' }}>{i.date}</span>
               </div>
               <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 21, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 10, lineHeight: 1.4 }}>{i.title}</h3>
               <span className="up-cta" style={{ color: 'var(--gc-emerald)' }}>

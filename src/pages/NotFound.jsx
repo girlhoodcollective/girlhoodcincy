@@ -15,7 +15,7 @@ export default function NotFound() {
       <NavBar variant="white" />
 
       <div style={{ background: 'var(--gc-cream)', padding: '90px 44px', textAlign: 'center' }}>
-        <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>
+        <div style={{ font: '600 16px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>
           404
         </div>
         <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 55, color: 'var(--gc-navy)', lineHeight: 1.1 }}>

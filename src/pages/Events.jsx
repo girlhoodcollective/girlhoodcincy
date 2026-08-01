@@ -194,16 +194,16 @@ export default function Events() {
           {visible.map((e) => (
             <div key={e.id} className="up-card" style={{ display: 'flex', border: '1px solid var(--gc-border)', borderRadius: 4, overflow: 'hidden' }}>
               <div style={{ background: 'var(--gc-slate)', width: 120, flexShrink: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '22px 12px' }}>
-                <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)' }}>{e.mon}</div>
+                <div style={{ font: '600 16px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)' }}>{e.mon}</div>
                 <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 55, color: '#fff', lineHeight: 1 }}>{e.day}</div>
-                <div style={{ font: '400 15px var(--font-sans)', color: 'rgba(255,255,255,.55)' }}>{e.year}</div>
+                <div style={{ font: '400 16px var(--font-sans)', color: 'rgba(255,255,255,.55)' }}>{e.year}</div>
               </div>
               <div style={{ padding: '22px 28px', flex: 1, minWidth: 0 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10, flexWrap: 'wrap' }}>
-                  <span style={{ display: 'inline-block', font: '700 12.5px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', padding: '4px 10px', borderRadius: 2, background: e.badgeBg, color: e.badgeText }}>
+                  <span style={{ display: 'inline-block', font: '700 16px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', padding: '4px 10px', borderRadius: 2, background: e.badgeBg, color: e.badgeText }}>
                     {e.cat}
                   </span>
-                  <span style={{ font: '400 15.5px var(--font-sans)', color: 'var(--gc-ink-muted)' }}>{e.where}</span>
+                  <span style={{ font: '400 16px var(--font-sans)', color: 'var(--gc-ink-muted)' }}>{e.where}</span>
                 </div>
                 <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 25, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>{e.title}</h3>
                 <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.65, maxWidth: 600, marginBottom: 14 }}>{e.desc}</p>
@@ -215,19 +215,19 @@ export default function Events() {
                       href={e.shopifyUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      style={{ display: 'inline-block', cursor: 'pointer', border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 12.5px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', padding: '11px 20px', borderRadius: 3, textDecoration: 'none' }}
+                      style={{ display: 'inline-block', cursor: 'pointer', border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 16px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', padding: '11px 20px', borderRadius: 3, textDecoration: 'none' }}
                     >
                       Get your ticket →
                     </a>
                   ) : (
                     <button
                       onClick={() => openDetail(e.id)}
-                      style={{ cursor: 'pointer', border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 12.5px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', padding: '11px 20px', borderRadius: 3 }}
+                      style={{ cursor: 'pointer', border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 16px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', padding: '11px 20px', borderRadius: 3 }}
                     >
                       Details &amp; RSVP
                     </button>
                   )}
-                  <span style={{ font: '600 15px var(--font-sans)', color: 'var(--gc-ink-muted)' }}>{e.price}</span>
+                  <span style={{ font: '600 16px var(--font-sans)', color: 'var(--gc-ink-muted)' }}>{e.price}</span>
                 </div>
               </div>
             </div>
@@ -263,7 +263,7 @@ export default function Events() {
                 <h3 className="hover-caption-target" style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: 'var(--gc-slate)', marginTop: 12, transition: 'color .2s' }}>
                   {p.title}
                 </h3>
-                <div style={{ font: '600 12.5px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginTop: 3 }}>
+                <div style={{ font: '600 16px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginTop: 3 }}>
                   {p.caption}{p.href ? ' · Read the case study →' : ''}
                 </div>
               </Wrapper>
@@ -287,7 +287,7 @@ export default function Events() {
               >
                 ×
               </button>
-              <span style={{ display: 'inline-block', font: '700 12.5px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', padding: '4px 10px', borderRadius: 2, background: detail.badgeBg, color: detail.badgeText, marginBottom: 12 }}>
+              <span style={{ display: 'inline-block', font: '700 16px var(--font-sans)', letterSpacing: '.14em', textTransform: 'uppercase', padding: '4px 10px', borderRadius: 2, background: detail.badgeBg, color: detail.badgeText, marginBottom: 12 }}>
                 {detail.cat}
               </span>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: '#fff', marginBottom: 6 }}>{detail.title}</div>
@@ -305,7 +305,7 @@ export default function Events() {
                   </p>
                   <button
                     onClick={closeDetail}
-                    style={{ cursor: 'pointer', border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 12.5px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', padding: '12px 24px', borderRadius: 3 }}
+                    style={{ cursor: 'pointer', border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 16px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', padding: '12px 24px', borderRadius: 3 }}
                   >
                     Back to events
                   </button>
@@ -313,7 +313,7 @@ export default function Events() {
               ) : (
                 <div>
                   <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.7, marginBottom: 20 }}>{detail.long}</p>
-                  <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 14 }}>Reserve your spot</div>
+                  <div style={{ font: '700 16px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 14 }}>Reserve your spot</div>
                   <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 12 }}>
                     <input className="fld" placeholder="Your name" value={form.name} onChange={setField('name')} />
                     <input className="fld" placeholder="Email address" value={form.email} onChange={setField('email')} />
@@ -345,7 +345,7 @@ export default function Events() {
                   <button
                     onClick={handleRsvp}
                     disabled={sending}
-                    style={{ width: '100%', cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 14px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', padding: 15, borderRadius: 3 }}
+                    style={{ width: '100%', cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 16px var(--font-sans)', letterSpacing: '.18em', textTransform: 'uppercase', padding: 15, borderRadius: 3 }}
                   >
                     {sending ? 'Sending…' : 'Confirm my RSVP'}
                   </button>

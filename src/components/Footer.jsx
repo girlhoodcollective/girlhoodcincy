@@ -54,13 +54,13 @@ function MiniNewsletterSignup() {
         <button
           onClick={handleSubmit}
           disabled={state === 'sending'}
-          style={{ cursor: state === 'sending' ? 'default' : 'pointer', opacity: state === 'sending' ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 12.5px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', padding: '10px 16px', borderRadius: 100, whiteSpace: 'nowrap' }}
+          style={{ cursor: state === 'sending' ? 'default' : 'pointer', opacity: state === 'sending' ? 0.7 : 1, border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 16px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', padding: '10px 16px', borderRadius: 100, whiteSpace: 'nowrap' }}
         >
           Subscribe
         </button>
       </div>
       {state === 'error' && (
-        <p style={{ fontSize: 14.5, color: '#ffb4a8', marginTop: 8 }}>{error} Email us at hello@girlhoodcincy.com instead.</p>
+        <p style={{ fontSize: 16, color: '#ffb4a8', marginTop: 8 }}>{error} Email us at hello@girlhoodcincy.com instead.</p>
       )}
     </div>
   );
@@ -132,7 +132,7 @@ export default function Footer({ linked = true, newsletterFormOnPage = false }) 
         <div>
           <p
             style={{
-              font: '600 12.5px var(--font-sans)',
+              font: '600 16px var(--font-sans)',
               letterSpacing: '.16em',
               textTransform: 'uppercase',
               color: 'rgba(255,255,255,.6)',
@@ -152,7 +152,7 @@ export default function Footer({ linked = true, newsletterFormOnPage = false }) 
         <div style={{ textAlign: 'right' }}>
           <p
             style={{
-              font: '600 12.5px var(--font-sans)',
+              font: '600 16px var(--font-sans)',
               letterSpacing: '.16em',
               textTransform: 'uppercase',
               color: 'rgba(255,255,255,.6)',
@@ -171,7 +171,7 @@ export default function Footer({ linked = true, newsletterFormOnPage = false }) 
             <>
               <p
                 style={{
-                  font: '600 12.5px var(--font-sans)',
+                  font: '600 16px var(--font-sans)',
                   letterSpacing: '.16em',
                   textTransform: 'uppercase',
                   color: 'rgba(255,255,255,.6)',
