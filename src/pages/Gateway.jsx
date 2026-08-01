@@ -1,6 +1,38 @@
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from '../components/NavBar.jsx';
+import { MapPin, ArrowUpRight } from 'lucide-react';
 import { useSEO, useStructuredData, SITE_URL, SITE_NAME } from '../lib/seo.js';
+import '../styles/gateway.css';
+
+function CommunityMark(props) {
+  return (
+    <svg viewBox="0 0 42 42" fill="none" aria-hidden="true" {...props}>
+      <circle cx="16" cy="19" r="12" stroke="currentColor" strokeWidth="1.4" />
+      <circle cx="27" cy="24" r="9" stroke="currentColor" strokeWidth="1.4" opacity="0.55" />
+    </svg>
+  );
+}
+
+function OrgMark(props) {
+  return (
+    <svg viewBox="0 0 42 42" fill="none" aria-hidden="true" {...props}>
+      <path d="M6 30 L6 20 M15 30 L15 13 M24 30 L24 22 M33 30 L33 8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M4 30 H36" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" opacity="0.5" />
+    </svg>
+  );
+}
+
+function useSpotlight() {
+  const ref = useRef(null);
+  const onMouseMove = (e) => {
+    const el = ref.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    el.style.setProperty('--mx', `${((e.clientX - rect.left) / rect.width) * 100}%`);
+    el.style.setProperty('--my', `${((e.clientY - rect.top) / rect.height) * 100}%`);
+  };
+  return { ref, onMouseMove };
+}
 
 export default function Gateway() {
   useSEO({
@@ -42,100 +74,116 @@ export default function Gateway() {
     sameAs: ['https://instagram.com/girlhood_cincy'],
   });
 
-  return (
-    <div className="flow-shell" style={{ minHeight: '100vh', background: 'var(--gc-cream)' }}>
-      <NavBar variant="minimal" label="Cincinnati · Est. 2025" />
+  const glowRef = useRef(null);
+  const glowTwoRef = useRef(null);
 
-      <div style={{ padding: '64px 32px 24px', textAlign: 'center' }}>
-        <h1
-          style={{
-            fontFamily: 'var(--font-serif)',
-            fontWeight: 700,
-            fontSize: 'clamp(30px,4.5vw,44px)',
-            color: 'var(--gc-navy)',
-            maxWidth: 720,
-            margin: '0 auto',
-            lineHeight: 1.15,
-          }}
-        >
-          The best of both worlds.
-        </h1>
-        <p
-          style={{
-            fontSize: 18,
-            fontWeight: 300,
-            color: 'var(--gc-ink-muted)',
-            lineHeight: 1.7,
-            maxWidth: 560,
-            margin: '18px auto 0',
-          }}
-        >
-          A monthly community and events experience for Cincinnati neighbors — and a boutique advisory for organizations building real culture and community. Tell us why you&rsquo;re here.
-        </p>
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        if (glowRef.current) glowRef.current.style.transform = `translateY(${y * 0.12}px)`;
+        if (glowTwoRef.current) glowTwoRef.current.style.transform = `translateY(${y * -0.08}px)`;
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const panelA = useSpotlight();
+  const panelB = useSpotlight();
+
+  return (
+    <div className="gw-page">
+      <div className="gw-grain" />
+      <div className="gw-glow" ref={glowRef} />
+      <div className="gw-glow gw-glow--two" ref={glowTwoRef} />
+
+      <header className="gw-header">
+        <Link to="/" className="gw-wordmark">
+          <span>Girlhood</span>
+          <span>Collective</span>
+        </Link>
+        <div className="gw-meta">
+          <MapPin aria-hidden="true" />
+          Cincinnati · Est. 2025
+        </div>
+      </header>
+
+      <div className="gw-ghost" aria-hidden="true">&amp;</div>
+
+      <div className="gw-hero">
+        <div className="gw-hero-inner">
+          <div className="gw-eyebrow gw-reveal gw-d1">Two ways in</div>
+          <h1 className="gw-headline gw-reveal gw-d2">
+            The best of <em>both worlds.</em>
+          </h1>
+          <p className="gw-dek gw-reveal gw-d3">
+            A monthly community and events experience for Cincinnati neighbors — and a boutique
+            advisory for organizations building real culture and community. Tell us why you&rsquo;re here.
+          </p>
+        </div>
       </div>
 
-      <div
-        className="rgrid"
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: 24,
-          maxWidth: 1000,
-          margin: '32px auto 64px',
-          padding: '0 32px',
-        }}
-      >
+      <div className="gw-panels">
         <Link
           to="/community"
-          className="hover-lift"
-          style={{
-            textDecoration: 'none',
-            display: 'block',
-            background: '#fff',
-            border: '1px solid var(--gc-border)',
-            borderRadius: 10,
-            padding: '40px 34px',
-          }}
+          ref={panelA.ref}
+          onMouseMove={panelA.onMouseMove}
+          className="gw-panel gw-panel--a gw-reveal gw-d4"
         >
-          <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 14 }}>
-            For Neighbors &amp; Families
+          <div className="gw-panel-content">
+            <CommunityMark className="gw-mark" />
+            <div className="gw-panel-eyebrow">For Neighbors &amp; Families</div>
+            <h2 className="gw-panel-title">Find your people</h2>
+            <p className="gw-panel-body">
+              Join a monthly event, or join The Village — a free newsletter for anyone looking for
+              real connection.
+            </p>
+            <span className="gw-panel-cta">
+              Explore Girlhood Collective
+              <ArrowUpRight aria-hidden="true" />
+            </span>
           </div>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: 'var(--gc-navy)', marginBottom: 12, lineHeight: 1.25 }}>
-            Find your people
-          </h2>
-          <p style={{ fontSize: 17, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, marginBottom: 20 }}>
-            Join a monthly event, or join The Village — a free newsletter for anyone looking for real connection.
-          </p>
-          <span style={{ font: '600 14px var(--font-sans)', color: 'var(--gc-emerald)' }}>Explore Girlhood Collective →</span>
         </Link>
 
         <Link
           to="/homepage-v2"
-          className="hover-lift"
-          style={{
-            textDecoration: 'none',
-            display: 'block',
-            background: 'var(--gc-navy)',
-            borderRadius: 10,
-            padding: '40px 34px',
-          }}
+          ref={panelB.ref}
+          onMouseMove={panelB.onMouseMove}
+          className="gw-panel gw-panel--b gw-reveal gw-d5"
         >
-          <div style={{ font: '700 12.5px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-emerald-soft)', marginBottom: 14 }}>
-            For Organizations &amp; Businesses
+          <div className="gw-panel-content">
+            <OrgMark className="gw-mark" />
+            <div className="gw-panel-eyebrow">For Organizations &amp; Businesses</div>
+            <h2 className="gw-panel-title">Build a stronger organization</h2>
+            <p className="gw-panel-body">
+              Community strategy, culture, and events consulting for small businesses, allied
+              health practices, and mission-driven organizations ready to turn stakeholders into
+              real community.
+            </p>
+            <span className="gw-panel-cta">
+              See our consulting work
+              <ArrowUpRight aria-hidden="true" />
+            </span>
           </div>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: '#f8f6f0', marginBottom: 12, lineHeight: 1.25 }}>
-            Build a stronger organization
-          </h2>
-          <p style={{ fontSize: 17, fontWeight: 300, color: 'rgba(248,246,240,.72)', lineHeight: 1.7, marginBottom: 20 }}>
-            Community strategy, culture, and events consulting for small businesses, allied health practices, and mission-driven organizations ready to turn stakeholders into real community.
-          </p>
-          <span style={{ font: '600 14px var(--font-sans)', color: '#f8f6f0' }}>See our consulting work →</span>
         </Link>
       </div>
 
-      <p style={{ textAlign: 'center', fontSize: 14, color: 'var(--gc-ink-muted)', paddingBottom: 48 }}>
-        Not sure? <Link to="/community" style={{ color: 'var(--gc-emerald)', fontWeight: 600 }}>Start with the community side</Link> — you can always find your way to the other.
-      </p>
+      <div className="gw-footer-line gw-reveal gw-d6">
+        <div className="gw-rule" />
+        <p>
+          Not sure?{' '}
+          <Link to="/community">
+            Start with the community side
+          </Link>
+          {' '}— you can always find your way to the other.
+        </p>
+      </div>
     </div>
   );
 }
