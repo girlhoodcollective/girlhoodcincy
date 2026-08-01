@@ -203,9 +203,6 @@ export default function BetterTogetherRecap() {
           <Link className="btn" to="/consultation-intake" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '15px 28px' }}>
             Start the intake
           </Link>
-          <Link className="btn" to="/work-together" style={{ border: '1.5px solid rgba(255,255,255,.4)', color: '#fff', padding: '13.5px 28px' }}>
-            See services
-          </Link>
         </div>
       </div>
 

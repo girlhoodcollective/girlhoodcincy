@@ -20,16 +20,21 @@ const DEFAULT_IMAGE = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/8.
 const ROUTES = [
   {
     path: '/',
-    sourceFile: 'src/pages/Home.jsx',
-    title: 'Girlhood Collective | Boutique Advisory for Organizational & Community Health',
-    description: 'A boutique advisory specializing in organizational and community health — plus monthly community events and a free newsletter for Cincinnati families and neighbors.',
+    sourceFile: 'src/pages/Gateway.jsx',
+    title: 'Girlhood Collective | Community & Boutique Advisory in Cincinnati',
+    description: 'A monthly community and events experience for Cincinnati neighbors — and a boutique advisory for organizations building real culture and community.',
   },
   {
-    path: '/about',
-    sourceFile: 'src/pages/About.jsx',
-    title: 'About Brittany Gruber | Girlhood Collective',
-    description: 'Brittany Gruber is the founder of Girlhood Collective, a Cincinnati-based boutique advisory specializing in organizational and community health, helping small businesses, health professionals, and mission-driven organizations build stronger leadership and lasting community.',
-    image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/J8A2562.jpg?v=1774664826&width=1200',
+    path: '/community',
+    sourceFile: 'src/pages/Community.jsx',
+    title: 'Girlhood Collective | Community Events & The Village Newsletter',
+    description: 'Monthly community events, a free newsletter, and the story behind founder Brittany Gruber — for Cincinnati families and neighbors looking for real connection.',
+  },
+  {
+    path: '/homepage-v2',
+    sourceFile: 'src/pages/HomepageV2.jsx',
+    title: 'Girlhood Collective | Community & Culture Advisory for Organizations',
+    description: 'Fractional community strategy, culture, and events consulting for small businesses, allied health practices, and mission-driven organizations across Cincinnati.',
   },
   {
     path: '/events',
@@ -45,22 +50,10 @@ const ROUTES = [
     description: 'A free monthly letter for anyone building real community — resources, local favorites, and what’s inspiring us right now.',
   },
   {
-    path: '/work-together',
-    sourceFile: 'src/pages/WorkTogether.jsx',
-    title: 'Work Together | Girlhood Collective Advisory Services',
-    description: 'Community Partnership Strategy, Grants & Sponsorship Support, ERG & Workshop Facilitation, Leadership Coaching, and Fractional Operational Exec Services — pick the engagement that fits.',
-  },
-  {
     path: '/resources',
     sourceFile: 'src/pages/Resources.jsx',
     title: 'Resources | Insights from Girlhood Collective',
     description: 'Practical ideas for building stronger organizations, neighborhoods, and relationships — the same thinking behind every Girlhood Collective partnership.',
-  },
-  {
-    path: '/contact',
-    sourceFile: 'src/pages/Contact.jsx',
-    title: 'Request a 20-Minute Fit Call | Girlhood Collective',
-    description: "Twenty minutes, no pitch — just a conversation about what you're building.",
   },
   {
     path: '/consultation-intake',
@@ -80,6 +73,12 @@ const ROUTES = [
     title: 'Case Study: Better Together Brunch — Girlhood Collective',
     description: 'How one event turned into $3,000 raised, 10 new sponsors, and the start of a lasting community for Endurance in Education.',
     image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/432_a2c25d8f-0ce8-40d5-b0fe-f1f1d4b17a69.jpg?v=1784653522&width=1200',
+  },
+  {
+    path: '/privacy',
+    sourceFile: 'src/pages/Privacy.jsx',
+    title: 'Privacy Policy | Girlhood Collective',
+    description: 'What information Girlhood Collective collects through its forms and newsletter, how it is used, and who it is shared with.',
   },
 ];
 

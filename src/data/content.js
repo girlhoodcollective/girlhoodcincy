@@ -146,18 +146,3 @@ export const PERSONAS = [
     body: 'Move from stakeholder alignment to real, lasting engagement.',
   },
 ];
-
-export const CONTACT_FAQS = [
-  {
-    q: 'What does an engagement actually look like?',
-    a: "Most partnerships start with a free 20–30 minute conversation. From there, we'll scope the engagement that fits — project-based, retainer, or fractional — whichever makes sense for where you are.",
-  },
-  {
-    q: 'Do you travel for speaking or work outside Cincinnati?',
-    a: "Reach out and tell us what you have in mind — we'll let you know what's possible.",
-  },
-  {
-    q: "What if I'm not ready to commit to anything yet?",
-    a: "That's what this conversation is for. Twenty minutes, no pitch — just a conversation about what you're building.",
-  },
-];

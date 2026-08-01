@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 import { subscribeToNewsletter } from '../lib/newsletter.js';
 
 const EXPLORE_LINKS = [
-  { label: 'Work Together', href: '/work-together' },
-  { label: 'About', href: '/about' },
+  { label: 'About', href: '/community#about' },
   { label: 'Events', href: '/events' },
   { label: 'Resources', href: '/resources' },
   { label: 'Subscribe', href: '/village' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Privacy', href: '/privacy' },
 ];
 
 const SOCIAL_LINKS = [

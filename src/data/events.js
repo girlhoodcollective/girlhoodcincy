@@ -111,6 +111,25 @@ export const EVENTS = [
   },
 ];
 
+export const PAST_EVENTS = [
+  {
+    title: 'Better, Together — Girlhood Brunch', caption: 'July 2026 · Flagship fundraiser for EIE', href: '/better-together-recap',
+    photo: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/432_a2c25d8f-0ce8-40d5-b0fe-f1f1d4b17a69.jpg?v=1784653522&width=560',
+  },
+  {
+    title: 'Spring Studio Art Series', caption: 'April 2025 · 10 students',
+    photo: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_2311.jpg?v=1777676512&width=560',
+  },
+  {
+    title: 'Hyde Park Market', caption: 'August 2025 · 22 makers',
+    photo: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/165.jpg?v=1783270119&width=560',
+  },
+  {
+    title: 'Fall Arts and Crafts Series', caption: 'October 2025 · Girls 9+',
+    photo: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-studio-art-1.jpg?v=1774545499&width=560',
+  },
+];
+
 export function eventDate(e) {
   return new Date(Number(e.year), MONTHS[e.mon], Number(e.day));
 }
