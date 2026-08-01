@@ -95,6 +95,26 @@ select:focus-visible,
   transform: none;
 }
 
+/* Scroll-triggered reveal, toggled by the <Reveal> component via
+   IntersectionObserver. Purely a fade/rise utility — pages own their
+   own timing (transition-delay) and don't need any other CSS to use it. */
+.reveal-base {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-base.is-in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-base {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* Hover-lift cards used across pages */
 .hover-lift {
   transition: transform 0.2s, box-shadow 0.2s;
