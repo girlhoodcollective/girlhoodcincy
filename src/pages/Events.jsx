@@ -154,9 +154,6 @@ export default function Events() {
             <h1 className="hero-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 65, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 640 }}>
               Gather <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>beautifully.</span>
             </h1>
-            <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, marginTop: 20 }}>
-              One Saturday a month, September through May, where girls ages 8–12 meet real local women entrepreneurs and build confidence through hands-on projects. Every session is 120 minutes, capped at 15 participants, and led by a Community Collaborator sharing her story and her craft. $40 per session, materials included. Attend one, or attend all nine.
-            </p>
           </Reveal>
           <Reveal delay={120} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             <img
