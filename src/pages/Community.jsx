@@ -85,7 +85,7 @@ export default function Community() {
                 See Upcoming Events <ArrowUpRight aria-hidden="true" width={16} height={16} />
               </Link>
               <Link className="cm-btn-outline" to="/village">
-                Join The Village
+                Join our email list to stay up to date
               </Link>
             </div>
           </Reveal>
@@ -126,12 +126,8 @@ export default function Community() {
 
       {/* INTRO */}
       <div className="cm-section" style={{ background: '#fff' }}>
-        <div className="cm-intro">
-          <Reveal as="div" className="cm-intro-block cm-intro-block--a">
-            <p>Fractional support when you need a hand, not a full-time hire. A fresh set of eyes when you need to build genuine internal culture or community presence.</p>
-          </Reveal>
-          <div className="cm-intro-rule" aria-hidden="true" />
-          <Reveal as="div" delay={120} className="cm-intro-block cm-intro-block--b">
+        <div className="cm-intro cm-intro--single">
+          <Reveal as="div" className="cm-intro-block cm-intro-block--b">
             <p>Events designed to encourage and empower. Programs and resources built to move you forward.</p>
           </Reveal>
         </div>
@@ -165,10 +161,15 @@ export default function Community() {
               <h2 className="cm-founder-name">Brittany Gruber</h2>
               <div className="cm-founder-role">Founder · Girlhood Collective</div>
               <p className="cm-founder-lede">
-                Brittany Gruber is the founder of Girlhood Collective, a Cincinnati-based boutique
-                advisory specializing in organizational and community health, helping small
-                businesses, health professionals, and mission-driven organizations build stronger
-                leadership and lasting community.
+                Brittany Gruber is a Cincinnati-based entrepreneur, wife, and mom of two who believes
+                that strong communities change lives. Originally from Dayton, Ohio, Brittany has
+                dedicated her career to bringing people together through partnerships, community
+                engagement, and education. From leading nonprofit initiatives and supporting a
+                top-producing real estate team to founding Girlhood Collective, Brittany has built
+                programs, cultivated meaningful partnerships, and helped mission-driven organizations
+                expand their impact. Whether she&rsquo;s developing community-centered strategies,
+                creating engaging content, or connecting people around a shared purpose, Brittany is
+                passionate about building relationships that create lasting change.
               </p>
             </Reveal>
           </div>

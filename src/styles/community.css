@@ -264,6 +264,12 @@
 }
 .cm-intro-block--a { margin-top: 0; }
 .cm-intro-block--b { margin-top: clamp(0px, 6vw, 56px); }
+.cm-intro--single {
+  grid-template-columns: 1fr;
+  max-width: 640px;
+  text-align: center;
+}
+.cm-intro--single .cm-intro-block--b { margin-top: 0; }
 
 /* ---------- VIDEO ---------- */
 .cm-video-wrap {

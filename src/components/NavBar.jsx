@@ -9,7 +9,7 @@ const LINKS = [
   { label: 'Subscribe', href: '/village' },
 ];
 
-const DEFAULT_CTA = { label: 'Join The Village', href: '/village' };
+const DEFAULT_CTA = { label: 'Join our email list to stay up to date', href: '/village' };
 
 export default function NavBar({ variant = 'white', active, label, cta = DEFAULT_CTA }) {
   const [menuOpen, setMenuOpen] = useState(false);
