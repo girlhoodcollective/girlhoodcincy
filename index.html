@@ -20,6 +20,17 @@
     <meta name="twitter:title" content="Girlhood Collective | Community & Boutique Advisory in Cincinnati" />
     <meta name="twitter:description" content="A monthly community and events experience for Cincinnati neighbors — and a boutique advisory for organizations building real culture and community." />
     <meta name="twitter:image" content="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/8.png?v=1784772079&width=1200" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYQGFZER6K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      // send_page_view is off here because this is a single-page app —
+      // src/lib/analytics.js fires page_view manually on each route change instead.
+      gtag('config', 'G-NYQGFZER6K', { send_page_view: false });
+    </script>
   </head>
   <body>
     <div id="root"></div>

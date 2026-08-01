@@ -43,7 +43,9 @@ export default function Privacy() {
             <li>Contact and inquiry forms — your name, email, organization (if applicable), and message.</li>
           </ul>
           <p style={SECTION}>
-            We don&rsquo;t collect payment information, and we don&rsquo;t use advertising cookies or tracking pixels.
+            We also use Google Analytics to understand overall site traffic — things like which pages are visited and
+            roughly where visitors are coming from. This sets a cookie but doesn&rsquo;t identify you personally. We
+            don&rsquo;t collect payment information, and we don&rsquo;t use advertising or retargeting pixels.
           </p>
 
           <h2 style={H2}>How we use it</h2>
@@ -57,8 +59,10 @@ export default function Privacy() {
           <p style={SECTION}>
             Form submissions are processed through Netlify Forms, our website host. Newsletter signups are managed
             through MailerLite, our email provider — every newsletter includes an unsubscribe link, and you can opt
-            out at any time. Neither service is permitted to use your information for anything other than delivering
-            our site and email on our behalf.
+            out at any time. Traffic data is processed by Google Analytics, subject to{' '}
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gc-emerald)' }}>Google&rsquo;s privacy policy</a>.
+            None of these services are permitted to use your information for anything other than delivering our site
+            and email on our behalf.
           </p>
 
           <h2 style={H2}>Children&rsquo;s privacy</h2>

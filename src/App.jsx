@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop.jsx';
+import PageViewTracker from './components/PageViewTracker.jsx';
 import Gateway from './pages/Gateway.jsx';
 import Community from './pages/Community.jsx';
 import HomepageV2 from './pages/HomepageV2.jsx';
@@ -16,6 +17,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <PageViewTracker />
       <Routes>
         <Route path="/" element={<Gateway />} />
         <Route path="/community" element={<Community />} />
