@@ -422,13 +422,19 @@ export default function HomepageV2() {
         <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 28px', position: 'relative', zIndex: 1 }}>
           One quick way to get started.
         </div>
-        <Reveal style={{ maxWidth: 400, margin: '0 auto', position: 'relative', zIndex: 1 }}>
+        <Reveal style={{ maxWidth: 720, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20, position: 'relative', zIndex: 1 }}>
           <a href="https://girlhoodeventrequest.netlify.app" target="_blank" rel="noopener noreferrer" className="hv2-tool-card">
             <div style={{ fontFamily: 'var(--font-serif)', fontSize: 16, color: SAGE }}>01</div>
             <div style={{ fontSize: 17, fontWeight: 600, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.4 }}>
               Submit a request to partner on an event or collaboration.
             </div>
           </a>
+          <Link to="/consultation-intake" className="hv2-tool-card">
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 16, color: SAGE }}>02</div>
+            <div style={{ fontSize: 17, fontWeight: 600, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.4 }}>
+              Start a consulting client intake.
+            </div>
+          </Link>
         </Reveal>
       </div>
 
