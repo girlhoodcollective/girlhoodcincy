@@ -1,0 +1,130 @@
+/* Shared bespoke-design-system pieces for Events, Village, and Resources —
+   scoped under .up-* (utility pages) so nothing here touches any other page. */
+
+.up-grain {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.045;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.up-grain-dark {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.up-eyebrow {
+  display: flex;
+  align-items: center;
+  font: 700 13px var(--font-sans);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gc-emerald);
+  margin-bottom: 14px;
+}
+.up-eyebrow::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  margin-right: 12px;
+  background: var(--gc-emerald);
+  opacity: 0.55;
+}
+.up-eyebrow--onlight {
+  color: rgba(255, 255, 255, 0.75);
+}
+.up-eyebrow--onlight::before {
+  background: rgba(255, 255, 255, 0.4);
+}
+.up-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  flex: none;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: var(--gc-peony);
+}
+
+.up-ghost {
+  position: absolute;
+  z-index: 0;
+  font-family: var(--font-serif);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--gc-navy);
+  opacity: 0.045;
+  pointer-events: none;
+  user-select: none;
+}
+.up-ghost--onlight {
+  color: #fff;
+}
+.up-ghost--italic {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.up-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 600 14px var(--font-sans);
+  text-decoration: none;
+  position: relative;
+}
+.up-cta::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.3;
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
+.up-cta:hover::after {
+  opacity: 1;
+  background: var(--gc-peony);
+}
+.up-cta svg {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+.up-cta:hover svg {
+  transform: translate(3px, -3px);
+  color: var(--gc-peony);
+}
+
+/* Premium card hover: lift + deeper shadow + peony-tinted border,
+   replacing the site's default flat .hover-lift for these pages' cards. */
+.up-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+.up-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(29, 53, 87, 0.14);
+  border-color: rgba(249, 113, 175, 0.4) !important;
+}
+
+.up-img-hover {
+  overflow: hidden;
+  display: block;
+}
+.up-img-hover img {
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.up-img-hover:hover img {
+  transform: scale(1.05);
+}

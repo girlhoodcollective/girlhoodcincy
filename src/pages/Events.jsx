@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
+import Reveal from '../components/Reveal.jsx';
 import ShopifyBuyButton from '../components/ShopifyBuyButton.jsx';
 import { submitNetlifyForm } from '../lib/netlifyForms.js';
 import { EVENTS, eventDate, PAST_EVENTS } from '../data/events.js';
 import { useSEO, useStructuredData } from '../lib/seo.js';
+import '../styles/utilityPages.css';
 
 const BUY_BUTTON_OPTIONS = {
   product: {
@@ -140,37 +143,45 @@ export default function Events() {
     <div className="page-shell">
       <NavBar variant="navy" active="Events" />
 
-      <div className="rgrid" style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px', display: 'grid', gridTemplateColumns: '1fr 220px', gap: 32, alignItems: 'center' }}>
-        <div>
-          <div style={{ width: 54, height: 4, background: 'var(--gc-emerald)', borderRadius: 2, marginBottom: 24 }} />
-          <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>Girlhood Cincy Monthly Experiences</div>
-          <h1 className="hero-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 65, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 640 }}>
-            Gather <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>beautifully.</span>
-          </h1>
-          <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, marginTop: 20 }}>
-            One Saturday a month, September through May, where girls ages 8–12 meet real local women entrepreneurs and build confidence through hands-on projects. Every session is 120 minutes, capped at 15 participants, and led by a Community Collaborator sharing her story and her craft. $40 per session, materials included. Attend one, or attend all nine.
-          </p>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-          <img
-            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-studio-art-2.jpg?v=1774548572&width=440"
-            alt="Girls working on a project at a Girlhood Collective workshop"
-            loading="lazy"
-            style={{ width: '100%', height: 145, objectFit: 'cover', borderRadius: 8, border: '1px solid var(--gc-border)', display: 'block' }}
-          />
-          <img
-            src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_9209.jpg?v=1785100838&width=440"
-            alt="Girlhood Collective community event booth in Cincinnati"
-            loading="lazy"
-            style={{ width: '100%', height: 145, objectFit: 'cover', objectPosition: 'center 25%', borderRadius: 8, border: '1px solid var(--gc-border)', display: 'block' }}
-          />
+      <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px', position: 'relative', overflow: 'hidden' }}>
+        <div className="up-ghost" aria-hidden="true" style={{ top: '-14%', right: '4vw', fontSize: 'clamp(140px,16vw,240px)' }}>&sect;</div>
+        <div className="rgrid" style={{ position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1fr 220px', gap: 32, alignItems: 'center' }}>
+          <Reveal>
+            <div className="up-eyebrow">
+              <span className="up-dot" aria-hidden="true" />
+              Girlhood Cincy Monthly Experiences
+            </div>
+            <h1 className="hero-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 65, color: 'var(--gc-navy)', lineHeight: 1.04, maxWidth: 640 }}>
+              Gather <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gc-emerald)' }}>beautifully.</span>
+            </h1>
+            <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 520, marginTop: 20 }}>
+              One Saturday a month, September through May, where girls ages 8–12 meet real local women entrepreneurs and build confidence through hands-on projects. Every session is 120 minutes, capped at 15 participants, and led by a Community Collaborator sharing her story and her craft. $40 per session, materials included. Attend one, or attend all nine.
+            </p>
+          </Reveal>
+          <Reveal delay={120} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-studio-art-2.jpg?v=1774548572&width=440"
+              alt="Girls working on a project at a Girlhood Collective workshop"
+              loading="lazy"
+              style={{ width: '100%', height: 145, objectFit: 'cover', borderRadius: 8, border: '1px solid var(--gc-border)', display: 'block' }}
+            />
+            <img
+              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_9209.jpg?v=1785100838&width=440"
+              alt="Girlhood Collective community event booth in Cincinnati"
+              loading="lazy"
+              style={{ width: '100%', height: 145, objectFit: 'cover', objectPosition: 'center 25%', borderRadius: 8, border: '1px solid var(--gc-border)', display: 'block' }}
+            />
+          </Reveal>
         </div>
       </div>
 
       <div style={{ background: '#fff', padding: '56px 44px 40px' }}>
-        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16, marginBottom: 24 }}>
+        <Reveal style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16, marginBottom: 24 }}>
           <div>
-            <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Upcoming</div>
+            <div className="up-eyebrow">
+              <span className="up-dot" aria-hidden="true" />
+              Upcoming
+            </div>
             <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 37.5, fontWeight: 700, color: 'var(--gc-slate)' }}>What's coming up next</h2>
           </div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
@@ -180,11 +191,11 @@ export default function Events() {
               </button>
             ))}
           </div>
-        </div>
+        </Reveal>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+        <Reveal delay={100} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
           {visible.map((e) => (
-            <div key={e.id} className="hover-shadow" style={{ display: 'flex', border: '1px solid var(--gc-border)', borderRadius: 4, overflow: 'hidden' }}>
+            <div key={e.id} className="up-card" style={{ display: 'flex', border: '1px solid var(--gc-border)', borderRadius: 4, overflow: 'hidden' }}>
               <div style={{ background: 'var(--gc-slate)', width: 120, flexShrink: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '22px 12px' }}>
                 <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)' }}>{e.mon}</div>
                 <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 55, color: '#fff', lineHeight: 1 }}>{e.day}</div>
@@ -224,27 +235,34 @@ export default function Events() {
               </div>
             </div>
           ))}
-        </div>
+        </Reveal>
       </div>
 
       <div style={{ background: 'var(--gc-section)', padding: '56px 44px' }}>
-        <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>Looking back</div>
-        <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 37.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Seriously proud of what we made.</h2>
-        <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 560, marginBottom: 28 }}>
-          A look back at the rooms we've filled since 2025.
-        </p>
-        <div className="rgrid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16 }}>
+        <Reveal>
+          <div className="up-eyebrow">
+            <span className="up-dot" aria-hidden="true" />
+            Looking back
+          </div>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 37.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Seriously proud of what we made.</h2>
+          <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 560, marginBottom: 28 }}>
+            A look back at the rooms we've filled since 2025.
+          </p>
+        </Reveal>
+        <Reveal delay={100} className="rgrid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16 }}>
           {PAST_EVENTS.map((p) => {
             const Wrapper = p.href ? Link : 'div';
             const wrapperProps = p.href ? { to: p.href, style: { textDecoration: 'none' } } : {};
             return (
               <Wrapper key={p.title} className="hover-caption" {...wrapperProps}>
-                <img
-                  src={p.photo}
-                  alt={p.title}
-                  loading="lazy"
-                  style={{ width: '100%', height: 180, objectFit: 'cover', borderRadius: 6, display: 'block' }}
-                />
+                <div className="up-img-hover" style={{ borderRadius: 6 }}>
+                  <img
+                    src={p.photo}
+                    alt={p.title}
+                    loading="lazy"
+                    style={{ width: '100%', height: 180, objectFit: 'cover', display: 'block' }}
+                  />
+                </div>
                 <h3 className="hover-caption-target" style={{ fontFamily: 'var(--font-serif)', fontSize: 19, fontWeight: 700, color: 'var(--gc-slate)', marginTop: 12, transition: 'color .2s' }}>
                   {p.title}
                 </h3>
@@ -254,7 +272,7 @@ export default function Events() {
               </Wrapper>
             );
           })}
-        </div>
+        </Reveal>
       </div>
 
       <Footer />

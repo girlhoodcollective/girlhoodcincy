@@ -1,8 +1,11 @@
 import { useState } from 'react';
+import { ArrowUpRight } from 'lucide-react';
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
+import Reveal from '../components/Reveal.jsx';
 import { subscribeToNewsletter } from '../lib/newsletter.js';
 import { useSEO } from '../lib/seo.js';
+import '../styles/utilityPages.css';
 
 // Real sent issues, pulled from MailerLite campaign history (Issues 1–5, Apr–Jun 2026).
 const ISSUES = [
@@ -41,12 +44,17 @@ export default function Village() {
 
   return (
     <div className="page-shell">
+      <div className="up-grain" />
       <NavBar variant="navy" active="Subscribe" />
 
-      <div style={{ background: 'var(--gc-cream)', padding: '60px 44px 52px' }}>
-        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: '1fr 320px', gap: 44, maxWidth: 1000, margin: '0 auto', alignItems: 'center' }}>
-          <div>
-            <div style={{ font: '600 14px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 16 }}>The Village</div>
+      <div style={{ background: 'var(--gc-cream)', padding: '60px 44px 52px', position: 'relative', overflow: 'hidden' }}>
+        <div className="up-ghost up-ghost--italic" aria-hidden="true" style={{ top: '-6%', right: '30%', fontSize: 'clamp(140px,16vw,240px)' }}>&ldquo;</div>
+        <div className="rgrid" style={{ position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1fr 320px', gap: 44, maxWidth: 1000, margin: '0 auto', alignItems: 'center' }}>
+          <Reveal>
+            <div className="up-eyebrow">
+              <span className="up-dot" aria-hidden="true" />
+              The Village
+            </div>
             <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 65, color: 'var(--gc-navy)', lineHeight: 1.08 }}>You&rsquo;re invited.</h1>
             <p style={{ fontSize: 19, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.85, maxWidth: 480, margin: '16px 0 30px' }}>
               A free monthly letter for anyone building real community — resources, local favorites, and what&rsquo;s inspiring us right now.
@@ -88,35 +96,43 @@ export default function Village() {
                 )}
               </div>
             )}
-          </div>
+          </Reveal>
 
           {/* PHOTO */}
-          <div style={{ width: '100%', height: 460, overflow: 'hidden', borderRadius: 10, background: 'var(--gc-navy)' }}>
-            <img
-              src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_7498.jpg?v=1785100814&width=800"
-              alt="Girlhood Collective community gathering"
-              loading="lazy"
-              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
-            />
-          </div>
+          <Reveal delay={120} style={{ position: 'relative' }}>
+            <div aria-hidden="true" style={{ position: 'absolute', inset: '-14px -14px 14px 14px', border: '1.5px solid var(--gc-emerald-soft)', borderRadius: 10, zIndex: 0 }} />
+            <div style={{ position: 'relative', zIndex: 1, width: '100%', height: 460, overflow: 'hidden', borderRadius: 10, background: 'var(--gc-navy)', boxShadow: '0 26px 50px rgba(29,53,87,.16)' }}>
+              <img
+                src="https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_7498.jpg?v=1785100814&width=800"
+                alt="Girlhood Collective community gathering"
+                loading="lazy"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
+              />
+            </div>
+          </Reveal>
         </div>
       </div>
 
       {/* ARCHIVE */}
       <div id="archive" style={{ background: 'var(--gc-section)', padding: '56px 44px 64px', scrollMarginTop: 80 }}>
-        <div style={{ font: '700 14px var(--font-sans)', letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 10 }}>The archive</div>
-        <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Past issues</h2>
-        <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 520, marginBottom: 26 }}>
-          Catch up on what you missed. A little of everything we&rsquo;ve been up to.
-        </p>
-        <div className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
+        <Reveal>
+          <div className="up-eyebrow">
+            <span className="up-dot" aria-hidden="true" />
+            The archive
+          </div>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>Past issues</h2>
+          <p style={{ fontSize: 17.5, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.7, maxWidth: 520, marginBottom: 26 }}>
+            Catch up on what you missed. A little of everything we&rsquo;ve been up to.
+          </p>
+        </Reveal>
+        <Reveal delay={100} className="rgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
           {ISSUES.map((i) => (
             <a
               key={i.vol}
               href={i.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover-lift"
+              className="up-card"
               style={{ textDecoration: 'none', display: 'block', background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 4, borderTop: `3px solid ${i.accent}`, padding: '24px 26px' }}
             >
               <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12, marginBottom: 10 }}>
@@ -124,10 +140,13 @@ export default function Village() {
                 <span style={{ font: '600 14px var(--font-sans)', color: 'var(--gc-ink-muted)' }}>{i.date}</span>
               </div>
               <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 21, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 10, lineHeight: 1.4 }}>{i.title}</h3>
-              <span style={{ font: '600 14px var(--font-sans)', letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--gc-emerald)' }}>Read this issue →</span>
+              <span className="up-cta" style={{ color: 'var(--gc-emerald)' }}>
+                Read this issue
+                <ArrowUpRight aria-hidden="true" />
+              </span>
             </a>
           ))}
-        </div>
+        </Reveal>
       </div>
 
       <Footer newsletterFormOnPage />
