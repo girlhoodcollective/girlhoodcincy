@@ -58,7 +58,7 @@ export default function Gateway() {
             lineHeight: 1.15,
           }}
         >
-          Girlhood Collective is two things at once.
+          The best of both worlds.
         </h1>
         <p
           style={{
