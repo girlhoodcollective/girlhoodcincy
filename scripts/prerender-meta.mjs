@@ -28,20 +28,13 @@ const ROUTES = [
     path: '/community',
     sourceFile: 'src/pages/Community.jsx',
     title: 'Girlhood Collective | Community Events & The Village Newsletter',
-    description: 'Monthly community events and a free newsletter for Cincinnati families and neighbors looking for real connection.',
+    description: 'Monthly community events, a free newsletter, and the story behind founder Brittany Gruber — for Cincinnati families and neighbors looking for real connection.',
   },
   {
     path: '/homepage-v2',
     sourceFile: 'src/pages/HomepageV2.jsx',
     title: 'Girlhood Collective | Community & Culture Advisory for Organizations',
     description: 'Fractional community strategy, culture, and events consulting for small businesses, allied health practices, and mission-driven organizations across Cincinnati.',
-  },
-  {
-    path: '/about',
-    sourceFile: 'src/pages/About.jsx',
-    title: 'About Brittany Gruber | Girlhood Collective',
-    description: 'Brittany Gruber is the founder of Girlhood Collective, a Cincinnati-based boutique advisory specializing in organizational and community health, helping small businesses, health professionals, and mission-driven organizations build stronger leadership and lasting community.',
-    image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/J8A2562.jpg?v=1774664826&width=1200',
   },
   {
     path: '/events',

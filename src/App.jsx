@@ -3,7 +3,6 @@ import ScrollToTop from './components/ScrollToTop.jsx';
 import Gateway from './pages/Gateway.jsx';
 import Community from './pages/Community.jsx';
 import HomepageV2 from './pages/HomepageV2.jsx';
-import About from './pages/About.jsx';
 import Events from './pages/Events.jsx';
 import Village from './pages/Village.jsx';
 import Resources from './pages/Resources.jsx';
@@ -21,7 +20,6 @@ export default function App() {
         <Route path="/" element={<Gateway />} />
         <Route path="/community" element={<Community />} />
         <Route path="/homepage-v2" element={<HomepageV2 />} />
-        <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
         <Route path="/village" element={<Village />} />
         <Route path="/resources" element={<Resources />} />

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { subscribeToNewsletter } from '../lib/newsletter.js';
 
 const EXPLORE_LINKS = [
-  { label: 'About', href: '/about' },
+  { label: 'About', href: '/community#about' },
   { label: 'Events', href: '/events' },
   { label: 'Resources', href: '/resources' },
   { label: 'Subscribe', href: '/village' },
