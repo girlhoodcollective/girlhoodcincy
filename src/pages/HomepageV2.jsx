@@ -161,15 +161,9 @@ export default function HomepageV2() {
         </Reveal>
       </div>
 
-      {/* HOW WE HELP */}
+      {/* SUPPORT & SERVICES */}
       <div id="services" className="hv2-section-pad" style={{ padding: '64px 48px', background: '#fff' }}>
-        <Reveal>
-          <div className="hv2-eyebrow" style={{ justifyContent: 'center' }}>
-            <span className="hv2-dot" aria-hidden="true" />
-            What we do
-          </div>
-        </Reveal>
-        <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 32 }}>How We Help</div>
+        <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 32 }}>Support &amp; Services</div>
         <div className="hv2-grid-2col" style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 48, alignItems: 'start' }}>
           <Reveal as="div" className="hv2-sticky-img" style={{ position: 'sticky', top: 90 }}>
             <div aria-hidden="true" style={{ position: 'absolute', top: 14, left: -14, right: -14, bottom: -14, background: HYDRANGEA, opacity: 0.35, borderRadius: 6, zIndex: 0 }} />
