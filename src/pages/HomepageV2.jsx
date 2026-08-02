@@ -166,7 +166,7 @@ export default function HomepageV2() {
         <Reveal>
           <div className="hv2-eyebrow" style={{ justifyContent: 'center' }}>
             <span className="hv2-dot" aria-hidden="true" />
-            What we do
+            Consulting Services
           </div>
         </Reveal>
         <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 32 }}>How We Help</div>
