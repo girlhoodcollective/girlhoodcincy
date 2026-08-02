@@ -56,7 +56,7 @@ export default function Community() {
   return (
     <div className="page-shell">
       <div className="cm-grain" />
-      <NavBar variant="white" />
+      <NavBar variant="white" ctaColor="var(--gc-navy)" />
 
       {/* HERO */}
       <div className="cm-hero">
@@ -76,10 +76,10 @@ export default function Community() {
               promote a genuine sense of belonging.
             </p>
             <div className="cm-hero-ctas">
-              <Link className="cm-btn-solid" to="/events">
+              <Link className="btn" to="/events" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'var(--gc-navy)', color: '#fff', padding: '15px 28px' }}>
                 See Upcoming Events <ArrowUpRight aria-hidden="true" width={16} height={16} />
               </Link>
-              <Link className="cm-btn-outline" to="/village">
+              <Link className="btn" to="/village" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'var(--gc-navy)', color: '#fff', padding: '15px 28px' }}>
                 Join our emails list
               </Link>
             </div>
