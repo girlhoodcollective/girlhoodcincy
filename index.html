@@ -41,6 +41,22 @@
         ml('account', '1805515');
     </script>
     <!-- End MailerLite Universal -->
+
+    <!-- Auto-trigger the gBbk76 pop-up form once per browser session -->
+    <script>
+      (function () {
+        var SHOWN_KEY = 'gc-popup-gBbk76-shown';
+        if (sessionStorage.getItem(SHOWN_KEY)) return;
+        window.addEventListener('load', function () {
+          setTimeout(function () {
+            if (window.ml) {
+              ml('show', 'gBbk76', true);
+              sessionStorage.setItem(SHOWN_KEY, '1');
+            }
+          }, 4000);
+        });
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
