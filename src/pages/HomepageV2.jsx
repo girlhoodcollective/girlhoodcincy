@@ -95,9 +95,9 @@ export default function HomepageV2() {
           borderBottom: '1px solid rgba(29,53,87,.14)',
         }}
       >
-        <a href="#top" style={{ textDecoration: 'none', fontFamily: 'var(--font-serif)', fontSize: 22, lineHeight: 1, color: 'var(--gc-navy)', display: 'flex', flexDirection: 'column' }}>
-          <span>Girlhood</span>
-          <span style={{ fontStyle: 'italic', fontSize: 16, alignSelf: 'flex-end', marginTop: -4 }}>Collective</span>
+        <a href="#top" style={{ textDecoration: 'none', lineHeight: 1 }}>
+          <span style={{ fontFamily: 'var(--font-display)', fontSize: 22, color: 'var(--gc-navy)' }}>Girlhood</span>
+          <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 17, color: 'var(--gc-navy)', marginLeft: 5 }}>Collective</span>
         </a>
         <div className={`hv2-nav-links${navOpen ? ' open' : ''}`} onClick={() => setNavOpen(false)}>
           <Link to="/" className="hv2-navlink">
@@ -154,7 +154,7 @@ export default function HomepageV2() {
             <a href="#contact" className="hv2-pill-cta">
               Ready to get to work? Let&rsquo;s chat.
             </a>
-            <a href="#services" className="hv2-pill-outline">
+            <a href="#services" className="hv2-pill-cta">
               Explore Our Services
             </a>
           </div>
@@ -537,8 +537,9 @@ export default function HomepageV2() {
           </form>
         )}
         <div style={{ maxWidth: 1160, margin: '48px auto 0', paddingTop: 20, borderTop: '1px solid rgba(29,53,87,.14)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
-          <div style={{ fontFamily: 'var(--font-serif)', fontSize: 17, color: 'var(--gc-navy)', display: 'flex', alignItems: 'center', gap: 8 }}>
-            Girlhood Collective
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, lineHeight: 1 }}>
+            <span style={{ fontFamily: 'var(--font-display)', fontSize: 17, color: 'var(--gc-navy)' }}>Girlhood</span>
+            <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 15, color: 'var(--gc-navy)', marginLeft: -3 }}>Collective</span>
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--gc-peony)', display: 'inline-block' }} />
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 18, fontSize: 16, color: 'var(--gc-ink-muted)' }}>

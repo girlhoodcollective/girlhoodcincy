@@ -11,7 +11,7 @@ const LINKS = [
 
 const DEFAULT_CTA = { label: 'Join our emails list', href: '/village' };
 
-export default function NavBar({ variant = 'white', active, label, cta = DEFAULT_CTA }) {
+export default function NavBar({ variant = 'white', active, label, cta = DEFAULT_CTA, ctaColor = 'var(--gc-emerald)' }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -107,7 +107,7 @@ export default function NavBar({ variant = 'white', active, label, cta = DEFAULT
               {l.label}
             </Link>
           ))}
-          <Link to={cta.href} className="btn" style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '11px 16px', whiteSpace: 'nowrap' }}>
+          <Link to={cta.href} className="btn" style={{ background: ctaColor, color: '#fff', padding: '11px 16px', whiteSpace: 'nowrap' }}>
             {cta.label}
           </Link>
         </div>
@@ -138,7 +138,7 @@ export default function NavBar({ variant = 'white', active, label, cta = DEFAULT
         <Link
           to={cta.href}
           className="btn"
-          style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '11px 20px', textAlign: 'center', marginTop: 8 }}
+          style={{ background: ctaColor, color: '#fff', padding: '11px 20px', textAlign: 'center', marginTop: 8 }}
           onClick={() => setMenuOpen(false)}
         >
           {cta.label}

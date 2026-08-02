@@ -122,17 +122,16 @@
   width: 100%;
 }
 
-/* Refined, boxy CTA treatment — uppercase + tracked, minimal radius */
+/* Sitewide dark-pill CTA treatment — matches the canonical .btn shape (global.css) */
 .hv2-pill-cta,
-.hv2-pill-outline,
 .hv2-pill-white,
 .hv2-submit {
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.09em;
-  border-radius: 3px;
+  letter-spacing: 0.1em;
+  border-radius: 100px;
   white-space: nowrap;
   cursor: pointer;
 }
@@ -145,17 +144,6 @@
 }
 .hv2-pill-cta:hover {
   background: #152943;
-}
-
-.hv2-pill-outline {
-  border: 1px solid var(--gc-navy);
-  color: var(--gc-navy);
-  padding: 15px 32px;
-  transition: background 200ms ease, color 200ms ease, border-color 200ms ease;
-}
-.hv2-pill-outline:hover {
-  background: var(--gc-navy);
-  color: #f8f6f0;
 }
 
 .hv2-pill-white {
