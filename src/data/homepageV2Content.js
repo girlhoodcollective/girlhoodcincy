@@ -37,10 +37,10 @@ export const CLIENTS_LIST = [
 ];
 
 export const STATS_V2 = [
-  { value: '1,000+', label: 'Local community members engaged', offset: 0 },
-  { value: '15+', label: 'Community partnerships developed', offset: 16 },
-  { value: '6+', label: 'Programs and events facilitated', offset: -8 },
-  { value: '15 Years', label: 'Building local partnerships, communications, and community initiatives', offset: 10 },
+  { value: '1,000+', label: 'Community members engaged since 2025', offset: 0 },
+  { value: '15+', label: 'Community partnerships since 2025', offset: 16 },
+  { value: '6+', label: 'Programs & events facilitated since 2025', offset: -8 },
+  { value: '15 Years', label: "Brittany's experience building community, culture & communications programs", offset: 10 },
 ];
 
 export const PARTNERS_V2 = [
