@@ -137,9 +137,13 @@ export default function Gateway() {
           to="/community"
           ref={panelA.ref}
           onMouseMove={panelA.onMouseMove}
-          className="gw-panel gw-panel--a gw-reveal gw-d4"
+          className="gw-panel gw-panel--primary gw-reveal gw-d4"
         >
           <div className="gw-panel-content">
+            <div className="gw-panel-badge">
+              <span className="gw-dot" aria-hidden="true" />
+              Most people start here
+            </div>
             <CommunityMark className="gw-mark" />
             <div className="gw-panel-eyebrow">For Neighbors &amp; Families</div>
             <h2 className="gw-panel-title">Find your people</h2>
@@ -148,7 +152,7 @@ export default function Gateway() {
               real connection.
             </p>
             <span className="gw-panel-cta">
-              Explore Girlhood Collective
+              Start with community
               <ArrowUpRight aria-hidden="true" />
             </span>
           </div>
@@ -158,7 +162,7 @@ export default function Gateway() {
           to="/homepage-v2"
           ref={panelB.ref}
           onMouseMove={panelB.onMouseMove}
-          className="gw-panel gw-panel--b gw-reveal gw-d5"
+          className="gw-panel gw-panel--secondary gw-reveal gw-d5"
         >
           <div className="gw-panel-content">
             <OrgMark className="gw-mark" />
@@ -170,7 +174,7 @@ export default function Gateway() {
               real community.
             </p>
             <span className="gw-panel-cta">
-              See our consulting work
+              Explore our services
               <ArrowUpRight aria-hidden="true" />
             </span>
           </div>
@@ -181,11 +185,11 @@ export default function Gateway() {
         <div className="gw-rule" />
         <p>
           <span className="gw-dot" aria-hidden="true" />
-          Not sure?{' '}
-          <Link to="/community">
-            Start with the community side
+          Running an organization instead?{' '}
+          <Link to="/homepage-v2">
+            Explore our services
           </Link>
-          {' '}— you can always find your way to the other.
+          {' '}— you&rsquo;re in the right place too.
         </p>
       </div>
     </div>
