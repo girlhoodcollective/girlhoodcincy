@@ -45,7 +45,7 @@ const cdnResize = (url, width) => `${url}${url.includes('?') ? '&' : '?'}width=$
 
 export default function HomepageV2() {
   useSEO({
-    title: 'Girlhood Collective | Community & Culture Advisory for Organizations',
+    title: 'Girlhood Collective | Culture & Community Consulting',
     description: 'Fractional community strategy, culture, and events consulting for small businesses, allied health practices, and mission-driven organizations across Cincinnati.',
     path: '/homepage-v2',
   });
@@ -133,7 +133,7 @@ export default function HomepageV2() {
             <span className="hv2-dot" aria-hidden="true" />
             Community &amp; Culture Advisory
           </div>
-          <div
+          <h1
             className="hv2-hero-title"
             style={{
               fontFamily: 'var(--font-serif)',
@@ -146,7 +146,7 @@ export default function HomepageV2() {
             }}
           >
             Helping build communities people can&rsquo;t wait to be a part of.
-          </div>
+          </h1>
           <div style={{ ...TYPE.body, color: 'var(--gc-ink-muted)', maxWidth: 680, margin: '20px auto 0' }}>
             Programs and events that create measurable impact. Bridging corporate culture, non-profit impact, and community engagement across Greater Cincinnati.
           </div>
@@ -163,7 +163,7 @@ export default function HomepageV2() {
 
       {/* SUPPORT & SERVICES */}
       <div id="services" className="hv2-section-pad" style={{ padding: '64px 48px', background: '#fff' }}>
-        <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 32 }}>Support &amp; Services</div>
+        <h2 style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 32 }}>Support &amp; Services</h2>
         <div className="hv2-grid-2col" style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 48, alignItems: 'start' }}>
           <Reveal as="div" className="hv2-sticky-img" style={{ position: 'sticky', top: 90 }}>
             <div aria-hidden="true" style={{ position: 'absolute', top: 14, left: -14, right: -14, bottom: -14, background: HYDRANGEA, opacity: 0.35, borderRadius: 6, zIndex: 0 }} />
@@ -180,16 +180,18 @@ export default function HomepageV2() {
               const isOpen = !!openItems[i];
               return (
                 <div key={item.title} style={{ borderTop: '1px solid rgba(29,53,87,.14)' }}>
-                  <button type="button" className="hv2-accordion-row" onClick={() => toggleItem(i)} aria-expanded={isOpen}>
-                    <div className="hv2-accordion-num" style={{ fontFamily: 'var(--font-serif)', fontSize: 16, color: 'var(--gc-emerald-soft)', width: 30, flex: 'none' }}>
-                      0{i + 1}
-                    </div>
-                    <div style={{ ...TYPE.h3, color: 'var(--gc-navy)', flex: 1 }}>{item.title}</div>
-                    <div style={{ position: 'relative', width: 22, height: 22, flex: 'none', marginLeft: 'auto' }}>
-                      <span style={{ position: 'absolute', top: 10, left: 2, width: 18, height: 2, background: 'var(--gc-navy)' }} />
-                      <span className={`hv2-accordion-vbar${isOpen ? ' open' : ''}`} />
-                    </div>
-                  </button>
+                  <h3 style={{ margin: 0 }}>
+                    <button type="button" className="hv2-accordion-row" onClick={() => toggleItem(i)} aria-expanded={isOpen}>
+                      <span className="hv2-accordion-num" style={{ fontFamily: 'var(--font-serif)', fontSize: 16, color: 'var(--gc-emerald-soft)', width: 30, flex: 'none' }}>
+                        0{i + 1}
+                      </span>
+                      <span style={{ ...TYPE.h3, color: 'var(--gc-navy)', flex: 1 }}>{item.title}</span>
+                      <span style={{ position: 'relative', width: 22, height: 22, flex: 'none', marginLeft: 'auto' }}>
+                        <span style={{ position: 'absolute', top: 10, left: 2, width: 18, height: 2, background: 'var(--gc-navy)' }} />
+                        <span className={`hv2-accordion-vbar${isOpen ? ' open' : ''}`} />
+                      </span>
+                    </button>
+                  </h3>
                   <div className={`hv2-accordion-panel${isOpen ? ' open' : ''}`}>
                     <div style={{ padding: '0 4px 24px', maxWidth: 760 }}>
                       <div style={{ ...TYPE.body, color: 'var(--gc-ink-muted)', marginBottom: 14 }}>{item.desc}</div>
@@ -211,7 +213,7 @@ export default function HomepageV2() {
       <div id="about" className="hv2-section-pad" style={{ padding: '48px 48px', background: '#fff' }}>
         <Reveal className="hv2-grid-2col" style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 40 }}>
           <div>
-            <div style={{ ...TYPE.h3, color: 'var(--gc-navy)', marginBottom: 12 }}>Why this work matters</div>
+            <h3 style={{ ...TYPE.h3, color: 'var(--gc-navy)', marginBottom: 12 }}>Why this work matters</h3>
             <div style={{ ...TYPE.body, color: 'var(--gc-navy)', marginBottom: 10 }}>
               Organizations don&rsquo;t struggle because they lack good intentions — they struggle because building genuine engagement takes time, strategy, and capacity they don&rsquo;t have to spare.
             </div>
@@ -225,7 +227,7 @@ export default function HomepageV2() {
             </div>
           </div>
           <div className="hv2-grid-2col-divider" style={{ borderLeft: '1px solid rgba(29,53,87,.14)', paddingLeft: 40 }}>
-            <div style={{ ...TYPE.h3, color: 'var(--gc-navy)', marginBottom: 12 }}>Who we work with</div>
+            <h3 style={{ ...TYPE.h3, color: 'var(--gc-navy)', marginBottom: 12 }}>Who we work with</h3>
             <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', marginBottom: 14 }}>
               We partner with organizations that understand people are their greatest asset.
             </div>
@@ -251,9 +253,9 @@ export default function HomepageV2() {
       <div className="hv2-section-pad" style={{ padding: '56px 48px', background: 'var(--gc-section)', position: 'relative', overflow: 'hidden' }}>
         <div className="hv2-grain" style={{ position: 'absolute' }} />
         <Reveal style={{ maxWidth: 680, margin: '0 auto', position: 'relative', zIndex: 1 }}>
-          <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', marginBottom: 20, textAlign: 'center' }}>
+          <h2 style={{ ...TYPE.h2, color: 'var(--gc-navy)', marginBottom: 20, textAlign: 'center' }}>
             Clients come to us when&hellip;
-          </div>
+          </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             {CLIENTS_LIST.map((line, i) => (
               <div key={line} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
@@ -268,9 +270,9 @@ export default function HomepageV2() {
       {/* RESULTS */}
       <div id="results" className="hv2-section-pad" style={{ padding: '64px 48px', background: '#fff', position: 'relative', overflow: 'hidden' }}>
         <div className="hv2-ghost" aria-hidden="true" style={{ bottom: '-4%', left: '1vw', fontSize: 'clamp(120px,14vw,220px)' }}>&rdquo;</div>
-        <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 32, position: 'relative', zIndex: 1 }}>
+        <h2 style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 32, position: 'relative', zIndex: 1 }}>
           Real community, real results
-        </div>
+        </h2>
         <Reveal as="div" className="hv2-stats-row" style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', position: 'relative', zIndex: 1 }}>
           {STATS_V2.map((stat, i) => (
             <div key={stat.label} className="hv2-stat-col" style={{ textAlign: 'center', padding: '0 20px', borderLeft: '1px solid rgba(29,53,87,.14)', transform: i % 2 === 1 ? 'translateY(-10px)' : undefined }}>
@@ -327,7 +329,7 @@ export default function HomepageV2() {
               <span className="hv2-dot" aria-hidden="true" />
               Meet the founder
             </div>
-            <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', marginBottom: 16 }}>Meet Brittany</div>
+            <h2 style={{ ...TYPE.h2, color: 'var(--gc-navy)', marginBottom: 16 }}>Meet Brittany</h2>
             <div style={{ ...TYPE.body, color: 'var(--gc-navy)', marginBottom: 14 }}>
               What started as a passion for creating spaces where people can grow with confidence has become a full ecosystem of support, consulting, and events.
             </div>
@@ -348,7 +350,7 @@ export default function HomepageV2() {
       {/* UPCOMING COMMUNITY EVENTS */}
       {FEATURED_EVENT && (
         <div id="events" className="hv2-section-pad" style={{ padding: '56px 48px', background: 'var(--gc-section)' }}>
-          <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 10 }}>Upcoming Community Events</div>
+          <h2 style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 10 }}>Upcoming Community Events</h2>
           <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 32px' }}>
             Join us in person — here&rsquo;s what&rsquo;s next.
           </div>
@@ -364,7 +366,7 @@ export default function HomepageV2() {
               <div style={{ display: 'inline-block', fontSize: 16, fontWeight: 600, letterSpacing: '.08em', textTransform: 'uppercase', color: '#fff', background: HYDRANGEA, padding: '5px 12px', borderRadius: 999, marginBottom: 14 }}>
                 {FEATURED_EVENT.mon} {FEATURED_EVENT.day}, {FEATURED_EVENT.year}
               </div>
-              <div style={{ ...TYPE.h3, color: 'var(--gc-navy)', marginBottom: 6 }}>{FEATURED_EVENT.title}</div>
+              <h3 style={{ ...TYPE.h3, color: 'var(--gc-navy)', marginBottom: 6 }}>{FEATURED_EVENT.title}</h3>
               <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', marginBottom: 12 }}>{FEATURED_EVENT.where}</div>
               <div style={{ ...TYPE.body, color: 'var(--gc-navy)', marginBottom: 16 }}>{FEATURED_EVENT.desc}</div>
               <div style={{ fontSize: 16, fontWeight: 600, color: 'var(--gc-navy)', marginBottom: 20 }}>{FEATURED_EVENT.price}</div>
@@ -378,7 +380,7 @@ export default function HomepageV2() {
 
       {/* EVENTS WE'RE PROUD OF */}
       <div className="hv2-section-pad" style={{ padding: '56px 48px', background: '#fff' }}>
-        <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 10 }}>Seriously proud of what we made.</div>
+        <h2 style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 10 }}>Seriously proud of what we made.</h2>
         <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 32px' }}>
           A look back at the rooms we&rsquo;ve filled since 2025.
         </div>
@@ -412,7 +414,7 @@ export default function HomepageV2() {
       {/* TOOLS */}
       <div id="tools" className="hv2-section-pad" style={{ padding: '56px 48px', background: 'var(--gc-section)', position: 'relative', overflow: 'hidden' }}>
         <div className="hv2-grain" style={{ position: 'absolute' }} />
-        <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 10, position: 'relative', zIndex: 1 }}>Start a Conversation</div>
+        <h2 style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 10, position: 'relative', zIndex: 1 }}>Start a Conversation</h2>
         <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 28px', position: 'relative', zIndex: 1 }}>
           One quick way to get started.
         </div>
@@ -434,7 +436,7 @@ export default function HomepageV2() {
 
       {/* PARTNERS */}
       <div id="partners" className="hv2-section-pad" style={{ padding: '56px 48px', background: '#fff', borderTop: '1px solid rgba(29,53,87,.14)' }}>
-        <div style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 10 }}>Our Partners</div>
+        <h2 style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 10 }}>Our Partners</h2>
         <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 28px' }}>
           Local businesses and organizations we&rsquo;ve had the privilege of building community with.
         </div>
@@ -471,9 +473,9 @@ export default function HomepageV2() {
             <span className="hv2-dot" aria-hidden="true" />
             Let&rsquo;s talk
           </div>
-          <div style={{ ...TYPE.h2, color: '#f8f6f0', maxWidth: 700, margin: '0 auto 14px' }}>
+          <h2 style={{ ...TYPE.h2, color: '#f8f6f0', maxWidth: 700, margin: '0 auto 14px' }}>
             Let&rsquo;s build something people want to be part of.
-          </div>
+          </h2>
           <div style={{ ...TYPE.small, color: 'rgba(248,246,240,.72)', maxWidth: 560, margin: '0 auto 24px' }}>
             Whether it&rsquo;s internal culture, community relationships, or experiences people remember, we&rsquo;re here to help.
           </div>

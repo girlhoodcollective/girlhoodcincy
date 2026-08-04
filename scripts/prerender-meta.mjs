@@ -21,26 +21,26 @@ const ROUTES = [
   {
     path: '/',
     sourceFile: 'src/pages/Gateway.jsx',
-    title: 'Girlhood Collective | Community & Boutique Advisory in Cincinnati',
+    title: 'Girlhood Collective | Cincinnati Community & Advisory',
     description: 'A monthly community and events experience for Cincinnati neighbors — and a boutique advisory for organizations building real culture and community.',
   },
   {
     path: '/community',
     sourceFile: 'src/pages/Community.jsx',
-    title: 'Girlhood Collective | Community Events & The Village Newsletter',
+    title: 'Girlhood Collective | Cincinnati Community Events',
     description: 'Monthly community events, a free newsletter, and the story behind founder Brittany Gruber — for Cincinnati families and neighbors looking for real connection.',
   },
   {
     path: '/homepage-v2',
     sourceFile: 'src/pages/HomepageV2.jsx',
-    title: 'Girlhood Collective | Community & Culture Advisory for Organizations',
+    title: 'Girlhood Collective | Culture & Community Consulting',
     description: 'Fractional community strategy, culture, and events consulting for small businesses, allied health practices, and mission-driven organizations across Cincinnati.',
   },
   {
     path: '/events',
     sourceFile: 'src/pages/Events.jsx',
     title: 'Upcoming Events | Girlhood Collective',
-    description: 'Girlhood Cincy Monthly Experiences — one Saturday a month, September through May, where girls ages 8–12 meet local women entrepreneurs and build confidence through hands-on projects.',
+    description: 'Girlhood Cincy Monthly Experiences — one Saturday a month, September through May, where girls ages 8–12 build confidence through hands-on projects.',
     image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-studio-art-2.jpg?v=1774548572&width=1200',
   },
   {
@@ -59,7 +59,7 @@ const ROUTES = [
     path: '/consultation-intake',
     sourceFile: 'src/pages/ConsultationIntake.jsx',
     title: 'Consultation Intake — Girlhood Collective',
-    description: 'An 8-minute diagnostic to help identify what your organization actually needs, and where we’d start working together.',
+    description: 'An 8-minute diagnostic to help identify what your organization actually needs, and where Girlhood Collective would start working together.',
   },
   {
     path: '/worth-quiz',
