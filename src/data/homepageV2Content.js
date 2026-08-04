@@ -3,26 +3,50 @@
 
 export const HOW_WE_HELP = [
   {
-    title: 'Community Strategy',
-    desc: "Build authentic relationships with the people and organizations that matter most. We help you strengthen your reputation, develop meaningful partnerships, and become a trusted presence in your community.",
+    title: 'Strategy Session',
+    desc: "A focused 90-minute working session on the one challenge that's top of mind, plus a written recap and a clear next-step plan.",
     ctaLabel: 'Learn more',
     href: '#contact',
   },
   {
-    title: 'Organizational Culture',
-    desc: "Strong culture is built on purpose, not accident. We work alongside leadership as a strategic thought partner — aligning your team, navigating growth or change, and building the kind of culture that keeps people invested. Executive-level support, without adding another executive.",
+    title: 'Sponsorship Pitch Refresh',
+    desc: 'A review and rewrite of your existing sponsorship deck or pitch materials, so what you put in front of partners actually lands.',
     ctaLabel: 'Learn more',
     href: '#contact',
   },
   {
-    title: 'Events & Community Experiences',
-    desc: 'From intimate gatherings to large-scale community events, we design experiences that bring people together with intention. We handle the strategy, curation, and execution, so what you host reflects your mission and leaves people wanting to come back.',
+    title: 'Partnership Prospect List',
+    desc: 'A curated list of 15–20 partnership targets, each with a tailored outreach angle, so you know exactly who to reach out to and why.',
     ctaLabel: 'Learn more',
     href: '#contact',
   },
   {
-    title: 'Speaking & Facilitation',
-    desc: 'Bring Brittany in to lead a workshop, moderate a panel, or speak to your team or community about building culture, belonging, and authentic partnerships. Every session is grounded in real experience, not theory.',
+    title: 'Brand & Community Snapshot',
+    desc: 'A light-touch audit of one channel (social, email, or shop) with a prioritized, ready-to-act-on list.',
+    ctaLabel: 'Learn more',
+    href: '#contact',
+  },
+  {
+    title: 'Half-Day Working Session',
+    desc: 'A hands-on, in-person session with your team, fully focused on moving one priority area forward.',
+    ctaLabel: 'Learn more',
+    href: '#contact',
+  },
+  {
+    title: 'Program Design Sprint',
+    desc: 'A defined program or initiative mapped end-to-end: goals, structure, timeline, and budget outline.',
+    ctaLabel: 'Learn more',
+    href: '#contact',
+  },
+  {
+    title: 'Hourly Rate',
+    desc: '$125/hour, billed in 30-minute increments. A flexible way to get support outside a package, or to try working together before committing to something bigger.',
+    ctaLabel: 'Learn more',
+    href: '#contact',
+  },
+  {
+    title: 'Custom Proposal',
+    desc: "Need something bigger, like an ongoing retainer, a full brand or partnerships engagement, or a project beyond a single package? Let's scope something custom together.",
     ctaLabel: 'Learn more',
     href: '#contact',
   },
