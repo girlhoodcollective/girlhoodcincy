@@ -282,7 +282,54 @@ export default function HomepageV2() {
             </div>
           ))}
         </Reveal>
+
+        <Reveal delay={80} style={{ maxWidth: 900, margin: '48px auto 0', position: 'relative', zIndex: 1 }}>
+          <Link
+            to="/better-together-recap"
+            className="hv2-grid-2col"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '0.9fr 1.1fr',
+              alignItems: 'center',
+              gap: 32,
+              background: 'var(--gc-section)',
+              border: '1px solid rgba(29,53,87,.14)',
+              borderRadius: 8,
+              overflow: 'hidden',
+              textDecoration: 'none',
+            }}
+          >
+            <img
+              src={cdnResize('https://cdn.shopify.com/s/files/1/0656/4328/2528/files/432_a2c25d8f-0ce8-40d5-b0fe-f1f1d4b17a69.jpg?v=1784653522', 700)}
+              alt="Guests and panelists together at the Better Together Brunch"
+              loading="lazy"
+              decoding="async"
+              style={{ width: '100%', aspectRatio: '4 / 3', objectFit: 'cover', display: 'block' }}
+            />
+            <div style={{ padding: '8px 32px 8px 0' }}>
+              <div className="hv2-eyebrow" style={{ justifyContent: 'flex-start' }}>
+                <span className="hv2-dot" aria-hidden="true" />
+                Featured Case Study
+              </div>
+              <h3 style={{ ...TYPE.h3, color: 'var(--gc-navy)', marginBottom: 10 }}>
+                $3,000 raised. 10 new sponsors. One flagship event.
+              </h3>
+              <div style={{ ...TYPE.body, color: 'var(--gc-ink-muted)', marginBottom: 18 }}>
+                From zero awareness to campaign kickoff — see how the Better Together Brunch became Endurance in Education&rsquo;s most successful fundraiser to date.
+              </div>
+              <span className="hv2-cta-link" style={{ color: ACCENT }}>
+                Read the full case study
+                <span className="hv2-arrow" aria-hidden="true">&rarr;</span>
+              </span>
+            </div>
+          </Link>
+        </Reveal>
+
         <Reveal delay={100} style={{ maxWidth: 800, margin: '40px auto 0', position: 'relative', zIndex: 1 }}>
+          <div className="hv2-eyebrow" style={{ justifyContent: 'center' }}>
+            <span className="hv2-dot" aria-hidden="true" />
+            Client Testimonial
+          </div>
           <span className="hv2-pullquote-mark" aria-hidden="true">&ldquo;</span>
           <div style={{ ...TYPE.quote, color: 'var(--gc-navy)', marginBottom: 16 }}>
             Co-hosting the community brunch alongside Girlhood Collective was an absolute high point for us at Endurance in Education. The room curated by Girlhood Collective embodied everything we stand for: genuine connections, community strength, and people passionate about building a stronger talent pipeline for Cincinnati.
