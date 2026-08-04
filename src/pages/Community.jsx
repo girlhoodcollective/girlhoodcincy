@@ -19,7 +19,7 @@ const PERSONAL_PHOTO = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/I
 
 export default function Community() {
   useSEO({
-    title: 'Girlhood Collective | Community Events & The Village Newsletter',
+    title: 'Girlhood Collective | Cincinnati Community Events',
     description: 'Monthly community events, a free newsletter, and the story behind founder Brittany Gruber — for Cincinnati families and neighbors looking for real connection.',
     path: '/community',
   });

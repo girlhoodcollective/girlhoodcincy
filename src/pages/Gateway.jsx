@@ -36,7 +36,7 @@ function useSpotlight() {
 
 export default function Gateway() {
   useSEO({
-    title: 'Girlhood Collective | Community & Boutique Advisory in Cincinnati',
+    title: 'Girlhood Collective | Cincinnati Community & Advisory',
     description: 'A monthly community and events experience for Cincinnati neighbors — and a boutique advisory for organizations building real culture and community.',
     path: '/',
   });

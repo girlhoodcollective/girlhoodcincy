@@ -161,7 +161,7 @@ function SectionNav({ onNext, onBack, nextLabel = 'Continue →', disabled = fal
 export default function ConsultationIntake() {
   useSEO({
     title: 'Consultation Intake — Girlhood Collective',
-    description: 'An 8-minute diagnostic to help identify what your organization actually needs, and where we’d start working together.',
+    description: 'An 8-minute diagnostic to help identify what your organization actually needs, and where Girlhood Collective would start working together.',
     path: '/consultation-intake',
   });
 
