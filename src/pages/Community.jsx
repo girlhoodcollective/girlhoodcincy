@@ -107,12 +107,23 @@ export default function Community() {
               <span key={e.id} style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
                 <Link to="/events">
                   <strong style={{ fontWeight: 700 }}>{e.title}</strong>
-                  <span style={{ fontWeight: 400, color: 'var(--gc-ink-muted)' }}> — {e.mon} {e.day} · {e.where}</span>
+                  <span style={{ fontWeight: 400, color: 'rgba(255,255,255,.62)' }}> — {e.mon} {e.day} · {e.where}</span>
                 </Link>
-                {i < UPCOMING_EVENTS.length - 1 && <span style={{ color: 'var(--gc-border)' }}>|</span>}
+                {i < UPCOMING_EVENTS.length - 1 && <span style={{ color: 'rgba(255,255,255,.3)' }}>|</span>}
               </span>
             ))}
-            <Link className="cm-cta" to="/events">
+            {UPCOMING_EVENTS[0].shopifyUrl && (
+              <a
+                href={UPCOMING_EVENTS[0].shopifyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn"
+                style={{ background: 'var(--gc-peony)', color: '#fff', padding: '9px 20px', fontSize: 15 }}
+              >
+                Get your ticket
+              </a>
+            )}
+            <Link className="cm-cta" to="/events" style={{ color: 'var(--gc-emerald-soft)' }}>
               View Upcoming Events <ArrowUpRight aria-hidden="true" />
             </Link>
           </div>

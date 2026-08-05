@@ -6,7 +6,7 @@ import Footer from '../components/Footer.jsx';
 import Reveal from '../components/Reveal.jsx';
 import ShopifyBuyButton from '../components/ShopifyBuyButton.jsx';
 import { submitNetlifyForm } from '../lib/netlifyForms.js';
-import { EVENTS, eventDate, PAST_EVENTS } from '../data/events.js';
+import { EVENTS, eventDate, getUpcomingPublishedEvents, PAST_EVENTS } from '../data/events.js';
 import { useSEO, useStructuredData } from '../lib/seo.js';
 import '../styles/utilityPages.css';
 
@@ -84,6 +84,7 @@ const BUY_BUTTON_OPTIONS = {
 };
 
 const CATS = ['All', 'Workshop'];
+const NEXT_EVENT = getUpcomingPublishedEvents(1)[0];
 
 export default function Events() {
   useSEO({
@@ -143,6 +144,21 @@ export default function Events() {
     <div className="page-shell">
       <NavBar variant="navy" active="Events" />
 
+      {NEXT_EVENT && NEXT_EVENT.shopifyUrl && (
+        <a
+          href={NEXT_EVENT.shopifyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ display: 'block', textDecoration: 'none' }}
+        >
+          <div style={{ background: 'var(--gc-navy)', padding: '13px 44px', textAlign: 'center' }}>
+            <span style={{ font: '700 16px var(--font-sans)', letterSpacing: '.06em', color: '#fff' }}>
+              Upcoming: {NEXT_EVENT.title} — {NEXT_EVENT.mon} {NEXT_EVENT.day} · Get your ticket &rarr;
+            </span>
+          </div>
+        </a>
+      )}
+
       <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px', position: 'relative', overflow: 'hidden' }}>
         <div className="up-ghost" aria-hidden="true" style={{ top: '-14%', right: '4vw', fontSize: 'clamp(140px,16vw,240px)' }}>&sect;</div>
         <div className="rgrid" style={{ position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1fr 220px', gap: 32, alignItems: 'center' }}>
@@ -192,7 +208,7 @@ export default function Events() {
 
         <Reveal delay={100} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
           {visible.map((e) => (
-            <div key={e.id} className="up-card" style={{ display: 'flex', border: '1px solid var(--gc-border)', borderRadius: 4, overflow: 'hidden' }}>
+            <div key={e.id} className="up-card" style={{ display: 'flex', border: '1px solid var(--gc-border)', borderLeft: e.shopifyUrl ? '4px solid var(--gc-peony)' : '1px solid var(--gc-border)', borderRadius: 4, overflow: 'hidden' }}>
               <div style={{ background: 'var(--gc-slate)', width: 120, flexShrink: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '22px 12px' }}>
                 <div style={{ font: '600 16px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)' }}>{e.mon}</div>
                 <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 55, color: '#fff', lineHeight: 1 }}>{e.day}</div>
@@ -215,7 +231,7 @@ export default function Events() {
                       href={e.shopifyUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      style={{ display: 'inline-block', cursor: 'pointer', border: 'none', background: 'var(--gc-emerald)', color: '#fff', font: '600 16px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', padding: '11px 20px', borderRadius: 3, textDecoration: 'none' }}
+                      style={{ display: 'inline-block', cursor: 'pointer', border: 'none', background: 'var(--gc-peony)', color: '#fff', font: '700 17px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', padding: '13px 26px', borderRadius: 3, textDecoration: 'none' }}
                     >
                       Get your ticket →
                     </a>

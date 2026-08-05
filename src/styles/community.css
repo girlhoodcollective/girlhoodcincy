@@ -172,20 +172,18 @@
 .cm-ticker {
   position: relative;
   z-index: 2;
-  background: var(--gc-section);
-  border-top: 1px solid var(--gc-border);
-  border-bottom: 1px solid var(--gc-border);
-  padding: 16px 6vw;
+  background: var(--gc-navy);
+  padding: 22px 6vw;
 }
 .cm-ticker-row {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 8px 16px;
-  max-width: 960px;
+  gap: 12px 20px;
+  max-width: 1000px;
   margin: 0 auto;
-  font-size: 16px;
+  font-size: 17px;
 }
 .cm-ticker-tag {
   display: inline-flex;
@@ -193,11 +191,11 @@
   font: 700 16px var(--font-sans);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gc-emerald);
+  color: var(--gc-peony);
 }
 .cm-ticker-row a {
   text-decoration: none;
-  color: var(--gc-slate);
+  color: #fff;
 }
 
 /* ---------- SECTION shell ---------- */
