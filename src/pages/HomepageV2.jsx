@@ -539,8 +539,15 @@ export default function HomepageV2() {
             <span className="hv2-dot" aria-hidden="true" />
             Get in touch
           </div>
-          <div style={{ ...TYPE.body, color: 'var(--gc-ink-muted)', marginBottom: 24 }}>
-            Let&rsquo;s chat. Reach out below and we&rsquo;ll get back to you ASAP.
+          <div style={{ ...TYPE.body, color: 'var(--gc-ink-muted)', marginBottom: 16 }}>
+            Let&rsquo;s chat. Tell us a bit about what you&rsquo;re working on below — mention
+            you&rsquo;d like to schedule a discovery call and we&rsquo;ll get back to you ASAP.
+          </div>
+          <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', marginBottom: 24, padding: '12px 18px', background: 'var(--gc-section)', borderRadius: 6, display: 'inline-block' }}>
+            Prefer a more structured way to start?{' '}
+            <Link to="/consultation-intake" style={{ color: 'var(--gc-navy)', fontWeight: 600 }}>
+              Complete the consultation intake instead →
+            </Link>
           </div>
         </Reveal>
         {formSubmitted ? (
@@ -572,7 +579,16 @@ export default function HomepageV2() {
               <label htmlFor="hv2-message" style={{ fontSize: 16, fontWeight: 600, color: 'var(--gc-navy)' }}>
                 Message
               </label>
-              <textarea id="hv2-message" required rows={4} value={form.message} onChange={setField('message')} className="hv2-field" style={{ resize: 'vertical' }} />
+              <textarea
+                id="hv2-message"
+                required
+                rows={4}
+                value={form.message}
+                onChange={setField('message')}
+                className="hv2-field"
+                style={{ resize: 'vertical' }}
+                placeholder="e.g. I'd like to schedule a discovery call to talk about..."
+              />
             </div>
             <button type="submit" className="hv2-submit" disabled={formSending}>
               {formSending ? 'Sending…' : 'Send message'}
