@@ -142,10 +142,6 @@ export default function Gateway() {
           className="gw-panel gw-panel--primary gw-reveal gw-d4"
         >
           <div className="gw-panel-content">
-            <div className="gw-panel-badge">
-              <span className="gw-dot" aria-hidden="true" />
-              Most people start here
-            </div>
             <CommunityMark className="gw-mark" />
             <div className="gw-panel-eyebrow">For Neighbors &amp; Families</div>
             <h2 className="gw-panel-title">Find your people</h2>
