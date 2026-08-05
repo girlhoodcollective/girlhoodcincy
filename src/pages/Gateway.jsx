@@ -2,7 +2,10 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, ArrowUpRight } from 'lucide-react';
 import { useSEO, useStructuredData, SITE_URL, SITE_NAME } from '../lib/seo.js';
+import { getUpcomingPublishedEvents } from '../data/events.js';
 import '../styles/gateway.css';
+
+const NEXT_EVENT = getUpcomingPublishedEvents(1)[0];
 
 function CommunityMark(props) {
   return (
@@ -99,6 +102,20 @@ export default function Gateway() {
 
   return (
     <div className="gw-page">
+      {NEXT_EVENT && NEXT_EVENT.shopifyUrl && (
+        <a
+          href={NEXT_EVENT.shopifyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ display: 'block', textDecoration: 'none' }}
+        >
+          <div style={{ background: 'var(--gc-navy)', padding: '13px 44px', textAlign: 'center' }}>
+            <span style={{ font: '700 16px var(--font-sans)', letterSpacing: '.06em', color: '#fff' }}>
+              Upcoming: {NEXT_EVENT.title} — {NEXT_EVENT.mon} {NEXT_EVENT.day} · Get your ticket &rarr;
+            </span>
+          </div>
+        </a>
+      )}
       <div className="gw-grain" />
       <div className="gw-glow" ref={glowRef} />
       <div className="gw-glow gw-glow--two" ref={glowTwoRef} />
