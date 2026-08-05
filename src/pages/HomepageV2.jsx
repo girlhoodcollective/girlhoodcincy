@@ -27,7 +27,7 @@ const NAV_LINKS = [
   { label: 'Services', href: '#services' },
   { label: 'Results', href: '#results' },
   { label: 'Events', href: '#events' },
-  { label: 'Tools', href: '#tools' },
+  { label: 'Tools & Resources', href: '#tools' },
   { label: 'Partners', href: '#partners' },
 ];
 
@@ -461,23 +461,29 @@ export default function HomepageV2() {
       {/* TOOLS */}
       <div id="tools" className="hv2-section-pad" style={{ padding: '56px 48px', background: 'var(--gc-section)', position: 'relative', overflow: 'hidden' }}>
         <div className="hv2-grain" style={{ position: 'absolute' }} />
-        <h2 style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 10, position: 'relative', zIndex: 1 }}>Start a Conversation</h2>
+        <h2 style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 10, position: 'relative', zIndex: 1 }}>Tools &amp; Resources</h2>
         <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 28px', position: 'relative', zIndex: 1 }}>
-          One quick way to get started.
+          Three quick ways to get started.
         </div>
-        <Reveal style={{ maxWidth: 720, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20, position: 'relative', zIndex: 1 }}>
-          <a href="https://girlhoodeventrequest.netlify.app" target="_blank" rel="noopener noreferrer" className="hv2-tool-card">
+        <Reveal style={{ maxWidth: 980, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20, position: 'relative', zIndex: 1 }}>
+          <Link to="/worth-quiz" className="hv2-tool-card">
             <div style={{ fontFamily: 'var(--font-serif)', fontSize: 16, color: SAGE }}>01</div>
             <div style={{ fontSize: 17, fontWeight: 600, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.4 }}>
-              Submit a request to partner on an event or collaboration.
+              Take the Dollars &amp; Cents skills &amp; income quiz.
             </div>
-          </a>
+          </Link>
           <Link to="/consultation-intake" className="hv2-tool-card">
             <div style={{ fontFamily: 'var(--font-serif)', fontSize: 16, color: SAGE }}>02</div>
             <div style={{ fontSize: 17, fontWeight: 600, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.4 }}>
               Start a consulting client intake.
             </div>
           </Link>
+          <a href="https://girlhoodeventrequest.netlify.app" target="_blank" rel="noopener noreferrer" className="hv2-tool-card">
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 16, color: SAGE }}>03</div>
+            <div style={{ fontSize: 17, fontWeight: 600, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.4 }}>
+              Submit a request to partner on an event or collaboration.
+            </div>
+          </a>
         </Reveal>
       </div>
 
