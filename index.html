@@ -30,6 +30,11 @@
       // send_page_view is off here because this is a single-page app —
       // src/lib/analytics.js fires page_view manually on each route change instead.
       gtag('config', 'G-NYQGFZER6K', { send_page_view: false });
+
+      // Google Ads conversion tracking — event snippets fire from
+      // src/lib/analytics.js (trackSignupConversion / trackLeadFormConversion)
+      // right when a sign-up or lead form actually succeeds, not on page load.
+      gtag('config', 'AW-17807273852');
     </script>
 
     <!-- MailerLite Universal -->

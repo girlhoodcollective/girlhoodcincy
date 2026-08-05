@@ -1,3 +1,5 @@
+import { trackSignupConversion } from './analytics.js';
+
 export async function subscribeToNewsletter(email) {
   const res = await fetch('/api/newsletter-subscribe', {
     method: 'POST',
@@ -8,4 +10,5 @@ export async function subscribeToNewsletter(email) {
     const data = await res.json().catch(() => ({}));
     throw new Error(data.error || `Subscription failed: ${res.status}`);
   }
+  trackSignupConversion();
 }

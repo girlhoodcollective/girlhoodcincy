@@ -1,3 +1,5 @@
+import { trackLeadFormConversion } from './analytics.js';
+
 export async function submitNetlifyForm(formName, fields) {
   const body = new URLSearchParams({ 'form-name': formName, ...fields }).toString();
   const res = await fetch('/', {
@@ -6,4 +8,5 @@ export async function submitNetlifyForm(formName, fields) {
     body,
   });
   if (!res.ok) throw new Error(`Form submission failed: ${res.status}`);
+  trackLeadFormConversion();
 }
