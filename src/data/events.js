@@ -21,8 +21,7 @@ export const EVENTS = [
   },
   {
     id: 'helping-hands', mon: 'Sep', day: '19', year: '2026', cat: 'Workshop',
-    shopifyUrl: 'https://shop.girlhoodcincy.com/products/mother-daughter-workshop-fill-a-purse-fill-a-heart',
-    buyButtonProductId: '7762355519584',
+    shopifyUrl: 'https://checkout.mailerlite.com/checkout/33148',
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Helping Hands', where: 'Parent-Child Volunteer Experience · 3500 Columbia Pkwy',
     price: '$50 · per adult-child pair',
