@@ -183,7 +183,42 @@ export default function Gateway() {
         </Link>
       </div>
 
-      <div className="gw-footer-line gw-reveal gw-d6">
+      <div className="gw-strip gw-reveal gw-d6">
+        <div className="gw-strip-inner">
+          <div className="gw-strip-head">
+            <span className="gw-strip-eyebrow">Tools &amp; Resources</span>
+            <span className="gw-strip-sub">Not ready to pick a door? Start here instead.</span>
+          </div>
+          <div className="gw-strip-row">
+            <Link to="/worth-quiz" className="gw-strip-item">
+              <span className="gw-strip-item-title">Dollars &amp; Cents Quiz</span>
+              <span className="gw-strip-item-body">Find your marketable skills and an income path that fits.</span>
+              <span className="gw-strip-item-cta">
+                Take the quiz
+                <ArrowUpRight aria-hidden="true" />
+              </span>
+            </Link>
+            <Link to="/consultation-intake" className="gw-strip-item">
+              <span className="gw-strip-item-title">Consulting Intake</span>
+              <span className="gw-strip-item-body">Tell us what you&rsquo;re working on and start a real conversation.</span>
+              <span className="gw-strip-item-cta">
+                Start the intake
+                <ArrowUpRight aria-hidden="true" />
+              </span>
+            </Link>
+            <a href="https://girlhoodeventrequest.netlify.app" target="_blank" rel="noopener noreferrer" className="gw-strip-item">
+              <span className="gw-strip-item-title">Event Collaboration</span>
+              <span className="gw-strip-item-body">Partner, co-host, or sponsor an upcoming event.</span>
+              <span className="gw-strip-item-cta">
+                Submit a request
+                <ArrowUpRight aria-hidden="true" />
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="gw-footer-line gw-reveal gw-d7">
         <div className="gw-rule" />
         <p>
           <span className="gw-dot" aria-hidden="true" />

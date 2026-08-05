@@ -16,6 +16,23 @@ const TOOLS = [
     body: 'A warm skills inventory that maps your real, marketable strengths to an income path that fits you — grounded in Cincinnati\'s actual market.',
     cta: 'Take the quiz',
   },
+  {
+    href: '/consultation-intake',
+    accent: 'var(--gc-emerald-soft)',
+    eyebrow: 'For organizations',
+    title: 'Consulting Intake',
+    body: 'A structured way to tell us what you\'re working on, so we can come to the first conversation ready to actually help.',
+    cta: 'Start the intake',
+  },
+  {
+    href: 'https://girlhoodeventrequest.netlify.app',
+    external: true,
+    accent: 'var(--gc-peony)',
+    eyebrow: 'For partners',
+    title: 'Event Collaboration',
+    body: 'Want to co-host, sponsor, or partner with us on an event? Tell us what you have in mind.',
+    cta: 'Submit a request',
+  },
 ];
 
 export default function Resources() {
@@ -28,7 +45,7 @@ export default function Resources() {
   return (
     <div className="page-shell">
       <div className="up-grain" />
-      <NavBar variant="white" active="Resources" />
+      <NavBar variant="white" active="Tools & Resources" />
 
       <Link to="/village#archive" style={{ display: 'block', textDecoration: 'none' }}>
         <div style={{ background: 'var(--gc-navy)', padding: '13px 44px', textAlign: 'center' }}>
@@ -66,27 +83,33 @@ export default function Resources() {
         <Reveal style={{ textAlign: 'center', marginBottom: 28, position: 'relative', zIndex: 1 }}>
           <div className="up-eyebrow up-eyebrow--onlight" style={{ justifyContent: 'center' }}>
             <span className="up-dot" aria-hidden="true" />
-            Free tools
+            Get started
           </div>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, fontSize: 35, color: '#fff' }}>Start with a question.</h2>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, fontSize: 35, color: '#fff' }}>Tools &amp; Resources</h2>
         </Reveal>
-        <Reveal delay={100} style={{ maxWidth: 420, margin: '0 auto', position: 'relative', zIndex: 1 }}>
-          {TOOLS.map((t) => (
-            <Link
-              key={t.title}
-              className="up-card"
-              to={t.href}
-              style={{ textDecoration: 'none', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.14)', borderRadius: 8, padding: '26px 24px', display: 'block' }}
-            >
-              <div style={{ font: '700 16px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>{t.eyebrow}</div>
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: '#fff', marginBottom: 6 }}>{t.title}</h3>
-              <p style={{ fontSize: 16, fontWeight: 300, color: 'rgba(255,255,255,.6)', lineHeight: 1.6, marginBottom: 12 }}>{t.body}</p>
-              <span className="up-cta" style={{ color: t.accent }}>
-                {t.cta}
-                <ArrowUpRight aria-hidden="true" />
-              </span>
-            </Link>
-          ))}
+        <Reveal delay={100} style={{ maxWidth: 980, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20, position: 'relative', zIndex: 1 }}>
+          {TOOLS.map((t) => {
+            const Wrapper = t.external ? 'a' : Link;
+            const wrapperProps = t.external
+              ? { href: t.href, target: '_blank', rel: 'noopener noreferrer' }
+              : { to: t.href };
+            return (
+              <Wrapper
+                key={t.title}
+                className="up-card"
+                {...wrapperProps}
+                style={{ textDecoration: 'none', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.14)', borderRadius: 8, padding: '26px 24px', display: 'flex', flexDirection: 'column' }}
+              >
+                <div style={{ font: '700 16px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--gc-lavender-soft)', marginBottom: 12 }}>{t.eyebrow}</div>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: '#fff', marginBottom: 6 }}>{t.title}</h3>
+                <p style={{ fontSize: 16, fontWeight: 300, color: 'rgba(255,255,255,.6)', lineHeight: 1.6, marginBottom: 12 }}>{t.body}</p>
+                <span className="up-cta" style={{ color: t.accent, marginTop: 'auto' }}>
+                  {t.cta}
+                  <ArrowUpRight aria-hidden="true" />
+                </span>
+              </Wrapper>
+            );
+          })}
         </Reveal>
       </div>
 

@@ -5,7 +5,7 @@ import { subscribeToNewsletter } from '../lib/newsletter.js';
 const EXPLORE_LINKS = [
   { label: 'About', href: '/community#about' },
   { label: 'Events', href: '/events' },
-  { label: 'Resources', href: '/resources' },
+  { label: 'Tools & Resources', href: '/resources' },
   { label: 'Subscribe', href: '/village' },
   { label: 'Privacy', href: '/privacy' },
 ];

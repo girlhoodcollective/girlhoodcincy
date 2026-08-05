@@ -5,7 +5,7 @@ const LINKS = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/community#about' },
   { label: 'Events', href: '/events' },
-  { label: 'Resources', href: '/resources' },
+  { label: 'Tools & Resources', href: '/resources' },
   { label: 'Subscribe', href: '/village' },
 ];
 
