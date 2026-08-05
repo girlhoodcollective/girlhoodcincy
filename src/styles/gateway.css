@@ -179,16 +179,6 @@
   margin: 0 auto;
 }
 
-@media (min-width: 900px) {
-  .gw-panels {
-    grid-template-columns: 1.14fr 0.86fr;
-    align-items: start;
-  }
-  .gw-panel--secondary {
-    margin-top: 64px;
-  }
-}
-
 .gw-panel {
   position: relative;
   border-radius: 4px;
@@ -212,62 +202,39 @@
   opacity: 1;
 }
 
-/* Primary path — the bold default (Community): solid navy, elevated,
-   leads the grid. Visual weight signals "start here" without relying
-   on easy-to-miss footnote text. */
-.gw-panel--primary {
-  background: var(--gc-navy);
-  box-shadow: 0 20px 48px rgba(29, 53, 87, 0.22);
-}
-.gw-panel--primary:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 34px 68px rgba(29, 53, 87, 0.32);
-}
-.gw-panel--primary::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  opacity: 0.5;
-  mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* Secondary path — the quieter option (Organizations): plain outline
-   card, smaller share of the grid, no dark fill. */
+/* Both paths carry equal visual weight — same fill, border, shadow, and
+   hover lift. Each keeps its own accent color (emerald / peony) on the
+   eyebrow, icon, and CTA so they read as distinct but not hierarchical. */
+.gw-panel--primary,
 .gw-panel--secondary {
   background: #fff;
   border: 1px solid var(--gc-border);
   box-shadow: 0 1px 2px rgba(29, 53, 87, 0.04);
 }
+.gw-panel--primary:hover,
 .gw-panel--secondary:hover {
   transform: translateY(-7px);
   box-shadow: 0 20px 40px rgba(29, 53, 87, 0.1);
   border-color: rgba(64, 130, 109, 0.3);
 }
+.gw-panel--primary::before {
+  background: radial-gradient(320px circle at var(--mx, 50%) var(--my, 0%), rgba(64, 130, 109, 0.12), transparent 60%);
+}
 .gw-panel--secondary::before {
   background: radial-gradient(320px circle at var(--mx, 50%) var(--my, 0%), rgba(249, 113, 175, 0.12), transparent 60%);
+}
+.gw-panel--secondary:hover {
+  border-color: rgba(249, 113, 175, 0.35);
+}
+.gw-panel--secondary .gw-panel-eyebrow,
+.gw-panel--secondary .gw-mark,
+.gw-panel--secondary .gw-panel-cta {
+  color: var(--gc-peony);
 }
 
 .gw-panel-content {
   position: relative;
   z-index: 1;
-}
-
-/* Explicit default-path signal on the primary card, so the recommendation
-   doesn't rely on small footer text to be noticed. */
-.gw-panel-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font: 700 13px var(--font-sans);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--gc-peony);
-  background: rgba(249, 113, 175, 0.16);
-  padding: 6px 13px;
-  border-radius: 999px;
-  margin-bottom: 20px;
 }
 
 .gw-mark {
@@ -276,9 +243,6 @@
   margin-bottom: 26px;
   color: var(--gc-emerald);
 }
-.gw-panel--primary .gw-mark {
-  color: var(--gc-emerald-soft);
-}
 
 .gw-panel-eyebrow {
   font: 700 16px var(--font-sans);
@@ -286,9 +250,6 @@
   text-transform: uppercase;
   color: var(--gc-emerald);
   margin-bottom: 16px;
-}
-.gw-panel--primary .gw-panel-eyebrow {
-  color: var(--gc-emerald-soft);
 }
 
 .gw-panel-title {
@@ -299,9 +260,6 @@
   margin-bottom: 15px;
   line-height: 1.22;
 }
-.gw-panel--primary .gw-panel-title {
-  color: #f8f6f0;
-}
 
 .gw-panel-body {
   font-size: 16.5px;
@@ -310,9 +268,6 @@
   line-height: 1.7;
   margin-bottom: 30px;
   max-width: 38ch;
-}
-.gw-panel--primary .gw-panel-body {
-  color: rgba(248, 246, 240, 0.68);
 }
 
 .gw-panel-cta {
@@ -323,9 +278,6 @@
   letter-spacing: 0.03em;
   color: var(--gc-emerald);
   position: relative;
-}
-.gw-panel--primary .gw-panel-cta {
-  color: #f8f6f0;
 }
 .gw-panel-cta::after {
   content: '';
@@ -507,16 +459,49 @@
 
 @media (max-width: 899px) {
   .gw-panels {
-    grid-template-columns: 1fr;
+    gap: 16px;
   }
   .gw-ghost {
     display: none;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 640px) {
+  /* Both panels stay side by side even on phones, so neither is buried
+     below the fold — sizing scales down instead of stacking to 1 column. */
+  .gw-panels {
+    gap: 10px;
+    padding-top: 40px;
+  }
   .gw-panel {
-    padding: 34px 26px;
+    padding: 18px 16px;
+  }
+  .gw-mark {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 12px;
+  }
+  .gw-panel-eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+  .gw-panel-title {
+    font-size: clamp(17px, 4.6vw, 21px);
+    margin-bottom: 8px;
+  }
+  .gw-panel-body {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+  }
+  .gw-panel-cta {
+    font-size: 14px;
+    gap: 6px;
+  }
+  .gw-panel-cta svg {
+    width: 13px;
+    height: 13px;
   }
   .gw-header {
     flex-direction: column;
