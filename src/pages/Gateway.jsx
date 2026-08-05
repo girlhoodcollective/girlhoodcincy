@@ -126,8 +126,10 @@ export default function Gateway() {
             The best of <em>both worlds.</em>
           </h1>
           <p className="gw-dek gw-reveal gw-d3">
-            A monthly community and events experience for Cincinnati neighbors — and a boutique
-            advisory for organizations building real culture and community. Tell us why you&rsquo;re here.
+            Everything here starts from one belief: people show up fully when they feel like they
+            belong. For neighbors, that looks like community events and experiences. For
+            organizations, it looks like a boutique culture &amp; community advisory. Tell us why
+            you&rsquo;re here.
           </p>
         </div>
       </div>
