@@ -29,13 +29,21 @@ const QUESTIONS = [
 
 const SKILL_LABELS = { project_mgmt: 'Project & Program Management', operations: 'Operations & Process Design', leadership: 'Leadership & Strategic Thinking', people: 'People & Relationship Intelligence', communication: 'Communication & Facilitation', analysis: 'Data Analysis & Research', research: 'Research & Strategic Insight', writing: 'Writing & Content Creation', marketing: 'Marketing & Brand Strategy', coaching: 'Coaching & Advising', teaching: 'Training & Instructional Design', speaking: 'Public Speaking & Facilitation', storytelling: 'Storytelling & Persuasion', tech: 'Tech Fluency & Digital Tools', systems: 'Systems Thinking', advocacy: 'Advocacy & Community Building', visual: 'Visual Communication & Design' };
 
+// Income-stream $ ranges are sourced market data, not estimates invented for this quiz.
+// Full-time roles: cross-checked across Salary.com, Glassdoor, Indeed, and ZipRecruiter Cincinnati/
+// Ohio data — ranges are re-centered where sources disagreed rather than taken from Salary.com alone
+// (Salary.com trends higher than Glassdoor/Indeed/ZipRecruiter for the same role+city; see PR notes).
+// Consulting/freelance/coaching rates: national industry rate surveys (ICF Global Coaching Study,
+// consultingsuccess.com, trainingcost.com, Upwork freelance-rate data, ghostwriting/course-creator
+// income surveys) — no metro-level government data exists for these categories.
+// Pulled August 2026. Re-pull and re-verify annually — comp-tool figures update continuously.
 const ARCHETYPES = {
-  connector: { name: 'Connector', tagline: 'You are the infrastructure other people\'s success runs on. You make people feel seen, trusted, and aligned — the most valuable skill in almost any room.', skills: ['people', 'communication', 'advocacy', 'coaching'], streams: [{ label: 'Full-time · in demand here', title: 'Community Affairs / DEI Manager', desc: "Cincinnati Children's, P&G, and Fifth Third are all building in this space, and the metro's tight labor pool — only 38% of residents are prime working-age — means relational intelligence is genuinely scarce right now.", range: '$57K–$155K' }, { label: 'Consulting', title: 'ERG Strategy & Facilitation Consultant', desc: "Cincinnati's corporate ecosystem needs facilitators who can run culture programs that aren't performative.", range: '$2K–$8K / engagement' }, { label: 'Start now', title: '1:1 or Group Coaching Practice', desc: 'Coaches charge $100–$500/session. Your track record of making people feel seen is your proof of concept.', range: '$100–$500 / session' }], imposter: "Around 70% of women have experienced imposter syndrome — and it often gets worse with career progression, not better. That's not a sign something's wrong with you. It's a sign the systems you're moving through weren't built with you in mind.", reframe: "They called it 'soft skills.' What they meant was the skills that hold everything together — and they hoped you'd keep doing it for free." },
-  strategist: { name: 'Strategist', tagline: "You see around corners. When everyone else is reacting, you've already mapped what happens next — exactly what Cincinnati's fastest-growing sectors pay for.", skills: ['analysis', 'systems', 'research', 'operations'], streams: [{ label: 'Full-time · in demand here', title: 'Strategy & Operations Lead', desc: "Fifth Third's fintech and cybersecurity buildout, GE Aerospace's continued expansion, and the Cintrifuse ecosystem all hire people who turn complexity into clear action.", range: '$62K–$129K' }, { label: 'Fractional', title: 'Fractional COO or Process Consultant', desc: 'Local small businesses need someone like you 10–15 hours a month. Fractional ops is the fastest-growing consulting niche.', range: '$5K–$12K / month' }, { label: 'Start now', title: 'Data & Systems Analyst (Freelance)', desc: 'TriHealth, UC Health, and Kroger\'s 84.51° data-analytics team all need people who can make their data legible — data scientist pay in Cincinnati runs from roughly $68K entry to $156K senior on staff, and freelance rates track above that.', range: '$55–$125 / hr' }], imposter: 'Credentials rarely resolve the doubt — even people with board certifications and decades of practice report it. What does help? Evidence. You have it. The question is whether you\'re letting yourself count it.', reframe: 'They said you were \'overthinking it.\' What they meant was you saw consequences they hadn\'t considered yet — and you were right.' },
-  storyteller: { name: 'Storyteller', tagline: 'You make people feel something, then move. In a market flooded with AI content, your voice is the thing that cannot be automated.', skills: ['writing', 'storytelling', 'marketing', 'communication'], streams: [{ label: 'Full-time · in demand here', title: 'Content Strategist / Brand Voice Lead', desc: "P&G, Kroger, and local startups need humans who write with a point of view. Cincinnati marketing managers earn a median of $135K, and the region's lower cost of living makes it go further.", range: '$70K–$135K' }, { label: 'Freelance', title: 'Copywriter / Ghostwriter for Executives', desc: "Plenty of Cincinnati leaders have something to say and can't find the words. Ghostwriting retainers run $2K–$8K/month.", range: '$2K–$8K / month' }, { label: 'Start now', title: 'Speaking & Workshop Facilitation', desc: 'Women of Cincy, eWomenNetwork, and Aviatra all book speakers.', range: '$1,500–$15K / talk' }], imposter: "Women undervalue their communication skills more than almost any other competency — we're trained to think things that come naturally aren't worth much. But natural to you + rare in the market + un-automatable = premium income.", reframe: "They said you were 'too much.' What they meant was you said things other people weren't brave enough to say — and people needed to hear them." },
-  builder: { name: 'Builder', tagline: 'You make things real. You build the infrastructure that lets ideas survive contact with the real world — and that is genuinely rare.', skills: ['project_mgmt', 'operations', 'leadership', 'teaching'], streams: [{ label: 'Full-time · in demand here', title: 'Program Director / Project Manager', desc: "Cincinnati's healthcare sector — 165,000+ employees, the region's single largest industry — constantly needs people who can execute, and so does GE Aerospace's growing local footprint.", range: '$62K–$129K' }, { label: 'Consulting', title: 'Launch & Implementation Consultant', desc: "Cincinnati's startups need someone to translate plans into programs. That's you, on contract, on your terms.", range: '$6K–$15K / project' }, { label: 'Start now', title: 'Course Creator / Instructional Designer', desc: 'If you can build a system, you can package it. Professional-development courses earn $500–$10K/month.', range: '$500–$10K / mo' }], imposter: "Women who 'just make things happen' are the most likely to be underpaid, because execution looks invisible to the people benefiting from it. Finding people who actually deliver is a top challenge for leaders — you are the answer to that problem.", reframe: "They said you were 'just organized.' What they meant was you were the only reason anything worked — and hoped you wouldn't notice." },
-  advocate: { name: 'Advocate', tagline: 'You fight for people. Right now, in this city and this moment, industries need you urgently — especially the ones that have gotten by without you.', skills: ['advocacy', 'speaking', 'people', 'leadership'], streams: [{ label: 'Full-time · growing here', title: 'Community Affairs / Policy / DEI Lead', desc: "Several Greater Cincinnati companies make Forbes' Best Employers for Women — and are building out the infrastructure you can lead.", range: '$57K–$155K' }, { label: 'Consulting', title: 'Nonprofit Fundraising & Development Consultant', desc: 'United Way and dozens of local nonprofits need someone who can write grants and build donor relationships.', range: '$50–$100 / hr' }, { label: 'Start now', title: 'Corporate Trainer / ERG Speaker', desc: 'Lived experience + advocacy + the ability to hold a room = a paid speaking practice.', range: '$2K–$10K / session' }], imposter: "Advocacy and community-facing roles see some of the highest rates of imposter syndrome — often because you're asked to fix problems caused by the exact systems you work inside. The friction isn't you being wrong.", reframe: "They said you were 'too passionate.' What they meant was you cared so much it made people who weren't willing to care uncomfortable." },
-  teacher: { name: 'Teacher', tagline: 'You make hard things make sense — and change how people think, not just what they know. That\'s the highest form of influence.', skills: ['teaching', 'coaching', 'communication', 'research'], streams: [{ label: 'Full-time · fastest-growing here', title: 'Learning & Development Manager', desc: "Healthcare, higher ed, and Cincinnati's corporate sector all have urgent L&D needs — and it's a proven path into roles like medical & health services manager, one of the nation's fastest-growing occupations (+23% projected growth, $118K median).", range: '$46K–$92K' }, { label: 'Consulting', title: 'Corporate Trainer / Workshop Designer', desc: 'The Women\'s Business Center and Aviatra book facilitators. Design and deliver a workshop for $2K–$10K.', range: '$2K–$10K / session' }, { label: 'Start now', title: 'Online Course Creator', desc: "Package what you already know. Your curriculum already exists — it's just living in your head.", range: '$500–$5K / mo' }], imposter: 'Nearly all women in knowledge-based fields report imposter feelings — including experienced teachers with years of evidence they\'re effective. The credential doesn\'t create the confidence. Letting yourself count your own receipts does.', reframe: "They said you were 'just a teacher.' What they meant was you could take something impossible and make it make sense — one of the rarest things a person can do." },
+  connector: { name: 'Connector', tagline: 'You are the infrastructure other people\'s success runs on. You make people feel seen, trusted, and aligned — the most valuable skill in almost any room.', skills: ['people', 'communication', 'advocacy', 'coaching'], streams: [{ label: 'Full-time · in demand here', title: 'Community Affairs / DEI Manager', desc: "Cincinnati Children's, P&G, and Fifth Third are all building in this space, and the metro's tight labor pool — only 38% of residents are prime working-age — means relational intelligence is genuinely scarce right now.", range: '$90K–$127K' }, { label: 'Consulting', title: 'ERG Strategy & Facilitation Consultant', desc: "Cincinnati's corporate ecosystem needs facilitators who can run culture programs that aren't performative.", range: '$2K–$8K / engagement' }, { label: 'Start now', title: '1:1 or Group Coaching Practice', desc: 'Coaches charge $100–$500/session. Your track record of making people feel seen is your proof of concept.', range: '$100–$500 / session' }], imposter: "Around 70% of women have experienced imposter syndrome — and it often gets worse with career progression, not better. That's not a sign something's wrong with you. It's a sign the systems you're moving through weren't built with you in mind.", reframe: "They called it 'soft skills.' What they meant was the skills that hold everything together — and they hoped you'd keep doing it for free." },
+  strategist: { name: 'Strategist', tagline: "You see around corners. When everyone else is reacting, you've already mapped what happens next — exactly what Cincinnati's fastest-growing sectors pay for.", skills: ['analysis', 'systems', 'research', 'operations'], streams: [{ label: 'Full-time · in demand here', title: 'Strategy & Operations Lead', desc: "Fifth Third's fintech and cybersecurity buildout, GE Aerospace's continued expansion, and the Cintrifuse ecosystem all hire people who turn complexity into clear action.", range: '$87K–$125K' }, { label: 'Fractional', title: 'Fractional COO or Process Consultant', desc: 'Local small businesses need someone like you 10–15 hours a month. Fractional ops is the fastest-growing consulting niche.', range: '$6K–$15K / month' }, { label: 'Start now', title: 'Data & Systems Analyst (Freelance)', desc: 'TriHealth, UC Health, and Kroger\'s 84.51° data-analytics team all need people who can make their data legible — freelance data-analyst rates track $40–$120/hr depending on experience.', range: '$40–$120 / hr' }], imposter: 'Credentials rarely resolve the doubt — even people with board certifications and decades of practice report it. What does help? Evidence. You have it. The question is whether you\'re letting yourself count it.', reframe: 'They said you were \'overthinking it.\' What they meant was you saw consequences they hadn\'t considered yet — and you were right.' },
+  storyteller: { name: 'Storyteller', tagline: 'You make people feel something, then move. In a market flooded with AI content, your voice is the thing that cannot be automated.', skills: ['writing', 'storytelling', 'marketing', 'communication'], streams: [{ label: 'Full-time · in demand here', title: 'Content Strategist / Brand Voice Lead', desc: "P&G, Kroger, and local startups need humans who write with a point of view. Cincinnati marketing managers run $85K–$128K, and the region's lower cost of living makes it go further.", range: '$85K–$128K' }, { label: 'Freelance', title: 'Copywriter / Ghostwriter for Executives', desc: "Plenty of Cincinnati leaders have something to say and can't find the words. Ghostwriting retainers run $2K–$8K/month.", range: '$2K–$8K / month' }, { label: 'Start now', title: 'Speaking & Workshop Facilitation', desc: 'Women of Cincy, eWomenNetwork, and Aviatra all book speakers.', range: '$1,500–$20K / talk' }], imposter: "Women undervalue their communication skills more than almost any other competency — we're trained to think things that come naturally aren't worth much. But natural to you + rare in the market + un-automatable = premium income.", reframe: "They said you were 'too much.' What they meant was you said things other people weren't brave enough to say — and people needed to hear them." },
+  builder: { name: 'Builder', tagline: 'You make things real. You build the infrastructure that lets ideas survive contact with the real world — and that is genuinely rare.', skills: ['project_mgmt', 'operations', 'leadership', 'teaching'], streams: [{ label: 'Full-time · in demand here', title: 'Program Director / Project Manager', desc: "Cincinnati's healthcare sector — 165,000+ employees, the region's single largest industry — constantly needs people who can execute, and so does GE Aerospace's growing local footprint.", range: '$67K–$145K' }, { label: 'Consulting', title: 'Launch & Implementation Consultant', desc: "Cincinnati's startups need someone to translate plans into programs. That's you, on contract, on your terms.", range: '$6K–$15K / project' }, { label: 'Start now', title: 'Course Creator / Instructional Designer', desc: 'If you can build a system, you can package it. Professional-development courses earn $500–$10K/month.', range: '$500–$10K / mo' }], imposter: "Women who 'just make things happen' are the most likely to be underpaid, because execution looks invisible to the people benefiting from it. Finding people who actually deliver is a top challenge for leaders — you are the answer to that problem.", reframe: "They said you were 'just organized.' What they meant was you were the only reason anything worked — and hoped you wouldn't notice." },
+  advocate: { name: 'Advocate', tagline: 'You fight for people. Right now, in this city and this moment, industries need you urgently — especially the ones that have gotten by without you.', skills: ['advocacy', 'speaking', 'people', 'leadership'], streams: [{ label: 'Full-time · growing here', title: 'Community Affairs / Policy / DEI Lead', desc: "Several Greater Cincinnati companies make Forbes' Best Employers for Women — and are building out the infrastructure you can lead.", range: '$90K–$127K' }, { label: 'Consulting', title: 'Nonprofit Fundraising & Development Consultant', desc: 'United Way and dozens of local nonprofits need someone who can write grants and build donor relationships.', range: '$50–$100 / hr' }, { label: 'Start now', title: 'Corporate Trainer / ERG Speaker', desc: 'Lived experience + advocacy + the ability to hold a room = a paid speaking practice.', range: '$2K–$10K / session' }], imposter: "Advocacy and community-facing roles see some of the highest rates of imposter syndrome — often because you're asked to fix problems caused by the exact systems you work inside. The friction isn't you being wrong.", reframe: "They said you were 'too passionate.' What they meant was you cared so much it made people who weren't willing to care uncomfortable." },
+  teacher: { name: 'Teacher', tagline: 'You make hard things make sense — and change how people think, not just what they know. That\'s the highest form of influence.', skills: ['teaching', 'coaching', 'communication', 'research'], streams: [{ label: 'Full-time · fastest-growing here', title: 'Learning & Development Manager', desc: "Healthcare, higher ed, and Cincinnati's corporate sector all have urgent L&D needs — and it's a proven path into roles like medical & health services manager, one of the nation's fastest-growing occupations (+23% projected growth, $118K median).", range: '$87K–$123K' }, { label: 'Consulting', title: 'Corporate Trainer / Workshop Designer', desc: 'The Women\'s Business Center and Aviatra book facilitators. Design and deliver a workshop for $2K–$5K.', range: '$2K–$5K / session' }, { label: 'Start now', title: 'Online Course Creator', desc: "Package what you already know. Your curriculum already exists — it's just living in your head.", range: '$500–$5K / mo' }], imposter: 'Nearly all women in knowledge-based fields report imposter feelings — including experienced teachers with years of evidence they\'re effective. The credential doesn\'t create the confidence. Letting yourself count your own receipts does.', reframe: "They said you were 'just a teacher.' What they meant was you could take something impossible and make it make sense — one of the rarest things a person can do." },
 };
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
@@ -129,18 +137,24 @@ export default function WorthQuiz() {
     }).filter(Boolean).join('\n\n');
   };
 
-  const submitResults = async (archName, topSkillsList) => {
+  const unlockResults = async () => {
     if (!email.trim()) return;
     setSending(true);
     setSubmitError(false);
     try {
+      const scores = calc();
+      const key = archetypeKey(scores);
+      const arch = ARCHETYPES[key];
+      const top = Object.entries(scores).sort((x, y) => y[1] - x[1]).slice(0, 6);
       await submitNetlifyForm('worth-quiz', {
         email: email.trim(),
-        archetype: archName,
-        topSkills: topSkillsList.join(', '),
+        archetype: arch.name,
+        topSkills: top.map(([s]) => SKILL_LABELS[s] || s).join(', '),
         answers: buildAnswersSummary(),
       });
       setSubmitted(true);
+      setPhase('results');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch {
       setSubmitError(true);
     } finally {
@@ -152,13 +166,16 @@ export default function WorthQuiz() {
     setPhase('intro');
     setCurrent(0);
     setAnswers({});
+    setEmail('');
+    setSubmitted(false);
+    setSubmitError(false);
   };
 
   const next = () => {
     const qi = current;
     if (!hasAnswer(qi)) return;
     const last = qi === QUESTIONS.length - 1;
-    if (last) setPhase('results');
+    if (last) setPhase('email');
     else go(qi + 1);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -265,6 +282,54 @@ export default function WorthQuiz() {
         );
       })()}
 
+      {phase === 'email' && (
+        <div style={{ maxWidth: 520, margin: '0 auto', padding: '48px 24px 70px', textAlign: 'center' }}>
+          <div style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 16, boxShadow: '0 4px 24px rgba(53,91,116,.07)', padding: '40px 32px' }}>
+            <div style={{ font: '600 16px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-emerald)', marginBottom: 14 }}>
+              Almost there
+            </div>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 30, fontWeight: 700, color: 'var(--gc-navy)', lineHeight: 1.25, marginBottom: 12 }}>
+              Enter your email to see your results
+            </h2>
+            <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.65, marginBottom: 24 }}>
+              We'll send you a copy of your skill profile and income streams, plus keep you posted on Girlhood Collective events and opportunities.
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10, maxWidth: 360, margin: '0 auto' }}>
+              <input
+                className="fld"
+                type="email"
+                placeholder="you@email.com"
+                aria-label="Your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                onKeyDown={(e) => { if (e.key === 'Enter' && email.trim() && !sending) unlockResults(); }}
+              />
+              <button
+                className="btn"
+                onClick={unlockResults}
+                disabled={sending || !email.trim()}
+                style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '14px 24px', cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1 }}
+              >
+                {sending ? 'Unlocking…' : 'See my results →'}
+              </button>
+              <button
+                className="btn"
+                onClick={() => setPhase('quiz')}
+                style={{ background: 'transparent', border: '1.5px solid var(--gc-border)', color: 'var(--gc-ink-muted)', padding: '12px 22px' }}
+              >
+                ← Back to last question
+              </button>
+            </div>
+            {submitError && (
+              <p style={{ fontSize: 16, color: '#c0392b', marginTop: 16 }}>
+                Something went wrong — try again, or reach us at{' '}
+                <a href="mailto:hello@girlhoodcincy.com" style={{ color: '#c0392b' }}>hello@girlhoodcincy.com</a>.
+              </p>
+            )}
+          </div>
+        </div>
+      )}
+
       {phase === 'results' && (() => {
         const scores = calc();
         const key = archetypeKey(scores);
@@ -326,50 +391,13 @@ export default function WorthQuiz() {
               <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 22.5, color: '#fff', lineHeight: 1.55 }}>{arch.reframe}</div>
             </div>
 
-            <div style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 14, padding: 28, marginTop: 16 }}>
-              {submitted ? (
-                <div style={{ textAlign: 'center' }}>
-                  <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 24, color: 'var(--gc-slate)', marginBottom: 6 }}>Got it — thank you!</div>
-                  <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.6 }}>
-                    We'll follow up with a copy of your results and what's next.
-                  </p>
-                </div>
-              ) : (
-                <div style={{ textAlign: 'center' }}>
-                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: 22.5, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 6 }}>
-                    Want this sent to you?
-                  </div>
-                  <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.6, marginBottom: 16, maxWidth: 440, margin: '0 auto 16px' }}>
-                    Drop your email and we'll send you a copy of your {arch.name} results — plus keep you posted on Girlhood Collective events and opportunities.
-                  </p>
-                  <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', maxWidth: 440, margin: '0 auto' }}>
-                    <input
-                      className="fld"
-                      type="email"
-                      placeholder="you@email.com"
-                      aria-label="Your email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      style={{ flex: 1, minWidth: 220 }}
-                    />
-                    <button
-                      className="btn"
-                      onClick={() => submitResults(arch.name, top.map(([s]) => SKILL_LABELS[s] || s))}
-                      disabled={sending || !email.trim()}
-                      style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '13px 22px', cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1 }}
-                    >
-                      {sending ? 'Sending…' : 'Email me my results'}
-                    </button>
-                  </div>
-                  {submitError && (
-                    <p style={{ fontSize: 16, color: '#c0392b', marginTop: 12 }}>
-                      Something went wrong — try again, or reach us at{' '}
-                      <a href="mailto:hello@girlhoodcincy.com" style={{ color: '#c0392b' }}>hello@girlhoodcincy.com</a>.
-                    </p>
-                  )}
-                </div>
-              )}
-            </div>
+            {submitted && (
+              <div style={{ background: 'var(--gc-sage-light)', border: '1px solid var(--gc-border)', borderRadius: 14, padding: '18px 22px', marginTop: 16, textAlign: 'center' }}>
+                <span style={{ fontSize: 16, color: 'var(--gc-ink)' }}>
+                  ✓ Sent to <strong>{email}</strong> — plus you're on the list for Girlhood Collective events and opportunities.
+                </span>
+              </div>
+            )}
 
             <div style={{ background: '#fff', border: '1px solid var(--gc-border)', borderRadius: 14, padding: 28, textAlign: 'center', marginTop: 16 }}>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 700, color: 'var(--gc-slate)', marginBottom: 8 }}>
