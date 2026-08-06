@@ -417,9 +417,15 @@ export default function HomepageV2() {
               <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', marginBottom: 12 }}>{FEATURED_EVENT.where}</div>
               <div style={{ ...TYPE.body, color: 'var(--gc-navy)', marginBottom: 16 }}>{FEATURED_EVENT.desc}</div>
               <div style={{ fontSize: 16, fontWeight: 600, color: 'var(--gc-navy)', marginBottom: 20 }}>{FEATURED_EVENT.price}</div>
-              <a href={FEATURED_EVENT.shopifyUrl} target="_blank" rel="noopener noreferrer" className="hv2-pill-cta">
-                Reserve Your Spot
-              </a>
+              {FEATURED_EVENT.landingPath ? (
+                <Link to={FEATURED_EVENT.landingPath} className="hv2-pill-cta">
+                  Reserve Your Spot
+                </Link>
+              ) : (
+                <a href={FEATURED_EVENT.shopifyUrl} target="_blank" rel="noopener noreferrer" className="hv2-pill-cta">
+                  Reserve Your Spot
+                </a>
+              )}
             </div>
           </Reveal>
         </div>

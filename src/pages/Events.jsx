@@ -144,19 +144,22 @@ export default function Events() {
     <div className="page-shell">
       <NavBar variant="navy" active="Events" />
 
-      {NEXT_EVENT && NEXT_EVENT.shopifyUrl && (
-        <a
-          href={NEXT_EVENT.shopifyUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ display: 'block', textDecoration: 'none' }}
-        >
-          <div style={{ background: 'var(--gc-navy)', padding: '13px 44px', textAlign: 'center' }}>
-            <span style={{ font: '700 16px var(--font-sans)', letterSpacing: '.06em', color: '#fff' }}>
-              Upcoming: {NEXT_EVENT.title} — {NEXT_EVENT.mon} {NEXT_EVENT.day} · Get your ticket &rarr;
-            </span>
-          </div>
-        </a>
+      {NEXT_EVENT && (NEXT_EVENT.landingPath || NEXT_EVENT.shopifyUrl) && (
+        (() => {
+          const BannerLink = NEXT_EVENT.landingPath ? Link : 'a';
+          const bannerProps = NEXT_EVENT.landingPath
+            ? { to: NEXT_EVENT.landingPath }
+            : { href: NEXT_EVENT.shopifyUrl, target: '_blank', rel: 'noopener noreferrer' };
+          return (
+            <BannerLink {...bannerProps} style={{ display: 'block', textDecoration: 'none' }}>
+              <div style={{ background: 'var(--gc-navy)', padding: '13px 44px', textAlign: 'center' }}>
+                <span style={{ font: '700 16px var(--font-sans)', letterSpacing: '.06em', color: '#fff' }}>
+                  Upcoming: {NEXT_EVENT.title} — {NEXT_EVENT.mon} {NEXT_EVENT.day} · Get your ticket &rarr;
+                </span>
+              </div>
+            </BannerLink>
+          );
+        })()
       )}
 
       <div style={{ background: 'var(--gc-cream)', padding: '56px 44px 52px', position: 'relative', overflow: 'hidden' }}>
@@ -226,6 +229,13 @@ export default function Events() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
                   {e.buyButtonProductId ? (
                     <ShopifyBuyButton productId={e.buyButtonProductId} options={BUY_BUTTON_OPTIONS} />
+                  ) : e.landingPath ? (
+                    <Link
+                      to={e.landingPath}
+                      style={{ display: 'inline-block', cursor: 'pointer', border: 'none', background: 'var(--gc-peony)', color: '#fff', font: '700 17px var(--font-sans)', letterSpacing: '.16em', textTransform: 'uppercase', padding: '13px 26px', borderRadius: 3, textDecoration: 'none' }}
+                    >
+                      Get your ticket →
+                    </Link>
                   ) : e.shopifyUrl ? (
                     <a
                       href={e.shopifyUrl}

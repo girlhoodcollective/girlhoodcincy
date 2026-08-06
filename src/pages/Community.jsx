@@ -112,16 +112,26 @@ export default function Community() {
                 {i < UPCOMING_EVENTS.length - 1 && <span style={{ color: 'rgba(255,255,255,.3)' }}>|</span>}
               </span>
             ))}
-            {UPCOMING_EVENTS[0].shopifyUrl && (
-              <a
-                href={UPCOMING_EVENTS[0].shopifyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-                style={{ background: 'var(--gc-peony)', color: '#fff', padding: '9px 20px', fontSize: 15 }}
-              >
-                Get your ticket
-              </a>
+            {(UPCOMING_EVENTS[0].landingPath || UPCOMING_EVENTS[0].shopifyUrl) && (
+              UPCOMING_EVENTS[0].landingPath ? (
+                <Link
+                  to={UPCOMING_EVENTS[0].landingPath}
+                  className="btn"
+                  style={{ background: 'var(--gc-peony)', color: '#fff', padding: '9px 20px', fontSize: 15 }}
+                >
+                  Get your ticket
+                </Link>
+              ) : (
+                <a
+                  href={UPCOMING_EVENTS[0].shopifyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn"
+                  style={{ background: 'var(--gc-peony)', color: '#fff', padding: '9px 20px', fontSize: 15 }}
+                >
+                  Get your ticket
+                </a>
+              )
             )}
             <Link className="cm-cta" to="/events" style={{ color: 'var(--gc-emerald-soft)' }}>
               View Upcoming Events <ArrowUpRight aria-hidden="true" />

@@ -68,6 +68,13 @@ const ROUTES = [
     description: "A warm skills inventory that maps your real, marketable strengths to an income path grounded in Cincinnati's actual market.",
   },
   {
+    path: '/helping-hands',
+    sourceFile: 'src/pages/HelpingHands.jsx',
+    title: 'Helping Hands: A Morning of Giving Back, Together | Girlhood Collective',
+    description: 'A parent-child service morning in Cincinnati — a hands-on service project, pop-up shopping with Collins Eliza, and play on the Play on the Way trailer. Saturday, September 19, 10–12 PM.',
+    image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Helping_Hands.png?v=1784921222&width=1200',
+  },
+  {
     path: '/better-together-recap',
     sourceFile: 'src/pages/BetterTogetherRecap.jsx',
     title: 'Case Study: Better Together Brunch — Girlhood Collective',
