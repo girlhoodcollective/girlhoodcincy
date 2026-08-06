@@ -5,7 +5,7 @@ import { EVENTS } from '../data/events.js';
 import { useSEO, useStructuredData } from '../lib/seo.js';
 
 const EVENT = EVENTS.find((e) => e.id === 'helping-hands');
-const EVENT_IMAGE = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Helping_Hands.png?v=1784921222';
+const EVENT_IMAGE = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3916.jpg?v=1783447727';
 
 const INCLUDES = [
   'A guided parent-child service project',
