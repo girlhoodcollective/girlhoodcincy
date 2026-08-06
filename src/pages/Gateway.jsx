@@ -7,24 +7,6 @@ import '../styles/gateway.css';
 
 const NEXT_EVENT = getUpcomingPublishedEvents(1)[0];
 
-function CommunityMark(props) {
-  return (
-    <svg viewBox="0 0 42 42" fill="none" aria-hidden="true" {...props}>
-      <circle cx="16" cy="19" r="12" stroke="currentColor" strokeWidth="1.4" />
-      <circle cx="27" cy="24" r="9" stroke="currentColor" strokeWidth="1.4" opacity="0.55" />
-    </svg>
-  );
-}
-
-function OrgMark(props) {
-  return (
-    <svg viewBox="0 0 42 42" fill="none" aria-hidden="true" {...props}>
-      <path d="M6 30 L6 20 M15 30 L15 13 M24 30 L24 22 M33 30 L33 8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-      <path d="M4 30 H36" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" opacity="0.5" />
-    </svg>
-  );
-}
-
 function useSpotlight() {
   const ref = useRef(null);
   const onMouseMove = (e) => {
@@ -159,7 +141,10 @@ export default function Gateway() {
           className="gw-panel gw-panel--primary gw-reveal gw-d4"
         >
           <div className="gw-panel-content">
-            <CommunityMark className="gw-mark" />
+            <div className="gw-mark-row">
+              <img src="/icons/party-hat.png" alt="" className="gw-mark-icon" />
+              <img src="/icons/phone.png" alt="" className="gw-mark-icon" />
+            </div>
             <div className="gw-panel-eyebrow">For Neighbors &amp; Families</div>
             <h2 className="gw-panel-title">Find your people</h2>
             <p className="gw-panel-body">
@@ -180,7 +165,10 @@ export default function Gateway() {
           className="gw-panel gw-panel--secondary gw-reveal gw-d5"
         >
           <div className="gw-panel-content">
-            <OrgMark className="gw-mark" />
+            <div className="gw-mark-row">
+              <img src="/icons/briefcase.png" alt="" className="gw-mark-icon" />
+              <img src="/icons/dollar-sign.png" alt="" className="gw-mark-icon" />
+            </div>
             <div className="gw-panel-eyebrow">For Organizations &amp; Businesses</div>
             <h2 className="gw-panel-title">Build a stronger organization</h2>
             <p className="gw-panel-body">
