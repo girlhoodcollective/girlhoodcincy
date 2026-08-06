@@ -71,7 +71,7 @@ const ROUTES = [
     path: '/helping-hands',
     sourceFile: 'src/pages/HelpingHands.jsx',
     title: 'Helping Hands: A Morning of Giving Back, Together | Girlhood Collective',
-    description: 'A parent-child service morning in Cincinnati — a hands-on service project, pop-up consignment shopping, and a kids play experience. Saturday, September 19, 10–12 PM.',
+    description: 'A parent-child service morning in Cincinnati — a hands-on service project, pop-up shopping with Collins Eliza, and a kids play experience. Saturday, September 19, 10–12 PM.',
     image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Helping_Hands.png?v=1784921222&width=1200',
   },
   {
