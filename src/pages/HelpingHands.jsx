@@ -9,15 +9,15 @@ const EVENT_IMAGE = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_
 
 const INCLUDES = [
   'A guided parent-child service project',
-  'Pop-up shopping & consignment with Collins Eliza',
-  'Play time on the Play on the Way trailer',
+  'Pop-up consignment shopping',
+  'A kids play experience',
   'A morning of connection with the Girlhood Collective community',
 ];
 
 export default function HelpingHands() {
   useSEO({
     title: 'Helping Hands: A Morning of Giving Back, Together | Girlhood Collective',
-    description: 'A parent-child service morning in Cincinnati — a hands-on service project, pop-up shopping with Collins Eliza, and play on the Play on the Way trailer. Saturday, September 19, 10–12 PM.',
+    description: 'A parent-child service morning in Cincinnati — a hands-on service project, pop-up consignment shopping, and a kids play experience. Saturday, September 19, 10–12 PM.',
     path: '/helping-hands',
     image: `${EVENT_IMAGE}&width=1200`,
   });
@@ -107,8 +107,7 @@ export default function HelpingHands() {
               <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.8 }}>
                 Join Girlhood Collective for Helping Hands, a parent-and-child morning built around giving back. You
                 and your kiddo will roll up your sleeves for a hands-on service project, then unwind with pop-up
-                shopping and consignment finds from Collins Eliza — and let the kids burn some energy on the Play on
-                the Way trailer.
+                consignment shopping — and let the kids burn some energy at a kids play experience.
               </p>
             </div>
 
