@@ -489,11 +489,15 @@ export default function HomepageV2() {
 
       {/* PARTNERS */}
       <div id="partners" className="hv2-section-pad" style={{ padding: '56px 48px', background: '#fff', borderTop: '1px solid rgba(29,53,87,.14)' }}>
-        <h2 style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 10 }}>Our Partners</h2>
-        <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 16px' }}>
+        <div className="hv2-eyebrow" style={{ justifyContent: 'center' }}>
+          <span className="hv2-dot" aria-hidden="true" />
+          Community Collaborators
+        </div>
+        <h2 style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 14 }}>Our Partners</h2>
+        <div style={{ ...TYPE.body, color: 'var(--gc-navy)', textAlign: 'center', maxWidth: 620, margin: '0 auto 16px' }}>
           Local businesses and organizations we&rsquo;ve had the privilege of building community with.
         </div>
-        <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 680, margin: '0 auto 28px' }}>
+        <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', textAlign: 'center', maxWidth: 600, margin: '0 auto 36px' }}>
           These local businesses and brands have sponsored our work and supported Girlhood
           Collective, and we love to support them too. Our city is lucky to have a variety of
           choices when it comes to who we hire, where we shop, and what initiatives we support.
