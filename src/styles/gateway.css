@@ -227,7 +227,6 @@
   border-color: rgba(249, 113, 175, 0.35);
 }
 .gw-panel--secondary .gw-panel-eyebrow,
-.gw-panel--secondary .gw-mark,
 .gw-panel--secondary .gw-panel-cta {
   color: var(--gc-peony);
 }
@@ -237,11 +236,15 @@
   z-index: 1;
 }
 
-.gw-mark {
-  width: 42px;
-  height: 42px;
+.gw-mark-row {
+  display: flex;
+  gap: 12px;
   margin-bottom: 26px;
-  color: var(--gc-emerald);
+}
+.gw-mark-icon {
+  width: 40px;
+  height: 40px;
+  display: block;
 }
 
 .gw-panel-eyebrow {
@@ -476,10 +479,13 @@
   .gw-panel {
     padding: 18px 16px;
   }
-  .gw-mark {
-    width: 28px;
-    height: 28px;
+  .gw-mark-row {
+    gap: 8px;
     margin-bottom: 12px;
+  }
+  .gw-mark-icon {
+    width: 26px;
+    height: 26px;
   }
   .gw-panel-eyebrow {
     font-size: 12px;
