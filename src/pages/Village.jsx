@@ -9,6 +9,8 @@ import '../styles/utilityPages.css';
 
 // Real sent issues, pulled from MailerLite campaign history (Issues 1–5, Apr–Jun 2026).
 const ISSUES = [
+  { vol: 'Issue 7', date: 'August 2026', accent: 'var(--gc-emerald-soft)', title: "Pull up a seat! This Week's Gatherings, Grants, and Good News", url: 'https://preview.mailerlite.io/preview/1805515/emails/194791249315628091' },
+  { vol: 'Issue 6', date: 'July 2026', accent: 'var(--gc-peony)', title: 'A Voice That Carries: Issue No. 6', url: 'https://preview.mailerlite.io/preview/1805515/emails/194169670417254076' },
   { vol: 'Issue 5', date: 'June 2026', accent: 'var(--gc-blush)', title: 'One Month Until Our First Fundraiser 🎉 Sponsor Highlights 💫 Hyde Park Market Preview 🛍️', url: 'https://preview.mailerlite.io/preview/1805515/emails/191026880087852582' },
   { vol: 'Issue 4', date: 'May 2026', accent: 'var(--gc-emerald)', title: 'Brunch News & Market Fun', url: 'https://preview.mailerlite.io/preview/1805515/emails/188546365699130527' },
   { vol: 'Issue 3', date: 'May 2026', accent: 'var(--gc-lavender)', title: 'Summer is coming! Updates Inside 💫', url: 'https://preview.mailerlite.io/preview/1805515/emails/187929868071077793' },
