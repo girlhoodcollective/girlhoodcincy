@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, ArrowUpRight } from 'lucide-react';
+import Footer from '../components/Footer.jsx';
 import { useSEO, useStructuredData, SITE_URL, SITE_NAME } from '../lib/seo.js';
 import { getUpcomingPublishedEvents } from '../data/events.js';
 import '../styles/gateway.css';
@@ -233,6 +234,8 @@ export default function Gateway() {
           {' '}— you&rsquo;re in the right place too.
         </p>
       </div>
+
+      <Footer />
     </div>
   );
 }

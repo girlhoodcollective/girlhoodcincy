@@ -26,7 +26,7 @@ const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
   { label: 'Results', href: '#results' },
-  { label: 'Events', href: '#events' },
+  { label: 'Events', href: '/events' },
   { label: 'Tools & Resources', href: '/resources' },
   { label: 'Partners', href: '#partners' },
 ];
@@ -95,10 +95,10 @@ export default function HomepageV2() {
           borderBottom: '1px solid rgba(29,53,87,.14)',
         }}
       >
-        <a href="#top" style={{ textDecoration: 'none', lineHeight: 1 }}>
+        <Link to="/" style={{ textDecoration: 'none', lineHeight: 1 }}>
           <span style={{ fontFamily: 'var(--font-display)', fontSize: 22, color: 'var(--gc-navy)' }}>Girlhood</span>
           <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 17, color: 'var(--gc-navy)', marginLeft: 5 }}>Collective</span>
-        </a>
+        </Link>
         <div className={`hv2-nav-links${navOpen ? ' open' : ''}`} onClick={() => setNavOpen(false)}>
           <Link to="/" className="hv2-navlink">
             Home

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import NavBar from '../components/NavBar.jsx';
+import Footer from '../components/Footer.jsx';
 import { submitNetlifyForm } from '../lib/netlifyForms.js';
 import { useSEO } from '../lib/seo.js';
 
@@ -521,6 +522,8 @@ export default function ConsultationIntake() {
           </div>
         )}
       </div>
+
+      <Footer />
     </div>
   );
 }
