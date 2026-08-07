@@ -82,7 +82,7 @@ export const PARTNERS_V2 = [
   { name: 'Endurance in Education', logo: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/34a71c_8fbe397836564875b0f2f83fc8a4c567_mv2_png_8ca8065d-10db-48e4-a809-b2c50e9b5781.avif?v=1783270503', url: 'https://www.enduranceineducation.com' },
   { name: 'Little Treasurer', logo: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Color_logo_-_no_background_125x_21f87626-976f-4163-b973-90c087fdbec3.png?v=1777567240', url: 'https://www.littletreasurer.com' },
   { name: 'Cincy Mom Made', logo: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Untitled_design_6.png?v=1774659894', url: 'https://cincymommade.com' },
-  { name: 'Collins Eliza', logo: 'https://storage.mlcdn.com/account_image/1805515/2JLxnFFrcdrayQcJfF5wf4Vvzt1yrE9ydHnXDgc1.jpg', url: 'https://www.instagram.com/collinselizaconsign/', tagline: "The best children's consignment in town." },
+  { name: 'Collins Eliza', logo: 'https://storage.mlcdn.com/account_image/1805515/2JLxnFFrcdrayQcJfF5wf4Vvzt1yrE9ydHnXDgc1.jpg', url: 'https://www.instagram.com/collinselizaconsign/', tagline: "The best children's consignment in town.", zoom: 1.8 },
 ];
 
 export const AUDIENCE_V2 = [
