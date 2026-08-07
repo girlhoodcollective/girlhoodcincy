@@ -114,12 +114,12 @@ export default function HelpingHands() {
               </p>
             </div>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 32 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 32 }}>
               <img
                 src={COLLINS_ELIZA_LOGO}
                 alt="Collins Eliza logo"
                 loading="lazy"
-                style={{ width: 52, height: 52, borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--gc-border)', flexShrink: 0 }}
+                style={{ width: 108, height: 108, borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--gc-border)', flexShrink: 0 }}
               />
               <div>
                 <div style={{ font: '600 13px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)' }}>
@@ -129,7 +129,7 @@ export default function HelpingHands() {
                   href={COLLINS_ELIZA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ font: '700 18px var(--font-serif)', color: 'var(--gc-navy)', textDecoration: 'none' }}
+                  style={{ font: '700 24px var(--font-serif)', color: 'var(--gc-navy)', textDecoration: 'none' }}
                 >
                   Collins Eliza
                 </a>
