@@ -28,7 +28,7 @@ const NAV_LINKS = [
   { label: 'Results', href: '#results' },
   { label: 'Events', href: '/events' },
   { label: 'Tools & Resources', href: '/resources' },
-  { label: 'Partners', href: '#partners' },
+  { label: 'Community Collaborators', href: '#partners' },
 ];
 
 // One shared type scale so headings/body copy stay consistent across every section.
