@@ -27,7 +27,7 @@ const NAV_LINKS = [
   { label: 'Services', href: '#services' },
   { label: 'Results', href: '#results' },
   { label: 'Events', href: '#events' },
-  { label: 'Tools & Resources', href: '#tools' },
+  { label: 'Tools & Resources', href: '/resources' },
   { label: 'Partners', href: '#partners' },
 ];
 
@@ -104,9 +104,15 @@ export default function HomepageV2() {
             Home
           </Link>
           {NAV_LINKS.map((l) => (
-            <a key={l.label} href={l.href} className="hv2-navlink">
-              {l.label}
-            </a>
+            l.href.startsWith('#') ? (
+              <a key={l.label} href={l.href} className="hv2-navlink">
+                {l.label}
+              </a>
+            ) : (
+              <Link key={l.label} to={l.href} className="hv2-navlink">
+                {l.label}
+              </Link>
+            )
           ))}
           <a href="#contact" className="hv2-pill-cta hv2-nav-cta">
             Let&rsquo;s chat
