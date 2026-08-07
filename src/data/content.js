@@ -90,7 +90,7 @@ export const PARTNER_LOGOS = [
   { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Color_logo_-_no_background_125x_21f87626-976f-4163-b973-90c087fdbec3.png?v=1777567240&width=300', href: 'https://www.littletreasurer.com/?srsltid=AfmBOoq5YHiKirwNTE8fcM7yiBkAmRcN8dc-dUlIg073BtUiOK08R83-', alt: 'Little Treasurer', quote: 'Financial literacy books and toys for kids.' },
   { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Untitled_design_6.png?v=1774659894&width=300', href: 'https://cincymommade.com/web-agency-gb-home/', alt: 'Cincy Mom Made', quote: 'Elevating women-owned small businesses in Cincinnati.', zoom: 1.6 },
   { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_1526.jpg?v=1774659883&width=300', href: 'https://www.instagram.com/hydeparkmarketcincy/?hl=en', alt: 'Hyde Park Market', quote: 'Summer vendor.' },
-  { src: 'https://storage.mlcdn.com/account_image/1805515/2JLxnFFrcdrayQcJfF5wf4Vvzt1yrE9ydHnXDgc1.jpg', href: 'https://www.instagram.com/collinselizaconsign/', alt: 'Collins Eliza', zoom: 1.8 },
+  { src: 'https://storage.mlcdn.com/account_image/1805515/2JLxnFFrcdrayQcJfF5wf4Vvzt1yrE9ydHnXDgc1.jpg', href: 'https://www.instagram.com/collinselizaconsign/', alt: 'Collins Eliza', quote: "The best children's consignment in town.", zoom: 1.8 },
 ];
 
 export const RESOURCE_PILLARS = [
