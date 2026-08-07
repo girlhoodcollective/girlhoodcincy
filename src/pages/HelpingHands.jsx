@@ -6,12 +6,14 @@ import { useSEO, useStructuredData } from '../lib/seo.js';
 
 const EVENT = EVENTS.find((e) => e.id === 'helping-hands');
 const EVENT_IMAGE = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3916.jpg?v=1783447727';
+const COLLINS_ELIZA_URL = 'https://www.instagram.com/collinselizaconsign/';
+const COLLINS_ELIZA_LOGO = 'https://storage.mlcdn.com/account_image/1805515/2JLxnFFrcdrayQcJfF5wf4Vvzt1yrE9ydHnXDgc1.jpg';
 
 const INCLUDES = [
-  'A guided parent-child service project',
-  'Pop-up shopping & consignment with Collins Eliza',
-  'A kids play experience',
-  'A morning of connection with the Girlhood Collective community',
+  { text: 'A guided parent-child service project' },
+  { text: 'Pop-up shopping & consignment with', linkLabel: 'Collins Eliza', linkHref: COLLINS_ELIZA_URL },
+  { text: 'A kids play experience' },
+  { text: 'A morning of connection with the Girlhood Collective community' },
 ];
 
 export default function HelpingHands() {
@@ -38,11 +40,8 @@ export default function HelpingHands() {
 
       <div style={{ background: 'var(--gc-navy)', padding: '72px 44px', textAlign: 'center' }}>
         <Reveal>
-          <div style={{ font: '700 16px var(--font-sans)', letterSpacing: '.24em', textTransform: 'uppercase', color: 'var(--gc-peony)', marginBottom: 18 }}>
-            Helping Hands
-          </div>
           <h1 style={{ fontFamily: 'var(--font-serif)', fontWeight: 700, fontSize: 'clamp(38px, 5vw, 56px)', color: 'var(--gc-cream)', lineHeight: 1.15, maxWidth: 720, margin: '0 auto 20px' }}>
-            Bring Your Kid. Bring Your Heart. Give Back Together.
+            Helping Hands. Join us for a morning of service and fun.
           </h1>
           <p style={{ fontSize: 19, fontWeight: 300, color: 'rgba(248,246,240,.85)', lineHeight: 1.7, maxWidth: 560, margin: '0 auto' }}>
             A morning of service, shopping, and play — built for you and your kiddo.
@@ -107,9 +106,34 @@ export default function HelpingHands() {
               <p style={{ fontSize: 18, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.8 }}>
                 Join Girlhood Collective for Helping Hands, a parent-and-child morning built around giving back. You
                 and your kiddo will roll up your sleeves for a hands-on service project, then unwind with pop-up
-                shopping and consignment finds from Collins Eliza — and let the kids burn some energy at a kids play
-                experience.
+                shopping and consignment finds from{' '}
+                <a href={COLLINS_ELIZA_URL} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gc-navy)', fontWeight: 500, textDecoration: 'underline' }}>
+                  Collins Eliza
+                </a>
+                {' '}— and let the kids burn some energy at a kids play experience.
               </p>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 32 }}>
+              <img
+                src={COLLINS_ELIZA_LOGO}
+                alt="Collins Eliza logo"
+                loading="lazy"
+                style={{ width: 52, height: 52, borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--gc-border)', flexShrink: 0 }}
+              />
+              <div>
+                <div style={{ font: '600 13px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)' }}>
+                  Pop-up shopping partner
+                </div>
+                <a
+                  href={COLLINS_ELIZA_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ font: '700 18px var(--font-serif)', color: 'var(--gc-navy)', textDecoration: 'none' }}
+                >
+                  Collins Eliza
+                </a>
+              </div>
             </div>
 
             <div style={{ background: 'rgba(249, 113, 175, 0.06)', borderLeft: '4px solid var(--gc-peony)', borderRadius: '0 4px 4px 0', padding: 24 }}>
@@ -118,9 +142,16 @@ export default function HelpingHands() {
               </h3>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 12 }}>
                 {INCLUDES.map((item) => (
-                  <li key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: 12, fontSize: 16, color: 'var(--gc-ink)', lineHeight: 1.5 }}>
+                  <li key={item.text} style={{ display: 'flex', alignItems: 'flex-start', gap: 12, fontSize: 16, color: 'var(--gc-ink)', lineHeight: 1.5 }}>
                     <span style={{ color: 'var(--gc-peony)', fontWeight: 700, flexShrink: 0 }}>✓</span>
-                    {item}
+                    {item.linkLabel ? (
+                      <span>
+                        {item.text}{' '}
+                        <a href={item.linkHref} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gc-navy)', textDecoration: 'underline' }}>
+                          {item.linkLabel}
+                        </a>
+                      </span>
+                    ) : item.text}
                   </li>
                 ))}
               </ul>
