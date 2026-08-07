@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
+import Footer from '../components/Footer.jsx';
 import { useSEO } from '../lib/seo.js';
 import { submitNetlifyForm } from '../lib/netlifyForms.js';
 
@@ -418,6 +419,8 @@ export default function WorthQuiz() {
           </div>
         );
       })()}
+
+      <Footer />
     </div>
   );
 }
