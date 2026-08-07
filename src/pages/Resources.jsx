@@ -139,9 +139,11 @@ export default function Resources() {
                   style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', display: 'block', transform: p.zoom ? `scale(${p.zoom})` : undefined }}
                 />
               </a>
-              <p style={{ fontSize: 16, fontStyle: 'normal', fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.5, textAlign: 'center', margin: '10px 4px 0' }}>
-                {p.quote}
-              </p>
+              {p.quote && (
+                <p style={{ fontSize: 16, fontStyle: 'normal', fontWeight: 300, color: 'var(--gc-ink-muted)', lineHeight: 1.5, textAlign: 'center', margin: '10px 4px 0' }}>
+                  {p.quote}
+                </p>
+              )}
             </div>
           ))}
         </Reveal>
