@@ -515,6 +515,9 @@ export default function HomepageV2() {
             <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" className="hv2-partner-card">
               <img src={cdnResize(p.logo, 200)} alt={p.name} loading="lazy" decoding="async" style={{ width: '100%', height: 52, objectFit: 'contain' }} />
               <div style={{ fontSize: 16, fontWeight: 500, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.3 }}>{p.name}</div>
+              {p.tagline && (
+                <div style={{ fontSize: 14, fontWeight: 300, color: 'var(--gc-ink-muted)', textAlign: 'center', lineHeight: 1.4 }}>{p.tagline}</div>
+              )}
             </a>
           ))}
         </Reveal>
