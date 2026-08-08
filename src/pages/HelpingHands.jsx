@@ -5,7 +5,7 @@ import { EVENTS } from '../data/events.js';
 import { useSEO, useStructuredData } from '../lib/seo.js';
 
 const EVENT = EVENTS.find((e) => e.id === 'helping-hands');
-const EVENT_IMAGE = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3916.jpg?v=1783447727';
+const EVENT_IMAGE = 'https://storage.mlcdn.com/account_image/1805515/UuvDkFo4fAKTSCVIE2e6wSJIAtARBFZ9s0z23VIv.png';
 const COLLINS_ELIZA_URL = 'https://www.instagram.com/collinselizaconsign/';
 const COLLINS_ELIZA_LOGO = 'https://storage.mlcdn.com/account_image/1805515/2JLxnFFrcdrayQcJfF5wf4Vvzt1yrE9ydHnXDgc1.jpg';
 const LITTLE_TREASURER_URL = 'https://www.littletreasurer.com/';
@@ -32,7 +32,7 @@ export default function HelpingHands() {
     title: 'Helping Hands: A Morning of Giving Back, Together | Girlhood Collective',
     description: 'A parent-child service morning in Cincinnati — a hands-on service project, pop-up shopping with Collins Eliza, and a kids play experience. Saturday, September 19, 10–12 PM.',
     path: '/helping-hands',
-    image: `${EVENT_IMAGE}&width=1200`,
+    image: EVENT_IMAGE,
   });
 
   useStructuredData('helping-hands-event', {
@@ -64,10 +64,10 @@ export default function HelpingHands() {
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
           <Reveal>
             <img
-              src={`${EVENT_IMAGE}&width=1200`}
-              alt="Parents and kids working together on a Helping Hands service project"
+              src={EVENT_IMAGE}
+              alt="Helping Hands: A Morning of Giving Back, Together"
               loading="lazy"
-              style={{ width: '100%', maxHeight: 420, objectFit: 'cover', borderRadius: 10, border: '1px solid var(--gc-border)', display: 'block', marginBottom: 48 }}
+              style={{ width: '100%', maxHeight: 420, objectFit: 'contain', background: 'var(--gc-cream)', borderRadius: 10, border: '1px solid var(--gc-border)', display: 'block', marginBottom: 48 }}
             />
           </Reveal>
 
