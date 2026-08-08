@@ -57,6 +57,15 @@ export default function HelpingHands() {
           <p style={{ fontSize: 19, fontWeight: 300, color: 'rgba(248,246,240,.85)', lineHeight: 1.7, maxWidth: 560, margin: '0 auto' }}>
             A morning of service, shopping, and play — built for you and your kiddo.
           </p>
+          <a
+            href={EVENT?.shopifyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn"
+            style={{ display: 'inline-block', marginTop: 28, background: 'var(--gc-peony)', color: '#fff', padding: '16px 44px', fontSize: 16, borderRadius: 999 }}
+          >
+            Register now
+          </a>
         </Reveal>
       </div>
 
@@ -108,6 +117,18 @@ export default function HelpingHands() {
                 <div style={{ font: '500 18px var(--font-sans)', color: 'var(--gc-navy)' }}>$50 per pair</div>
                 <div style={{ font: '500 18px var(--font-sans)', color: 'var(--gc-navy)' }}>One parent/caregiver + one child</div>
               </div>
+            </div>
+
+            <div style={{ textAlign: 'center', marginBottom: 32 }}>
+              <a
+                href={EVENT?.shopifyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn"
+                style={{ display: 'inline-block', background: 'var(--gc-peony)', color: '#fff', padding: '15px 40px', fontSize: 16, borderRadius: 999 }}
+              >
+                Register now
+              </a>
             </div>
 
             <div style={{ marginBottom: 32 }}>
