@@ -8,20 +8,22 @@ const EVENT = EVENTS.find((e) => e.id === 'helping-hands');
 const EVENT_IMAGE = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3916.jpg?v=1783447727';
 const COLLINS_ELIZA_URL = 'https://www.instagram.com/collinselizaconsign/';
 const COLLINS_ELIZA_LOGO = 'https://storage.mlcdn.com/account_image/1805515/2JLxnFFrcdrayQcJfF5wf4Vvzt1yrE9ydHnXDgc1.jpg';
-const LITTLE_TREASURER_URL = 'https://www.littletreasurer.com';
+const LITTLE_TREASURER_URL = 'https://www.littletreasurer.com/';
 const LITTLE_TREASURER_LOGO = 'https://storage.mlcdn.com/account_image/1805515/aZQfDo3u5n4h4vVCZZsQvU8VBQYf5rNPDj5DQb8q.png';
+const PLAY_ON_THE_WAY_URL = 'https://playontheway.co';
 const PLAY_ON_THE_WAY_LOGO = 'https://storage.mlcdn.com/account_image/1805515/iT5bwRP2cd8rmbMqGR5ULWhWcjklDtXTRTRtqJNB.jpg';
 
 const EVENT_PARTNERS = [
   { name: 'Collins Eliza', logo: COLLINS_ELIZA_LOGO, url: COLLINS_ELIZA_URL, role: 'Pop-up shopping partner' },
-  { name: 'Play on the way', logo: PLAY_ON_THE_WAY_LOGO, url: null, role: 'Play Experience Partner' },
+  { name: 'Play on the way', logo: PLAY_ON_THE_WAY_LOGO, url: PLAY_ON_THE_WAY_URL, role: 'Play Experience Partner' },
   { name: 'Little Treasurer', logo: LITTLE_TREASURER_LOGO, url: LITTLE_TREASURER_URL, role: 'Story Time Partner' },
 ];
 
 const INCLUDES = [
   { text: 'A guided parent-child service project' },
   { text: 'Pop-up shopping & consignment with', linkLabel: 'Collins Eliza', linkHref: COLLINS_ELIZA_URL },
-  { text: 'A kids play experience' },
+  { text: 'A kids play experience with', linkLabel: 'Play on the way', linkHref: PLAY_ON_THE_WAY_URL },
+  { text: 'Story time with', linkLabel: 'Little Treasurer', linkHref: LITTLE_TREASURER_URL },
   { text: 'A morning of connection with the Girlhood Collective community' },
 ];
 
