@@ -8,6 +8,15 @@ const EVENT = EVENTS.find((e) => e.id === 'helping-hands');
 const EVENT_IMAGE = 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3916.jpg?v=1783447727';
 const COLLINS_ELIZA_URL = 'https://www.instagram.com/collinselizaconsign/';
 const COLLINS_ELIZA_LOGO = 'https://storage.mlcdn.com/account_image/1805515/2JLxnFFrcdrayQcJfF5wf4Vvzt1yrE9ydHnXDgc1.jpg';
+const LITTLE_TREASURER_URL = 'https://www.littletreasurer.com';
+const LITTLE_TREASURER_LOGO = 'https://storage.mlcdn.com/account_image/1805515/aZQfDo3u5n4h4vVCZZsQvU8VBQYf5rNPDj5DQb8q.png';
+const PLAY_ON_THE_WAY_LOGO = 'https://storage.mlcdn.com/account_image/1805515/iT5bwRP2cd8rmbMqGR5ULWhWcjklDtXTRTRtqJNB.jpg';
+
+const EVENT_PARTNERS = [
+  { name: 'Collins Eliza', logo: COLLINS_ELIZA_LOGO, url: COLLINS_ELIZA_URL, role: 'Pop-up shopping partner' },
+  { name: 'Play on the way', logo: PLAY_ON_THE_WAY_LOGO, url: null, role: 'Play Experience Partner' },
+  { name: 'Little Treasurer', logo: LITTLE_TREASURER_LOGO, url: LITTLE_TREASURER_URL, role: 'Story Time Partner' },
+];
 
 const INCLUDES = [
   { text: 'A guided parent-child service project' },
@@ -114,26 +123,36 @@ export default function HelpingHands() {
               </p>
             </div>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 32 }}>
-              <img
-                src={COLLINS_ELIZA_LOGO}
-                alt="Collins Eliza logo"
-                loading="lazy"
-                style={{ width: 108, height: 108, borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--gc-border)', flexShrink: 0 }}
-              />
-              <div>
-                <div style={{ font: '600 13px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)' }}>
-                  Pop-up shopping partner
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 32, marginBottom: 32 }}>
+              {EVENT_PARTNERS.map((p) => (
+                <div key={p.name} style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
+                  <img
+                    src={p.logo}
+                    alt={`${p.name} logo`}
+                    loading="lazy"
+                    style={{ width: 108, height: 108, borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--gc-border)', flexShrink: 0 }}
+                  />
+                  <div>
+                    <div style={{ font: '600 13px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)' }}>
+                      {p.role}
+                    </div>
+                    {p.url ? (
+                      <a
+                        href={p.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ font: '700 24px var(--font-serif)', color: 'var(--gc-navy)', textDecoration: 'none' }}
+                      >
+                        {p.name}
+                      </a>
+                    ) : (
+                      <div style={{ font: '700 24px var(--font-serif)', color: 'var(--gc-navy)' }}>
+                        {p.name}
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <a
-                  href={COLLINS_ELIZA_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ font: '700 24px var(--font-serif)', color: 'var(--gc-navy)', textDecoration: 'none' }}
-                >
-                  Collins Eliza
-                </a>
-              </div>
+              ))}
             </div>
 
             <div style={{ background: 'rgba(249, 113, 175, 0.06)', borderLeft: '4px solid var(--gc-peony)', borderRadius: '0 4px 4px 0', padding: 24 }}>
