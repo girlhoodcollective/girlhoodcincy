@@ -121,7 +121,15 @@ export default function HelpingHands() {
                 <a href={COLLINS_ELIZA_URL} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gc-navy)', fontWeight: 500, textDecoration: 'underline' }}>
                   Collins Eliza
                 </a>
-                {' '}— and let the kids burn some energy at a kids play experience.
+                . Kids will explore and burn some energy with{' '}
+                <a href={PLAY_ON_THE_WAY_URL} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gc-navy)', fontWeight: 500, textDecoration: 'underline' }}>
+                  Play on the way
+                </a>
+                , a new kids play experience. Take a break and listen to story time with Courtney, author of the{' '}
+                <a href={LITTLE_TREASURER_URL} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gc-navy)', fontWeight: 500, textDecoration: 'underline' }}>
+                  Little Treasurer
+                </a>
+                {' '}book series. This event is best for kids ages preschool&ndash;8 years or so.
               </p>
             </div>
 
