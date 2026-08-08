@@ -130,7 +130,7 @@ export default function HelpingHands() {
                     src={p.logo}
                     alt={`${p.name} logo`}
                     loading="lazy"
-                    style={{ width: 108, height: 108, borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--gc-border)', flexShrink: 0 }}
+                    style={{ width: 108, height: 108, borderRadius: 14, objectFit: 'contain', background: '#fff', border: '1px solid var(--gc-border)', flexShrink: 0, padding: 8, boxSizing: 'border-box' }}
                   />
                   <div>
                     <div style={{ font: '600 13px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)' }}>
