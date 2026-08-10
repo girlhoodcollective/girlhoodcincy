@@ -41,7 +41,7 @@ function MiniNewsletterSignup() {
 
   return (
     <div>
-      <div style={{ display: 'flex', gap: 8 }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
         <input
           type="email"
           placeholder="you@cincinnati.com"
@@ -49,7 +49,7 @@ function MiniNewsletterSignup() {
           onChange={(e) => setEmail(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
           aria-label="Email address"
-          style={{ background: 'rgba(255,255,255,.09)', border: '1px solid rgba(255,255,255,.22)', borderRadius: 100, padding: '10px 16px', font: '400 16px var(--font-sans)', color: '#fff', width: 190, outline: 'none' }}
+          style={{ background: 'rgba(255,255,255,.09)', border: '1px solid rgba(255,255,255,.22)', borderRadius: 100, padding: '10px 16px', font: '400 16px var(--font-sans)', color: '#fff', width: '100%', maxWidth: 190, minWidth: 140, flex: '1 1 140px', boxSizing: 'border-box', outline: 'none' }}
         />
         <button
           onClick={handleSubmit}

@@ -1,5 +1,4 @@
-// Content for the homepage-v2 design preview (design handoff: consultancy/advisory homepage).
-// See design_handoff_homepage/README.md in the upload for the source spec.
+// Content for the /services consulting page (consultancy/advisory offering).
 
 export const HOW_WE_HELP = [
   {

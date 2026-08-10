@@ -1,4 +1,4 @@
-/* Scoped styles for the /homepage-v2 design-handoff preview page.
+/* Scoped styles for the /services consulting page.
    Namespaced under .hv2 so nothing here leaks into the rest of the site. */
 
 .hv2-grain {
@@ -95,31 +95,6 @@
   opacity: 0.35;
   display: block;
   margin-bottom: -18px;
-}
-
-.hv2-navlink {
-  position: relative;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--gc-navy);
-  transition: color 200ms ease;
-}
-.hv2-navlink::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 1px;
-  background: var(--gc-peony);
-  transition: width 250ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-.hv2-navlink:hover {
-  color: var(--gc-emerald-soft);
-}
-.hv2-navlink:hover::after {
-  width: 100%;
 }
 
 /* Sitewide dark-pill CTA treatment — matches the canonical .btn shape (global.css) */
@@ -311,39 +286,6 @@
   box-shadow: 0 0 0 3px rgba(249, 113, 175, 0.12);
 }
 
-.hv2-burger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 44px;
-  height: 44px;
-  cursor: pointer;
-  flex: none;
-  background: none;
-  border: none;
-  padding: 8px;
-  margin: -8px;
-}
-.hv2-burger span {
-  display: block;
-  height: 2px;
-  background: var(--gc-navy);
-}
-.hv2-burger span:nth-child(1),
-.hv2-burger span:nth-child(2) {
-  width: 100%;
-}
-.hv2-burger span:nth-child(3) {
-  width: 70%;
-}
-
-.hv2-nav-links {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
 @media (max-width: 900px) {
   .hv2-grid-2col {
     grid-template-columns: 1fr !important;
@@ -390,27 +332,6 @@
     padding-left: 24px !important;
     padding-right: 24px !important;
   }
-  .hv2-nav-links {
-    display: none !important;
-  }
-  .hv2-nav-links.open {
-    display: flex !important;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    align-items: flex-start !important;
-    background: #fff;
-    padding: 24px;
-    border-bottom: 1px solid rgba(29, 53, 87, 0.14);
-    gap: 20px !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    z-index: 20;
-  }
-  .hv2-burger {
-    display: flex !important;
-  }
   .hv2-hero-title {
     font-size: clamp(28px, 7vw, 40px) !important;
   }
@@ -420,6 +341,18 @@
   }
   .hv2-hero-cta a {
     justify-content: center !important;
+  }
+  .hv2-pill-cta,
+  .hv2-pill-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: normal !important;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
   }
 }
 

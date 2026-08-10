@@ -1,17 +1,19 @@
-/work-with-me            /homepage-v2   301
+/work-with-me            /services      301
 /newsletter               /village         301
 /tools                    /resources       301
-/partners                 /homepage-v2   301
+/partners                 /services      301
 /about                    /community#about   301
+/homepage-v2              /services      301
 
 /                          /index.html   200
 /community                 /index.html   200
-/homepage-v2               /index.html   200
+/services                  /index.html   200
 /events                    /index.html   200
 /village                   /index.html   200
 /resources                 /index.html   200
 /consultation-intake       /index.html   200
 /worth-quiz                /index.html   200
 /better-together-recap     /index.html   200
+/event-collaboration       /index.html   200
 /privacy                   /index.html   200
 /*                         /index.html   404

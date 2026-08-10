@@ -163,7 +163,7 @@ export default function Gateway() {
         </Link>
 
         <Link
-          to="/homepage-v2"
+          to="/services"
           ref={panelB.ref}
           onMouseMove={panelB.onMouseMove}
           className="gw-panel gw-panel--secondary gw-reveal gw-d5"
@@ -211,14 +211,14 @@ export default function Gateway() {
                 <ArrowUpRight aria-hidden="true" />
               </span>
             </Link>
-            <a href="https://girlhoodeventrequest.netlify.app" target="_blank" rel="noopener noreferrer" className="gw-strip-item">
+            <Link to="/event-collaboration" className="gw-strip-item">
               <span className="gw-strip-item-title">Event Collaboration</span>
               <span className="gw-strip-item-body">Partner, co-host, or sponsor an upcoming event.</span>
               <span className="gw-strip-item-cta">
                 Submit a request
                 <ArrowUpRight aria-hidden="true" />
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -228,7 +228,7 @@ export default function Gateway() {
         <p>
           <span className="gw-dot" aria-hidden="true" />
           Running an organization instead?{' '}
-          <Link to="/homepage-v2">
+          <Link to="/services">
             Explore our services
           </Link>
           {' '}— you&rsquo;re in the right place too.
