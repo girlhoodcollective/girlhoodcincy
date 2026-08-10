@@ -240,7 +240,7 @@ export default function ConsultationIntake() {
   const isResults = section === 'results';
   const progressPct = isResults ? 100 : Math.round(((section - 1) / 5) * 100);
   const secNum = isResults ? 5 : section;
-  const firstName = name ? name.trim().split(' ')[0] : 'You';
+  const firstName = name ? name.trim().split(' ')[0] : '';
 
   function buildResultCards() {
     const cards = [];
@@ -274,7 +274,7 @@ export default function ConsultationIntake() {
 
     const map = { consult: 'Strategic Consultation', workshop: 'Workshop / Facilitation', speaking: 'Speaking Engagement', programming: 'Program Design', 'hr-support': 'HR & People Strategy', ongoing: 'Ongoing Advisory' };
     const types = supportType.map((t) => map[t] || t).join(' · ');
-    cards.push({ label: 'What working together could look like', title: 'Possible engagement types', body: `${types || 'To be determined — let’s talk first.'}. These aren’t commitments — every engagement is scoped to the actual situation, not a package.` });
+    cards.push({ label: 'What working together could look like', title: 'Possible engagement types', body: `${types || "To be determined — let’s talk first"}. These aren’t commitments — every engagement is scoped to the actual situation, not a package.` });
     return cards;
   }
 
@@ -507,7 +507,9 @@ export default function ConsultationIntake() {
               <div style={{ position: 'absolute', top: -60, right: -60, width: 240, height: 240, borderRadius: '50%', background: 'radial-gradient(circle, rgba(186,217,243,.22), transparent 70%)' }} />
               <div style={{ position: 'relative', zIndex: 2 }}>
                 <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 22.5, color: 'var(--gc-lavender-soft)', marginBottom: 10 }}>Here's what I see.</div>
-                <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 37.5, fontWeight: 700, color: '#fff' }}>{firstName}, you're in the right place.</h2>
+                <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 37.5, fontWeight: 700, color: '#fff' }}>
+                  {firstName ? `${firstName}, you're` : "You're"} in the right place.
+                </h2>
                 <p style={{ fontSize: 17.5, fontWeight: 300, color: 'rgba(255,255,255,.62)', lineHeight: 1.7, maxWidth: 440, margin: '12px auto 0' }}>
                   A snapshot of what you're carrying, where we'd start, and what working together could look like.
                 </p>

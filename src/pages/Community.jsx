@@ -203,14 +203,14 @@ export default function Community() {
         {/* HOW I WORK */}
         <div className="cm-work cm-section">
           <div className="cm-work-grid">
-            <Reveal className="cm-work-label">
+            <Reveal as="h2" className="cm-work-label">
               <span className="cm-dot" aria-hidden="true" />
               How I work
             </Reveal>
             <Reveal delay={100}>
-              <h2 className="cm-work-heading">
+              <p className="cm-work-heading">
                 Girlhood Collective is me — but you&rsquo;re never getting just one perspective.
-              </h2>
+              </p>
               <p className="cm-work-body">
                 I collaborate with a trusted network of doctors, teachers, community leaders, and
                 local brands, so every partnership brings in real expertise and the right
@@ -224,14 +224,14 @@ export default function Community() {
         <div className="cm-personal cm-section">
           <div className="cm-personal-grid">
             <Reveal>
-              <div className="cm-eyebrow cm-eyebrow--onlight">
+              <h2 className="cm-eyebrow cm-eyebrow--onlight">
                 <span className="cm-dot" aria-hidden="true" />
                 Why this is personal
-              </div>
-              <h2 className="cm-personal-heading">
+              </h2>
+              <p className="cm-personal-heading">
                 Diagnosed with ADHD and autism later in life, I know what it&rsquo;s like to
                 navigate a world that wasn&rsquo;t built for the way your brain works best.
-              </h2>
+              </p>
               <p className="cm-personal-body">
                 That journey fuels the work. I love helping others understand themselves, embrace
                 their strengths, and advocate for what they need — and helping organizations learn

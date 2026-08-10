@@ -89,7 +89,7 @@ const NEXT_EVENT = getUpcomingPublishedEvents(1)[0];
 export default function Events() {
   useSEO({
     title: 'Upcoming Events | Girlhood Collective',
-    description: "Girlhood Cincy Monthly Experiences — one Saturday a month, September through May, where girls ages 8–12 build confidence through hands-on projects.",
+    description: 'Upcoming Girlhood Collective events in Cincinnati — hands-on service projects, seasonal markets, and monthly experiences for families and kids.',
     path: '/events',
     image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/gc-studio-art-2.jpg?v=1774548572&width=1200',
   });
