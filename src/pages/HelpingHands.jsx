@@ -27,6 +27,33 @@ const INCLUDES = [
   { text: 'A morning of connection with the Girlhood Collective community' },
 ];
 
+const FAQS = [
+  {
+    q: 'What does my ticket cover?',
+    a: "Your $50 ticket covers your spot at the event, snacks for you and your kiddo, pop-up shopping and consigning with Collins Eliza, access to the Play on the way trailer, a free car seat check with a certified technician, and the cost of the supplies we're providing to support the classrooms as part of our service project.",
+  },
+  {
+    q: 'What ages is this event best for?',
+    a: 'We built Helping Hands with kids from preschool through about age 8 in mind — and all genders of kids and grownups are welcome.',
+  },
+  {
+    q: 'How many kids can I bring?',
+    a: 'One ticket is required per adult, with a maximum of two kids per adult ticket.',
+  },
+  {
+    q: 'What should we bring?',
+    a: 'Just yourselves and a positive attitude — all supplies for the service project are provided.',
+  },
+  {
+    q: 'Do I need to register in advance?',
+    a: "Yes. Space is limited, so we recommend reserving your spot ahead of time rather than showing up at the door.",
+  },
+  {
+    q: 'Is this just for girls, or can any family join?',
+    a: 'Any family can join — all genders of kids and grownups are welcome at Helping Hands.',
+  },
+];
+
 export default function HelpingHands() {
   useSEO({
     title: 'Helping Hands: A Morning of Giving Back, Together | Girlhood Collective',
@@ -43,6 +70,16 @@ export default function HelpingHands() {
     endDate: '2026-09-19T12:00:00-04:00',
     location: { '@type': 'Place', name: '3500 Columbia Parkway', address: 'Cincinnati, OH' },
     offers: { '@type': 'Offer', priceCurrency: 'USD', price: '50', url: EVENT?.shopifyUrl },
+  });
+
+  useStructuredData('helping-hands-faq', {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
   });
 
   return (
@@ -205,6 +242,34 @@ export default function HelpingHands() {
                   </li>
                 ))}
               </ul>
+            </div>
+          </Reveal>
+
+          <Reveal
+            delay={100}
+            style={{
+              background: '#fff',
+              border: '1px solid var(--gc-border)',
+              borderRadius: 20,
+              padding: 48,
+              boxShadow: '0 2px 8px rgba(29, 53, 87, 0.08)',
+              marginTop: 48,
+            }}
+          >
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 32, fontWeight: 700, color: 'var(--gc-navy)', marginBottom: 24 }}>
+              Frequently asked questions
+            </h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+              {FAQS.map((item) => (
+                <div key={item.q} style={{ borderTop: '1px solid var(--gc-border)', paddingTop: 20 }}>
+                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: 20, fontWeight: 700, color: 'var(--gc-navy)', marginBottom: 8 }}>
+                    {item.q}
+                  </div>
+                  <p style={{ fontSize: 16, fontWeight: 300, color: 'var(--gc-ink)', lineHeight: 1.7 }}>
+                    {item.a}
+                  </p>
+                </div>
+              ))}
             </div>
           </Reveal>
         </div>
