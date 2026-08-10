@@ -25,9 +25,9 @@ export const EVENTS = [
     landingPath: '/helping-hands',
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Helping Hands', where: 'Parent-Child Volunteer Experience · 3500 Columbia Pkwy',
-    price: '$50 · per adult-child pair',
+    price: '$50 · covers up to 2 adults & 2 kids',
     desc: 'A hands-on service project for parents and kids (ages preschool–8 or so) to give back together — supporting one of our partner nonprofits.',
-    long: "Join us for a hands-on service opportunity supporting one of our partner organizations. All supplies provided — just bring yourself and a positive attitude. All genders of kids and grownups welcome. One ticket required per adult, max 2 kids per adult ticket.",
+    long: "Join us for a hands-on service opportunity supporting one of our partner organizations. All supplies provided — just bring yourself and a positive attitude. All genders of kids and grownups welcome. Each $50 ticket covers up to 2 adults and up to 2 kids.",
   },
   {
     id: 'bloom-confidence', mon: 'Oct', day: '10', year: '2026', cat: 'Workshop', published: false,
