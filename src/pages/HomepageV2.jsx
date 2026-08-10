@@ -25,6 +25,7 @@ const ACCENT_CYCLE = [SAGE, EMERALD, HYDRANGEA, PEONY];
 const TAG_CYCLE = [SAGE, EMERALD, HYDRANGEA];
 
 const SERVICES_CTA = { label: "Let's chat", href: '/services#contact' };
+const BOOKING_URL = 'https://calendar.app.google/DEw4XZZtr3KUtxkGA';
 
 // One shared type scale so headings/body copy stay consistent across every section.
 const TYPE = {
@@ -102,12 +103,15 @@ export default function HomepageV2() {
             Programs and events that create measurable impact. Bridging corporate culture, non-profit impact, and community engagement across Greater Cincinnati.
           </div>
           <div className="hv2-hero-cta" style={{ marginTop: 28, display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="#contact" className="hv2-pill-cta">
-              Ready to get to work? Let&rsquo;s chat.
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="hv2-pill-cta" style={{ background: 'var(--gc-peony)' }}>
+              Book a free 15-min call
             </a>
             <a href="#services" className="hv2-pill-cta">
               Explore Our Services
             </a>
+          </div>
+          <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', marginTop: 14 }}>
+            No pressure, no pitch — just a quick conversation to see if it&rsquo;s a fit.
           </div>
         </Reveal>
       </div>
@@ -117,7 +121,7 @@ export default function HomepageV2() {
         <h2 style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 32 }}>Support &amp; Services</h2>
         <div className="hv2-grid-2col" style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 48, alignItems: 'start' }}>
           <Reveal as="div" className="hv2-sticky-img" style={{ position: 'sticky', top: 90 }}>
-            <div aria-hidden="true" style={{ position: 'absolute', top: 14, left: -14, right: -14, bottom: -14, background: HYDRANGEA, opacity: 0.35, borderRadius: 6, zIndex: 0 }} />
+            <div aria-hidden="true" className="hv2-sticky-img-bleed" style={{ position: 'absolute', top: 14, left: -14, right: -14, bottom: -14, background: HYDRANGEA, opacity: 0.35, borderRadius: 6, zIndex: 0 }} />
             <img
               src={cdnResize('https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_3916.jpg?v=1783447727', 900)}
               alt="Girlhood Collective community event"
@@ -137,6 +141,11 @@ export default function HomepageV2() {
                         0{i + 1}
                       </span>
                       <span style={{ ...TYPE.h3, color: 'var(--gc-navy)', flex: 1 }}>{item.title}</span>
+                      {item.price && (
+                        <span style={{ fontSize: 16, fontWeight: 600, color: 'var(--gc-emerald)', flex: 'none', marginRight: 16, whiteSpace: 'nowrap' }}>
+                          {item.price}
+                        </span>
+                      )}
                       <span style={{ position: 'relative', width: 22, height: 22, flex: 'none', marginLeft: 'auto' }}>
                         <span style={{ position: 'absolute', top: 10, left: 2, width: 18, height: 2, background: 'var(--gc-navy)' }} />
                         <span className={`hv2-accordion-vbar${isOpen ? ' open' : ''}`} />
@@ -528,11 +537,21 @@ export default function HomepageV2() {
             Let&rsquo;s chat. Tell us a bit about what you&rsquo;re working on below — mention
             you&rsquo;d like to schedule a discovery call and we&rsquo;ll get back to you ASAP.
           </div>
-          <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', marginBottom: 24, padding: '12px 18px', background: 'var(--gc-section)', borderRadius: 6, display: 'inline-block' }}>
-            Prefer a more structured way to start?{' '}
-            <Link to="/consultation-intake" style={{ color: 'var(--gc-navy)', fontWeight: 600 }}>
-              Complete the consultation intake instead →
-            </Link>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10, alignItems: 'center', marginBottom: 24 }}>
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ ...TYPE.small, color: 'var(--gc-navy)', fontWeight: 600, padding: '12px 18px', background: 'var(--gc-sage-light)', borderRadius: 6, display: 'inline-block' }}
+            >
+              Not ready to fill out a form? Book a free 15-minute call instead →
+            </a>
+            <div style={{ ...TYPE.small, color: 'var(--gc-ink-muted)', padding: '12px 18px', background: 'var(--gc-section)', borderRadius: 6, display: 'inline-block' }}>
+              Prefer a more structured way to start?{' '}
+              <Link to="/consultation-intake" style={{ color: 'var(--gc-navy)', fontWeight: 600 }}>
+                Complete the consultation intake instead →
+              </Link>
+            </div>
           </div>
         </Reveal>
         {formSubmitted ? (

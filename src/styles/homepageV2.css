@@ -298,6 +298,13 @@
     position: relative !important;
     top: auto !important;
   }
+  .hv2-sticky-img-bleed {
+    /* Negative left/right insets bleed past the viewport edge on narrow
+       screens, causing horizontal scroll — drop the horizontal bleed below
+       this breakpoint, keep the vertical one for the layered look. */
+    left: 0 !important;
+    right: 0 !important;
+  }
   .hv2-stats-row {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 32px 0 !important;
