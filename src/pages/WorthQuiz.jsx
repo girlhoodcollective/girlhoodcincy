@@ -49,6 +49,8 @@ const ARCHETYPES = {
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 
+const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
+
 export default function WorthQuiz() {
   useSEO({
     title: 'Dollars & Cents: A Skills Inventory — Girlhood Collective',
@@ -139,7 +141,7 @@ export default function WorthQuiz() {
   };
 
   const unlockResults = async () => {
-    if (!email.trim()) return;
+    if (!isValidEmail(email)) return;
     setSending(true);
     setSubmitError(false);
     try {
@@ -303,12 +305,17 @@ export default function WorthQuiz() {
                 aria-label="Your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                onKeyDown={(e) => { if (e.key === 'Enter' && email.trim() && !sending) unlockResults(); }}
+                onKeyDown={(e) => { if (e.key === 'Enter' && isValidEmail(email) && !sending) unlockResults(); }}
               />
+              {email.trim() && !isValidEmail(email) && (
+                <p style={{ fontSize: 15, color: '#c0392b', margin: '-4px 0 0', textAlign: 'left' }}>
+                  That doesn&rsquo;t look like a valid email address.
+                </p>
+              )}
               <button
                 className="btn"
                 onClick={unlockResults}
-                disabled={sending || !email.trim()}
+                disabled={sending || !isValidEmail(email)}
                 style={{ background: 'var(--gc-emerald)', color: '#fff', padding: '14px 24px', cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1 }}
               >
                 {sending ? 'Unlocking…' : 'See my results →'}
