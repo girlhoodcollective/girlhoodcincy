@@ -37,8 +37,8 @@ const FAQS = [
     a: 'We built Helping Hands with kids from preschool through about age 8 in mind — and all genders of kids and grownups are welcome.',
   },
   {
-    q: 'How many kids can I bring?',
-    a: 'One ticket is required per adult, with a maximum of two kids per adult ticket.',
+    q: 'Who does one ticket cover?',
+    a: 'Each $50 ticket covers up to 2 adults and up to 2 kids.',
   },
   {
     q: 'What should we bring?',
@@ -151,8 +151,8 @@ export default function HelpingHands() {
               </div>
               <div>
                 <div style={{ font: '600 16px var(--font-sans)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gc-ink-muted)', marginBottom: 8 }}>Cost</div>
-                <div style={{ font: '500 18px var(--font-sans)', color: 'var(--gc-navy)' }}>$50 per pair</div>
-                <div style={{ font: '500 18px var(--font-sans)', color: 'var(--gc-navy)' }}>One parent/caregiver + one child</div>
+                <div style={{ font: '500 18px var(--font-sans)', color: 'var(--gc-navy)' }}>$50 per ticket</div>
+                <div style={{ font: '500 18px var(--font-sans)', color: 'var(--gc-navy)' }}>Covers up to 2 adults &amp; 2 kids</div>
               </div>
             </div>
 
