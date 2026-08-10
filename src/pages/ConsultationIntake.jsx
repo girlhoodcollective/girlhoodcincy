@@ -144,16 +144,21 @@ function Card({ children }) {
   );
 }
 
-function SectionNav({ onNext, onBack, nextLabel = 'Continue →', disabled = false }) {
+function SectionNav({ onNext, onBack, nextLabel = 'Continue →', nextDisabled = false, backDisabled = false, hint }) {
   return (
-    <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-      <button className="btn" onClick={onNext} disabled={disabled} style={{ background: 'var(--gc-navy)', color: '#fff', padding: '15px 30px', opacity: disabled ? 0.7 : 1, cursor: disabled ? 'default' : 'pointer' }}>
-        {nextLabel}
-      </button>
-      {onBack && (
-        <button className="btn" onClick={onBack} disabled={disabled} style={{ background: 'transparent', color: 'var(--gc-ink-muted)', padding: '15px 16px' }}>
-          ← Back
+    <div>
+      <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+        <button className="btn" onClick={onNext} disabled={nextDisabled} style={{ background: 'var(--gc-navy)', color: '#fff', padding: '15px 30px', opacity: nextDisabled ? 0.5 : 1, cursor: nextDisabled ? 'not-allowed' : 'pointer' }}>
+          {nextLabel}
         </button>
+        {onBack && (
+          <button className="btn" onClick={onBack} disabled={backDisabled} style={{ background: 'transparent', color: 'var(--gc-ink-muted)', padding: '15px 16px' }}>
+            ← Back
+          </button>
+        )}
+      </div>
+      {nextDisabled && hint && (
+        <div style={{ fontSize: 15, color: 'var(--gc-ink-muted)', fontStyle: 'italic', marginTop: 10 }}>{hint}</div>
       )}
     </div>
   );
@@ -229,6 +234,9 @@ export default function ConsultationIntake() {
     }
   };
 
+  const section1Valid = name.trim() !== '' && email.trim() !== '';
+  const section2Valid = problemDesc.trim() !== '';
+
   const isResults = section === 'results';
   const progressPct = isResults ? 100 : Math.round(((section - 1) / 5) * 100);
   const secNum = isResults ? 5 : section;
@@ -278,6 +286,21 @@ export default function ConsultationIntake() {
       ? '"You were never too much. You were in the wrong room."'
       : '"The correction travels both directions — we’re building the room our daughters walk into without hesitation."'
     : '';
+
+  const mailtoHref = (() => {
+    const subject = `Consultation request${name.trim() ? ` from ${name.trim()}` : ''}`;
+    const lines = [
+      `Name: ${name.trim() || '—'}`,
+      `Email: ${email.trim() || '—'}`,
+      `Role: ${role.trim() || '—'}`,
+      `Problem: ${problemDesc.trim() || '—'}`,
+      `Timeline: ${TIMELINE_DEFS.find((d) => d.v === timeline)?.label || '—'}`,
+      `Budget: ${BUDGET_DEFS.find((d) => d.v === budget)?.label || '—'}`,
+      '',
+      "(I completed the consultation intake form — following up in case it didn't come through.)",
+    ];
+    return `mailto:hello@girlhoodcincy.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
+  })();
 
   return (
     <div className="flow-shell" style={{ minHeight: '100vh', background: 'var(--gc-cream)' }}>
@@ -333,7 +356,7 @@ export default function ConsultationIntake() {
               <label style={{ ...LABEL_STYLE, marginBottom: 10 }}>What kind of organization or context are you bringing me into?</label>
               <CheckGrid group={{ value: orgType, toggle: toggle(setOrgType) }} defs={ORG_DEFS} />
             </div>
-            <SectionNav onNext={() => go(2)} />
+            <SectionNav onNext={() => go(2)} nextDisabled={!section1Valid} hint="Add your name and email to continue." />
           </Card>
         )}
 
@@ -364,7 +387,7 @@ export default function ConsultationIntake() {
               <div style={HINT_STYLE}>Training? New hires? Policy changes? What was tried — and what actually happened.</div>
               <textarea className="fld" placeholder="e.g. We did a DEI training two years ago but nothing changed…" value={prevAttempts} onChange={(e) => setPrevAttempts(e.target.value)} />
             </div>
-            <SectionNav onNext={() => go(3)} onBack={() => go(1)} />
+            <SectionNav onNext={() => go(3)} onBack={() => go(1)} nextDisabled={!section2Valid} hint="Tell me what's actually going on to continue." />
           </Card>
         )}
 
@@ -474,7 +497,7 @@ export default function ConsultationIntake() {
               <label style={{ ...LABEL_STYLE, marginBottom: 10 }}>What would make you trust a consultant right away?</label>
               <textarea className="fld" placeholder="e.g. Someone who listens before they propose a solution. / Lived experience, not just theory…" value={trust} onChange={(e) => setTrust(e.target.value)} />
             </div>
-            <SectionNav onNext={finishIntake} onBack={() => go(4)} nextLabel={sending ? 'Sending…' : 'See my summary →'} disabled={sending} />
+            <SectionNav onNext={finishIntake} onBack={() => go(4)} nextLabel={sending ? 'Sending…' : 'See my summary →'} nextDisabled={sending} backDisabled={sending} />
           </Card>
         )}
 
@@ -515,7 +538,7 @@ export default function ConsultationIntake() {
                   Heads up — your intake summary didn't send automatically. Please use the button below to reach out directly so nothing gets lost.
                 </p>
               )}
-              <a className="btn" href="mailto:hello@girlhoodcincy.com" style={{ background: 'var(--gc-navy)', color: '#fff', padding: '15px 30px' }}>
+              <a className="btn" href={mailtoHref} style={{ background: 'var(--gc-navy)', color: '#fff', padding: '15px 30px' }}>
                 Request a consultation call
               </a>
             </div>
