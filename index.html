@@ -68,10 +68,18 @@
 
     <!-- Hidden static forms so Netlify's build-time bot can detect these form schemas. -->
     <!-- The real, styled forms live in the React app and submit to these same names via fetch. -->
-    <form name="homepage-v2-contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <form name="services-contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
       <input type="text" name="name" />
       <input type="text" name="org" />
       <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="event-collaboration" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="org" />
+      <input type="text" name="collabType" />
       <textarea name="message"></textarea>
     </form>
 

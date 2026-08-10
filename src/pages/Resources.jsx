@@ -10,7 +10,7 @@ import '../styles/utilityPages.css';
 const TOOLS = [
   {
     href: '/worth-quiz',
-    accent: 'var(--gc-lavender)',
+    accent: '#6F96CF',
     eyebrow: 'For individuals · 20 questions',
     title: 'Dollars & Cents',
     body: 'A warm skills inventory that maps your real, marketable strengths to an income path that fits you — grounded in Cincinnati\'s actual market.',
@@ -25,8 +25,7 @@ const TOOLS = [
     cta: 'Start the intake',
   },
   {
-    href: 'https://girlhoodeventrequest.netlify.app',
-    external: true,
+    href: '/event-collaboration',
     accent: 'var(--gc-peony)',
     eyebrow: 'For partners',
     title: 'Event Collaboration',

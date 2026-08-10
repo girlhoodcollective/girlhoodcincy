@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import NavBar from '../components/NavBar.jsx';
+import Footer from '../components/Footer.jsx';
 import YouTubeEmbed from '../components/YouTubeEmbed.jsx';
 import Reveal from '../components/Reveal.jsx';
 import { useSEO } from '../lib/seo.js';
@@ -22,14 +24,7 @@ const PEONY = 'var(--gc-peony)';
 const ACCENT_CYCLE = [SAGE, EMERALD, HYDRANGEA, PEONY];
 const TAG_CYCLE = [SAGE, EMERALD, HYDRANGEA];
 
-const NAV_LINKS = [
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Results', href: '#results' },
-  { label: 'Events', href: '/events' },
-  { label: 'Tools & Resources', href: '/resources' },
-  { label: 'Community Collaborators', href: '#partners' },
-];
+const SERVICES_CTA = { label: "Let's chat", href: '/services#contact' };
 
 // One shared type scale so headings/body copy stay consistent across every section.
 const TYPE = {
@@ -47,10 +42,9 @@ export default function HomepageV2() {
   useSEO({
     title: 'Girlhood Collective | Culture & Community Consulting',
     description: 'Fractional community strategy, culture, and events consulting for small businesses, allied health practices, and mission-driven organizations across Cincinnati.',
-    path: '/homepage-v2',
+    path: '/services',
   });
 
-  const [navOpen, setNavOpen] = useState(false);
   const [openItems, setOpenItems] = useState({ 0: true });
   const [form, setForm] = useState({ name: '', org: '', email: '', message: '' });
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -65,7 +59,7 @@ export default function HomepageV2() {
     setFormSending(true);
     setFormError(false);
     try {
-      await submitNetlifyForm('homepage-v2-contact', form);
+      await submitNetlifyForm('services-contact', form);
       setFormSubmitted(true);
     } catch {
       setFormError(true);
@@ -80,56 +74,7 @@ export default function HomepageV2() {
     <div className="hv2" style={{ background: '#fff', fontFamily: 'var(--font-sans)', color: 'var(--gc-navy)' }}>
       <div style={{ height: 4, background: `linear-gradient(90deg, var(--gc-navy), ${SAGE}, ${EMERALD}, ${HYDRANGEA}, ${PEONY})` }} />
 
-      {/* NAV */}
-      <div
-        className="hv2-section-pad"
-        style={{
-          position: 'sticky',
-          top: 0,
-          zIndex: 10,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          padding: '18px 48px',
-          background: '#fff',
-          borderBottom: '1px solid rgba(29,53,87,.14)',
-        }}
-      >
-        <Link to="/" style={{ textDecoration: 'none', lineHeight: 1 }}>
-          <span style={{ fontFamily: 'var(--font-display)', fontSize: 22, color: 'var(--gc-navy)' }}>Girlhood</span>
-          <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 17, color: 'var(--gc-navy)', marginLeft: 5 }}>Collective</span>
-        </Link>
-        <div className={`hv2-nav-links${navOpen ? ' open' : ''}`} onClick={() => setNavOpen(false)}>
-          <Link to="/" className="hv2-navlink">
-            Home
-          </Link>
-          {NAV_LINKS.map((l) => (
-            l.href.startsWith('#') ? (
-              <a key={l.label} href={l.href} className="hv2-navlink">
-                {l.label}
-              </a>
-            ) : (
-              <Link key={l.label} to={l.href} className="hv2-navlink">
-                {l.label}
-              </Link>
-            )
-          ))}
-          <a href="#contact" className="hv2-pill-cta hv2-nav-cta">
-            Let&rsquo;s chat
-          </a>
-        </div>
-        <button
-          type="button"
-          className="hv2-burger"
-          aria-label={navOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={navOpen}
-          onClick={() => setNavOpen((o) => !o)}
-        >
-          <span style={{ transform: navOpen ? 'translateY(7px) rotate(45deg)' : 'none' }} />
-          <span style={{ opacity: navOpen ? 0 : 1 }} />
-          <span style={{ width: navOpen ? '100%' : undefined, transform: navOpen ? 'translateY(-7px) rotate(-45deg)' : 'none' }} />
-        </button>
-      </div>
+      <NavBar variant="white" ctaColor="var(--gc-navy)" cta={SERVICES_CTA} />
 
       {/* HERO */}
       <div id="top" className="hv2-section-pad" style={{ padding: '64px 48px 48px', textAlign: 'center', background: '#fff', position: 'relative', overflow: 'hidden' }}>
@@ -490,12 +435,12 @@ export default function HomepageV2() {
               Start a consulting client intake.
             </div>
           </Link>
-          <a href="https://girlhoodeventrequest.netlify.app" target="_blank" rel="noopener noreferrer" className="hv2-tool-card">
+          <Link to="/event-collaboration" className="hv2-tool-card">
             <div style={{ fontFamily: 'var(--font-serif)', fontSize: 16, color: SAGE }}>03</div>
             <div style={{ fontSize: 17, fontWeight: 600, color: 'var(--gc-navy)', textAlign: 'center', lineHeight: 1.4 }}>
               Submit a request to partner on an event or collaboration.
             </div>
-          </a>
+          </Link>
         </Reveal>
       </div>
 
@@ -641,18 +586,9 @@ export default function HomepageV2() {
             )}
           </form>
         )}
-        <div style={{ maxWidth: 1160, margin: '48px auto 0', paddingTop: 20, borderTop: '1px solid rgba(29,53,87,.14)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, lineHeight: 1 }}>
-            <span style={{ fontFamily: 'var(--font-display)', fontSize: 17, color: 'var(--gc-navy)' }}>Girlhood</span>
-            <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 15, color: 'var(--gc-navy)', marginLeft: -3 }}>Collective</span>
-            <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--gc-peony)', display: 'inline-block' }} />
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 18, fontSize: 16, color: 'var(--gc-ink-muted)' }}>
-            <span>© 2026 Girlhood Collective. All rights reserved.</span>
-            <Link to="/privacy" style={{ color: 'var(--gc-ink-muted)' }}>Privacy</Link>
-          </div>
-        </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

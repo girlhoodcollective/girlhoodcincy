@@ -31,7 +31,7 @@ const ROUTES = [
     description: 'Monthly community events, a free newsletter, and the story behind founder Brittany Gruber — for Cincinnati families and neighbors looking for real connection.',
   },
   {
-    path: '/homepage-v2',
+    path: '/services',
     sourceFile: 'src/pages/HomepageV2.jsx',
     title: 'Girlhood Collective | Culture & Community Consulting',
     description: 'Fractional community strategy, culture, and events consulting for small businesses, allied health practices, and mission-driven organizations across Cincinnati.',
@@ -80,6 +80,12 @@ const ROUTES = [
     title: 'Case Study: Better Together Brunch — Girlhood Collective',
     description: 'How one event turned into $3,000 raised, 10 new sponsors, and the start of a lasting community for Endurance in Education.',
     image: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/432_a2c25d8f-0ce8-40d5-b0fe-f1f1d4b17a69.jpg?v=1784653522&width=1200',
+  },
+  {
+    path: '/event-collaboration',
+    sourceFile: 'src/pages/EventCollaboration.jsx',
+    title: 'Event Collaboration | Girlhood Collective',
+    description: 'Want to co-host, sponsor, or partner with Girlhood Collective on an upcoming event? Tell us what you have in mind.',
   },
   {
     path: '/privacy',
