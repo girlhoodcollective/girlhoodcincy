@@ -60,7 +60,7 @@ function MiniNewsletterSignup() {
         </button>
       </div>
       {state === 'error' && (
-        <p style={{ fontSize: 16, color: '#ffb4a8', marginTop: 8 }}>{error} Email us at hello@girlhoodcincy.com instead.</p>
+        <p style={{ fontSize: 16, color: '#ffb4a8', marginTop: 8 }}>{error.replace(/\.+$/, '')}. Email us at hello@girlhoodcincy.com instead.</p>
       )}
     </div>
   );

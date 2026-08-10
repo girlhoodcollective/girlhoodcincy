@@ -67,8 +67,8 @@ export default function Privacy() {
 
           <h2 style={H2}>Children&rsquo;s privacy</h2>
           <p style={SECTION}>
-            Our events are designed for girls ages 8&ndash;12, but registration is always completed by a parent or
-            guardian — we don&rsquo;t knowingly collect personal information directly from children online.
+            Some of our events and programs are designed for children, but registration is always completed by a
+            parent or guardian — we don&rsquo;t knowingly collect personal information directly from children online.
           </p>
 
           <h2 style={H2}>Your choices</h2>

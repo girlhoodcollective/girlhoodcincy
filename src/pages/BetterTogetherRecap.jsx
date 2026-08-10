@@ -5,7 +5,7 @@ import { useSEO } from '../lib/seo.js';
 
 const STATS = [
   { value: '$3,000', label: 'Revenue raised' },
-  { value: '$1,000', label: 'Donated directly to nonprofit capital campaign kickoff' },
+  { value: '$1,000', label: 'Donated directly to nonprofit' },
   { value: '10', label: 'Sponsors secured' },
   { value: '30', label: 'Guests in attendance' },
   { value: '5', label: 'Panelists featured' },
