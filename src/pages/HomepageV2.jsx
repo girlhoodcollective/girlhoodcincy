@@ -141,11 +141,6 @@ export default function HomepageV2() {
                         0{i + 1}
                       </span>
                       <span style={{ ...TYPE.h3, color: 'var(--gc-navy)', flex: 1 }}>{item.title}</span>
-                      {item.price && (
-                        <span style={{ fontSize: 16, fontWeight: 600, color: 'var(--gc-emerald)', flex: 'none', marginRight: 16, whiteSpace: 'nowrap' }}>
-                          {item.price}
-                        </span>
-                      )}
                       <span style={{ position: 'relative', width: 22, height: 22, flex: 'none', marginLeft: 'auto' }}>
                         <span style={{ position: 'absolute', top: 10, left: 2, width: 18, height: 2, background: 'var(--gc-navy)' }} />
                         <span className={`hv2-accordion-vbar${isOpen ? ' open' : ''}`} />
@@ -154,6 +149,11 @@ export default function HomepageV2() {
                   </h3>
                   <div className={`hv2-accordion-panel${isOpen ? ' open' : ''}`}>
                     <div style={{ padding: '0 4px 24px', maxWidth: 760 }}>
+                      {item.price && (
+                        <div style={{ fontSize: 16, fontWeight: 600, color: 'var(--gc-emerald)', marginBottom: 10 }}>
+                          {item.price}
+                        </div>
+                      )}
                       <div style={{ ...TYPE.body, color: 'var(--gc-ink-muted)', marginBottom: 14 }}>{item.desc}</div>
                       <a href={item.href} className="hv2-cta-link" style={{ color: ACCENT }}>
                         {item.ctaLabel}
