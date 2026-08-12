@@ -91,6 +91,7 @@ export const PARTNERS_V2 = [
   { name: 'Cincy Mom Made', logo: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/Untitled_design_6.png?v=1774659894', url: 'https://cincymommade.com' },
   { name: 'Collins Eliza', logo: 'https://storage.mlcdn.com/account_image/1805515/2JLxnFFrcdrayQcJfF5wf4Vvzt1yrE9ydHnXDgc1.jpg', url: 'https://www.instagram.com/collinselizaconsign/', zoom: 1.8 },
   { name: 'Play on the way', logo: 'https://storage.mlcdn.com/account_image/1805515/iT5bwRP2cd8rmbMqGR5ULWhWcjklDtXTRTRtqJNB.jpg', url: 'https://playontheway.co', tagline: "Cincinnati's Mobile Sensory Play Trailer" },
+  { name: 'Happy Seat Co', logo: 'https://storage.mlcdn.com/account_image/1805515/jPImGMRP2QGyHLymRvSq6dtWJLAaEGppLfaoqgKe.png', url: 'https://happyseatcocincy.com', tagline: 'Child Passenger Safety Technician' },
 ];
 
 export const AUDIENCE_V2 = [

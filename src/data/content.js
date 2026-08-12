@@ -18,6 +18,7 @@ export const PARTNER_LOGOS = [
   { src: 'https://cdn.shopify.com/s/files/1/0656/4328/2528/files/IMG_1526.jpg?v=1774659883&width=300', href: 'https://www.instagram.com/hydeparkmarketcincy/?hl=en', alt: 'Hyde Park Market', quote: 'Summer vendor.' },
   { src: 'https://storage.mlcdn.com/account_image/1805515/2JLxnFFrcdrayQcJfF5wf4Vvzt1yrE9ydHnXDgc1.jpg', href: 'https://www.instagram.com/collinselizaconsign/', alt: 'Collins Eliza', quote: "The best children's consignment in town.", zoom: 1.8 },
   { src: 'https://storage.mlcdn.com/account_image/1805515/iT5bwRP2cd8rmbMqGR5ULWhWcjklDtXTRTRtqJNB.jpg', href: 'https://playontheway.co', alt: 'Play on the way', quote: "Cincinnati's Mobile Sensory Play Trailer" },
+  { src: 'https://storage.mlcdn.com/account_image/1805515/jPImGMRP2QGyHLymRvSq6dtWJLAaEGppLfaoqgKe.png', href: 'https://happyseatcocincy.com', alt: 'Happy Seat Co', quote: 'Child Passenger Safety Technician' },
 ];
 
 export const TRUST_STATS = [
