@@ -118,7 +118,10 @@ export default function HomepageV2() {
 
       {/* SUPPORT & SERVICES */}
       <div id="services" className="hv2-section-pad" style={{ padding: '64px 48px', background: '#fff' }}>
-        <h2 style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 32 }}>Support &amp; Services</h2>
+        <h2 style={{ ...TYPE.h2, color: 'var(--gc-navy)', textAlign: 'center', marginBottom: 16 }}>Support &amp; Services</h2>
+        <div style={{ ...TYPE.quote, color: 'var(--gc-emerald)', textAlign: 'center', maxWidth: 640, margin: '0 auto 40px' }}>
+          You focus on running your business. I&rsquo;ll focus on helping your business stay connected to the community around it.
+        </div>
         <div className="hv2-grid-2col" style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 48, alignItems: 'start' }}>
           <Reveal as="div" className="hv2-sticky-img" style={{ position: 'sticky', top: 90 }}>
             <div aria-hidden="true" className="hv2-sticky-img-bleed" style={{ position: 'absolute', top: 14, left: -14, right: -14, bottom: -14, background: HYDRANGEA, opacity: 0.35, borderRadius: 6, zIndex: 0 }} />
