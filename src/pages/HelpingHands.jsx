@@ -5,7 +5,7 @@ import { EVENTS } from '../data/events.js';
 import { useSEO, useStructuredData } from '../lib/seo.js';
 
 const EVENT = EVENTS.find((e) => e.id === 'helping-hands');
-const EVENT_IMAGE = 'https://storage.mlcdn.com/account_image/1805515/UuvDkFo4fAKTSCVIE2e6wSJIAtARBFZ9s0z23VIv.png';
+const EVENT_IMAGE = 'https://storage.mlcdn.com/account_image/1805515/amvCpdwN2TXMpJpujpnU1NDTe1ScYo4VtHEQQgF3.png';
 const COLLINS_ELIZA_URL = 'https://www.instagram.com/collinselizaconsign/';
 const COLLINS_ELIZA_LOGO = 'https://storage.mlcdn.com/account_image/1805515/2JLxnFFrcdrayQcJfF5wf4Vvzt1yrE9ydHnXDgc1.jpg';
 const LITTLE_TREASURER_URL = 'https://www.littletreasurer.com/';
