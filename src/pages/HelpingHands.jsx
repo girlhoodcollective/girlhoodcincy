@@ -12,11 +12,14 @@ const LITTLE_TREASURER_URL = 'https://www.littletreasurer.com/';
 const LITTLE_TREASURER_LOGO = 'https://storage.mlcdn.com/account_image/1805515/aZQfDo3u5n4h4vVCZZsQvU8VBQYf5rNPDj5DQb8q.png';
 const PLAY_ON_THE_WAY_URL = 'https://playontheway.co';
 const PLAY_ON_THE_WAY_LOGO = 'https://storage.mlcdn.com/account_image/1805515/iT5bwRP2cd8rmbMqGR5ULWhWcjklDtXTRTRtqJNB.jpg';
+const HAPPY_SEAT_CO_URL = 'https://happyseatcocincy.com';
+const HAPPY_SEAT_CO_LOGO = 'https://storage.mlcdn.com/account_image/1805515/jPImGMRP2QGyHLymRvSq6dtWJLAaEGppLfaoqgKe.png';
 
 const EVENT_PARTNERS = [
   { name: 'Collins Eliza', logo: COLLINS_ELIZA_LOGO, url: COLLINS_ELIZA_URL, role: 'Pop-up shopping partner' },
   { name: 'Play on the way', logo: PLAY_ON_THE_WAY_LOGO, url: PLAY_ON_THE_WAY_URL, role: 'Play Experience Partner' },
   { name: 'Little Treasurer', logo: LITTLE_TREASURER_LOGO, url: LITTLE_TREASURER_URL, role: 'Story Time Partner' },
+  { name: 'Happy Seat Co', logo: HAPPY_SEAT_CO_LOGO, url: HAPPY_SEAT_CO_URL, role: 'Car Seat Inspection Partner' },
 ];
 
 const INCLUDES = [
@@ -187,7 +190,11 @@ export default function HelpingHands() {
                 <a href={LITTLE_TREASURER_URL} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gc-navy)', fontWeight: 500, textDecoration: 'underline' }}>
                   Little Treasurer
                 </a>
-                {' '}book series. This event is best for kids ages preschool&ndash;8 years or so.
+                {' '}book series. We&rsquo;ll also have car seat safety checks by a certified inspector, thanks to{' '}
+                <a href={HAPPY_SEAT_CO_URL} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gc-navy)', fontWeight: 500, textDecoration: 'underline' }}>
+                  Happy Seat Co
+                </a>
+                . This event is best for kids ages preschool&ndash;8 years or so.
               </p>
             </div>
 
