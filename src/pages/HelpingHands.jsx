@@ -27,6 +27,7 @@ const INCLUDES = [
   { text: 'Pop-up shopping & consignment with', linkLabel: 'Collins Eliza', linkHref: COLLINS_ELIZA_URL },
   { text: 'A kids play experience with', linkLabel: 'Play on the way', linkHref: PLAY_ON_THE_WAY_URL },
   { text: 'Story time with', linkLabel: 'Little Treasurer', linkHref: LITTLE_TREASURER_URL },
+  { text: 'A free car seat safety check with', linkLabel: 'Happy Seat Co', linkHref: HAPPY_SEAT_CO_URL },
   { text: 'A morning of connection with the Girlhood Collective community' },
 ];
 
