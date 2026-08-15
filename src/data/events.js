@@ -21,7 +21,7 @@ export const EVENTS = [
   },
   {
     id: 'helping-hands', mon: 'Sep', day: '19', year: '2026', cat: 'Workshop',
-    shopifyUrl: 'https://checkout.mailerlite.com/checkout/33740',
+    shopifyUrl: 'https://checkout.mailerlite.com/checkout/33742',
     landingPath: '/helping-hands',
     badgeBg: 'var(--gc-lavender-soft)', badgeText: 'var(--gc-slate)',
     title: 'Helping Hands', where: 'Parent-Child Volunteer Experience · 3500 Columbia Pkwy',
